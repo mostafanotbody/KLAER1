@@ -2794,8 +2794,8 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  ❨ 𝚂𝙰𝚂𝙰',url="t.me/M0STaFa_6"},{text = ' 𝙱𝙾𝙾𝙳𝚈  ❩ ',url="t.me/BoOdY_BaSha"}},
-{{text = '  ❨ 𝙷𝙰𝚁W𝙴𝙽',url="t.me/mhzon1"},{text = '  𝙹𝙾𝙺𝙴𝚁 𝚁𝙰𝙱 ❩ ',url="t.me/jokerrap2"}},
+{{text = '  ❨ 🌖 𝚂𝙰𝚂𝙰',url="t.me/M0STaFa_6"},{text = ' 🌖 𝙱𝙾𝙾𝙳𝚈  ❩ ',url="t.me/BoOdY_BaSha"}},
+{{text = 'اضف البوت لمجموعتك', url = "https://t.me/"..data.username_.."?startgroup=new"}},
 {{text = '  ❨𝚂𝙾𝚄𝚁𝙲𝙴 𝙷𝙾𝙶𝙰𝙽 ❩ ',url="https://t.me/sasa_boody"}}, 
 }
 local msg_id = msg.id_/2097152/0.5
