@@ -312,6 +312,8 @@ elseif tonumber(user_id) == tonumber(bot_id) then
 var = 'البوت'
 elseif database:sismember(bot_id..'Sudo:User', user_id) then
 var = database:get(bot_id.."Sudo:Rd"..msg.chat_id_) or 'المطور'  
+elseif database:sismember(bot_id.."Dev:SoFi:2", user_id) then
+var = database:get(bot_id.."Sudo:Rd"..msg.chat_id_) or 'مطور اساسي²'  
 elseif database:sismember(bot_id..'CoSu'..chat_id, user_id) then
 var = database:get(bot_id.."CoSu:Rd"..msg.chat_id_) or 'هوجان'
 elseif database:sismember(bot_id..'Basic:Constructor'..chat_id, user_id) then
@@ -5901,7 +5903,7 @@ end
 if text == ("تنزيل ثانوي") and tonumber(msg.reply_to_message_id_) ~= 0 and SudoBot(msg) then
 function Function_DRAGON(extra, result, success)
 database:srem(bot_id.."Dev:SoFi:2", result.sender_user_id_)
-Reply_Status(msg,result.sender_user_id_,"reply","◈ تم تنزيله من المطور ثانويين")  
+Reply_Status(msg,result.sender_user_id_,"reply","◈ تم تنزيله من المطور الثانوي")  
 end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_DRAGON, nil)
 return false 
@@ -5911,7 +5913,7 @@ local username = text:match("^تنزيل ثانوي @(.*)$")
 function Function_DRAGON(extra, result, success)
 if result.id_ then
 database:srem(bot_id.."Dev:SoFi:2", result.id_)
-Reply_Status(msg,result.id_,"reply","◈ تم تنزيله من المطور ثانويين")  
+Reply_Status(msg,result.id_,"reply","◈ تم تنزيله من المطور الثانوي")  
 else
 send(msg.chat_id_, msg.id_,"◈ لا يوجد حساب بهاذا المعرف")
 end
@@ -5922,7 +5924,7 @@ end
 if text and text:match("^تنزيل ثانوي (%d+)$") and SudoBot(msg) then
 local userid = text:match("^تنزيل ثانوي (%d+)$")
 database:srem(bot_id.."Dev:SoFi:2", userid)
-Reply_Status(msg,userid,"reply","◈ تم تنزيله من المطور ثانويين")  
+Reply_Status(msg,userid,"reply","◈ تم تنزيله من المطور الثانوي")  
 return false 
 end
 if text == ("الثانوين") and SudoBot(msg) then
@@ -11846,7 +11848,7 @@ return false
 end
 
 if text == 'تيست' and SudoBot(msg) then 
-send(msg.chat_id_,msg.id_, ' هوجان شغال ') 
+send(msg.chat_id_,msg.id_, ' البوت شغال ') 
 return false
 end
 
