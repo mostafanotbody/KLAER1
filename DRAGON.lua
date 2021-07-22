@@ -11893,6 +11893,16 @@ send(msg.chat_id_,msg.id_, '[بالتكت بتاعها..😹💔🎶](t.me/sasa_
 return false
 end
 
+ if text == 'زبي' then 
+send(msg.chat_id_,msg.id_, '[حطة فطيزك..😹💔🎶](t.me/sasa_boody)') 
+return false
+end
+ 
+ if text == 'ماشي' then 
+send(msg.chat_id_,msg.id_, '[بيعرج..😹💔🎶](t.me/sasa_boody)') 
+return false
+end
+ 
 if text == 'هاي' or text == 'هيي' then
 send(msg.chat_id_,msg.id_, '[علي الواي فاي..😺💜](t.me/sasa_boody)') 
 return false
