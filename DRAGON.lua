@@ -3347,18 +3347,6 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
--- if text == 'مبرمج السورس' then
--- local Text = [[ 
--- [𝙷𝙰𝚁W𝙴𝙽](t.me/mhzon1)
--- ]] 
--- keyboard = {}  
--- keyboard.inline_keyboard = { 
--- {{text = '  ❨𝙷𝙰𝚁W𝙴𝙽❩', url="t.me/mhzon1"}}, 
--- } 
--- local msg_id = msg.id_/2097152/0.5 
--- https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
--- end
-
 if text == 'مالك السورس' then
 local Text = [[ 
 
@@ -11321,7 +11309,6 @@ ght = math.random(2,22);
 local Text ='تم اختيار فديو استوري  لك 🧞‍♂️' 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = 'harwen.',url="t.me/mhzon1"}}, 
 {{text = 'SOURCE.',url="t.me/sasa_boody"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
