@@ -303,7 +303,7 @@ function Rutba(user_id,chat_id)
 if tonumber(user_id) == tonumber(1610557559) then  
 var = 'مبرمج السورس'
 elseif tonumber(user_id) == tonumber(1753323063) then
-var = 'مبرمج السورس'
+var = 'مالك السورس'
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = 'المطور الاساسي'  
 elseif database:sismember(bot_id.."Dev:SoFi:2", user_id) then
@@ -899,7 +899,7 @@ if DevSoFi(msg) then
 local bl = 'انت الان المطور الاساسي في البوت \n سورس هوجان\n يمكنك تحكم في البوتات من الكيبورد أسفل \n[تابع جديدنا](t.me/sasa_boody)'
 local keyboard = {
 {'الاحصائيات','المطور','الثانوين'},
-{' مبرمج السورس','مبرمج السورس'},
+{' مبرمج السورس','مالك السورس'},
 {'جلب المطورين','جلب التوكن'},
 {'قناه السورس','بوت تواصل'},
 {'اضف رد عام','حذف رد عام'},
@@ -940,7 +940,7 @@ if start then
 keyboard = start
 else
 keyboard = {
-{'مبرمج السورس','مبرمج السورس'},
+{'مبرمج السورس','مالك السورس'},
 {'🧞‍♂️═───═𝑯𝑶𝑮𝑨𝑵═───═🧞‍♂️'},
 {'قناة السورس','بوت التواصل'},
 {'🧞‍♂️═───═𝑯𝑶𝑮𝑨𝑵═───═🧞‍♂️'},
@@ -1130,7 +1130,7 @@ send(msg.chat_id_, msg.id_,' 🧞‍♂️ اصدار سورس هوجان { s: 6
 end
 if text == 'بودي' or text == 'بودي' or text == 'بودي القامد' or text == 'صاحب السورس' or text == 'مالك سورس' or text == 'فين بودي' or text =='بودي فين' then
 local Text = [[
-مبرمج السورس
+مالك السورس
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -2580,7 +2580,7 @@ local BlNe = text:match("^كتم اسم (.*)$")
 send(msg.chat_id_, msg.id_, '🧞‍♂️ تم كتم الاسم '..BlNe)
 database:sadd(bot_id.."DRAGON:blocname"..msg.chat_id_, BlNe)
 end
- 
+
 if text and text:match("^الغاء كتم اسم (.*)$") and Manager(msg) and database:get(bot_id.."block:name:stats"..msg.chat_id_) == "open" then
 local delBn = text:match("^الغاء كتم اسم (.*)$")
 send(msg.chat_id_, msg.id_, '🧞‍♂️ تم الغاء كتم الاسم '..delBn)
@@ -2827,7 +2827,7 @@ keyboard.inline_keyboard = {
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/M0STaFa_6&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text == 'بودي' or text == 'مبرمج السورس' or text == 'صاحب السورس' or text == 'بوضي' or text == 'بيوضي' or text == 'body' then 
+if text == 'بودي' or text == 'مالك السورس' or text == 'صاحب السورس' or text == 'بوضي' or text == 'بيوضي' or text == 'body' then 
 local msg_id = msg.id_/2097152/0.5  
 local Text = [[ 
 𝙱𝙾𝙾𝙳𝚈
@@ -3348,7 +3348,7 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text == 'مبرمج السورس' then
+if text == 'مالك السورس' then
 local Text = [[ 
 
 ]] 
@@ -4409,13 +4409,17 @@ if result.sender_user_id_ == tonumber(SUDO) then
 send(msg.chat_id_, msg.id_, " 🧞‍♂️ لا يمكنك حظر المطور الاساسي \n")
 return false 
 end
+if result.sender_user_id_ == tonumber(DevSoFi) then
+send(msg.chat_id_, msg.id_, " 🧞‍♂️ لا يمكنك حظر المطور الثانوي \n")
+return false 
+end
 if tonumber(result.sender_user_id_) == tonumber(bot_id) then  
 send(msg.chat_id_, msg.id_, " 🧞‍♂️ لا تسطيع حظر البوت عام")
 return false 
 end
 
 if tonumber(result.sender_user_id_) == tonumber(1753323063) then  
-send(msg.chat_id_, msg.id_, " 🧞‍♂️ لا تسطيع حظر مبرمج السورس عام")
+send(msg.chat_id_, msg.id_, " 🧞‍♂️ لا تسطيع حظر مالك السورس عام")
 return false 
 end
 database:sadd(bot_id..'GBan:User', result.sender_user_id_)
@@ -4460,8 +4464,13 @@ if result.id_ == tonumber(SUDO) then
 send(msg.chat_id_, msg.id_, " 🧞‍♂️ لا يمكنك حظر المطور الاساسي \n")
 return false 
 end
+if result.id_ == tonumber(DevSoFi) then
+send(msg.chat_id_, msg.id_, " 🧞‍♂️ لا يمكنك حظر المطور الثانوي \n")
+return false 
+end
+
 if result.id_ == tonumber(1753323063) then
-send(msg.chat_id_, msg.id_, " 🧞‍♂️ لا تسطيع حظر مبرمج السورس عام \n")
+send(msg.chat_id_, msg.id_, " 🧞‍♂️ لا تسطيع حظر مالك السورس عام \n")
 return false 
 end
 usertext = '\n 🧞‍♂️ العضو ← ['..result.title_..'](t.me/'..(username or 'DV_POWER1')..')'
@@ -4496,12 +4505,17 @@ if userid == tonumber(SUDO) then
 send(msg.chat_id_, msg.id_, " 🧞‍♂️ لا يمكنك حظر المطور الاساسي \n")
 return false 
 end
+if userid == tonumber(DevSoFi) then
+send(msg.chat_id_, msg.id_, " 🧞‍♂️ لا يمكنك حظر المطور الثانوي \n")
+return false 
+end
+DevSoFi
 if tonumber(userid) == tonumber(bot_id) then  
 send(msg.chat_id_, msg.id_, " 🧞‍♂️ لا تسطيع حظر البوت عام")
 return false 
 end
 if tonumber(userid) == tonumber(1753323063) then  
-send(msg.chat_id_, msg.id_, " 🧞‍♂️ لا تسطيع حظر مبرمج السورس عام")
+send(msg.chat_id_, msg.id_, " 🧞‍♂️ لا تسطيع حظر مالك السورس عام")
 return false 
 end
 database:sadd(bot_id..'GBan:User', userid)
@@ -4537,12 +4551,16 @@ if result.sender_user_id_ == tonumber(SUDO) then
 send(msg.chat_id_, msg.id_, " 🧞‍♂️ لا يمكنك كتم المطور الاساسي \n")
 return false 
 end
+if result.sender_user_id_ == tonumber(DevSoFi) then
+send(msg.chat_id_, msg.id_, " 🧞‍♂️ لا يمكنك كتم المطور الاساسي \n")
+return false 
+end
 if tonumber(result.sender_user_id_) == tonumber(bot_id) then  
 send(msg.chat_id_, msg.id_, " 🧞‍♂️ لا تسطيع كتم البوت عام")
 return false 
 end
 if tonumber(result.sender_user_id_) == tonumber(1753323063) then  
-send(msg.chat_id_, msg.id_, " 🧞‍♂️ لا تسطيع كتم مبرمج السورس عام")
+send(msg.chat_id_, msg.id_, " 🧞‍♂️ لا تسطيع كتم مالك السورس عام")
 return false 
 end
 database:sadd(bot_id..'Gmute:User', result.sender_user_id_)
@@ -4586,8 +4604,12 @@ if result.id_ == tonumber(SUDO) then
 send(msg.chat_id_, msg.id_, " 🧞‍♂️ لا يمكنك كتم المطور الاساسي \n")
 return false 
 end
+if result.id_ == tonumber(DevSoFi) then
+send(msg.chat_id_, msg.id_, " 🧞‍♂️ لا يمكنك كتم المطور الاساسي \n")
+return false 
+end
 if result.id_ == tonumber(1753323063) then
-send(msg.chat_id_, msg.id_, " 🧞‍♂️ لا تسطيع كتم مبرمج السورس عام \n")
+send(msg.chat_id_, msg.id_, " 🧞‍♂️ لا تسطيع كتم مالك السورس عام \n")
 return false 
 end
 usertext = '\n 🧞‍♂️ العضو ← ['..result.title_..'](t.me/'..(username or 'DV_POWER1')..')'
@@ -4622,6 +4644,10 @@ if userid == tonumber(SUDO) then
 send(msg.chat_id_, msg.id_, " 🧞‍♂️ لا يمكنك كتم المطور الاساسي \n")
 return false 
 end 
+if userid == tonumber(DevSoFi) then
+send(msg.chat_id_, msg.id_, " 🧞‍♂️ لا يمكنك كتم المطور الاساسي \n")
+return false 
+end 
 if database:sismember(bot_id.."Dev:SoFi:2", user_id) then
 send(msg.chat_id_, msg.id_, " 🧞‍♂️ لا يمكنك كتم مطور اساسي² \n")
 return false 
@@ -4631,7 +4657,7 @@ send(msg.chat_id_, msg.id_, " 🧞‍♂️ لا تسطيع كتم البوت ع
 return false 
 end
 if tonumber(userid) == tonumber(1753323063) then  
-send(msg.chat_id_, msg.id_, " 🧞‍♂️ لا تسطيع كتم مبرمج السورس عام")
+send(msg.chat_id_, msg.id_, " 🧞‍♂️ لا تسطيع كتم مالك السورس عام")
 return false 
 end
 database:sadd(bot_id..'Gmute:User', userid)
@@ -13079,7 +13105,7 @@ Msᴀɢ ~ #msgs
 [[
 ᯓ 𝟔𝟔𝟔 𖡋 #username •✟
 ᯓ 𝟔𝟔𝟔𖡋 #stast  •✟
-ᯓ 𝟔𝟔𝟔𖡋 #id  • ✟
+ᯓ 𝟔𝟔𝟔?? #id  • ✟
 ᯓ 𝟔𝟔𝟔𖡋 #msgs  •✟ 
 ᯓ 𝟔𝟔𝟔𖡋 #game •✟
 ᯓ 𝟔𝟔𝟔𖡋 𝗖𝗛 - @sasa_boody 🇪🇬
