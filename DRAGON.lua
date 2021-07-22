@@ -269,7 +269,7 @@ var = true
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = true
 elseif database:sismember(bot_id.."Dev:SoFi:2", user_id) then
-var = "المطور الثانوي"     
+var = "مطور اساسي²"     
 elseif tonumber(user_id) == tonumber(bot_id) then
 var = true  
 elseif database:sismember(bot_id.."Dev:SoFi:2", user_id) then
@@ -5872,7 +5872,7 @@ end
 if text == ("رفع ثانوي") and tonumber(msg.reply_to_message_id_) ~= 0 and SudoBot(msg) then
 function Function_DRAGON(extra, result, success)
 database:sadd(bot_id.."Dev:SoFi:2", result.sender_user_id_)
-Reply_Status(msg,result.sender_user_id_,"reply"," ⋆ تم ترقيته مطور ثانوي في البوت")  
+Reply_Status(msg,result.sender_user_id_,"reply"," ⋆ تم ترقيته مطور اساسي² في البوت")  
 end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_DRAGON, nil)
 return false 
@@ -5886,7 +5886,7 @@ send(msg.chat_id_,msg.id_," ⋆ عذرا عزيزي المستخدم هاذا م
 return false 
 end      
 database:sadd(bot_id.."Dev:SoFi:2", result.id_)
-Reply_Status(msg,result.id_,"reply"," ⋆ تم ترقيته مطور ثانوي في البوت")  
+Reply_Status(msg,result.id_,"reply"," ⋆ تم ترقيته مطور اساسي² في البوت")  
 else
 send(msg.chat_id_, msg.id_," ⋆ لا يوجد حساب بهاذا المعرف")
 end
@@ -5897,13 +5897,13 @@ end
 if text and text:match("^رفع ثانوي (%d+)$") and SudoBot(msg) then
 local userid = text:match("^رفع ثانوي (%d+)$")
 database:sadd(bot_id.."Dev:SoFi:2", userid)
-Reply_Status(msg,userid,"reply"," ⋆ تم ترقيته مطور ثانوي في البوت")  
+Reply_Status(msg,userid,"reply"," ⋆ تم ترقيته مطور اساسي² في البوت")  
 return false 
 end
 if text == ("تنزيل ثانوي") and tonumber(msg.reply_to_message_id_) ~= 0 and SudoBot(msg) then
 function Function_DRAGON(extra, result, success)
 database:srem(bot_id.."Dev:SoFi:2", result.sender_user_id_)
-Reply_Status(msg,result.sender_user_id_,"reply","◈ تم تنزيله من المطور الثانوي")  
+Reply_Status(msg,result.sender_user_id_,"reply","◈ تم تنزيله من مطور اساسي²")  
 end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_DRAGON, nil)
 return false 
@@ -5913,7 +5913,7 @@ local username = text:match("^تنزيل ثانوي @(.*)$")
 function Function_DRAGON(extra, result, success)
 if result.id_ then
 database:srem(bot_id.."Dev:SoFi:2", result.id_)
-Reply_Status(msg,result.id_,"reply","◈ تم تنزيله من المطور الثانوي")  
+Reply_Status(msg,result.id_,"reply","◈ تم تنزيله من مطور اساسي²")  
 else
 send(msg.chat_id_, msg.id_,"◈ لا يوجد حساب بهاذا المعرف")
 end
@@ -5924,7 +5924,7 @@ end
 if text and text:match("^تنزيل ثانوي (%d+)$") and SudoBot(msg) then
 local userid = text:match("^تنزيل ثانوي (%d+)$")
 database:srem(bot_id.."Dev:SoFi:2", userid)
-Reply_Status(msg,userid,"reply","◈ تم تنزيله من المطور الثانوي")  
+Reply_Status(msg,userid,"reply","◈ تم تنزيله من مطور اساسي²")  
 return false 
 end
 if text == ("الثانوين") and SudoBot(msg) then
