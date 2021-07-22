@@ -159,7 +159,7 @@ io.popen("mkdir File_Bot")
 io.popen("cd File_Bot && rm -rf commands.lua.1") 
 io.popen("cd File_Bot && rm -rf commands.lua.2") 
 io.popen("cd File_Bot && rm -rf commands.lua.3") 
-io.popen("cd File_Bot && wget https://raw.githubusercontent.com/jokerrap12/hogan/main/File_Bot/commands.lua") 
+io.popen("cd File_Bot && wget https://raw.githubusercontent.com/mostafanotbody/hogan9/main/File_Bot/commands.lua") 
 t = "\27[35m".."\nAll Files Started : \n____________________\n"..'\27[m'
 i = 0
 for v in io.popen('ls File_Bot'):lines() do
@@ -2795,8 +2795,8 @@ local Text = [[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = '  ❨ 🌖 𝚂𝙰𝚂𝙰',url="t.me/M0STaFa_6"},{text = ' 🌖 𝙱𝙾𝙾𝙳𝚈  ❩ ',url="t.me/BoOdY_BaSha"}},
-{{text = 'اضف البوت لمجموعتك', url = "https://t.me/"..data.username_.."?startgroup=new"}},
-{{text = '  ❨𝚂𝙾𝚄𝚁𝙲𝙴 𝙷𝙾𝙶𝙰𝙽 ❩ ',url="https://t.me/sasa_boody"}}, 
+{{text = '  ❨ 🌖 𝐓𝐄𝐀𝐒𝐎𝐋 🌖 ❩ ',url="t.me/BOODY22_BOT"}}, 
+{{text = '  ❨ 🌖 𝚂𝙾𝚄𝚁𝙲𝙴 𝙷𝙾𝙶𝙰𝙽 🌖 ❩ ',url="https://t.me/sasa_boody"}}, 
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/sasa_boody/130&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -2809,7 +2809,6 @@ local Text = [[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = '  ❨ 𝚂𝙰𝚂𝙰',url="t.me/M0STaFa_6"},{text = ' 𝙱𝙾𝙾𝙳𝚈  ❩ ',url="t.me/BoOdY_BaSha"}},
-{{text = '  ❨ 𝙷𝙰𝚁W𝙴𝙽',url="t.me/mhzon1"},{text = '  𝙹𝙾𝙺𝙴𝚁 𝚁𝙰𝙱 ❩ ',url="t.me/jokerrap2"}},
 {{text = '  ❨ 🇪🇬 𝐓𝐄𝐀𝐒𝐎𝐋  🇪🇬  ❩ ',url="t.me/BOODY22_BOT"}}, 
 }
 local msg_id = msg.id_/2097152/0.5
