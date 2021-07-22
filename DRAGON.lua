@@ -2794,7 +2794,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  ❨ 🌖 𝚂𝙰𝚂𝙰',url="t.me/M0STaFa_6"},{text = ' 🌖 𝙱𝙾𝙾𝙳𝚈  ❩ ',url="t.me/BoOdY_BaSha"}},
+{{text = '  ❨ 🌖 𝚂𝙰𝚂𝙰  ',url="t.me/M0STaFa_6"},{text = '  𝙱𝙾𝙾𝙳𝚈 🌖 ❩ ',url="t.me/BoOdY_BaSha"}},
 {{text = '  ❨ 🌖 𝐓𝐄𝐀𝐒𝐎𝐋 🌖 ❩ ',url="t.me/BOODY22_BOT"}}, 
 {{text = '  ❨ 🌖 𝚂𝙾𝚄𝚁𝙲𝙴 𝙷𝙾𝙶𝙰𝙽 🌖 ❩ ',url="https://t.me/sasa_boody"}}, 
 }
@@ -11325,7 +11325,7 @@ keyboard.inline_keyboard = {
 {{text = 'SOURCE.',url="t.me/sasa_boody"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/bhhggjhjg/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/teamhogan/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 if text == 'وااء' then
