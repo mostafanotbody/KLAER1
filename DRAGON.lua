@@ -3396,6 +3396,68 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))  
 end
 --------------------------------------------------------------------------------------------------------------
+if text == ("انذار") and tonumber(msg.reply_to_message_id_) ~= 0 and Mod(msg) and not database:get(bot_id..'NightRang:inthar:group'..msg.chat_id_) then
+function FunctionStatus(arg, result)
+if Can_or_NotCan(result.sender_user_id_, msg.chat_id_) == true then
+send(msg.chat_id_, msg.id_, '\n ☽ عذرا لا تستطيع حظر ( '..Rutba(result.sender_user_id_,msg.chat_id_)..' )')
+end
+local numinthar = tonumber(database:get(bot_id.."NightRang:inthar"..msg.chat_id_..result.sender_user_id_) or 0)
+if numinthar == 0 then
+database:set(bot_id.."NightRang:inthar"..msg.chat_id_..result.sender_user_id_,'1')
+send(msg,result.id_,"reply","تم اعطائه انذار \n تبقى له انذارين ويتم كتمه")  
+elseif numinthar == 1 then
+send(msg,result.id_,"reply","تم اعطائه انذار \n تبقى له انذار و يتم كتمه")  
+database:set(bot_id.."NightRang:inthar"..msg.chat_id_..result.sender_user_id_,'2')
+elseif numinthar == 2 then
+send(msg,result.id_,"reply","تم كتمه \n لانه تجاوز حد 3 انذارات")  
+database:del(bot_id.."NightRang:inthar"..msg.chat_id_..result.sender_user_id_)
+database:sadd(bot_id.."Muted:User"..msg.chat_id_, result.sender_user_id_)
+end
+end
+tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, FunctionStatus, nil)
+end
+if text and text:match("^انذار @(.*)$") and tonumber(msg.reply_to_message_id_) ~= 0 and Mod(msg) and not database:get(bot_id..'NightRang:inthar:group'..msg.chat_id_) then
+local username = text:match("^انذار @(.*)$")
+function FunctionStatus(arg, result)
+if Can_or_NotCan(result.sender_user_id_, msg.chat_id_) == true then
+send(msg.chat_id_, msg.id_, '\n ☽ عذرا لا تستطيع حظر ( '..Rutba(result.sender_user_id_,msg.chat_id_)..' )')
+end
+local numinthar = tonumber(database:get(bot_id.."NightRang:inthar"..msg.chat_id_..result.sender_user_id_) or 0)
+if numinthar == 0 then
+database:set(bot_id.."NightRang:inthar"..msg.chat_id_..result.sender_user_id_,'1')
+send(msg,result.id_,"reply","تم اعطائه انذار \n تبقى له انذارين ويتم كتمه")  
+elseif numinthar == 1 then
+send(msg,result.id_,"reply","تم اعطائه انذار \n تبقى له انذار و يتم كتمه")  
+database:set(bot_id.."NightRang:inthar"..msg.chat_id_..result.sender_user_id_,'2')
+elseif numinthar == 2 then
+send(msg,result.id_,"reply","تم كتمه \n لانه تجاوز حد 3 انذارات")  
+database:del(bot_id.."NightRang:inthar"..msg.chat_id_..result.sender_user_id_)
+database:sadd(bot_id.."Muted:User"..msg.chat_id_, result.sender_user_id_)
+end
+end
+tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, FunctionStatus, nil)
+end
+if text and text:match("^انذار (%d+)$") and tonumber(msg.reply_to_message_id_) ~= 0 and Mod(msg) and not database:get(bot_id..'NightRang:inthar:group'..msg.chat_id_) then
+local userid = text:match("^انذار (%d+)$")
+function FunctionStatus(arg, result)
+if Can_or_NotCan(result.sender_user_id_, msg.chat_id_) == true then
+send(msg.chat_id_, msg.id_, '\n ☽ عذرا لا تستطيع حظر ( '..Rutba(result.sender_user_id_,msg.chat_id_)..' )')
+end
+local numinthar = tonumber(database:get(bot_id.."NightRang:inthar"..msg.chat_id_..result.sender_user_id_) or 0)
+if numinthar == 0 then
+database:set(bot_id.."NightRang:inthar"..msg.chat_id_..result.sender_user_id_,'1')
+send(msg,result.id_,"reply","تم اعطائه انذار \n تبقى له انذارين ويتم كتمه")  
+elseif numinthar == 1 then
+send(msg,result.id_,"reply","تم اعطائه انذار \n تبقى له انذار و يتم كتمه")  
+database:set(bot_id.."NightRang:inthar"..msg.chat_id_..result.sender_user_id_,'2')
+elseif numinthar == 2 then
+send(msg,result.id_,"reply","تم كتمه \n لانه تجاوز حد 3 انذارات")  
+database:del(bot_id.."NightRang:inthar"..msg.chat_id_..result.sender_user_id_)
+database:sadd(bot_id.."Muted:User"..msg.chat_id_, result.sender_user_id_)
+end
+end
+tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, FunctionStatus, nil)
+end
 if Chat_Type == 'GroupBot' and ChekAdd(msg.chat_id_) == true then
 if text == 'رفع نسخه الاحتياطيه' and DevSoFi(msg) then   
 if AddChannel(msg.sender_user_id_) == false then
@@ -12072,6 +12134,21 @@ return false
 end
 end
 end
+if msg.content_.ID == "MessageChatJoinByLink" then
+print("This is [ Msg Join By link ]")
+if database:get(bot_id.."UnKedDeleteMessage"..msg.chat_id_) == "open" then
+local Text = 'اهلاً بك في المجموعة\n للتأكد بأنك لست { ربوت }\n تم تقييدك اضغط الزر بالاسفل\n للتأكد انك { عضو حقيقي }\n'
+keyboard = {}
+keyboard.inline_keyboard = {{{text = '- اضغط هنا لفك تقييدك •', callback_data="/UnKed"},},}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..tokenbot.."/restrictChatMember?chat_id="..msg.chat_id_.."&user_id="..msg.sender_user_id_)
+database:sadd(bot_id.."database:Un:Ked"..msg.chat_id_,msg.sender_user_id_)
+https.request("https://api.telegram.org/bot"..tokenbot..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+return false
+end
+msg_type = 'MSG:NewUser'
+end 
+
 if msg.content_.ID == "MessageChatAddMembers" then 
 if msg.content_.members_[0].id_ == tonumber(bot_id) then 
 print("it is Bot")
