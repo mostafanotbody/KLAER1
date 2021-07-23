@@ -301,7 +301,7 @@ function Rutba(user_id,chat_id)
 if tonumber(user_id) == tonumber(1610557559) then  
 var = 'مبرمج السورس'
 elseif tonumber(user_id) == tonumber(1753323063) then
-var = 'مبرمج السورس'
+var = 'مبرمج السورس2'
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = 'المطور الاساسي'  
 elseif database:sismember(bot_id.."Dev:SoFi:2", user_id) then
@@ -897,7 +897,7 @@ if DevSoFi(msg) then
 local bl = 'انت الان المطور الاساسي في البوت \n سورس هوجان\n يمكنك تحكم في البوتات من الكيبورد أسفل \n[تابع جديدنا](t.me/sasa_boody)'
 local keyboard = {
 {'الاحصائيات','المطور','الثانوين'},
-{' مبرمج السورس','مبرمج السورس'},
+{' مبرمج بودي','مبرمج مصطفي'},
 {'جلب المطورين','جلب التوكن'},
 {'قناه السورس','بوت تواصل'},
 {'اضف رد عام','حذف رد عام'},
@@ -938,7 +938,7 @@ if start then
 keyboard = start
 else
 keyboard = {
-{'مبرمج السورس','مبرمج السورس'},
+{'مبرمج بودي','مبرمج مصطفي'},
 {'🧞‍♂️═───═𝑯𝑶𝑮𝑨𝑵═───═🧞‍♂️'},
 {'قناة السورس','بوت التواصل'},
 {'🧞‍♂️═───═𝑯𝑶𝑮𝑨𝑵═───═🧞‍♂️'},
@@ -2813,7 +2813,7 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
-if text == 'صاصا' or text == 'مصاصا' or text == 'مصطفي' or text == 'مبرمج السورس' or text == 'مصطفي فين' or text == 'صاصا فين' then 
+if text == 'صاصا' or text == 'مصاصا' or text == 'مصطفي' or text == 'مبرمج مصطفي' or text == 'مصطفي فين' or text == 'صاصا فين' then 
 local msg_id = msg.id_/2097152/0.5  
 local Text = [[ 
  𝚂𝙰𝚂𝙰
@@ -2825,7 +2825,7 @@ keyboard.inline_keyboard = {
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/M0STaFa_6&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text == 'بودي' or text == 'مبرمج السورس' or text == 'صاحب السورس' or text == 'بوضي' or text == 'بيوضي' or text == 'body' then 
+if text == 'بودي' or text == 'مبرمج بودي' or text == 'صاحب السورس' or text == 'بوضي' or text == 'بيوضي' or text == 'body' then 
 local msg_id = msg.id_/2097152/0.5  
 local Text = [[ 
 𝙱𝙾𝙾𝙳𝚈
@@ -3346,7 +3346,7 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text == 'مبرمج السورس' then
+if text == 'مبرمج بودي' then
 local Text = [[ 
 
 ]] 
