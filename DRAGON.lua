@@ -4970,40 +4970,34 @@ if text == 'تحديث' and DevSoFi(msg) then
 dofile('DRAGON.lua')  
 send(msg.chat_id_, msg.id_, ' 🧞‍♂️ تم تحديث جميع الملفات') 
 end 
-if text == ("مسح قائمه العام") and DevSoFi(msg) then
+if text == ("مسح قائمه العام") and SudoBot(msg) then
 database:del(bot_id..'GBan:User')
-send(msg.chat_id_, msg.id_, '\n 🧞‍♂️ تم مسح قائمه العام')
+send(msg.chat_id_, msg.id_, '\n• تم مسح قائمه العام')
 return false
 end
-if text == ("مسح الكتم العام") and DevSoFi(msg) then
-database:del(bot_id..'Gmute:User')
-send(msg.chat_id_, msg.id_, '\n 🧞‍♂️ تم مسح قائمه العام')
-return false
-end
-if text == ("قائمه العام") and DevSoFi(msg) then
+if text == ("قائمة العام") and SudoBot(msg) then
 local list = database:smembers(bot_id..'GBan:User')
-t = "\n 🧞‍♂️ قائمة المحظورين عام \n🧞‍♂️═───═𝑯𝑶𝑮𝑨𝑵═───═🧞‍♂️\n"
+t = "\n• قائمة المحظورين عام \n━━━━━━━━━━━\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
-t = t..""..k.."- ([@"..username.."])\n"
+t = t.."*︙"..k.."︙> [@"..username.."]•\n*"
 else
-t = t..""..k.."- (`"..v.."`)\n"
 end
 end
 if #list == 0 then
-t = " 🧞‍♂️ لا يوجد محظورين عام"
+t = "• لا يوجد محظورين عام"
 end
 send(msg.chat_id_, msg.id_, t)
 return false
 end
-if text == ("حظر عام") and msg.reply_to_message_id_ and DevSoFi(msg) then
+if text == ("حظر عام") and msg.reply_to_message_id_ and SudoBot(msg) then
 if AddChannel(msg.sender_user_id_) == false then
-local sasa_boody = database:get(bot_id..'text:ch:user')
-if sasa_boody then
-send(msg.chat_id_, msg.id_,'['..sasa_boody..']')
+local textchuser = database:get(bot_id..'text:ch:user')
+if textchuser then
+send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' 🧞‍♂️ لا تستطيع استخدام البوت \n  🧞‍♂️ يرجى الاشتراك بالقناه اولا \n  🧞‍♂️ اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,'• عذراً عـليك الاشـتࢪاك في قنـاة البـوت اولآ\n•قناة الاشتراك ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
