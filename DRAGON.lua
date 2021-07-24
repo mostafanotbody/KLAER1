@@ -4482,10 +4482,6 @@ if result.sender_user_id_ == tonumber(SUDO) then
 send(msg.chat_id_, msg.id_, " 🧞‍♂️ لا يمكنك حظر المطور الاساسي \n")
 return false 
 end
-if result.sender_user_id_ == tonumber"Dev:SoFi:2" then
-send(msg.chat_id_, msg.id_, " 🧞‍♂️ لا يمكنك حظر المطور الاساسي² \n")
-return false 
-end
 if tonumber(result.sender_user_id_) == tonumber(bot_id) then  
 send(msg.chat_id_, msg.id_, " 🧞‍♂️ لا تسطيع حظر البوت عام")
 return false 
@@ -4537,10 +4533,6 @@ if result.id_ == tonumber(SUDO) then
 send(msg.chat_id_, msg.id_, " 🧞‍♂️ لا يمكنك حظر المطور الاساسي \n")
 return false 
 end
-if result.sender_user_id_ == tonumber"Dev:SoFi:2" then
-send(msg.chat_id_, msg.id_, " 🧞‍♂️ لا يمكنك حظر المطور الاساسي² \n")
-return false 
-end
 if result.id_ == tonumber(1753323063) then
 send(msg.chat_id_, msg.id_, " 🧞‍♂️ لا تسطيع حظر مبرمج السورس عام \n")
 return false 
@@ -4575,10 +4567,6 @@ return false
 end
 if userid == tonumber(SUDO) then
 send(msg.chat_id_, msg.id_, " 🧞‍♂️ لا يمكنك حظر المطور الاساسي \n")
-return false 
-end
-if result.sender_user_id_ == tonumber"Dev:SoFi:2" then
-send(msg.chat_id_, msg.id_, " 🧞‍♂️ لا يمكنك حظر المطور الاساسي² \n")
 return false 
 end
 if tonumber(userid) == tonumber(bot_id) then  
@@ -4620,10 +4608,6 @@ return false
 end
 if result.sender_user_id_ == tonumber(SUDO) then
 send(msg.chat_id_, msg.id_, " 🧞‍♂️ لا يمكنك كتم المطور الاساسي \n")
-return false 
-end
-if result.sender_user_id_ == tonumber"Dev:SoFi:2" then
-send(msg.chat_id_, msg.id_, " 🧞‍♂️ لا يمكنك كتم المطور الاساسي² \n")
 return false 
 end
 if tonumber(result.sender_user_id_) == tonumber(bot_id) then  
@@ -4675,10 +4659,6 @@ if result.id_ == tonumber(SUDO) then
 send(msg.chat_id_, msg.id_, " 🧞‍♂️ لا يمكنك كتم المطور الاساسي \n")
 return false 
 end
-if result.sender_user_id_ == tonumber"Dev:SoFi:2" then
-send(msg.chat_id_, msg.id_, " 🧞‍♂️ لا يمكنك كتم المطور الاساسي² \n")
-return false 
-end
 if result.id_ == tonumber(1753323063) then
 send(msg.chat_id_, msg.id_, " 🧞‍♂️ لا تسطيع كتم مبرمج السورس عام \n")
 return false 
@@ -4714,11 +4694,7 @@ end
 if userid == tonumber(SUDO) then
 send(msg.chat_id_, msg.id_, " 🧞‍♂️ لا يمكنك كتم المطور الاساسي \n")
 return false 
-end 
-if database:sismember(bot_id.."Dev:SoFi:2", user_id) then
-send(msg.chat_id_, msg.id_, " 🧞‍♂️ لا يمكنك كتم المطور الاساسي² \n")
-return false 
-end 
+end  
 if tonumber(userid) == tonumber(bot_id) then  
 send(msg.chat_id_, msg.id_, " 🧞‍♂️ لا تسطيع كتم البوت عام")
 return false 
@@ -12964,7 +12940,7 @@ Msᴀɢ ~ #msgs
 [[
 🇪🇬 - 𝄬 username . #username  𓃠
 🇪🇬 - 𝄬 stast . #stast  ??
-🇪🇬 - ?? id . #id 𓃠
+??🇬 - ?? id . #id 𓃠
 🇪🇬 - 𝄬 gmas . #gmas 𓃠
 🇪🇬 - 𝄬 msgs . #msgs  𓃠
 🇪🇬 - 𝄬 𝗖𝗛 - @sasa_boody 💞.
