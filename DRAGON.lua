@@ -946,17 +946,7 @@ keyboard = {
 {'🧞‍♂️═───═𝑯𝑶𝑮𝑨𝑵═───═🧞‍♂️'},
 {'انصحنى','كتبات'},
 {'🧞‍♂️═───═𝑯𝑶𝑮𝑨𝑵═───═🧞‍♂️'},
-{'سمايلات'},
-{'🧞‍♂️═───═𝑯𝑶𝑮𝑨𝑵═───═🧞‍♂️'},
-{'الاسرع','حزوره'},
-{'🧞‍♂️═───═𝑯𝑶𝑮𝑨𝑵═───═🧞‍♂️'},
-{'المختلف','رياضيات'},
-{'🧞‍♂️═───═𝑯𝑶𝑮𝑨𝑵═───═🧞‍♂️'},
-{'انكليزي','امثله'},
-{'🧞‍♂️═───═𝑯𝑶𝑮𝑨𝑵═───═🧞‍♂️'},
-{'العكس','معاني'},
-{'🧞‍♂️═───═𝑯𝑶𝑮𝑨𝑵═───═🧞‍♂️'},
-{'خمن','محيبس'},
+{'تعطيل مريم', 'تفعيل مريم',' مريم'},
 {'🧞‍♂️═───═𝑯𝑶𝑮𝑨𝑵═───═🧞‍♂️'},
 {'مطور','انا مين'},
 {'🧞‍♂️═───═𝑯𝑶𝑮𝑨𝑵═───═🧞‍♂️'},
@@ -14539,6 +14529,152 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
+end
+end
+if text == "تفعيل مريم"  then
+if Constructor(msg) then  
+database:set(bot_id.."my_maryam:status"..msg.chat_id_,true) 
+send(msg.chat_id_, msg.id_," 🕊تـم تـفعـيل مريم") 
+return false  
+end
+end
+
+if text == "تعطيل مريم"  then
+if Constructor(msg) then  
+database:del(bot_id.."my_maryam:status"..msg.chat_id_) 
+send(msg.chat_id_, msg.id_," 🕊 تـم تـعـطـيل مريم") 
+return false end
+end
+if text == "مريم" then
+local my_ph = database:get(bot_id.."my_maryam:status"..msg.chat_id_)
+if not my_ph then
+send(msg.chat_id_, msg.id_," 🕊مريم  معطله") 
+return false  
+end
+if not database:get(bot_id..'lock:add'..msg.chat_id_) then
+local texting = {"هل انت جاهز ؟🧟‍♀🧟‍♂ ❲لو هتكمل ارسل يلا❳"}
+send(msg.chat_id_, msg.id_, ''..texting[math.random(#texting)]..'')
+end
+end
+if text == "يلا" or text == "هيا بنا"  then
+local my_ph = database:get(bot_id.."my_maryam:status"..msg.chat_id_)
+if not my_ph then
+return false  
+end
+if not database:get(bot_id..'lock:add'..msg.chat_id_) then
+local texting = {" ؟لا تصدر اي صوت ! 🧟‍♀🧟‍♂ ❲لو هتكمل ارسال حاضر ❳"}
+send(msg.chat_id_, msg.id_, ''..texting[math.random(#texting)]..'')
+end
+end
+if text == "ماشي" or text == "حاضر"  then
+local my_ph = database:get(bot_id.."my_maryam:status"..msg.chat_id_)
+if not my_ph then
+return false  
+end
+if not database:get(bot_id..'lock:add'..msg.chat_id_) then
+local texting = {" لقد وصلنا الى المنزل شكراَ جزيلَ انتطرني ثواني وسوف اعود! 🧟‍♀🧟‍♂ ❲لو هتكمل ارسال مستني ❳"}
+send(msg.chat_id_, msg.id_, ''..texting[math.random(#texting)]..'')
+end
+end
+if text == "مستني" or text == "منتظر"  then
+local my_ph = database:get(bot_id.."my_maryam:status"..msg.chat_id_)
+if not my_ph then
+return false  
+end
+if not database:get(bot_id..'lock:add'..msg.chat_id_) then
+local texting = {" لقد عودت إليك ظهر شيئ 🧟‍♂🧟‍♀ ❲لو هتكمل إرسال احد ما خرج من المنزل! 🧟‍♀🧟‍♂❳"}
+send(msg.chat_id_, msg.id_, ''..texting[math.random(#texting)]..'')
+end
+end
+if text == "احد ما خرج من المنزل! 🧟‍♀🧟‍♂" or text == "احد ما خرج من المنزل"  then
+local my_ph = database:get(bot_id.."my_maryam:status"..msg.chat_id_)
+if not my_ph then
+return false  
+end
+if not database:get(bot_id..'lock:add'..msg.chat_id_) then
+local texting = {"هيا نذهب داخل المنزل🧟‍♀🧟‍♂ ❲لو هتكمل ارسال هيا❳"}
+send(msg.chat_id_, msg.id_, ''..texting[math.random(#texting)]..'')
+end
+end
+if text == "هيا"  then
+local my_ph = database:get(bot_id.."my_maryam:status"..msg.chat_id_)
+if not my_ph then
+return false  
+end
+if not database:get(bot_id..'lock:add'..msg.chat_id_) then
+local texting = {" نحنو نتوه في هذه المكان🧟‍♀🧟‍♂❲لو هتكمل ارسال تعالي نذهب الي الضوء❳"}
+send(msg.chat_id_, msg.id_, ''..texting[math.random(#texting)]..'')
+end
+end
+if text == "تعالي نذهب الي الضوء"  then
+local my_ph = database:get(bot_id.."my_maryam:status"..msg.chat_id_)
+if not my_ph then
+return false  
+end
+if not database:get(bot_id..'lock:add'..msg.chat_id_) then
+local texting = {"❲لو هتكمل ارسل ياالهي كان هناك❳ 🧟‍♀🧟‍♂لايوجد ضوء هناك انظر"}
+send(msg.chat_id_, msg.id_, ''..texting[math.random(#texting)]..'')
+end
+end
+if text == "ياالهي كان هناك" then
+local my_ph = database:get(bot_id.."my_maryam:status"..msg.chat_id_)
+if not my_ph then
+return false  
+end
+if not database:get(bot_id..'lock:add'..msg.chat_id_) then
+local texting = {"تع نذهب الي الباب الرئيسي🧟‍♀🧟‍♂ ❲لو هتكمل ارسل انهو مغلق❳"}
+send(msg.chat_id_, msg.id_, ''..texting[math.random(#texting)]..'')
+end
+end
+if text == "انهو مغلق" then
+local my_ph = database:get(bot_id.."my_maryam:status"..msg.chat_id_)
+if not my_ph then
+return false  
+end
+if not database:get(bot_id..'lock:add'..msg.chat_id_) then
+local texting = {"انها النهايه  ❲هتكمل ولا لا❳"}
+send(msg.chat_id_, msg.id_, ''..texting[math.random(#texting)]..'')
+end
+end
+if text == "هكمل" then
+local my_ph = database:get(bot_id.."my_maryam:status"..msg.chat_id_)
+if not my_ph then
+return false  
+end
+if not database:get(bot_id..'lock:add'..msg.chat_id_) then
+local texting = {"سارسل اليك اختيارت لو حليت صح ستنجو من العقاب لو خطأ سيقوم عليك العقاب🧟‍♀🧟‍♂❲عدد يقبل القسمة على 2,3,4,5,6 وعند القسمة في كل مرة يتبقى واحد، ما هو العدد؟❳❲61،44,00,121,90،99,70❳"}
+
+send(msg.chat_id_, msg.id_, ''..texting[math.random(#texting)]..'')
+end
+end
+if text == "لا" then
+local my_ph = database:get(bot_id.."my_maryam:status"..msg.chat_id_)
+if not my_ph then
+return false  
+end
+if not database:get(bot_id..'lock:add'..msg.chat_id_) then
+local texting = {"هي انت ستندم سأقتلك🧟‍♀🧟‍♂"}
+send(msg.chat_id_, msg.id_, ''..texting[math.random(#texting)]..'')
+end
+end
+if text == "61" then
+local my_ph = database:get(bot_id.."my_maryam:status"..msg.chat_id_)
+if not my_ph then
+return false  
+end
+if not database:get(bot_id..'lock:add'..msg.chat_id_) then
+local texting = {"لقد فازت ونجوت من العقاب 👻🌟"}
+send(msg.chat_id_, msg.id_, ''..texting[math.random(#texting)]..'')
+end
+end
+if text == "99" or text == "70" or text == "44" or text == "00" or text == "121" or text == "90" then
+local my_ph = database:get(bot_id.."my_maryam:status"..msg.chat_id_)
+if not my_ph then
+return false  
+end
+if not database:get(bot_id..'lock:add'..msg.chat_id_) then
+local texting = {"قل لواحد ماتعرفه عطني كف خطأ العقاب هوا ؟؟","خطأ العقاب هوا ؟؟سو مشهد تمثيلي عن مصرية بتولد","خطأ العقاب هوا ؟؟صور اي شيء يطلبه منك الاعبين","خطأ العقاب هوا ؟؟البس طرحه امك او اختك ","خطأ العقاب هوا ؟؟لا خلاص معتش في سمحتك"," خطأ العقاب هوا ؟؟اتصل لاخوك و قول له انك سويت حادث و الخ....","خطأ العقاب هوا ؟؟تكلم باللغة الانجليزية الين يجي دورك مرة ثانية لازم تتكلم اذا ما تكلمت تنفذ عقاب ثاني","خطأ العقاب هوا ؟؟تروح عند شخص تقول له ","خطأ العقاب هوا ؟؟ اتصل على ابوك و قول له انك رحت مع بنت و احين هي حامل....","خطأ العقاب هوا ؟؟اتصل على امك و قول لها انك ","خطأ العقاب هوا ؟؟اذا انت ولد اكسر اغلى او احسن عطور عندك اذا انتي بنت اكسري الروج حقك او الميك اب حقك"}
+send(msg.chat_id_, msg.id_, ''..texting[math.random(#texting)]..'')
 end
 end
 if text == "بتحبو" or text == "بتحب دا" then
