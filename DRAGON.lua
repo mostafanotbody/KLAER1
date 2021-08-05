@@ -14534,7 +14534,7 @@ end
 if text == "تفعيل مريم"  then
 if Constructor(msg) then  
 database:set(bot_id.."my_maryam:status"..msg.chat_id_,true) 
-send(msg.chat_id_, msg.id_," 🕊تـم تـفعـيل مريم") 
+send(msg.chat_id_, msg.id_,"😈 تم تفعيل مريم ابدا العب") 
 return false  
 end
 end
@@ -14542,13 +14542,13 @@ end
 if text == "تعطيل مريم"  then
 if Constructor(msg) then  
 database:del(bot_id.."my_maryam:status"..msg.chat_id_) 
-send(msg.chat_id_, msg.id_," 🕊 تـم تـعـطـيل مريم") 
+send(msg.chat_id_, msg.id_," 😈لقد تم تعطيل اللعبه") 
 return false end
 end
 if text == "مريم" then
 local my_ph = database:get(bot_id.."my_maryam:status"..msg.chat_id_)
 if not my_ph then
-send(msg.chat_id_, msg.id_," 🕊مريم  معطله") 
+send(msg.chat_id_, msg.id_,"😈 مريم معطله الان ") 
 return false  
 end
 if not database:get(bot_id..'lock:add'..msg.chat_id_) then
