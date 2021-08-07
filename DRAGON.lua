@@ -9038,7 +9038,7 @@ end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
 end
 if text == ("رفع مشرف") and tonumber(msg.reply_to_message_id_) ~= 0 and Constructor(msg) then
-function Function_Tshake(extra, result, success)
+function Function_DRAGON(extra, result, success)
 https.request("https://api.telegram.org/bot" .. token .. "/promoteChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.sender_user_id_.."&can_invite_users=True")
 local Text = "💢┇تم ترقيته مشرف"
 keyboard = {} 
@@ -9050,12 +9050,12 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
-tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_Tshake, nil)
+tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_DRAGON, nil)
 return false
 end
 if text and text:match("^رفع مشرف @(.*)$") and Constructor(msg) then
 local username = text:match("^رفع مشرف @(.*)$")
-function Function_Tshake(extra, result, success)
+function Function_DRAGON(extra, result, success)
 if result.id_ then
 if (result and result.type_ and result.type_.ID == "ChannelChatInfo") then
 send(msg.chat_id_,msg.id_,"💢┇عذرا عزيزي المستخدم هاذا معرف قناة يرجى استخدام الامر بصوره صحيحه !")   
@@ -9075,20 +9075,20 @@ else
 send(msg.chat_id_, msg.id_,"💢┇لا يوجد حساب بهاذا المعرف")
 end
 end
-tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_Tshake, nil)
+tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_DRAGON, nil)
 return false
 end
 if text == ("تنزيل مشرف") and tonumber(msg.reply_to_message_id_) ~= 0 and Constructor(msg) then
-function Function_Tshake(extra, result, success)
+function Function_DRAGON(extra, result, success)
 Reply_Status(msg,result.sender_user_id_,"reply","💢┇تم تنزيله من المشرفين")  
 https.request("https://api.telegram.org/bot" .. token .. "/promoteChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.sender_user_id_.."&can_manage_chat=false&can_manage_voice_chats=false&can_manage_voice_chats=false&can_delete_messages=false&can_invite_users=false&can_restrict_members=false&can_pin_messages=false&can_promote_members=false")
 end
-tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_Tshake, nil)
+tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_DRAGON, nil)
 return false
 end
 if text and text:match("^تنزيل مشرف @(.*)$") and Constructor(msg) then
 local username = text:match("^تنزيل مشرف @(.*)$")
-function Function_Tshake(extra, result, success)
+function Function_DRAGON(extra, result, success)
 if result.id_ then
 if (result and result.type_ and result.type_.ID == "ChannelChatInfo") then
 send(msg.chat_id_,msg.id_,"💢┇عذرا عزيزي المستخدم هاذا معرف قناة يرجى استخدام الامر بصوره صحيحه !")   
@@ -9100,7 +9100,7 @@ else
 send(msg.chat_id_, msg.id_,"💢┇لا يوجد حساب بهاذا المعرف")
 end
 end
-tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_Tshake, nil)
+tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_DRAGON, nil)
 return false
 end
 
