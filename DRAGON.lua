@@ -11863,7 +11863,7 @@ local msg_id = msg.id_/2097152/0.5
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = 'قناه السورس', url="http://t.me/sasa_boody},
+{text = '  ❨  𝚂𝙾𝚄𝚁𝙲𝙴 𝙷𝙾𝙶𝙰𝙽  ❩ ',url="https://t.me/sasa_boody"},
 },
 }
 local function getpro(extra, result, success) 
