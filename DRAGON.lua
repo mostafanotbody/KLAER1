@@ -9723,6 +9723,19 @@ database:del(bot_id.."my_photo:status"..msg.chat_id_)
 send(msg.chat_id_, msg.id_," 🧞‍♂️ تم تعطيل الصوره") 
 return false end
 end
+if text == "تفعيل نسبه جمالي" or text == 'تفعيل جمالي' then
+if Constructor(msg) then  
+database:set(bot_id.."pp_photo:status"..msg.chat_id_,true) 
+send(msg.chat_id_, msg.id_," 🕊 تم تفعيل نسبه جمالك") 
+return false  
+end
+end
+if text == "تعطيل جمالي" or text == 'تعطيل نسبه جمالي' then
+if Constructor(msg) then  
+database:del(bot_id.."pp_photo:status"..msg.chat_id_) 
+send(msg.chat_id_, msg.id_," 🕊 تم تعطيل نسبه جمالك") 
+return false end
+end
 if text == "الرابط" then 
 local status_Link = database:get(bot_id.."Link_Group:status"..msg.chat_id_)
 if not status_Link then
@@ -12446,6 +12459,28 @@ local my_ph = database:get(bot_id.."my_photo:status"..msg.chat_id_)
 if not my_ph then
 send(msg.chat_id_, msg.id_," 🧞‍♂️ الصوره معطله") 
 return false  
+end
+
+if text == "نسبه جمالي" or text == "جمالي" then
+if Sudo(msg) then
+local function getpro(extra, result, success)
+if result.photos_[0] then
+sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, result.photos_[0].sizes_[1].photo_.persistent_id_," نسبه جمالك هي 500% \nعشان مطور وكدا لازم اطبله 😹♥️\n" )
+else
+send(msg.chat_id_, msg.id_,'لا تمتلك صوره في حسابك', 1, 'md')
+  end end
+tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil)
+else
+local function getpro(extra, result, success)
+local nspp = {"10","20","30","35","75","34","66","82","23","19","55","80","63","32","27","89","99","98","79","100","8","3","6","0",}
+local rdbhoto = nspp[math.random(#nspp)]
+if result.photos_[0] then
+sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, result.photos_[0].sizes_[1].photo_.persistent_id_," نسبه جمالك هي "..rdbhoto.."🙄♥️" )
+else
+send(msg.chat_id_, msg.id_,'لا تمتلك صوره في حسابك', 1, 'md')
+  end end
+tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil)
+end
 end
 local function getpro(extra, result, success)
 if result.photos_[0] then
