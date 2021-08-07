@@ -1124,6 +1124,40 @@ os.execute('wget https://raw.githubusercontent.com/mostafanotbody/hogan9/main/DR
 send(msg.chat_id_, msg.id_,'🧞‍♂️ تم تحديث السورس')
 dofile('DRAGON.lua')  
 end
+if text == 'جلب المشتركين' and DevSoFi(msg) then 
+local list = database:smembers(bot_id..'User_Bot') 
+local t = '{"users":['   
+for k,v in pairs(list) do 
+if k == 1 then 
+t =  t..'"'..v..'"' 
+else 
+t =  t..',"'..v..'"' 
+end 
+end 
+t = t..']}' 
+local File = io.open('./users.json', "w") 
+File:write(t) 
+File:close() 
+sendDocument(msg.chat_id_, msg.id_,0, 1, nil, './users.json', ' عدد المشتركين { '..#list..'}') 
+end
+
+if text == 'رفع المشتركين' and DevSoFi(msg) then 
+function by_reply(extra, result, success)    
+if result.content_.document_ then  
+local ID_FILE = result.content_.document_.document_.persistent_id_  
+local File_Name = result.content_.document_.file_name_ 
+local File = json:decode(https.request('https://api.telegram.org/bot'.. token..'/getfile?file_id='..ID_FILE) )  
+download_to_file('https://api.telegram.org/file/bot'..token..'/'..File.result.file_path, ''..File_Name)  
+local info_file = io.open('./users.json', "r"):read('*a') 
+local users = JSON.decode(info_file) 
+for k,v in pairs(users.users) do 
+database:sadd(bot_id..'User_Bot',v)  
+end 
+send(msg.chat_id_,msg.id_,'تم رفع المشتركين ') 
+end    
+end 
+tdcli_function ({ ID = "GetMessage", chat_id_ = msg.chat_id_, message_id_ = tonumber(msg.reply_to_message_id_) }, by_reply, nil) 
+end
 if text == 'الاصدار ' and DevSoFi(msg) then 
 database:del(bot_id..'Srt:Bot') 
 send(msg.chat_id_, msg.id_,' 🧞‍♂️ اصدار سورس هوجان { s: 6.7}')
@@ -1211,6 +1245,9 @@ keyboard.inline_keyboard = {
 {text = ''..result.first_name_..'', url = "https://t.me/"..result.username_..""},
 },
 {{text = '  ❨   𝓢𝓞𝓤𝓡𝓒𝓔    ❩ ', url="t.me/sasa_boody"}},
+{
+{text = 'اضف البوت الي مجموعتك ↯' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"},
+},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id='..msg.chat_id_..'&caption='..URL.escape(Name)..'&photo='..taha.photos_[0].sizes_[1].photo_.persistent_id_..'&reply_to_message_id='..msg_id..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
