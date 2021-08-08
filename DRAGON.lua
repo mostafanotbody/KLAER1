@@ -11971,7 +11971,39 @@ username = 'لا يوجد '
 end
 if result.status_.ID == "UserStatusRecently" and result.profile_photo_ ~= false then
 sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, ban.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n● رتبتك ⋙ '..Rutba(msg.sender_user_id_,msg.chat_id_)..' \n ● البايو ⋙ '..getbioY..' \n')
+else 
+if result.status_.ID == "UserStatusEmpty" and result.profile_photo_ == false then
+send(msg.chat_id_, msg.id_,'[\n ¦✙ بيك عزيزي 「'..Name..'」 \n¦• 𝚄𝚂𝙴𝚁 ↝  「'..Name..'」    ↝💘\n¦• 𝙼𝚂𝙶𝚂↝ 「'..Msguser..'」.   ↝💘\n ¦• 𝚁𝙰𝙽𝙺↝ 「'..Rutba(msg.sender_user_id_,msg.chat_id_)..'」    ↝💘\n¦• 𝙸𝙳↝  「'..msg.sender_user_id_..'」    ↝💘\n¦• 𝒄𝒉↝   「@sasa_boody」 ↝🇧??\n')
+else
+send(msg.chat_id_, msg.id_, '\n ● الصوره ⇜ ليس لديك صور في حسابك'..'[\n¦• 𝚄𝚂𝙴𝚁 ↝ 「'..username..'」\n¦• 𝙼𝚂𝙶𝚂↝ 「'..Msguser..'」\n¦• 𝙸𝙳↝  「'..msg.sender_user_id_..'」\n¦• 𝒄𝒉↝  「@sasa_boody」\n')
+end 
+end
+end
+else
+local get_id_text = bot_data:get(ban_id.."KLISH:ID"..msg.chat_id_)
+if get_id_text then
+get_id_text = get_id_text:gsub('#rdphoto',rdphoto) 
+get_id_text = get_id_text:gsub('#bio',getbioY) 
+get_id_text = get_id_text:gsub('#id',iduser) 
+get_id_text = get_id_text:gsub('#username',username) 
+get_id_text = get_id_text:gsub('#msgs',Msguser) 
+get_id_text = get_id_text:gsub('#edit',edit) 
+get_id_text = get_id_text:gsub('#stast',rtp) 
+get_id_text = get_id_text:gsub('#auto',interaction) 
+get_id_text = get_id_text:gsub('#game',NUMPGAME) 
+get_id_text = get_id_text:gsub('#photos',photps) 
+send(msg.chat_id_, msg.id_,'['..get_id_text..']')   
+else
+send(msg.chat_id_, msg.id_,'[\n¦• 𝚄𝚂𝙴𝚁 ↝  '..username..' \n¦• 𝙼𝚂𝙶𝚂↝ '..Msguser..' \n¦• 𝚁𝙰𝙽𝙺↝ '..Rutba(msg.sender_user_id_,msg.chat_id_)..'  \n¦• 𝙸𝙳↝  '..msg.sender_user_id_..' \n¦• 𝒄𝒉↝ @sasa_boody  \n')
+end
+end
 
+end,nil)
+end,nil)
+end,nil)
+end,nil)
+end
+end
 
 if text == 'انا مين' and SudoBot(msg) then 
 send(msg.chat_id_,msg.id_, '[انت مطوري نور عنيا🥺🤍](t.me/sasa_boody)') 
