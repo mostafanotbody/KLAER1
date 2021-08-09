@@ -4520,7 +4520,7 @@ chat_kick(result.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},
 function(arg,data) 
 usertext = '\n 🧞‍♂️ العضو ← ['..data.first_name_..'](t.me/'..(data.username_ or 'DV_POWER1')..')'
-status  = '\n 🧞‍♂️ تم حظره عام من *~ "..#list.." ~* جروبات'
+status  = '\n 🧞‍♂️ تم حظره عام من جروبات'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
 end
@@ -4562,7 +4562,7 @@ send(msg.chat_id_, msg.id_, " 🧞‍♂️ لا تسطيع حظر مبرمج ا
 return false 
 end
 usertext = '\n 🧞‍♂️ العضو ← ['..result.title_..'](t.me/'..(username or 'DV_POWER1')..')'
-status  = '\n 🧞‍♂️ تم حظره عام من *~ "..#list.." ~* الجروبات'
+status  = '\n 🧞‍♂️ تم حظره عام من الجروبات'
 texts = usertext..status
 database:sadd(bot_id..'GBan:User', result.id_)
 else
@@ -4605,11 +4605,11 @@ database:sadd(bot_id..'GBan:User', userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
 usertext = '\n 🧞‍♂️ العضو ← ['..data.first_name_..'](t.me/'..(data.username_ or 'DV_POWER1')..')'
-status  = '\n 🧞‍♂️ تم حظره عام من *~ "..#list.." ~* الجروبات'
+status  = '\n 🧞‍♂️ تم حظره عام من الجروبات'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
 usertext = '\n 🧞‍♂️ العضو ← '..userid..''
-status  = '\n 🧞‍♂️ تم حظره عام من *~ "..#list.." ~* الجروبات'
+status  = '\n 🧞‍♂️ تم حظره عام من الجروبات'
 send(msg.chat_id_, msg.id_, usertext..status)
 end;end,nil)
 return false
@@ -4646,7 +4646,7 @@ database:sadd(bot_id..'Gmute:User', result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},
 function(arg,data) 
 usertext = '\n 🧞‍♂️ العضو ← ['..data.first_name_..'](t.me/'..(data.username_ or 'DV_POWER1')..')'
-status  = '\n 🧞‍♂️ تم كتمه عام من *~ "..#list.." ~* الجروبات'
+status  = '\n 🧞‍♂️ تم كتمه عام من الجروبات'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
 end
@@ -4688,7 +4688,7 @@ send(msg.chat_id_, msg.id_, " 🧞‍♂️ لا تسطيع كتم مبرمج ا
 return false 
 end
 usertext = '\n 🧞‍♂️ العضو ← ['..result.title_..'](t.me/'..(username or 'DV_POWER1')..')'
-status  = '\n 🧞‍♂️ تم كتمه عام من *~ "..#list.." ~* الجروبات'
+status  = '\n 🧞‍♂️ تم كتمه عام من الجروبات'
 texts = usertext..status
 database:sadd(bot_id..'Gmute:User', result.id_)
 else
@@ -4731,11 +4731,11 @@ database:sadd(bot_id..'Gmute:User', userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
 usertext = '\n 🧞‍♂️ العضو ← ['..data.first_name_..'](t.me/'..(data.username_ or 'DV_POWER1')..')'
-status  = '\n 🧞‍♂️ تم كتمه عام من *~ "..#list.." ~* الجروبات'
+status  = '\n 🧞‍♂️ تم كتمه عام من الجروبات'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
 usertext = '\n 🧞‍♂️ العضو ← '..userid..''
-status  = '\n 🧞‍♂️ تم كتمه عام من *~ "..#list.." ~* الجروبات'
+status  = '\n 🧞‍♂️ تم كتمه عام من الجروبات'
 send(msg.chat_id_, msg.id_, usertext..status)
 end;end,nil)
 return false
@@ -4753,7 +4753,7 @@ end
 function start_function(extra, result, success)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 usertext = '\n 🧞‍♂️ العضو ← ['..data.first_name_..'](t.me/'..(data.username_ or 'DV_POWER1')..')'
-status  = '\n 🧞‍♂️ تم الغاء (الحظر-الكتم) عام من *~ "..#list.." ~* الجروبات'
+status  = '\n 🧞‍♂️ تم الغاء (الحظر-الكتم) عام من الجروبات'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
 database:srem(bot_id..'GBan:User', result.sender_user_id_)
@@ -4776,7 +4776,7 @@ end
 function start_function(extra, result, success)
 if result.id_ then
 usertext = '\n 🧞‍♂️ العضو ← ['..result.title_..'](t.me/'..(username or 'DV_POWER1')..')'
-status  = '\n 🧞‍♂️ تم الغاء (الحظر-الكتم) عام من *~ "..#list.." ~* الجروبات'
+status  = '\n 🧞‍♂️ تم الغاء (الحظر-الكتم) عام من الجروبات'
 texts = usertext..status
 database:srem(bot_id..'GBan:User', result.id_)
 database:srem(bot_id..'Gmute:User', result.id_)
@@ -4804,11 +4804,11 @@ database:srem(bot_id..'Gmute:User', userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
 usertext = '\n 🧞‍♂️ العضو ← ['..data.first_name_..'](t.me/'..(data.username_ or 'DV_POWER1')..')'
-status  = '\n 🧞‍♂️ تم الغاء (الحظر-الكتم) عام من *~ "..#list.." ~* الجروبات'
+status  = '\n 🧞‍♂️ تم الغاء (الحظر-الكتم) عام من الجروبات'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
 usertext = '\n 🧞‍♂️ العضو ← '..userid..''
-status  = '\n 🧞‍♂️ تم حظره عام من *~ "..#list.." ~* الجروبات'
+status  = '\n 🧞‍♂️ تم حظره عام من الجروبات'
 send(msg.chat_id_, msg.id_, usertext..status)
 end;end,nil)
 return false
@@ -11902,7 +11902,7 @@ if text == 'انا مين' then
 local rtp = Rutba(msg.sender_user_id_,msg.chat_id_)
 local function getpro(extra, result, success)
 if result.photos_[0] then
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, result.photos_[0].sizes_[1].photo_.persistent_id_,"انـت"..Rutba(msg.sender_user_id_,msg.chat_id_).." اخويا🧞‍♂️", msg.id_, msg.id_, "md")
+sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, result.photos_[0].sizes_[1].photo_.persistent_id_,"انـت ~⪼"..Rutba(msg.sender_user_id_,msg.chat_id_).." اخويا🧞‍♂️ ", msg.id_, msg.id_, "md")
 else
 send(msg.chat_id_, msg.id_,'لا تمتلك صوره في حسابك', 1, 'md')
   end end
