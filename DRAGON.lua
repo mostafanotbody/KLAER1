@@ -11922,115 +11922,6 @@ return false
 end
 
 
-if text == 'سلام' then 
-send(msg.chat_id_,msg.id_, '[ابق تعاله كليوم..😹💔🎶](t.me/sasa_boody)') 
-return false
-end
-
-if text == 'كسمك' then 
-send(msg.chat_id_,msg.id_, '[بلاش قله ادب بقا..😹💔🎶](t.me/sasa_boody)') 
-return false
-end
-
-if text == 'احا' then 
-send(msg.chat_id_,msg.id_, '[بالتكت بتاعها..😹💔🎶](t.me/sasa_boody)') 
-return false
-end
-
- if text == 'زبي' then 
-send(msg.chat_id_,msg.id_, '[حطة فطيزك..😹💔🎶](t.me/sasa_boody)') 
-return false
-end
- 
- if text == 'ماشي' then 
-send(msg.chat_id_,msg.id_, '[بيعرج..😹💔🎶](t.me/sasa_boody)') 
-return false
-end
- 
-if text == 'هاي' or text == 'هيي' then
-send(msg.chat_id_,msg.id_, '[علي الواي فاي..😺💜](t.me/sasa_boody)') 
-return false
-end
-
-if text then 
-list = {'متيجي'}
-for k,v in pairs(list) do
-if string.find(text,v) ~= nil then
-send(msg.chat_id_,msg.id_, '[علي فين يوسخ..🙂😹](t.me/sasa_boody)') 
-return false
-end
-end
-end
-
-if text then 
-list = {'بكرهك'}
-for k,v in pairs(list) do
-if string.find(text,v) ~= nil then
-send(msg.chat_id_,msg.id_, '[طب انا بحبك يوه..💔🥺](t.me/sasa_boody)') 
-return false
-end
-end
-end
-
-if text then 
-list = {'بحبح'}
-for k,v in pairs(list) do
-if string.find(text,v) ~= nil then
-send(msg.chat_id_,msg.id_, '[بحبح اكتر ..🙂❤️](t.me/sasa_boody)') 
-return false
-end
-end
-end
-
-if text then 
-list = {'ميسد'}
-for k,v in pairs(list) do
-if string.find(text,v) ~= nil then
-send(msg.chat_id_,msg.id_, '[ونا كان مين قالي ميسد ..🙂💔](t.me/sasa_boody)') 
-return false
-end
-end
-end
-
-if text then 
-list = {'عرفني'}
-for k,v in pairs(list) do
-if string.find(text,v) ~= nil then
-send(msg.chat_id_,msg.id_, '[شخصيه انت يعني ..🙂😹](t.me/sasa_boody)') 
-return false
-end
-end
-end
-
-if text then 
-list = {'حبيبي'}
-for k,v in pairs(list) do
-if string.find(text,v) ~= nil then
-send(msg.chat_id_,msg.id_, '[ اومرني يقلبي ..❤️](t.me/sasa_boody)') 
-return false
-end
-end
-end
-
-if text then 
-list = {'ده بوت'}
-for k,v in pairs(list) do
-if string.find(text,v) ~= nil then
-send(msg.chat_id_,msg.id_, '[ هو مفكرني بني ادم ..😹🙂](t.me/sasa_boody)') 
-return false
-end
-end
-end
-
-if text then 
-list = {'دا بوت'}
-for k,v in pairs(list) do
-if string.find(text,v) ~= nil then
-send(msg.chat_id_,msg.id_, '[ هو مفكرني بني ادم ..😹🙂](t.me/sasa_boody)') 
-return false
-end
-end
-end
 
 if text then 
 list = {'النبي'}
@@ -12071,41 +11962,8 @@ return false
 end
 end
 end
-if text == "حلوه"  or text == "حلو" then
 
-send(msg.chat_id_,msg.id_, '[يحلات عيونك..♥️🌸](t.me/sasa_boody)')
-return false
-end
 
-if text then 
-list = {'💋'}
-for k,v in pairs(list) do
-if string.find(text,v) ~= nil then
-send(msg.chat_id_,msg.id_, '[عايز من ده..💋🥀](t.me/sasa_boody)') 
-return false
-end
-end
-end
-
-if text then 
-list = {'😔'}
-for k,v in pairs(list) do
-if string.find(text,v) ~= nil then
-send(msg.chat_id_,msg.id_, '[متزعلش بحبك..😥♥️](t.me/sasa_boody)') 
-return false
-end
-end
-end
-
-if text then 
-list = {'بحبك'}
-for k,v in pairs(list) do
-if string.find(text,v) ~= nil then
-send(msg.chat_id_,msg.id_, '[وانا كمان بحبك .🥺❤️](t.me/sasa_boody)') 
-return false
-end
-end
-end
 
 if text then 
 list = {'سلام عليكم'}
