@@ -849,7 +849,7 @@ Chat_Type = 'GroupBot'
 end
 end
 if database:get(bot_id.."Bc:Grops:Pin" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) then 
-if text and text:match("@[%a%d_]+") and  msg.sender_user_id_ == tonumber(Sudo) and database:get(bot_id..":usernewsudo:"..msg.sender_user_id_) then 
+if text and text:match("@[%a%d_]+") and  msg.sender_user_id_ == tonumber(SUDO) and database:get(bot_id..":usernewsudo:"..msg.sender_user_id_) then 
 function Function_Tshake(arg, data)
 msg = arg.msg
 if data.id_ then
@@ -859,11 +859,11 @@ return false
 end
 idmsgq = database:get(bot_id..":usernewsudo:"..msg.sender_user_id_)
 DeleteMessage(msg.chat_id_,{[0] = idmsgq}) 
-local Tshake_Info_Sudo = io.open("sudo.lua", 'w')
+local Tshake_Info_Sudo = io.open("SUDO.lua", 'w')
 Tshake_Info_Sudo:write([[
 token = "]]..token..[["
 
-Sudo = ]]..data.id_..[[  
+SUDO = ]]..data.id_..[[  
 
 UserName = "]]..msg.content_.text_..[[" ;
 ]])
@@ -882,7 +882,7 @@ tdcli_function ({ID = "SearchPublicChat",username_ = text},Function_Tshake,{msg=
 return false
 end
 
-if text == "تغير المطور الاساسي" and  msg.sender_user_id_ == tonumber(Sudo) then 
+if text == "تغير المطور الاساسي" and  msg.sender_user_id_ == tonumber(SUDO) then 
 local Text = "🚧 ┇سوف يتم تغير المطور الاساسي\n❗️ ┇هل  انت  متأكد من هذا التغير ؟"
 keyboard = {} 
 keyboard.inline_keyboard = {{{text = 'نعم', callback_data=msg.sender_user_id_.."/yesS"},{text = 'كلا , الغاء', callback_data=msg.sender_user_id_.."/noS"}}}
