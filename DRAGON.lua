@@ -13927,6 +13927,7 @@ end,nil)
 end
 end
 
+
 if Text and Text:match('amr@(%d+)/user@(%d+)/setiinginfo') then
 local users = {string.match(Text,"^amr@(%d+)/user@(%d+)/setiinginfo$")}
 if tonumber(users[1]) == tonumber(data.sender_user_id_) then
@@ -14737,6 +14738,8 @@ https.request("https://api.telegram.org/bot"..token.."/promoteChatMember?chat_id
 sendin(Chat_id,msg_idd,data.sender_user_id_,users[2])
 end
 end
+
+
 
 if text == 'سحكاتي' or text == 'تعديلاتي' then 
 local Num = tonumber(database:get(bot_id..'edits'..msg.chat_id_..msg.sender_user_id_) or 0)
