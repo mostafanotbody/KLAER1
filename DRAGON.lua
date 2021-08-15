@@ -12073,7 +12073,7 @@ end
 end
 if text == "حلوه"  or text == "حلو" then
 
-send(msg.chat_id_,msg.id_, '[يحلات عيونك..♥️🦋](t.me/sasa_boody)')
+send(msg.chat_id_,msg.id_, '[يحلات عيونك..♥️🌸](t.me/sasa_boody)')
 return false
 end
 
@@ -12515,7 +12515,7 @@ local List = {
 ]],
 [[
 𖡋 𝐔𝐒𝐄 #username 
-𖡋 𝐌𝐒𝐆 #msgs 
+𖡋 𝙼𝚂𝙶 #msgs 
 𖡋 𝐒𝐓𝐀 #stast 
 𖡋 𝐈𝐃 #id 
 𖡋 ??𝐃𝐈𝐓 #edit
@@ -13114,7 +13114,7 @@ Msᴀɢ ~ #msgs
 ]],
 [[
 𖡋 𝐔𝐒𝐄 #username 
-𖡋 𝐌𝐒𝐆 #msgs 
+𖡋 𝙼𝚂𝙶 #msgs 
 𖡋 𝐒𝐓𝐀 #stast 
 𖡋 𝐈𝐃 #id 
 𖡋 𝐄𝐃𝐈𝐓 #edit
@@ -13729,7 +13729,7 @@ else
 username = 'لا يوجد '
 end
 if result.status_.ID == "UserStatusRecently" and result.profile_photo_ ~= false then
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, sofi.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n🦋 𝐔𝑆𝐸𝑅 ↬  ↝'..username..'↜💞   ↝\n🦋 𝐌𝐒𝐆↬  ↝'..Msguser..'↜ 💞  ↝\n🦋 𝑅𝐴𝑁𝐾↬ ↝'..Rutba(msg.sender_user_id_,msg.chat_id_)..'↜ 💞  ↝\n🦋 𝕴𝕯↬   ↝'..msg.sender_user_id_..'↜💞  ↝\n🦋 𝓑𝓘𝓞 ↬ ↝'..getbioY..'↜💞  ↝\n 🦋 𝒄𝒉↬  ↝@sasa_boody↜  💞  ↝\n')
+sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, sofi.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n🌸 𝚄𝚂𝙴𝚁 ↬  ↝'..username..'↜💞   ↝\n🌸 𝙼𝚂𝙶↬  ↝'..Msguser..'↜ 💞  ↝\n🌸 𝚁𝙰𝙽𝙺↬ ↝'..Rutba(msg.sender_user_id_,msg.chat_id_)..'↜ 💞  ↝\n🌸 𝙸𝙳↬   ↝'..msg.sender_user_id_..'↜💞  ↝\n🌸 𝙱𝙸𝙾 ↬ ↝'..getbioY..'↜💞  ↝\n 🌸 𝙲𝙷↬  ↝@sasa_boody↜  💞  ↝\n')
 else 
 if result.status_.ID == "UserStatusEmpty" and result.profile_photo_ == false then
 send(msg.chat_id_, msg.id_,'[\n🇧🇱-𝒖𝒔𝒆𝒓   '..username..'\n 🇧🇱-𝒎𝒔𝒈𝒔  '..Msguser..'\n 🇧🇱-𝒔𝒕𝒂𝒕𝒔  '..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n 🇧🇱-𝒊𝒅 '..msg.sender_user_id_..'\n🇧🇱- ??𝗛  @sasa_boody\n')
