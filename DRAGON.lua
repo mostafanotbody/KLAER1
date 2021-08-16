@@ -11894,9 +11894,6 @@ local textt = ' ※ رتبتك في البوت » '..Rutba(msg.sender_user_id_,m
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
-},
-{
 {text = 'اضف البوت الي مجموعتك ' ,url="t.me/"..dofile("./sasa.lua").botUserName.."?startgroup=start"},
 },
 }
