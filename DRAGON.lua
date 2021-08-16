@@ -11995,21 +11995,8 @@ https.request("https://api.telegram.org/bot"..tokenbot..'/sendMessage?chat_id=' 
 return false
 end
 msg_type = 'MSG:NewUser'
-end 
-------------------------------------		
-local Text,UserJoin = TextCmdquery:match("^(CheckRobotJoin:)(%d+)$")
-local UserJoin = tonumber(UserJoin)
-if Text == "CheckRobotJoin:" then
-if CheckUserAdmin(msg) or UserID == UserJoin then
-Restrict(ChatID,UserJoin,2)
-EditMsg(ChatID,dataid,"- تم فك التقييد بنجاح والتاكد بانك لست روبوت ❤️")
-answerCallbackQuery(data.id_,"- تم فك التقييد بنجاح والتاكد بانك لست روبوت ❤️",true)
-else
-answerCallbackQuery(data.id_,"عذرا انت لست الشخص المقيد او لا يوجد لديك صلاحيه الادارة , نعتذر منك",true)	
-end
-end
-end
------------------------------------------------------------------------------------------
+end 	
+
 if msg.content_.ID == "MessageChatAddMembers" then 
 if msg.content_.members_[0].id_ == tonumber(bot_id) then 
 print("it is Bot")
