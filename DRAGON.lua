@@ -11908,7 +11908,10 @@ local textt = ' ※ رتبتك في البوت » '..Rutba(msg.sender_user_id_,m
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
+{text = ''..result.first_name_..'', url = "https://t.me/"..result.username_..""},
+},
+{
+{text = 'اضف البوت لمجموعتك', url = "https://t.me/"..data.username_.."?startgroup=new"},
 },
 }
 local function getpro(extra, result, success) 
