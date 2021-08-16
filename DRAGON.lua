@@ -11894,7 +11894,7 @@ local textt = ' ※ رتبتك في البوت » '..Rutba(msg.sender_user_id_,m
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = 'اضف البوت الي مجموعتك ' ,url="t.me/"..dofile("./sasa.lua").botUserName.."?startgroup=start"},
+{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
 },
 }
 local function getpro(extra, result, success) 
@@ -11996,7 +11996,20 @@ return false
 end
 msg_type = 'MSG:NewUser'
 end 
-
+------------------------------------		
+local Text,UserJoin = TextCmdquery:match("^(CheckRobotJoin:)(%d+)$")
+local UserJoin = tonumber(UserJoin)
+if Text == "CheckRobotJoin:" then
+if CheckUserAdmin(msg) or UserID == UserJoin then
+Restrict(ChatID,UserJoin,2)
+EditMsg(ChatID,dataid,"- تم فك التقييد بنجاح والتاكد بانك لست روبوت ❤️")
+answerCallbackQuery(data.id_,"- تم فك التقييد بنجاح والتاكد بانك لست روبوت ❤️",true)
+else
+answerCallbackQuery(data.id_,"عذرا انت لست الشخص المقيد او لا يوجد لديك صلاحيه الادارة , نعتذر منك",true)	
+end
+end
+end
+-----------------------------------------------------------------------------------------
 if msg.content_.ID == "MessageChatAddMembers" then 
 if msg.content_.members_[0].id_ == tonumber(bot_id) then 
 print("it is Bot")
@@ -12029,7 +12042,7 @@ local DRAGON_Msg = {
 'اسمي  '..Namebot..' يعم 😒', 
 'مقولت اسمي '..Namebot..' في اي 🙄', 
 'اسمي الكيوت '..Namebot..' 🌝💘', 
-'اسمي  '..Namebot..' ياحياتي💞 ♥️', 
+'اسمي  '..Namebot..' ي جامد ♥️', 
 'اسمي  '..Namebot..' يوتكه🙈🍑', 
 } 
 Namebot = DRAGON_Msg[math.random(#DRAGON_Msg)] 
