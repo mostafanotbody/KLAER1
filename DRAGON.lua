@@ -11893,7 +11893,12 @@ local msg_id = msg.id_/2097152/0.5
 local textt = ' ※ رتبتك في البوت » '..Rutba(msg.sender_user_id_,msg.chat_id_)
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  ❨   𝚂𝙾𝚄𝚁𝙲𝙴    ❩ ', url="t.me/sasa_boody"}},
+{
+{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
+},
+{
+{text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..sudos.UserName.."?startgroup=new"},
+},
 }
 local function getpro(extra, result, success) 
 if result.photos_[0] then 
