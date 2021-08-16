@@ -11910,9 +11910,6 @@ keyboard.inline_keyboard = {
 {
 {text = ''..result.first_name_..'', url = "https://t.me/"..result.username_..""},
 },
-{
-{text = 'اضف البوت لمجموعتك', url = "https://t.me/"..data.username_.."?startgroup=new"},
-},
 }
 local function getpro(extra, result, success) 
 if result.photos_[0] then 
