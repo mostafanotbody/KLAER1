@@ -1302,10 +1302,10 @@ t =  t..',"'..v..'"'
 end 
 end 
 t = t..']}' 
-local File = io.open('./sudos3.json', "w") 
+local File = io.open('./sanween.json', "w") 
 File:write(t) 
 File:close() 
-sendDocument(msg.chat_id_, msg.id_,0, 1, nil, './sudos3.json', ' عدد الثانوين { '..#list..'}') 
+sendDocument(msg.chat_id_, msg.id_,0, 1, nil, './sanween.json', ' عدد الثانوين { '..#list..'}') 
 end
 if text == 'رفع الثانوين' and DevSoFi(msg) then 
 function by_reply(extra, result, success)    
