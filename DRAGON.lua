@@ -157,7 +157,7 @@ print([[
 > CH › @sasa_boody
 ~> DEVELOPER › @sasa_boody
 ]])
-sudos = dofile("./DRAGON.lua") 
+sudos = dofile("./kkkklInfo.lua") 
 SUDO = tonumber(sudos.SUDO)
 sudo_users = {SUDO}
 bot_id = sudos.token:match("(%d+)")  
