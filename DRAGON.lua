@@ -153,17 +153,16 @@ print([[
 |  _  | | | | | | |  _    / / | | | |\   | 
 | | | | | |_| | | |_| |  / /  | | | | \  | 
 |_| |_| \_____/ \_____/ /_/   |_| |_|  \_| 
-                                          
-> CH ↯ ↝@sasa_boody↜
-~> DEVELOPER ↯ {text = @BoOdY_BaSha
-~> DEVELOPER ↯ {text = @BoOdY_BaSha
+ 
+> CH › @sasa_boody
+~> DEVELOPER › @sasa_boody
 ]])
-sudos = BoOdY_BaShabot("./kkkklInfo.lua") 
+sudos = dofile("./sasa.lua") 
 SUDO = tonumber(sudos.SUDO)
 sudo_users = {SUDO}
 bot_id = sudos.token:match("(%d+)")  
 token = sudos.token 
---- start functions 💞 ═───═𝙷𝙾𝙶𝙰𝙽═───═💞 
+--- start functions ↓
 --------------------------------------------------------------------------------------------------------------
 io.popen("mkdir File_Bot") 
 io.popen("cd File_Bot && rm -rf commands.lua.1") 
@@ -10829,7 +10828,7 @@ local text =
 ' }\n'..' 💞   الفيديو  ⇇{ '..lock_ved..
 ' }\n'..' 💞   الصور  ⇇{ '..lock_photo..
 ' }\nء💞 ═───═𝙷𝙾𝙶𝙰𝙽═───═💞 '..
-'\n'..' 💞   الصوت  ⇇{ '..lock_muse..
+'\n'..' ??   الصوت  ⇇{ '..lock_muse..
 ' }\n'..' 💞  الملصقات  ⇇{ '..lock_ste..
 ' }\n'..' 💞  الجهات  ⇇{ '..lock_phon..
 ' }\n'..' 💞  الدخول  ⇇{ '..lock_join..
