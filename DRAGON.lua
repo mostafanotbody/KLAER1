@@ -1527,18 +1527,16 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendmessage?chat_id=' .. msg.sender_user_id_ .. '&text=' ..token) 
 send(msg.chat_id_, msg.id_,' ') 
 end
-if text == 'المبرمج صاصا' and DevSoFi(msg) then
-database:del(bot_id..'Srt:Bot') 
+if text == 'صاصا' or text == 'مصاصا' or text == 'مصطفي' or text == 'مبرمج مصطفي' or text == 'مصطفي فين' or text == 'صاصا فين' then 
+local msg_id = msg.id_/2097152/0.5  
 local Text = [[ 
-↝المبرمج صاصا لو حابب تتواصل معاه
-اتبع الزر إلى تحت 💞 ═───═⟦𝙷𝙾𝙶𝙰𝙽⟧═───═💞 ↜
+ 𝚂𝙰𝚂𝙰
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '𝚂𝙰𝚂𝙰', url="t.me/@M0STaFa_6"}}, 
+{{text = ' 𝚂𝙰𝚂𝙰',url="t.me/M0STaFa_6"}}, 
 } 
-local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/M0STaFa_6&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 if text == 'قناه السورس' and DevSoFi(msg) then
 database:del(bot_id..'Srt:Bot') 
@@ -3248,16 +3246,16 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/beborty/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text == 'مبرمج بودي'  then
-local Text = [[
-بودي مبرمج سورس هوجان للتواصل معه اتبع الزر الاسفل ⬇️💕.
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = ' 𝙱𝙾𝙾𝙳𝚈',url="t.me/BoOdY_BaSha"}},
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/vagwg/27&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+if text == 'بودي' or text == 'مبرمج بودي' or text == 'صاحب السورس' or text == 'بوضي' or text == 'بيوضي' or text == 'body' then 
+local msg_id = msg.id_/2097152/0.5  
+local Text = [[ 
+𝙱𝙾𝙾𝙳𝚈
+   ]] 
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = ' 𝙱𝙾𝙾𝙳𝚈𝅘𝅥𝅮',url="t.me/BoOdY_BaSha"}}, 
+} 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/BoOdY_BaSha&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 if text == 'صاصا'  then
@@ -9059,7 +9057,7 @@ send(msg.chat_id_, msg.id_, ' ❤ تم تنزيل جميع زواحف')
 end
 if text == ("تاك للرقاصات") and Mod(msg) then
 local list = database:smembers(bot_id..'Zahf:User'..msg.chat_id_)
-t = "\n ❤ قائمة رقاصات الجروب \n💞 ═───═⟦𝙷𝙾𝙶𝙰𝙽⟧═───═💞 \n"
+t = "\n ❤ قائمة رقاصات الجروب \n?? ═───═⟦𝙷𝙾𝙶𝙰𝙽⟧═───═💞 \n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -15044,7 +15042,7 @@ Msᴀɢ ~ #msgs
 ]],
 [[
 金 - 𝓾𝓼𝓮𝓻𝓷𝓪𝓶𝓮 . #username ⸙ 
-金 - 𝓼𝓽𝓪𝓼𝓽  . #stast ⸙ 
+金 - 𝓼𝓽𝓪𝓼??  . #stast ⸙ 
 金 - 𝓲𝓭 . #id ⸙ 
 金 - 𝓰𝓶𝓪𝓼 . #gmas ⸙ 
 金 - 𝓶𝓼𝓰𝓼 . #msgs ⸙
