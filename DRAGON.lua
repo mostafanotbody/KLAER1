@@ -1,8 +1,8 @@
 redis = require('redis') 
 https = require ("ssl.https") 
-serpent = BoOdY_BaShabot("./library/serpent.lua") 
-json = BoOdY_BaShabot("./library/JSON.lua") 
-JSON  = BoOdY_BaShabot("./library/dkjson.lua")
+serpent = dofile("./library/serpent.lua") 
+json = dofile("./library/JSON.lua") 
+JSON  = dofile("./library/dkjson.lua")
 URL = require('socket.url')  
 utf8 = require ('lua-utf8') 
 database = redis.connect('127.0.0.1', 6379) 
@@ -14513,7 +14513,7 @@ local List = {
 [[
 .𖣂 𝙪𝙨𝙚𝙧𝙣𝙖𝙢𝙚 , #username  
 .𖣂 𝙨𝙩𝙖𝙨𝙩 , #stast  
-.𖣂 𝙡?? , #id  
+.𖣂 𝙡𝘿 , #id  
 .𖣂 𝙂𝙖𝙢𝙨 , #game 
 .𖣂 𝙢𝙨𝙂𝙨 , #msgs
 ]],
@@ -14947,7 +14947,7 @@ local List = {
 • 🇪🇬 - 𝙸𝙳 « #id  🍭
 • 🇪🇬 - 𝙼𝚂𝙶𝚂 « #msgs  🍭
 • 🇪🇬 - 𝚂𝚃𝙰𝚂𝚃 « #stast  🍭
-• 🇪🇬 - 𝗖𝗛 - ↝@sasa_boody↜ 💞.
+• 🇪🇬 - 𝗖𝗛 - ↝@sasa_boody↜ ??.
 ]],
 [[
 • USE ➤  #username .
@@ -16815,7 +16815,7 @@ local Teext =[[
  💞الاساسين
  💞الاسماء المكتومه
  💞الردود الجروب
- ??البوتات
+ 💞البوتات
  💞امسح
  💞صلاحيه
  💞قائمه منع المتحركات
