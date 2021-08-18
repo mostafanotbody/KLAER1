@@ -35,7 +35,7 @@ database:set(id_server..":token",token)
 end 
 else
 print('\27[0;35m💞 ═───═𝙷𝙾𝙶𝙰𝙽═───═💞 \n لم يتم حفظ التوكن ارسل لي التوكن الان')
-end 
+end
 os.execute('lua DRAGON.lua')
 end
 if not database:get(id_server..":SUDO:ID") then
@@ -133,9 +133,9 @@ file:close()
 end 
 local load_redis = function()  
 local f = io.open("./kkkklInfo.lua", "r")  
-if not f then   
+if not f then
 AutoSet
-else   
+else
 f:close()  
 database:del(id_server..":token")
 database:del(id_server..":SUDO:ID")
@@ -310,8 +310,8 @@ var = true
 elseif database:sismember(bot_id..'Special:User'..chat_id, user_id) then  
 var = true  
 elseif database:sismember(bot_id..'Mamez:User'..chat_id, user_id) then  
-var = true  
-else  
+var = true
+else
 var = false  
 end  
 return var
@@ -8815,7 +8815,7 @@ send(msg.chat_id_, msg.id_, ' 💞 تم تنزيل جميع أولادي')
 end
 if text == ("تاك لولادي") and Mod(msg) then
 local list = database:smembers(bot_id..'Zahf:User'..msg.chat_id_)
-t = "\n 💞 قائمة كساس الجروب \n💞 ═───═𝙷𝙾𝙶𝙰𝙽═───═💞 \n"
+t = "\n 💞 قائمة كساس الجروب \n💞 ═───═𝙷𝙾𝙶??𝙽═───═💞 \n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -14533,7 +14533,7 @@ local List = {
 𝗖𝗛 - ↝@sasa_boody↜ 💞.
 ]],
 [[
-🇪🇬≪💎≫ #username • メ
+🇪??≪💎≫ #username • メ
 🇪🇬≪💎≫ #stast  •メ
 🇪🇬≪💎≫ #id  • メ
 🇪🇬≪💎≫ #msgs  •メ
