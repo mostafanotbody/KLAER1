@@ -134,7 +134,7 @@ end
 local load_redis = function()  
 local f = io.open("./kkkklInfo.lua", "r")  
 if not f then   
-AutoSet()  
+AutoSet
 else   
 f:close()  
 database:del(id_server..":token")
@@ -10850,7 +10850,7 @@ local text =
 ' }\n'..' 💞  الايدي  ⇇{ '..idgp..
 ' }\n'..' 💞  الايدي بالصوره  ⇇{ '..idph..
 ' }\n'..' 💞  الرفع  ⇇{ '..setadd..
-' }\n'..' 💞  الحظر  ⇇{ '..banm..' }\n\n 💞═───═❲[《𝚂𝙾𝚄𝚁𝙲𝙴 𝙷𝙾𝙶𝙰𝙽》 ](t.me/sasa_boody)❳═───═ 💞\n 💞 قناة سورس هوجان💞 ═───═𝙷𝙾𝙶𝙰𝙽═───═💞 \n [ ❲[《𝚂𝙾𝚄𝚁𝙲𝙴 𝙷𝙾𝙶𝙰𝙽》 ](t.me/sasa_boody)❳](t.me/sasa_boody) \n'
+' }\n'..' 💞  الحظر  ⇇{ '..banm..' }\n\n
 send(msg.chat_id_, msg.id_,text)     
 end
 if text ==('تثبيت') and msg.reply_to_message_id_ ~= 0 and Mod(msg) then  
