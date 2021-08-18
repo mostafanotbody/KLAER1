@@ -2942,7 +2942,6 @@ local TWEET_Msg = {
 "اي رايك في سورس هوجان ؟ ", 
 "كم مره حبيت؟ ", 
 " اكثر المتابعين عندك باي برنامج؟", 
-" آخر مره ضربت عشره كانت متى ؟", 
 " نسبه الندم عندك للي وثقت فيهم ؟", 
 "تحب ترتبط بكيرفي ولا فلات؟", 
 " جربت شعور احد يحبك بس انت مو قادر تحبه؟", 
@@ -12197,6 +12196,21 @@ return false
 end
 msg_type = 'MSG:NewUser'
 end 	
+
+if msg.content_.ID == "MessageChatJoinByLink" then
+print("This is [ Msg Join By link ]")
+if database:get(bot_id.."UnKedDeleteMessage"..msg.chat_id_) == "open" then
+local Text = 'اهلاً بك في المجموعة\n للتأكد بأنك لست { ربوت }\n تم تقييدك اضغط الزر بالاسفل\n للتأكد انك { عضو حقيقي }\n'
+keyboard = {}
+keyboard.inline_keyboard = {{{text = '- اضغط هنا لفك تقييدك •', callback_data="/UnKed"},},}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..tokenbot.."/restrictChatMember?chat_id="..msg.chat_id_.."&user_id="..msg.sender_user_id_)
+database:sadd(bot_id.."database:Un:Ked"..msg.chat_id_,msg.sender_user_id_)
+https.request("https://api.telegram.org/bot"..tokenbot..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+return false
+end
+msg_type = 'MSG:NewUser'
+end
 
 if msg.content_.ID == "MessageChatAddMembers" then 
 if msg.content_.members_[0].id_ == tonumber(bot_id) then 
