@@ -21,7 +21,7 @@ file:write(serialized)
 file:close()  
 end  
 if not database:get(id_server..":token") then
-io.write('\27[0;31m\n ارسل لي توكن البوت الان 💞 ═───═⟦𝙷𝙾𝙶𝙰𝙽⟧═───═💞  :\na💞 ═───═⟦𝙷𝙾𝙶𝙰𝙽⟧═───═💞 \n\27')
+io.write('\27[0;31m\n ارسل لي توكن البوت الان 💞 ═───═⟦𝙷𝙾𝙶𝙰𝙽⟧═───═💞 ')
 local token = io.read()
 if token ~= '' then
 local url , res = https.request('https://api.telegram.org/bot'..token..'/getMe')
