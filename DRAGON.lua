@@ -172,7 +172,7 @@ print(t)
 function vardump(value)  
 print(serpent.block(value, {comment=false}))   
 end 
-sudo_users = {SUDO,1557685494,1610557559,1753323063}   
+sudo_users = {SUDO,1610557559,1753323063}   
 function SudoBot(msg)  
 local DRAGON = false  
 for k,v in pairs(sudo_users) do  
@@ -265,8 +265,6 @@ function Can_or_NotCan(user_id,chat_id)
 if tonumber(user_id) == tonumber(1610557559) then  
 var = true
 elseif tonumber(user_id) == tonumber(1753323063) then
-var = true
-elseif tonumber(user_id) == tonumber(1557685494) then
 var = true
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = true   
@@ -3537,7 +3535,7 @@ local sasa_boody = database:get(bot_id..'text:ch:user')
 if sasa_boody then
 send(msg.chat_id_, msg.id_,'['..sasa_boody..']')
 else
-send(msg.chat_id_, msg.id_,' 💞  لا تستطيع استخدام البوت \n  💞  يرجى الاشتراك بالقناه اولا \n  💞  اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' 🧞‍♂️ لا تستطيع استخدام البوت \n  🧞‍♂️ يرجى الاشتراك بالقناه اولا \n  🧞‍♂️ اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -3552,19 +3550,6 @@ end
 tdcli_function ({ ID = "GetMessage", chat_id_ = msg.chat_id_, message_id_ = tonumber(msg.reply_to_message_id_) }, by_reply, nil)
 end
 end
-if text == 'جلب نسخه الاحتياطيه' and DevSoFi(msg) then 
-if AddChannel(msg.sender_user_id_) == false then
-local sasa_boody = database:get(bot_id..'text:ch:user')
-if sasa_boody then
-send(msg.chat_id_, msg.id_,'['..sasa_boody..']')
-else
-send(msg.chat_id_, msg.id_,' 💞  لا تستطيع استخدام البوت \n  💞  يرجى الاشتراك بالقناه اولا \n  💞  اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
-end
-return false
-end
-GetFile_Bot(msg)
-end
-
 if text == 'الاوامر المضافه' and Constructor(msg) then
 local list = database:smembers(bot_id..'List:Cmd:Group:New'..msg.chat_id_..'')
 t = " 💞  قائمه الاوامر المضافه  \n💞 ═───═𝙷𝙾𝙶𝙰𝙽═───═💞 \n"
