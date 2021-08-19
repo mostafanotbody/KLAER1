@@ -1072,7 +1072,7 @@ end
 return false
 end
 if DevSoFi(msg) then
-local bl = '☆'
+local bl = 'اهلا بكم ومرحبا ف سورس هوجان'
 local keyboard = {
 {'ضع اسم للبوت','معلومات الكيبورد'},
 {'المطور','الاحصائيات'},
@@ -1455,7 +1455,7 @@ tdcli_function ({ ID = "GetMessage", chat_id_ = msg.chat_id_, message_id_ = tonu
 end
 if text == 'الاصدار' and DevSoFi(msg) then 
 database:del(bot_id..'Srt:Bot') 
-send(msg.chat_id_, msg.id_,' ❤ اصدار سورس هوجان{ 3x☆}')
+send(msg.chat_id_, msg.id_,' ❤ اصدار سورس هوجان{ 4x}')
 end
 if text == '━┅┅┄⟞⟦ مطورين السورس ⟧⟝┄┉┉━' then
 local Text = [[ 
@@ -1469,7 +1469,7 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/sasa7_7/2&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-if text == '💞 ═───═⟦𝙷𝙾𝙶𝙰𝙽⟧═───═💞 ' and DevSoFi(msg) then
+if text == '💞 ═───═⟦𝙷𝙾𝙶𝙰𝙽⟧═───═💞' and DevSoFi(msg) then
 local Text = [[ 
 [قناه سورس هوجان ادخل وتابع الجديد](t.me/sasa_boody)
 ]] 
