@@ -326,13 +326,13 @@ var = "المطور الثانوي"
 elseif tonumber(user_id) == tonumber(bot_id) then  
 var = 'البوت'
 elseif database:sismember(bot_id..'Sudo:User', user_id) then
-var = database:get(bot_id.."Sudo:Rd"..msg.chat_id_) or 'مطوري الغالي '  
+var = database:get(bot_id.."Sudo:Rd"..msg.chat_id_) or 'مطوري الجامد '  
 elseif database:sismember(bot_id..'CoSu'..chat_id, user_id) then
 var = database:get(bot_id.."CoSu:Rd"..msg.chat_id_) or 'صاحب الخرابه يواد'
 elseif database:sismember(bot_id..'Basic:Constructor'..chat_id, user_id) then
-var = database:get(bot_id.."BasicConstructor:Rd"..msg.chat_id_) or 'المنشئ الاساسي عم الناس '
+var = database:get(bot_id.."BasicConstructor:Rd"..msg.chat_id_) or 'المنشئ الاساسي'
 elseif database:sismember(bot_id..'Constructor'..chat_id, user_id) then
-var = database:get(bot_id.."Constructor:Rd"..msg.chat_id_) or 'المنشئ روح قلبي'  
+var = database:get(bot_id.."Constructor:Rd"..msg.chat_id_) or 'المنشئ'  
 elseif database:sismember(bot_id..'onall'..chat_id, user_id) then
 var = database:get(bot_id.."onall:Rd"..msg.chat_id_) or 'المدير العام الموكوس'  
 elseif database:sismember(bot_id..'moall'..chat_id, user_id) then
@@ -344,9 +344,9 @@ var = 'منظف'
 elseif database:sismember(bot_id..'Mod:User'..chat_id, user_id) then
 var = database:get(bot_id.."Mod:Rd"..msg.chat_id_) or 'الادمن الموكوس '  
 elseif database:sismember(bot_id..'Special:User'..chat_id, user_id) then  
-var = database:get(bot_id.."Special:Rd"..msg.chat_id_) or 'المميز حبيبي الكل'  
+var = database:get(bot_id.."Special:Rd"..msg.chat_id_) or 'المميز'  
 else  
-var = database:get(bot_id.."Memp:Rd"..msg.chat_id_) or 'عضو مسكين'
+var = database:get(bot_id.."Memp:Rd"..msg.chat_id_) or 'عضو'
 end  
 return var
 end 
@@ -1306,7 +1306,8 @@ if text == 'قسم مطورين السورس والمبرمجين' and DevSoFi(m
 local Text = 'قسم مطورين السورس لدخول الي حسابتهم'
 local Key = {
 {'━┅┅┄⟞⟦ مطورين السورس ⟧⟝┄┉┉━'},
-{'يا سورس','التواصل'},
+{'التواصل','عايز بوت','يا سورس'},
+{'مبرمج بودي','مبرمج مصطفي'},
 {'العوده💞'},
 }
 send_inline_key(msg.chat_id_,Text,Key)
@@ -1659,7 +1660,7 @@ database:setex(bot_id.."Send:Fwd:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_i
 send(msg.chat_id_, msg.id_," ❤ ارسل لي التوجيه الان")
 return false
 end 
-if text == 'جلب النسخه' and DevSoFi(msg) then 
+if text == 'جلب نسخه الاحتياطيه' and DevSoFi(msg) then 
 GetFile_Bot(msg)
 end
 if text == "تنظيف المشتركين " and SudoBot(msg) then 
