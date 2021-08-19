@@ -934,7 +934,7 @@ if text == '/start' then
 local bl = 'مرحبا بيك عزيزي العضو اليك الاوامر في الاسفل'
 local keyboard = {
 {'━┅┅┄⟞⟦ مطورين السورس ⟧⟝┄┉┉━'},
-{'مبرمج بودي','مبرمج صاصا'},
+{'مبرمج بودي','مبرمج مصطفي'},
 {'💞 ═───═⟦𝙷𝙾𝙶𝙰𝙽⟧═───═💞 '},
 {'ثيم','بايو','ايدي'},
 {'💞 ═───═⟦𝙷𝙾𝙶𝙰𝙽⟧═───═💞 '},
@@ -1078,7 +1078,7 @@ local Text = ' قسم مطورين السورس لدخول الي حسابتهم
 local Key = {
 {'━┅┅┄⟞⟦ مطورين السورس ⟧⟝┄┉┉━'},
 {'التواصل','عايز بوت','يا سورس'},
-{'مبرمج بودي','مبرمج صاصا'},
+{'مبرمج بودي','مبرمج مصطفي'},
 {'𝙱𝙰𝙲𝙺'},
 }
 send_inline_key(msg.chat_id_,Text,Key)
@@ -1442,6 +1442,39 @@ for k,v in pairs(users.users) do
 database:sadd(bot_id..'Sudo:User',v)  
 end 
 send(msg.chat_id_,msg.id_,'تم رفع المطورين ') 
+end    
+end 
+tdcli_function ({ ID = "GetMessage", chat_id_ = msg.chat_id_, message_id_ = tonumber(msg.reply_to_message_id_) }, by_reply, nil) 
+end
+if text == 'جلب الثانوين' and DevSoFi(msg) then  
+local list = database:smembers(bot_id..'Dev:SoFi:2') 
+local t = '{"users":['   
+for k,v in pairs(list) do 
+if k == 1 then 
+t =  t..'"'..v..'"' 
+else 
+t =  t..',"'..v..'"' 
+end 
+end 
+t = t..']}' 
+local File = io.open('./sanween.json', "w") 
+File:write(t) 
+File:close() 
+sendDocument(msg.chat_id_, msg.id_,0, 1, nil, './sanween.json', ' عدد الثانوين { '..#list..'}') 
+end
+if text == 'رفع الثانوين' and DevSoFi(msg) then 
+function by_reply(extra, result, success)    
+if result.content_.document_ then  
+local ID_FILE = result.content_.document_.document_.persistent_id_  
+local File_Name = result.content_.document_.file_name_ 
+local File = json:decode(https.request('https://api.telegram.org/bot'.. token..'/getfile?file_id='..ID_FILE) )  
+download_to_file('https://api.telegram.org/file/bot'..token..'/'..File.result.file_path, ''..File_Name)  
+local info_file = io.open('./sudos3.json', "r"):read('*a') 
+local users = JSON.decode(info_file) 
+for k,v in pairs(users.users) do 
+database:sadd(bot_id..'Dev:SoFi:2',v)  
+end 
+send(msg.chat_id_,msg.id_,'تم رفع الثانوين ') 
 end    
 end 
 tdcli_function ({ ID = "GetMessage", chat_id_ = msg.chat_id_, message_id_ = tonumber(msg.reply_to_message_id_) }, by_reply, nil) 
@@ -3254,17 +3287,6 @@ keyboard.inline_keyboard = {
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/BoOdY_BaSha&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text == 'صاصا'  then
-local Text = [[
-صاصا مبرمج سورس هوجان للتواصل معه اتبع الزر الاسفل ⬇️💕.
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = '𝚂𝙰𝚂𝙰',url="t.me/M0STaFa_6"}},
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/vagwg/26&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-end
 if text == 'يوتيوب' or text == 'بحث' or text == 'اليوتيوب' then
 local Text = [[
 اليك بوتات تحميل ??🇪
@@ -3286,19 +3308,19 @@ local Text = [[
 《The list of novels》
 ]]
 keyboard = {} keyboard.inline_keyboard = {
-{{text = '🎯رواية "أرض زيكولا"',url="https://t.me/sasa_boody"}},
-{{text = '🎯موسوعة الظلام رعب وما شابه ذلك', url="https://t.me/barfrends/263376"}},
-{{text = '🎯رواية "الشفق الجزء الأول"', url="https://t.me/sasa_boody"}},
-{{text = '🎯رواية "المخلوق', url="https://t.me/sasa_boody"}},
-{{text = '🎯رواية "بعد النسيان"', url="https://t.me/t.me/sasa_boody"}},
-{{text = '🎯كتاب في حضرة الجن', url="https://t.me/https://t.me/t.me/sasa_boody"}},
-{{text = '🎯رواية "واختفى كل شئ"', url="https://t.me/t.me/sasa_boody"}},
-{{text = '🎯رواية "نيلوفر أسود"', url="https://t.me/t.me/sasa_boody"}},
-{{text = '🎯رواية"جثة في الفندق"', url="https://t.me/t.me/sasa_boody"}},
-{{text = '🎯رواية "في القطار السريع"', url="https://t.me/t.me/sasa_boody"}},
-{{text = '🎯لقاء مع كاتب رعب"', url="https://t.me/t.me/sasa_boody"}},
-{{text = '🎯رواية"الإنسان الأخير""', url="https://t.me/t.me/sasa_boody"}},
-{{text = '🎯رواية" مقبرة الحيوانات""', url="https://t.me/sasa_boody"}},
+{{text = '🎯رواية "أرض زيكولا"',url="https://t.me/UU_NOVEL/3"}},
+{{text = '🎯موسوعة الظلام رعب وما شابه ذلك', url="https://t.me/UU_NOVEL/4"}},
+{{text = '🎯رواية "الشفق الجزء الأول"', url="https://t.me/UU_NOVEL/21"}},
+{{text = '🎯رواية "المخلوق', url="https://t.me/UU_NOVEL/5"}},
+{{text = '🎯رواية "بعد النسيان"', url="https://t.me/UU_NOVEL/19"}},
+{{text = '🎯كتاب في حضرة الجن', url="https://t.me/UU_NOVEL/6"}},
+{{text = '🎯رواية "واختفى كل شئ"', url="https://t.me/UU_NOVEL/37"}},
+{{text = '🎯رواية "نيلوفر أسود"', url="https://t.me/UU_NOVEL/34"}},
+{{text = '🎯رواية"جثة في الفندق"', url="https://t.me/UU_NOVEL/36"}},
+{{text = '🎯رواية "في القطار السريع"', url="https://t.me/UU_NOVEL/33"}},
+{{text = '🎯لقاء مع كاتب رعب"', url="https://t.me/UU_NOVEL/7"}},
+{{text = '🎯رواية"الإنسان الأخير""', url="https://t.me/UU_NOVEL/24"}},
+{{text = '🎯رواية" مقبرة الحيوانات""', url="https://t.me/UU_NOVEL/8"}},
 {{text = '𝚂𝙰𝚂𝙰',url="t.me/M0STaFa_6"}},
 {{text = ' 𝙱𝙾𝙾𝙳𝚈',url="t.me/BoOdY_BaSha"}},
 {{text = '《𝚂𝙾𝚄𝚁𝙲𝙴 𝙷𝙾𝙶𝙰𝙽》 ', url="t.me/sasa_boody"}},
@@ -12711,20 +12733,15 @@ local curlm = 'curl "'..'https://api.telegram.org/bot'..token..'/sendDocument'..
 end   
 end
 
-if text == "غنيلي" and not database:get(bot_id.."sing:for:me"..msg.chat_id_) then
-data,res = https.request('https://black-source.tk/BlackTeAM/audios.php')
-if res == 200 then
-audios = json:decode(data)
-if audios.Info == true then
-local Text ='تم اختيار المقطع الصوتي لك'
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = '《𝚂𝙾𝚄𝚁𝙲𝙴 𝙷𝙾𝙶𝙰𝙽》', url="t.me/sasa_boody"}},
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice='..URL.escape(audios.info)..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-end
-end
+if text == "غنيلي" and not  database:get(bot_id.."sing:for:me"..msg.chat_id_) then 
+ght = math.random(3,200); 
+local Text ='تم اختيار المقطع الصوتي لك 💞 ' 
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = '❨𝚂𝙾𝚄𝚁𝙲𝙴 ❩', url="t.me/sasa_boody"}},
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/efwhgsdjg/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 end
 if text == "ثيم" then  
