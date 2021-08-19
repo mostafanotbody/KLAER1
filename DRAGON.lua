@@ -14340,7 +14340,7 @@ send(msg.chat_id_, msg.id_,'لا تمتلك صوره في حسابك', 1, 'md')
   end end
 tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil)
 end
-if text == "ايدي" or text == "id" or text == "Id" or text == "ID" or text == "ا" and msg.reply_to_message_id_ == 0 and not database:get(bot_id.. Bot:Id ..msg.chat_id_) then     
+if text == "ايدي" or text == "id" or text == "Id" or text == "ID" and msg.reply_to_message_id_ == 0 and not database:get(bot_id..'Bot:Id'..msg.chat_id_) then     
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
