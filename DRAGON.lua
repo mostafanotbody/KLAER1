@@ -12724,28 +12724,6 @@ https.request("https://api.telegram.org/bot"..token..'/sendVoice?chat_id=' .. ms
 end
 end
 
-if text == "غنيلي" and not  database:get(bot_id.."sing:for:me"..msg.chat_id_) then 
-ght = math.random(3,200); 
-local Text ='تم اختيار المقطع الصوتي لك 💞 ' 
-keyboard = {}  
-keyboard.inline_keyboard = { 
-{{text = '❨𝚂𝙾𝚄𝚁𝙲𝙴 ❩', url="t.me/sasa_boody"}},
-} 
-local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/efwhgsdjg/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-end
-
-if text == "استوري" and not  database:get(bot_id.."sing:for:me"..msg.chat_id_) then 
-ght = math.random(2,22); 
-local Text ='تم اختيار فديو استوري  لك 💞 ' 
-keyboard = {}  
-keyboard.inline_keyboard = { 
-{{text = 'SOURCE.',url="t.me/sasa_boody"}}, 
-} 
-local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/sijebehdhd/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end 
 if text == "استوري" and not  database:get(bot_id.."sing:for:me"..msg.chat_id_) then 
 ght = math.random(2,22); 
 local Text ='تم اختيار فديو استوري  لك 💞 ' 
@@ -13304,15 +13282,10 @@ end
 
 if text == "رتبتي" then
 local msg_id = msg.id_/2097152/0.5  
-local textt = ' 🌚💘 رتبتك في  ⤌ '..Rutba(msg.sender_user_id_,msg.chat_id_)
+local textt = ' ※ رتبتك في البوت » '..Rutba(msg.sender_user_id_,msg.chat_id_)
 keyboard = {} 
 keyboard.inline_keyboard = {
-{
-{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
-},
-{
-{text = 'اضف البوت الي مجموعتك ↯' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"},
-},
+{{text = '  ❨   𝚂𝙾𝚄𝚁𝙲𝙴    ❩ ', url="t.me/sasa_boody"}},
 }
 local function getpro(extra, result, success) 
 if result.photos_[0] then 
@@ -13342,12 +13315,7 @@ local msg_id = msg.id_/2097152/0.5
 local textt = '[انت مطوري ولازم اعرصلك ينور عنيا🥺🤍](t.me/sasa_boody)'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{
-{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
-},
-{
-{text = 'اضف البوت الي مجموعتك ↯' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"},
-},
+{{text = '  ❨   𝚂𝙾𝚄𝚁𝙲𝙴    ❩ ', url="t.me/sasa_boody"}},
 }
 local function getpro(extra, result, success) 
 if result.photos_[0] then 
@@ -13365,12 +13333,7 @@ local msg_id = msg.id_/2097152/0.5
 local textt = '[انت مطوري الثاني حته مني 😍💚](t.me/sasa_boody)'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{
-{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
-},
-{
-{text = 'اضف البوت الي مجموعتك ↯' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"},
-},
+{{text = '  ❨   𝚂𝙾𝚄𝚁𝙲𝙴    ❩ ', url="t.me/sasa_boody"}},
 }
 local function getpro(extra, result, success) 
 if result.photos_[0] then 
@@ -13388,12 +13351,7 @@ local msg_id = msg.id_/2097152/0.5
 local textt = '[انت المطور بس الصغنن 🌝💘](t.me/sasa_boody)'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{
-{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
-},
-{
-{text = 'اضف البوت الي مجموعتك ↯' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"},
-},
+{{text = '  ❨   𝚂𝙾𝚄𝚁𝙲𝙴    ❩ ', url="t.me/sasa_boody"}},
 }
 local function getpro(extra, result, success) 
 if result.photos_[0] then 
@@ -13411,12 +13369,7 @@ local msg_id = msg.id_/2097152/0.5
 local textt = '[نت المالك هن يعني حاجه فوق فوق راسي 😂♥](t.me/sasa_boody)'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{
-{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
-},
-{
-{text = 'اضف البوت الي مجموعتك ↯' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"},
-},
+{{text = '  ❨   𝚂𝙾𝚄𝚁𝙲𝙴    ❩ ', url="t.me/sasa_boody"}},
 }
 local function getpro(extra, result, success) 
 if result.photos_[0] then 
@@ -13434,12 +13387,7 @@ local msg_id = msg.id_/2097152/0.5
 local textt = '[انت منشئ يسطا عتلاء منشئ عاوز حاجه تانيه??🤦‍♂️](t.me/sasa_boody)'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{
-{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
-},
-{
-{text = 'اضف البوت الي مجموعتك ↯' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"},
-},
+{{text = '  ❨   𝚂𝙾𝚄𝚁𝙲𝙴    ❩ ', url="t.me/sasa_boody"}},
 }
 local function getpro(extra, result, success) 
 if result.photos_[0] then 
@@ -13457,12 +13405,7 @@ local msg_id = msg.id_/2097152/0.5
 local textt = '[ انت هنا منشئ اساسي يعني اعلى رتبه عاوزك تفتخر😂🎯](t.me/sasa_boody)'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{
-{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
-},
-{
-{text = 'اضف البوت الي مجموعتك ↯' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"},
-},
+{{text = '  ❨   𝚂𝙾𝚄𝚁𝙲𝙴    ❩ ', url="t.me/sasa_boody"}},
 }
 local function getpro(extra, result, success) 
 if result.photos_[0] then 
@@ -13480,12 +13423,7 @@ local msg_id = msg.id_/2097152/0.5
 local textt = '[ انت المدير يعني الروم تحت سيطرتك😹](t.me/sasa_boody)'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{
-{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
-},
-{
-{text = 'اضف البوت الي مجموعتك ↯' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"},
-},
+{{text = '  ❨   𝚂𝙾𝚄𝚁𝙲𝙴    ❩ ', url="t.me/sasa_boody"}},
 }
 local function getpro(extra, result, success) 
 if result.photos_[0] then 
@@ -13503,12 +13441,7 @@ local msg_id = msg.id_/2097152/0.5
 local textt = '[انت مجرد ادمن اجتهد عشان ياخد رتبه😹 ](t.me/sasa_boody)'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{
-{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
-},
-{
-{text = 'اضف البوت الي مجموعتك ↯' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"},
-},
+{{text = '  ❨   𝚂𝙾𝚄𝚁𝙲𝙴    ❩ ', url="t.me/sasa_boody"}},
 }
 local function getpro(extra, result, success) 
 if result.photos_[0] then 
@@ -13526,12 +13459,7 @@ local msg_id = msg.id_/2097152/0.5
 local textt = '[ انت مميز ابن ناس 😊 ](t.me/sasa_boody)'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{
-{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
-},
-{
-{text = 'اضف البوت الي مجموعتك ↯' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"},
-},
+{{text = '  ❨   𝚂𝙾𝚄𝚁𝙲𝙴    ❩ ', url="t.me/sasa_boody"}},
 }
 local function getpro(extra, result, success) 
 if result.photos_[0] then 
@@ -13549,12 +13477,7 @@ local msg_id = msg.id_/2097152/0.5
 local textt = '[ انت مجرد عضو حقير ملكش لازمه 🌝💘 ](t.me/sasa_boody)'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{
-{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
-},
-{
-{text = 'اضف البوت الي مجموعتك ↯' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"},
-},
+{{text = '  ❨   𝚂𝙾𝚄𝚁𝙲𝙴    ❩ ', url="t.me/sasa_boody"}},
 }
 local function getpro(extra, result, success) 
 if result.photos_[0] then 
@@ -14066,6 +13989,9 @@ end
 if text == 'اطردني' or text == 'طلعني' then
 if not database:get(bot_id..'Cick:Me'..msg.chat_id_) then
 if Can_or_NotCan(msg.sender_user_id_, msg.chat_id_) == true then
+send(msg.chat_id_, msg.id_, '\n ❤ عذرا لا استطيع طرد ( ↝'..Rutba(msg.sender_user_id_,msg.chat_id_)..'↜ )')
+return false
+end
 send(msg.chat_id_, msg.id_, '\n ❤ عذرا لا استطيع طرد ( ↝'..Rutba(msg.sender_user_id_,msg.chat_id_)..'↜ )')
 return false
 end
@@ -17388,7 +17314,7 @@ local Teext =[[
  ❤ تفعيل/تعطيل المغادره
  ❤ مسح الجروبات
 •┉ • ┉ • ┉ 《𝙷𝙾𝙶𝙰𝙽》 ┉ • ┉ • ┉•
-➫ .[🖨┇𝚂𝙾𝚄𝚁𝙲e hogan.](t.me/sasa_boody)➤
+➫ .[🖨┇𝚂𝙾𝚄𝚁𝙲𝙴𝚂 𝙿𝙾𝚆𝙴𝚁.](t.me/sopowerb0t)➤
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -17408,7 +17334,7 @@ keyboard.inline_keyboard = {
 {text = '🔙 الاوامر الرئيسيه 🔙', callback_data="/help"},
 },
 {
-{text = ' ( source )', url="t.me/sasa_boody"},
+{text = '𓆩𝑷𝑶𝑾𝑬𝑹𓆪', url="t.me/sopowerb0t"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
