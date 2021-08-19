@@ -1520,7 +1520,7 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-if text == "توكن البوت" and SudoBot(msg) or text == 'جلب التوكن' and SudoBot(msg) then 
+if text == "بليز البوت" and SudoBot(msg) or text == 'ممكن التوكن' and SudoBot(msg) then 
 if not DevSoFi(msg) then
 send(msg.chat_id_, msg.id_,'هذا الامر خاص بمطور البوت')
 return false
@@ -1528,17 +1528,6 @@ end
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendmessage?chat_id=' .. msg.sender_user_id_ .. '&text=' ..token) 
 send(msg.chat_id_, msg.id_,' ') 
-end
-if text == 'صاصا' or text == 'مصاصا' or text == 'مصطفي' or text == 'مبرمج مصطفي' or text == 'مصطفي فين' or text == 'صاصا فين' then 
-local msg_id = msg.id_/2097152/0.5  
-local Text = [[ 
- 𝚂𝙰𝚂𝙰
-]] 
-keyboard = {}  
-keyboard.inline_keyboard = { 
-{{text = ' 𝚂𝙰𝚂𝙰',url="t.me/M0STaFa_6"}}, 
-} 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/M0STaFa_6&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 if text == 'قناه السورس' and DevSoFi(msg) then
 database:del(bot_id..'Srt:Bot') 
@@ -3257,6 +3246,17 @@ keyboard.inline_keyboard = {
 {{text = ' 𝙱𝙾𝙾𝙳𝚈𝅘𝅥𝅮',url="t.me/BoOdY_BaSha"}}, 
 } 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/BoOdY_BaSha&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+if text == 'مصطفي' or text == 'مبرمج مصطفي' or text == 'صاصا' or text == 'مصاصا' or text == 'صاصا' or text == 'sasa' then 
+local msg_id = msg.id_/2097152/0.5  
+local Text = [[ 
+𝚂𝙰𝚂𝙰
+   ]] 
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = ' 𝚂𝙰𝚂𝙰𝅘𝅥𝅮',url="t.me/M0STaFa_6"}}, 
+} 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/M0STaFa_6&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 if text == 'يوتيوب' or text == 'بحث' or text == 'اليوتيوب' then
@@ -11955,7 +11955,7 @@ local DRAGON_Msg = {
 'نعم يا قلب  '..Namebot..'',
 'عاوز اي من '..Namebot..'',
 'دوختو  '..Namebot..'',
-'انت تعرف انو بوت  '..Namebot..'  متنصب علي سورس هوجانو🙈♥️',
+'انت تعرف انو بوت  '..Namebot..'  متنصب علي سورس هوجان🙈♥️',
 'بتشقط وجي ويت 🤪',
 'ايوا جاي 🙈',
 'يعم هتسحر واجي 😾',
@@ -11997,7 +11997,7 @@ local DRAGON_Msg = {
 'اسمي الكيوت '..Namebot..' 🌝💘',
 'اسمي  '..Namebot..' ياحياتي🧸♥️',
 'اسمي  '..Namebot..' يوتكه🙈🍑',
-'انت تعرف انو بوت  '..Namebot..'  متنصب علي سورس هوجانو🙈♥️',
+'انت تعرف انو بوت  '..Namebot..'  متنصب علي سورس هوجان🙈♥️',
 } 
 Namebot = DRAGON_Msg[math.random(#DRAGON_Msg)] 
 local msg_id = msg.id_/2097152/0.5  
