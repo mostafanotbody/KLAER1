@@ -1104,12 +1104,12 @@ local keyboard = {
 {'ضع اسم للبوت','معلومات الكيبورد'},
 {'المطور','الاحصائيات'},
 {'💞 ═───═⟦𝙷𝙾𝙶𝙰𝙽⟧═───═💞 '},
+{'جلب المطورين','جلب المشتركين','جلب الثانوين'},
 {'قسم مطورين السورس والمبرمجين','قـسم مـسح&اضـف'},
 {'قـسم تـفعيل&تـعطيل','قـسم الـحمايه'},
 {'قـسم الاذاعـه'},
 {'💞 ═───═⟦𝙷𝙾𝙶𝙰𝙽⟧═───═💞 '},
-{'جلب المشتركين','جلب النسخه'},
-{'جلب المطورين','جلب التوكن'},
+{'جلب نسخه الاحتياطيه'},
 {'تحديث السورس ','الاصدار'},
 {'معلومات السيرفر'},
 {'الغاء'},
@@ -4321,7 +4321,7 @@ end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, FunctionStatus, nil)
 end
 if Chat_Type == 'GroupBot' and ChekAdd(msg.chat_id_) == true then
-if text == 'رفع النسخه' and DevSoFi(msg) then   
+if text == 'رفع نسخه الاحتياطيه' and DevSoFi(msg) then   
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -4343,7 +4343,7 @@ tdcli_function ({ ID = "GetMessage", chat_id_ = msg.chat_id_, message_id_ = tonu
 end
 end
 
-if text == 'جلب النسخه' and DevSoFi(msg) then 
+if text == 'جلب نسخه الاحتياطيه' and DevSoFi(msg) then 
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -13341,7 +13341,12 @@ local msg_id = msg.id_/2097152/0.5
 local textt = ' ※ رتبتك في البوت » '..Rutba(msg.sender_user_id_,msg.chat_id_)
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  ❨   𝚂𝙾𝚄𝚁𝙲𝙴    ❩ ', url="t.me/sasa_boody"}},
+{
+{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
+},
+{
+{text = 'اضف البوت الي مجموعتك ' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"},
+},
 }
 local function getpro(extra, result, success) 
 if result.photos_[0] then 
@@ -13371,7 +13376,12 @@ local msg_id = msg.id_/2097152/0.5
 local textt = '[انت مطوري ولازم اعرصلك ينور عنيا🥺🤍](t.me/sasa_boody)'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  ❨   𝚂𝙾𝚄𝚁𝙲𝙴    ❩ ', url="t.me/sasa_boody"}},
+{
+{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
+},
+{
+{text = 'اضف البوت الي مجموعتك ' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"},
+},
 }
 local function getpro(extra, result, success) 
 if result.photos_[0] then 
@@ -13389,7 +13399,12 @@ local msg_id = msg.id_/2097152/0.5
 local textt = '[انت مطوري الثاني حته مني 😍💚](t.me/sasa_boody)'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  ❨   𝚂𝙾𝚄𝚁𝙲𝙴    ❩ ', url="t.me/sasa_boody"}},
+{
+{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
+},
+{
+{text = 'اضف البوت الي مجموعتك ' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"},
+},
 }
 local function getpro(extra, result, success) 
 if result.photos_[0] then 
@@ -13407,7 +13422,12 @@ local msg_id = msg.id_/2097152/0.5
 local textt = '[انت المطور بس الصغنن 🌝💘](t.me/sasa_boody)'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  ❨   𝚂𝙾𝚄𝚁𝙲𝙴    ❩ ', url="t.me/sasa_boody"}},
+{
+{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
+},
+{
+{text = 'اضف البوت الي مجموعتك ' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"},
+},
 }
 local function getpro(extra, result, success) 
 if result.photos_[0] then 
@@ -13425,7 +13445,12 @@ local msg_id = msg.id_/2097152/0.5
 local textt = '[نت المالك هن يعني حاجه فوق فوق راسي 😂♥](t.me/sasa_boody)'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  ❨   𝚂𝙾𝚄𝚁𝙲𝙴    ❩ ', url="t.me/sasa_boody"}},
+{
+{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
+},
+{
+{text = 'اضف البوت الي مجموعتك ' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"},
+},
 }
 local function getpro(extra, result, success) 
 if result.photos_[0] then 
@@ -13443,7 +13468,12 @@ local msg_id = msg.id_/2097152/0.5
 local textt = '[انت منشئ يسطا عتلاء منشئ عاوز حاجه تانيه??🤦‍♂️](t.me/sasa_boody)'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  ❨   𝚂𝙾𝚄𝚁𝙲𝙴    ❩ ', url="t.me/sasa_boody"}},
+{
+{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
+},
+{
+{text = 'اضف البوت الي مجموعتك ' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"},
+},
 }
 local function getpro(extra, result, success) 
 if result.photos_[0] then 
@@ -13461,7 +13491,12 @@ local msg_id = msg.id_/2097152/0.5
 local textt = '[ انت هنا منشئ اساسي يعني اعلى رتبه عاوزك تفتخر😂🎯](t.me/sasa_boody)'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  ❨   𝚂𝙾𝚄𝚁𝙲𝙴    ❩ ', url="t.me/sasa_boody"}},
+{
+{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
+},
+{
+{text = 'اضف البوت الي مجموعتك ' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"},
+},
 }
 local function getpro(extra, result, success) 
 if result.photos_[0] then 
@@ -13479,7 +13514,12 @@ local msg_id = msg.id_/2097152/0.5
 local textt = '[ انت المدير يعني الروم تحت سيطرتك😹](t.me/sasa_boody)'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  ❨   𝚂𝙾𝚄𝚁𝙲𝙴    ❩ ', url="t.me/sasa_boody"}},
+{
+{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
+},
+{
+{text = 'اضف البوت الي مجموعتك ' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"},
+},
 }
 local function getpro(extra, result, success) 
 if result.photos_[0] then 
@@ -13497,7 +13537,12 @@ local msg_id = msg.id_/2097152/0.5
 local textt = '[انت مجرد ادمن اجتهد عشان ياخد رتبه😹 ](t.me/sasa_boody)'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  ❨   𝚂𝙾𝚄𝚁𝙲𝙴    ❩ ', url="t.me/sasa_boody"}},
+{
+{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
+},
+{
+{text = 'اضف البوت الي مجموعتك ' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"},
+},
 }
 local function getpro(extra, result, success) 
 if result.photos_[0] then 
@@ -13515,7 +13560,12 @@ local msg_id = msg.id_/2097152/0.5
 local textt = '[ انت مميز ابن ناس 😊 ](t.me/sasa_boody)'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  ❨   𝚂𝙾𝚄𝚁𝙲𝙴    ❩ ', url="t.me/sasa_boody"}},
+{
+{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
+},
+{
+{text = 'اضف البوت الي مجموعتك ' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"},
+},
 }
 local function getpro(extra, result, success) 
 if result.photos_[0] then 
@@ -13533,7 +13583,12 @@ local msg_id = msg.id_/2097152/0.5
 local textt = '[ انت مجرد عضو حقير ملكش لازمه 🌝💘 ](t.me/sasa_boody)'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  ❨   𝚂𝙾𝚄𝚁𝙲𝙴    ❩ ', url="t.me/sasa_boody"}},
+{
+{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
+},
+{
+{text = 'اضف البوت الي مجموعتك ' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"},
+},
 }
 local function getpro(extra, result, success) 
 if result.photos_[0] then 
