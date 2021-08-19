@@ -13308,10 +13308,15 @@ end
 
 if text == "رتبتي" then
 local msg_id = msg.id_/2097152/0.5  
-local textt = ' ※ رتبتك في البوت » '..Rutba(msg.sender_user_id_,msg.chat_id_)
+local textt = ' 🌚💘 رتبتك في  ⤌ '..Rutba(msg.sender_user_id_,msg.chat_id_)
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  ❨   𝚂𝙾𝚄𝚁𝙲𝙴    ❩ ', url="t.me/sasa_boody"}},
+{
+{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
+},
+{
+{text = 'اضف البوت الي مجموعتك ↯' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"},
+},
 }
 local function getpro(extra, result, success) 
 if result.photos_[0] then 
@@ -13341,7 +13346,12 @@ local msg_id = msg.id_/2097152/0.5
 local textt = '[انت مطوري ولازم اعرصلك ينور عنيا🥺🤍](t.me/sasa_boody)'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  ❨   𝚂𝙾𝚄𝚁𝙲𝙴    ❩ ', url="t.me/sasa_boody"}},
+{
+{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
+},
+{
+{text = 'اضف البوت الي مجموعتك ↯' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"},
+},
 }
 local function getpro(extra, result, success) 
 if result.photos_[0] then 
@@ -13359,7 +13369,12 @@ local msg_id = msg.id_/2097152/0.5
 local textt = '[انت مطوري الثاني حته مني 😍💚](t.me/sasa_boody)'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  ❨   𝚂𝙾𝚄𝚁𝙲𝙴    ❩ ', url="t.me/sasa_boody"}},
+{
+{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
+},
+{
+{text = 'اضف البوت الي مجموعتك ↯' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"},
+},
 }
 local function getpro(extra, result, success) 
 if result.photos_[0] then 
@@ -13377,7 +13392,12 @@ local msg_id = msg.id_/2097152/0.5
 local textt = '[انت المطور بس الصغنن 🌝💘](t.me/sasa_boody)'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  ❨   𝚂𝙾𝚄𝚁𝙲𝙴    ❩ ', url="t.me/sasa_boody"}},
+{
+{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
+},
+{
+{text = 'اضف البوت الي مجموعتك ↯' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"},
+},
 }
 local function getpro(extra, result, success) 
 if result.photos_[0] then 
@@ -13395,7 +13415,12 @@ local msg_id = msg.id_/2097152/0.5
 local textt = '[نت المالك هن يعني حاجه فوق فوق راسي 😂♥](t.me/sasa_boody)'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  ❨   𝚂𝙾𝚄𝚁𝙲𝙴    ❩ ', url="t.me/sasa_boody"}},
+{
+{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
+},
+{
+{text = 'اضف البوت الي مجموعتك ↯' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"},
+},
 }
 local function getpro(extra, result, success) 
 if result.photos_[0] then 
@@ -13413,7 +13438,12 @@ local msg_id = msg.id_/2097152/0.5
 local textt = '[انت منشئ يسطا عتلاء منشئ عاوز حاجه تانيه??🤦‍♂️](t.me/sasa_boody)'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  ❨   𝚂𝙾𝚄𝚁𝙲𝙴    ❩ ', url="t.me/sasa_boody"}},
+{
+{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
+},
+{
+{text = 'اضف البوت الي مجموعتك ↯' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"},
+},
 }
 local function getpro(extra, result, success) 
 if result.photos_[0] then 
@@ -13431,7 +13461,12 @@ local msg_id = msg.id_/2097152/0.5
 local textt = '[ انت هنا منشئ اساسي يعني اعلى رتبه عاوزك تفتخر😂🎯](t.me/sasa_boody)'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  ❨   𝚂𝙾𝚄𝚁𝙲𝙴    ❩ ', url="t.me/sasa_boody"}},
+{
+{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
+},
+{
+{text = 'اضف البوت الي مجموعتك ↯' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"},
+},
 }
 local function getpro(extra, result, success) 
 if result.photos_[0] then 
@@ -13449,7 +13484,12 @@ local msg_id = msg.id_/2097152/0.5
 local textt = '[ انت المدير يعني الروم تحت سيطرتك😹](t.me/sasa_boody)'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  ❨   𝚂𝙾𝚄𝚁𝙲𝙴    ❩ ', url="t.me/sasa_boody"}},
+{
+{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
+},
+{
+{text = 'اضف البوت الي مجموعتك ↯' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"},
+},
 }
 local function getpro(extra, result, success) 
 if result.photos_[0] then 
@@ -13467,7 +13507,12 @@ local msg_id = msg.id_/2097152/0.5
 local textt = '[انت مجرد ادمن اجتهد عشان ياخد رتبه😹 ](t.me/sasa_boody)'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  ❨   𝚂𝙾𝚄𝚁𝙲𝙴    ❩ ', url="t.me/sasa_boody"}},
+{
+{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
+},
+{
+{text = 'اضف البوت الي مجموعتك ↯' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"},
+},
 }
 local function getpro(extra, result, success) 
 if result.photos_[0] then 
@@ -13485,7 +13530,12 @@ local msg_id = msg.id_/2097152/0.5
 local textt = '[ انت مميز ابن ناس 😊 ](t.me/sasa_boody)'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  ❨   𝚂𝙾𝚄𝚁𝙲𝙴    ❩ ', url="t.me/sasa_boody"}},
+{
+{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
+},
+{
+{text = 'اضف البوت الي مجموعتك ↯' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"},
+},
 }
 local function getpro(extra, result, success) 
 if result.photos_[0] then 
@@ -13503,7 +13553,12 @@ local msg_id = msg.id_/2097152/0.5
 local textt = '[ انت مجرد عضو حقير ملكش لازمه 🌝💘 ](t.me/sasa_boody)'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  ❨   𝚂𝙾𝚄𝚁𝙲𝙴    ❩ ', url="t.me/sasa_boody"}},
+{
+{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
+},
+{
+{text = 'اضف البوت الي مجموعتك ↯' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"},
+},
 }
 local function getpro(extra, result, success) 
 if result.photos_[0] then 
@@ -16812,9 +16867,6 @@ keyboard.inline_keyboard = {
 {
 {text = 'الرجوع الاوامر 🃏', callback_data="/help8"},
 },
-{
-{text = 'اخفاء الاوامر', callback_data="/hide"},
-},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -16887,9 +16939,6 @@ keyboard.inline_keyboard = {
 {
 {text = 'الرجوع الاوامر 🃏', callback_data="/help8"},
 },
-{
-{text = 'اخفاء الاوامر', callback_data="/hide"},
-},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -16952,9 +17001,6 @@ keyboard.inline_keyboard = {
 },
 {
 {text = '◗القائمه الرائسيه◖', callback_data="/help8"},
-},
-{
-{text = 'اخفاء الاوامر', callback_data="/hide"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -17053,9 +17099,6 @@ keyboard.inline_keyboard = {
 {text = 'الامر السابق', callback_data="/help3"},
 },
 {
-{text = 'اخفاء الاوامر', callback_data="/hide"},
-},
-{
 {text = 'Back ❤', callback_data="/help8"},
 },
 }
@@ -17141,9 +17184,6 @@ keyboard.inline_keyboard = {
 {
 {text = 'الرجوع الاوامر 🃏', callback_data="/help8"},
 },
-{
-{text = 'اخفاء الاوامر', callback_data="/hide"},
-},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -17183,9 +17223,6 @@ keyboard = {}
 keyboard.inline_keyboard = {
 {
 {text = 'الرجوع الاوامر 🃏', callback_data="/help8"},
-},
-{
-{text = 'اخفاء الاوامر', callback_data="/hide"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -17259,9 +17296,6 @@ keyboard.inline_keyboard = {
 {
 {text = 'مميزات التسليه 🧸', callback_data="/help10"},
 },
-{
-{text = 'اخفاء الاوامر', callback_data="/hide"},
-},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -17289,9 +17323,6 @@ keyboard.inline_keyboard = {
 },
 {
 {text = 'ااوامر اصحاب الرتب ⇊', callback_data="/help2"},
-},
-{
-{text = 'اخفاء الاوامر', callback_data="/hide"},
 },
 {
 {text = '《𝚂𝙾𝚄𝚁𝙲𝙴 𝙷𝙾𝙶𝙰𝙽》', url="t.me/sasa_boody"},
@@ -17364,7 +17395,7 @@ local Teext =[[
  ❤ تفعيل/تعطيل المغادره
  ❤ مسح الجروبات
 •┉ • ┉ • ┉ 《𝙷𝙾𝙶𝙰𝙽》 ┉ • ┉ • ┉•
-➫ .[🖨┇𝚂𝙾𝚄𝚁𝙲𝙴𝚂 𝙿𝙾𝚆𝙴𝚁.](t.me/sopowerb0t)➤
+➫ .[🖨┇𝚂𝙾𝚄𝚁𝙲e hogan.](t.me/sasa_boody)➤
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -17384,10 +17415,7 @@ keyboard.inline_keyboard = {
 {text = '🔙 الاوامر الرئيسيه 🔙', callback_data="/help"},
 },
 {
-{text = 'اخفاء الاوامر', callback_data="/hide"},
-},
-{
-{text = '𓆩𝑷𝑶𝑾𝑬𝑹𓆪', url="t.me/sopowerb0t"},
+{text = ' ( source )', url="t.me/sasa_boody"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -17410,9 +17438,6 @@ keyboard.inline_keyboard = {
 {{text = 'غنيلي', callback_data="/help17"}},
 {{text = 'نسبه جمالي', callback_data="/help18"},{text = 'اليتيوب', callback_data="/help24"}},
 {{text = '◗القائمه الرائسيه◖', callback_data="/help7"}},
-{
-{text = 'اخفاء الاوامر', callback_data="/hide"},
-},
 {{text = '《𝚂𝙾𝚄𝚁𝙲𝙴 𝙷𝙾𝙶𝙰𝙽》', url="t.me/sasa_boody"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -17442,9 +17467,6 @@ keyboard.inline_keyboard = {
 {text = 'ااوامر اصحاب الرتب ⇊', callback_data="/help2"},
 },
 {
-{text = 'اخفاء الاوامر', callback_data="/hide"},
-},
-{
 {text = '◗القائمه الرائسيه◖', callback_data="/add"},
 },
 {
@@ -17452,14 +17474,6 @@ keyboard.inline_keyboard = {
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
-end
-if Text == '/hide' then
-local hide = 'تم اخفاء الاوامر'
-https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(hide)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true') 
-DeleteMessage(Chat_id, msg_idd)
-https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(hide).."&show_alert=false")
-DeleteMessage(Chat_id, msg_idd)
-return false
 end
 ------------------------------ callback add dev mr sofi
 if Text == '/mute-name' then
