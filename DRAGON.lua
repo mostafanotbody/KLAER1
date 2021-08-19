@@ -12717,7 +12717,6 @@ ght = math.random(3,200);
 local Text ='تم اختيار المقطع الصوتي لك 💞 ' 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = 'غنيلي اخر', callback_data="غنيلي"}},
 {{text = '❨𝚂𝙾𝚄𝚁𝙲𝙴 ❩', url="t.me/sasa_boody"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
@@ -12730,7 +12729,6 @@ ght = math.random(3,200);
 local Text ='تم اختيار المقطع الصوتي لك 💞 ' 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = 'غنيلي اخر', callback_data="/added"}},
 {{text = '❨𝚂𝙾𝚄𝚁𝙲𝙴 ❩', url="t.me/sasa_boody"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
@@ -12743,7 +12741,6 @@ ght = math.random(2,22);
 local Text ='تم اختيار فديو استوري  لك 💞 ' 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = 'لتغير الاستوري', callback_data="استوري"}},
 {{text = 'SOURCE.',url="t.me/sasa_boody"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
@@ -12754,7 +12751,6 @@ ght = math.random(2,22);
 local Text ='تم اختيار فديو استوري  لك 💞 ' 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = 'ثيم اخر', callback_data="/added"}},
 {{text = 'SOURCE.',url="t.me/sasa_boody"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
