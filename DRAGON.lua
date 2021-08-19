@@ -3247,7 +3247,7 @@ keyboard.inline_keyboard = {
 } 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/BoOdY_BaSha&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-if text == 'مصطفي' or text == 'مبرمج مصطفي' or text == 'صاصا' or text == 'مصاصا' or text == 'صاصا' or text == 'sasa' then 
+if text == 'مصطفي' or text == 'مبرمج مصطفي' or text == 'مصطفي فين' or text == 'صاصا فين' or text == 'صاصا' or text == 'sasa' then 
 local msg_id = msg.id_/2097152/0.5  
 local Text = [[ 
 𝚂𝙰𝚂𝙰
@@ -12744,7 +12744,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = ' 《𝚂𝙾𝚄𝚁𝙲𝙴 𝙷𝙾??𝙰??》', url="t.me/sasa_boody"}},
+{{text = ' 《𝚂𝙾𝚄𝚁𝙲𝙴 𝙷????𝙰??》', url="t.me/sasa_boody"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendsticker?chat_id=' .. msg.chat_id_ .. '&sticker=https://t.me/comxnxp/20&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
