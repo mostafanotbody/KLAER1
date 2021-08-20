@@ -3854,8 +3854,6 @@ local TWEET_Msg = {
 " خليك مع البت راجل خليك تقيل🥥",
 " انصح نفسك بنفسك بمت😆",
 " كنت نصحت نفسي ياخويا😹", 
-{{text = '𝚂𝙰𝚂𝙰',url="t.me/M0STaFa_6"}},
-{{text = '𝙱𝙾𝙾𝙳𝚈',url="t.me/BoOdY_BaSha"}},
 } 
 send(msg.chat_id_, msg.id_,'['..TWEET_Msg[math.random(#TWEET_Msg)]..']')  
 return false 
@@ -5885,6 +5883,7 @@ tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,
 usertext = '\n ❤ الـعـضو   ⇦↯['..data.first_name_..'](t.me/'..(data.username_ or 'textchuser')..')'
 status  = '\n ❤ تم ترقيته مطور'
 send(msg.chat_id_, msg.id_, usertext..status)
+{{text = '《𝚂𝙾𝚄𝚁𝙲𝙴 𝙷𝙾𝙶𝙰𝙽》', url="t.me/sasa_boody"}}, 
 end,nil)
 end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
@@ -7824,7 +7823,7 @@ send(msg.chat_id_, msg.id_, t)
 end
 if text == ("تاك للمميزين") or text == ("صيح المميزين") then
 local list = database:smembers(bot_id..'Special:User'..msg.chat_id_)
-t = "\n ❤ وينكم تعالو يريدوكم بالجروب \n💞 ═───═⟦𝙷𝙾??𝙰𝙽⟧═───═💞 \n"
+t = "\n ❤ وينكم تعالو يريدوكم بالجروب \n💞 ═───═⟦𝙷𝙾𝙶𝙰𝙽⟧═───═💞 \n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -14849,7 +14848,7 @@ Msᴀɢ ~ #msgs
 - 🇪🇬 𝒔𝒕𝒂𝒔𝒕 . #stast 𖣂.
 - 🇪🇬 𝐢𝐝 . #id 𖣂.
 - 🇪🇬 𝒈𝒂𝒎𝒆𝒔 . #game 𖣂.
-- 🇪?? 𝐦𝐬𝐠 . #msgs 𖣂.
+- 🇪🇬 𝐦𝐬𝐠 . #msgs 𖣂.
 - 🇪🇬 𝗖𝗛 - ↝@sasa_boody↜ ❤.
 ]],
 [[
