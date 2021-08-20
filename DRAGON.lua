@@ -3343,6 +3343,7 @@ keyboard = {}
 keyboard.inline_keyboard = { 
 {{text = 'استوري اخر', callback_data="استوري"}},
 {{text = '𝚂𝙰𝚂𝙰',url="t.me/M0STaFa_6"}},
+{{text = '𝙱𝙾𝙾𝙳𝚈',url="t.me/BoOdY_BaSha"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/sijebehdhd/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -3354,6 +3355,7 @@ keyboard = {}
 keyboard.inline_keyboard = { 
 {{text = 'ثيم اخر', callback_data="/added"}},
 {{text = '𝚂𝙰𝚂𝙰',url="t.me/M0STaFa_6"}},
+{{text = '𝙱𝙾𝙾𝙳𝚈',url="t.me/BoOdY_BaSha"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/xxvvzm/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -4184,7 +4186,7 @@ end
 if text == 'التواصل'  then
 database:del(bot_id..'Srt:Bot') 
 local Text = [[ 
-[𝚃𝚆𝙻](t.me/BOODY22_BOT)
+[𝚃𝙰𝚆𝙰𝚂𝙾𝙻](t.me/BOODY22_BOT)
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
@@ -13588,13 +13590,13 @@ send(msg.chat_id_, msg.id_," ❤ تـم تـعـطـيل ردود السورس")
 return false end
 end
 
-if text == 'تيست' then 
-local my_ph = database:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
+if text == 'تيست' and SudoBot(msg) then 
 send(msg.chat_id_,msg.id_, ' البوت شغال ') 
+return false
+end
+
+if text == 'تيست' then 
+send(msg.chat_id_,msg.id_, ' هاذا الامر يخص المطور الاساسي فقط ') 
 return false
 end
 
@@ -14033,17 +14035,6 @@ local interaction = Total_Msg(Msguser)
 local rtpg = rtpa
 local sofia = {
 	
-"يتي القمر نزل الارض يعمل اي🥺",
-
-"صورتك عفنت غيرها بقي....🤓🧡",
-
-"اي يعم القمر دا ملاك يجدعان...🥺💕",
-
-"اي الصوره المفنه دي يعم....😜",
-
-"هوا الي مجننا هوا هوا القمر هوا....😂",
-
-"صورتك دي ولا صورت القمر.....🙈♥️",
 
 }
 local rdphoto = sofia[math.random(#sofia)]
@@ -14153,15 +14144,6 @@ local interaction = Total_Msg(Msguser)
 local rtpg = rtpa
 local sofia = {
 	
-"يتي القمر نزل الارض يعمل اي🥺",
-
-"اي يعم القمر دا ملاك يجدعان...🥺💕",
-
-"اي الصوره المفنه دي يعم....😜",
-
-"هوا الي مجننا هوا هوا القمر هوا....😂",
-
-"صورتك دي ولا صورت القمر.....🙈♥️",
 
 }
 local rdphoto = sofia[math.random(#sofia)]
