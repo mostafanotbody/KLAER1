@@ -334,7 +334,7 @@ var = database:get(bot_id.."BasicConstructor:Rd"..msg.chat_id_) or 'المنشئ
 elseif database:sismember(bot_id..'Constructor'..chat_id, user_id) then
 var = database:get(bot_id.."Constructor:Rd"..msg.chat_id_) or 'المنشئ'  
 elseif database:sismember(bot_id..'onall'..chat_id, user_id) then
-var = database:get(bot_id.."onall:Rd"..msg.chat_id_) or 'المدير العام  
+var = database:get(bot_id.."onall:Rd"..msg.chat_id_) or 'المدير العام'
 elseif database:sismember(bot_id..'moall'..chat_id, user_id) then
 var = database:get(bot_id.."moall:Rd"..msg.chat_id_) or 'الادمن العام'  
 elseif database:sismember(bot_id..'Manager'..chat_id, user_id) then
@@ -10850,7 +10850,7 @@ local text =
 ' }\n'..' ❤  التكرار  ⇦↯{ '..flood..
 ' }\n'..' ❤  الترحيب  ⇦↯{ '..welcome..
 ' }\n'..' ❤  عدد التكرار  ⇦↯{ '..NUM_MSG_MAX..
-' }\nء⧬━┅┅┄⟞❲[𝚂𝙾𝚄𝚁𝙲𝙴 𝙷𝙾𝙶𝙰𝙽](t.me/sasa_boody)❳⟝┄┉┉━⧬'..
+' }\nء⧬━┅┅┄⟞❲[𝚂𝙾𝚄𝚁𝙲𝙴 𝙷??𝙶𝙰𝙽](t.me/sasa_boody)❳⟝┄┉┉━⧬'..
 '\n ❤  علامة ال {✓} تعني مفعل'..
 '\n ❤  علامة ال {✘} تعني معطل'..
 '\nء💞 ═───═⟦𝙷𝙾𝙶𝙰𝙽⟧═───═💞 '..
