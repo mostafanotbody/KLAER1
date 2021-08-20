@@ -14035,6 +14035,17 @@ local interaction = Total_Msg(Msguser)
 local rtpg = rtpa
 local sofia = {
 	
+"يتي القمر نزل الارض يعمل اي🥺",
+
+"صورتك عفنت غيرها بقي....🤓🧡",
+
+"اي يعم القمر دا ملاك يجدعان...🥺💕",
+
+"اي الصوره المفنه دي يعم....😜",
+
+"هوا الي مجننا هوا هوا القمر هوا....😂",
+
+"صورتك دي ولا صورت القمر.....🙈♥️",
 
 }
 local rdphoto = sofia[math.random(#sofia)]
@@ -14144,6 +14155,15 @@ local interaction = Total_Msg(Msguser)
 local rtpg = rtpa
 local sofia = {
 	
+"يتي القمر نزل الارض يعمل اي🥺",
+
+"اي يعم القمر دا ملاك يجدعان...🥺💕",
+
+"اي الصوره المفنه دي يعم....😜",
+
+"هوا الي مجننا هوا هوا القمر هوا....😂",
+
+"صورتك دي ولا صورت القمر.....🙈♥️",
 
 }
 local rdphoto = sofia[math.random(#sofia)]
@@ -14397,7 +14417,7 @@ local List = {
 ► 𝗨𝗦𝗘𝗥𝗡𝗔𝗠𝗘 #username 𓃚  ꙰
 ► 𝗜𝗗 #id 𓃚 ꙰
 ► 𝗦𝗧𝗔𝗦 #stast 𓃚 ꙰
-► 𝗠𝗦𝗔𝗚 #msgs 𓃚 ꙰
+► 𝗠𝗦𝗔?? #msgs 𓃚 ꙰
 ► 𝗖𝗛 - ↝@sasa_boody↜ ❤.
 ]],
 [[
