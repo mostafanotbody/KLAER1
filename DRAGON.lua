@@ -14041,7 +14041,7 @@ local sofia = {
 
 "اي يعم القمر دا ملاك يجدعان...🥺💕",
 
-"اي الصوره المفنه دي يعم....😜",
+"اي الصوره المعفنه دي يعم....😜",
 
 "هوا الي مجننا هوا هوا القمر هوا....😂",
 
@@ -16521,9 +16521,6 @@ keyboard.inline_keyboard = {
 {
 {text = 'الرجوع الاوامر 🃏', callback_data="/help8"},
 },
-{
-{text = 'اخفاء الاوامر', callback_data="/hide"},
-},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -16596,9 +16593,6 @@ keyboard.inline_keyboard = {
 {
 {text = 'الرجوع الاوامر 🃏', callback_data="/help8"},
 },
-{
-{text = 'اخفاء الاوامر', callback_data="/hide"},
-},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -16661,9 +16655,6 @@ keyboard.inline_keyboard = {
 },
 {
 {text = '◗القائمه الرائسيه◖', callback_data="/help8"},
-},
-{
-{text = 'اخفاء الاوامر', callback_data="/hide"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -16762,9 +16753,6 @@ keyboard.inline_keyboard = {
 {text = 'الامر السابق', callback_data="/help3"},
 },
 {
-{text = 'اخفاء الاوامر', callback_data="/hide"},
-},
-{
 {text = 'Back ❤', callback_data="/help8"},
 },
 }
@@ -16850,9 +16838,6 @@ keyboard.inline_keyboard = {
 {
 {text = 'الرجوع الاوامر 🃏', callback_data="/help8"},
 },
-{
-{text = 'اخفاء الاوامر', callback_data="/hide"},
-},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -16892,9 +16877,6 @@ keyboard = {}
 keyboard.inline_keyboard = {
 {
 {text = 'الرجوع الاوامر 🃏', callback_data="/help8"},
-},
-{
-{text = 'اخفاء الاوامر', callback_data="/hide"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -16968,9 +16950,6 @@ keyboard.inline_keyboard = {
 {
 {text = 'مميزات التسليه 🧸', callback_data="/help10"},
 },
-{
-{text = 'اخفاء الاوامر', callback_data="/hide"},
-},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -17000,7 +16979,7 @@ keyboard.inline_keyboard = {
 {text = 'ااوامر اصحاب الرتب ⇊', callback_data="/help2"},
 },
 {
-{text = '《𝚂𝙾𝚄𝚁𝙲𝙴 𝙷𝙾𝙶𝙰𝙽》', url="t.me/sasa_boody"},{text = 'اخفاء الاوامر', callback_data="/hide"}},
+{text = '《𝚂𝙾𝚄𝚁𝙲𝙴 𝙷𝙾𝙶𝙰𝙽》', url="t.me/sasa_boody"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -17087,7 +17066,7 @@ keyboard.inline_keyboard = {
 {text = '9️⃣', callback_data="/help9"},{text = '🔟', callback_data="/help10"},
 },
 {
-{text = '🔙 الاوامر الرئيسيه 🔙', callback_data="/help"},{text = 'اخفاء الاوامر', callback_data="/hide"}},
+{text = '🔙 الاوامر الرئيسيه 🔙', callback_data="/help"},
 },
 {
 {text = '( source hogan )', url="t.me/sasa_boody"},
@@ -17112,8 +17091,7 @@ keyboard.inline_keyboard = {
 {{text = 'بتكره دا', callback_data="/help16"},{text = 'نكته', callback_data="/help23"}}, 
 {{text = 'غنيلي', callback_data="/help17"}},
 {{text = 'نسبه جمالي', callback_data="/help18"},{text = 'اليتيوب', callback_data="/help24"}},
-{{text = '◗القائمه الرائسيه◖', callback_data="/help7"}},{text = 'اخفاء الاوامر', callback_data="/hide"}},
-},
+{{text = '◗القائمه الرائسيه◖', callback_data="/help7"}},
 {{text = '《𝚂𝙾𝚄𝚁𝙲𝙴 𝙷𝙾𝙶𝙰𝙽》', url="t.me/sasa_boody"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -17146,21 +17124,10 @@ keyboard.inline_keyboard = {
 {text = '◗القائمه الرائسيه◖', callback_data="/add"},
 },
 {
-{text = 'اخفاء الاوامر', callback_data="/hide"},
-},
-{
 {text = '《𝚂𝙾𝚄𝚁𝙲𝙴 𝙷𝙾𝙶𝙰𝙽》', url="t.me/sasa_boody"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
-end
-if Text == '/hide' then
-local hide = 'تم اخفاء الاوامر'
-https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(hide)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true') 
-DeleteMessage(Chat_id, msg_idd)
-https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(hide).."&show_alert=false")
-DeleteMessage(Chat_id, msg_idd)
-return false
 end
 ------------------------------ callback add dev mr sofi
 if Text == '/mute-name' then
