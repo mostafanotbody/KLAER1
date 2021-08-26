@@ -2721,19 +2721,45 @@ end
 -------------------------------------------------------------------------------------------------------------
 
 -------------------------------------------------------------------------------------------------------------
-if text == 'تفعيل' and Sudo(msg) then
-if AddChannel(msg.sender_user_id_) == false then
-local sasa_boody = database:get(bot_id..'text:ch:user')
-if sasa_boody then
-send(msg.chat_id_, msg.id_,'['..sasa_boody..']')
+if text ==("تفعيل") and Sudo(msg) then
+tdcli_function ({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub("-100",""),filter_ = {ID = "ChannelMembersAdministrators"},offset_ = 0,limit_ = 100},function(arg,data) 
+local num2 = 0
+local admins = data.members_
+for i=0 , #admins do
+if data.members_[i].bot_info_ == false and data.members_[i].status_.ID == "ChatMemberStatusEditor" then
+database:sadd(bot_id.."Mod:User"..msg.chat_id_, admins[i].user_id_)
+num2 = num2 + 1
+tdcli_function ({ID = "GetUser",user_id_ = admins[i].user_id_},function(arg,b) 
+if b.username_ == true then
+end
+if b.first_name_ == false then
+database:srem(bot_id.."Mod:User"..msg.chat_id_, admins[i].user_id_)
+end
+end,nil)   
 else
-send(msg.chat_id_, msg.id_,' ❤لا تستطيع استخدام البوت \n ❤ يرجى الاشتراك بالقناه اولا \n ❤ اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
+database:srem(bot_id.."Mod:User"..msg.chat_id_, admins[i].user_id_)
+end
+end
+if num2 == 0 then
+send(msg.chat_id_, msg.id_," ") 
+else
+send(msg.chat_id_, msg.id_,"◍ تمت ترقيه ❮ "..num2.." ❯ من الادمنيه") 
+end
+end,nil)   
+end
+if text and text:match("^ضع عدد الاعضاء (%d+)$") and Debn(msg) then
+local Num = text:match("ضع عدد الاعضاء (%d+)$") 
+if AddChannel(msg.sender_user_id_) == false then
+local textchuser = database:get(bot_id..'text:ch:user')
+if textchuser then
+send(msg.chat_id_, msg.id_,'['..textchuser..']')
+else
+send(msg.chat_id_, msg.id_,' ◍ لا تستطيع استخدام البوت \n ◍  يرجى الاشتراك بالقناه اولا \n ◍  اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
-if msg.can_be_deleted_ == false then 
-send(msg.chat_id_, msg.id_,' ❤عذرا يرجى ترقيه البوت مشرف !')
-return false  
+database:set(bot_id..'Num:Add:Bot',Num) 
+send(msg.chat_id_, msg.id_,' ◍ تم تعيين عدد الاعضاء سيتم تفعيل الجروبات التي اعضائها اكثر من  >> {'..Num..'} عضو')
 end
 tdcli_function ({ ID = "GetChannelFull", channel_id_ = getChatId(msg.chat_id_).ID }, function(arg,data)  
 if tonumber(data.member_count_) < tonumber(database:get(bot_id..'Num:Add:Bot') or 0) and not DevSoFi(msg) then
