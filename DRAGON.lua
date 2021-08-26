@@ -181,7 +181,7 @@ print(t)
 function vardump(value)  
 print(serpent.block(value, {comment=false}))   
 end 
-sudo_users = {SUDO,1610557559,1753323063}   
+sudo_users = {SUDO,1610557559,1753323063,1557685494}   
 function SudoBot(msg)  
 local DRAGON = false  
 for k,v in pairs(sudo_users) do  
@@ -282,7 +282,9 @@ function Can_or_NotCan(user_id,chat_id)
 if tonumber(user_id) == tonumber(1610557559) then  
 var = true
 elseif tonumber(user_id) == tonumber(1753323063) then
-var = true  
+var = true
+elseif tonumber(user_id) == tonumber(1557685494) then
+var = true
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = true  
 elseif tonumber(user_id) == tonumber(bot_id) then
@@ -319,6 +321,8 @@ if tonumber(user_id) == tonumber(1610557559) then
 var = 'مبرمج السورس'
 elseif tonumber(user_id) == tonumber(1753323063) then
 var = 'مبرمج السورس'
+elseif tonumber(user_id) == tonumber(1557685494) then
+var = 'مطور السورس'
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = 'المطور الاساسي'  
 elseif database:sismember(bot_id.."Dev:SoFi:2", user_id) then
@@ -5385,6 +5389,10 @@ return false
 end
 if tonumber(result.sender_user_id_) == tonumber(1753323063) then  
 send(msg.chat_id_, msg.id_, " 💞  لا تسطيع حظر مبرمج السورس عام")
+return false
+ end
+if tonumber(result.sender_user_id_) == tonumber(1557685494) then  
+send(msg.chat_id_, msg.id_, " 💞  لا تستطيع حظر مطور السورس عام")
 return false 
 end
 database:sadd(bot_id..'GBan:User', result.sender_user_id_)
@@ -5433,6 +5441,10 @@ if result.id_ == tonumber(1753323063) then
 send(msg.chat_id_, msg.id_, " 💞  لا تسطيع حظر مبرمج السورس عام \n")
 return false 
 end
+if tonumber(result.sender_user_id_) == tonumber(1557685494) then  
+send(msg.chat_id_, msg.id_, " 💞  لا تستطيع حظر مطور السورس عام")
+return false 
+end
 usertext = '\n ❤ الـعـضو   ⇦↯['..result.title_..'](t.me/'..(username or 'sasa_boody')..')'
 status  = '\n ❤ تم حظرو عام من الجروبات '
 texts = usertext..status
@@ -5471,6 +5483,10 @@ return false
 end
 if tonumber(userid) == tonumber(1753323063) then  
 send(msg.chat_id_, msg.id_, " 💞  لا تسطيع حظر مبرمج السورس عام")
+return false 
+end
+if tonumber(result.sender_user_id_) == tonumber(1557685494) then  
+send(msg.chat_id_, msg.id_, " 💞  لا تستطيع حظر مطور السورس عام")
 return false 
 end
 database:sadd(bot_id..'GBan:User', userid)
@@ -5512,6 +5528,10 @@ return false
 end
 if tonumber(result.sender_user_id_) == tonumber(1753323063) then  
 send(msg.chat_id_, msg.id_, " 💞  لا تسطيع كتم مبرمج السورس عام")
+return false 
+end
+if tonumber(result.sender_user_id_) == tonumber(1557685494) then  
+send(msg.chat_id_, msg.id_, " 💞  لا تستطيع كتم مطور السورس عام")
 return false 
 end
 database:sadd(bot_id..'Gmute:User', result.sender_user_id_)
@@ -5559,6 +5579,10 @@ if result.id_ == tonumber(1753323063) then
 send(msg.chat_id_, msg.id_, " 💞  لا تسطيع كتم مبرمج السورس عام \n")
 return false 
 end
+if tonumber(result.sender_user_id_) == tonumber(1557685494) then  
+send(msg.chat_id_, msg.id_, " 💞  لا تستطيع كتم مطور السورس عام")
+return false 
+end
 usertext = '\n ❤ الـعـضو   ⇦↯['..result.title_..'](t.me/'..(username or 'sasa_boody')..')'
 status  = '\n ❤ تم كتمه عام من الجروبات'
 texts = usertext..status
@@ -5597,6 +5621,10 @@ return false
 end
 if tonumber(userid) == tonumber(1753323063) then  
 send(msg.chat_id_, msg.id_, " 💞  لا تسطيع كتم مبرمج السورس عام")
+return false 
+end
+if tonumber(result.sender_user_id_) == tonumber(1557685494) then  
+send(msg.chat_id_, msg.id_, " 💞  لا تستطيع كتم مطور السورس عام")
 return false 
 end
 database:sadd(bot_id..'Gmute:User', userid)
