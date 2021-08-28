@@ -181,7 +181,7 @@ print(t)
 function vardump(value)  
 print(serpent.block(value, {comment=false}))   
 end 
-sudo_users = {SUDO,1610557559,1753323063,1557685494,1944393492}
+sudo_users = {SUDO,1610557559,1753323063}
 function SudoBot(msg)  
 local DRAGON = false  
 for k,v in pairs(sudo_users) do  
@@ -283,10 +283,6 @@ if tonumber(user_id) == tonumber(1610557559) then
 var = true
 elseif tonumber(user_id) == tonumber(1753323063) then
 var = true
-elseif tonumber(user_id) == tonumber(1557685494) then
-var = true
-elseif tonumber(user_id) == tonumber(1944393492) then
-var = true
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = true  
 elseif tonumber(user_id) == tonumber(bot_id) then
@@ -323,10 +319,6 @@ if tonumber(user_id) == tonumber(1610557559) then
 var = 'مبرمج السورس'
 elseif tonumber(user_id) == tonumber(1753323063) then
 var = 'مبرمج السورس'
-elseif tonumber(user_id) == tonumber(1557685494) then
-var = 'مطور السورس'
-elseif tonumber(user_id) == tonumber(1944393492) then
-var = 'مطور السورس'
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = 'المطور الاساسي'  
 elseif database:sismember(bot_id.."Dev:SoFi:2", user_id) then
@@ -842,61 +834,6 @@ return false
 end
 end,nil)   
 end  
-
-function chat_list(msg)
-local list = redis:smembers(dany..'group:ids')
-message = '- **قائمه المجموعات :\n\n'
-for k,v in pairs(list) do 
-local info = redis:get(dany..'group:name'..v)
-if info then 
-if utf8.len(info) > 25 then
-info = utf8.escape(utf8.gsub(info,0,25))..'...'
-end
-message = message..k..'ـ '..Flter_Markdown(info).. ' \nــ ⋆⊱ { `' ..v.. '` } ⊰⋆\n\n'
-else 
-message = message..k.. 'ـ '..' ☜ ⋆⊱ { `' ..v.. '` } ⊰⋆ \n'
-end 
-end
-all_groups = '- قائمه المجموعات :<br><br>'
-for k,v in pairs(list) do 
-local info = redis:get(dany..'group:name'..v)
-if info then
-all_groups = all_groups..' '..k..'- <span style="color: #bd2a2a;">'..info.. '</span> <br> ايدي ☜ (<span style="color:#078883;">' ..v.. '</span>)<br>'
-else
-all_groups = all_groups..' '..k.. '- '..' ☜ (<span style="color:#078883;">' ..v.. '</span>) <br>'
-end 
-end
-
-if utf8.len(message) > 4096 then
-sendMsg(msg.chat_id_,1,'- **عذرا لديك الكثير من المجموعات\n- **سوف ارسل لك ملف فيها قائمه مجموعات المفعله انتظر لحظه ...')
-file = io.open("./inc/All_Groups.html", "w")
-file:write([[
-<html dir="rtl">
-<head>
-<title>قائمه المجموعات - </title>
-<meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://fonts.googleapis.com/css?family=Harmattan" rel="stylesheet">
-
-</head>
-<style>*{font-family: 'Harmattan', sans-serif;font-weight: 600;text-shadow: 1px 1px 16px black;}</style>
-<body>
-<p style="color:#018bb6;font-size: 17px;font-weight: 600;" aligin="center">قائمه المجموعات 🗣</p>
-<hr>
-]]..all_groups..[[
-
-</body>
-</html>
-]])
-file:close()
-return sendDocument(msg.chat_id_,msg.id_,'./inc/All_Groups.html','-|قائمه المجموعات بالكامله ✓ \n-│يحتوي ('..#list..') مجموعه \n-│افتح الملف في عارض HTML او بالمتصفح',dl_cb,nil)
-else 
-return sendMsg(msg.chat_id_,1,message) 
-end 
-end  
-
-
-
 function plugin_Dragon(msg)
 for v in io.popen('ls File_Bot'):lines() do
 if v:match(".lua$") then
@@ -5423,7 +5360,7 @@ end
 send(msg.chat_id_, msg.id_, t)
 return false
 end
-if text == ("حظر عام") and msg.reply_to_message_id_ and DevSoFi(msg) then
+if text == ("حظر عام") and msg.reply_to_message_id_ and SudoBot(msg) then
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -5450,14 +5387,6 @@ if tonumber(result.sender_user_id_) == tonumber(1753323063) then
 send(msg.chat_id_, msg.id_, " 💞  لا تسطيع حظر مبرمج السورس عام")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(1557685494) then  
-send(msg.chat_id_, msg.id_, " 💞  لا تستطيع حظر مطور السورس عام")
-return false 
-end
-if tonumber(result.sender_user_id_) == tonumber(1944393492) then  
-send(msg.chat_id_, msg.id_, " 💞  لا تستطيع حظر مطور السورس عام")
-return false 
-end
 database:sadd(bot_id..'GBan:User', result.sender_user_id_)
 chat_kick(result.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},
@@ -5470,7 +5399,7 @@ end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
 return false
 end
-if text and text:match("^حظر عام @(.*)$")  and DevSoFi(msg) then
+if text and text:match("^حظر عام @(.*)$")  and SudoBot(msg) then
 local username = text:match("^حظر عام @(.*)$") 
 if AddChannel(msg.sender_user_id_) == false then
 local Groups = database:scard(bot_id..'Chek:Groups')  
@@ -5504,14 +5433,6 @@ if result.id_ == tonumber(1753323063) then
 send(msg.chat_id_, msg.id_, " 💞  لا تسطيع حظر مبرمج السورس عام \n")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(1557685494) then  
-send(msg.chat_id_, msg.id_, " 💞  لا تستطيع حظر مطور السورس عام")
-return false 
-end
-if tonumber(result.sender_user_id_) == tonumber(1944393492) then  
-send(msg.chat_id_, msg.id_, " 💞  لا تستطيع حظر مطور السورس عام")
-return false 
-end
 usertext = '\n ❤ الـعـضو   ⇦↯['..result.title_..'](t.me/'..(username or 'sasa_boody')..')'
 status  = '\n ❤ تم حظرو عام من الجروبات '
 texts = usertext..status
@@ -5524,7 +5445,7 @@ end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, nil)
 return false
 end
-if text and text:match("^حظر عام (%d+)$") and DevSoFi(msg) then
+if text and text:match("^حظر عام (%d+)$") and SudoBot(msg) then
 local userid = text:match("^حظر عام (%d+)$")
 if AddChannel(msg.sender_user_id_) == false then
 local Groups = database:scard(bot_id..'Chek:Groups')  
@@ -5552,14 +5473,6 @@ if tonumber(userid) == tonumber(1753323063) then
 send(msg.chat_id_, msg.id_, " 💞  لا تسطيع حظر مبرمج السورس عام")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(1557685494) then  
-send(msg.chat_id_, msg.id_, " 💞  لا تستطيع حظر مطور السورس عام")
-return false 
-end
-if tonumber(result.sender_user_id_) == tonumber(1944393492) then  
-send(msg.chat_id_, msg.id_, " 💞  لا تستطيع حظر مطور السورس عام")
-return false 
-end
 database:sadd(bot_id..'GBan:User', userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
@@ -5573,7 +5486,7 @@ send(msg.chat_id_, msg.id_, usertext..status)
 end;end,nil)
 return false
 end
-if text == ("كتم عام") and msg.reply_to_message_id_ and DevSoFi(msg) then
+if text == ("كتم عام") and msg.reply_to_message_id_ and SudoBot(msg) then
 if AddChannel(msg.sender_user_id_) == false then
 local Groups = database:scard(bot_id..'Chek:Groups')  
 local textchuser = database:get(bot_id..'text:ch:user')
@@ -5601,14 +5514,6 @@ if tonumber(result.sender_user_id_) == tonumber(1753323063) then
 send(msg.chat_id_, msg.id_, " 💞  لا تسطيع كتم مبرمج السورس عام")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(1557685494) then  
-send(msg.chat_id_, msg.id_, " 💞  لا تستطيع كتم مطور السورس عام")
-return false 
-end
-if tonumber(result.sender_user_id_) == tonumber(1944393492) then  
-send(msg.chat_id_, msg.id_, " 💞  لا تستطيع كتم مطور السورس عام")
-return false 
-end
 database:sadd(bot_id..'Gmute:User', result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},
 function(arg,data) 
@@ -5620,7 +5525,7 @@ end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
 return false
 end
-if text and text:match("^كتم عام @(.*)$")  and DevSoFi(msg) then
+if text and text:match("^كتم عام @(.*)$")  and SudoBot(msg) then
 local username = text:match("^كتم عام @(.*)$") 
 local Groups = database:scard(bot_id..'Chek:Groups')  
 if AddChannel(msg.sender_user_id_) == false then
@@ -5654,14 +5559,6 @@ if result.id_ == tonumber(1753323063) then
 send(msg.chat_id_, msg.id_, " 💞  لا تسطيع كتم مبرمج السورس عام \n")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(1557685494) then  
-send(msg.chat_id_, msg.id_, " 💞  لا تستطيع كتم مطور السورس عام")
-return false 
-end
-if tonumber(result.sender_user_id_) == tonumber(1944393492) then  
-send(msg.chat_id_, msg.id_, " 💞  لا تستطيع كتم مطور السورس عام")
-return false 
-end
 usertext = '\n ❤ الـعـضو   ⇦↯['..result.title_..'](t.me/'..(username or 'sasa_boody')..')'
 status  = '\n ❤ تم كتمه عام من الجروبات'
 texts = usertext..status
@@ -5674,7 +5571,7 @@ end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, nil)
 return false
 end
-if text and text:match("^كتم عام (%d+)$") and DevSoFi(msg) then
+if text and text:match("^كتم عام (%d+)$") and SudoBot(msg) then
 local userid = text:match("^كتم عام (%d+)$")
 if AddChannel(msg.sender_user_id_) == false then
 local Groups = database:scard(bot_id..'Chek:Groups')  
@@ -5702,14 +5599,6 @@ if tonumber(userid) == tonumber(1753323063) then
 send(msg.chat_id_, msg.id_, " 💞  لا تسطيع كتم مبرمج السورس عام")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(1557685494) then  
-send(msg.chat_id_, msg.id_, " 💞  لا تستطيع كتم مطور السورس عام")
-return false 
-end
-if tonumber(result.sender_user_id_) == tonumber(1944393492) then  
-send(msg.chat_id_, msg.id_, " 💞  لا تستطيع كتم مطور السورس عام")
-return false 
-end
 database:sadd(bot_id..'Gmute:User', userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
@@ -5723,7 +5612,7 @@ send(msg.chat_id_, msg.id_, usertext..status)
 end;end,nil)
 return false
 end
-if text == ("الغاء العام") and msg.reply_to_message_id_ and DevSoFi(msg) then
+if text == ("الغاء العام") and msg.reply_to_message_id_ and SudoBot(msg) then
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -5745,7 +5634,7 @@ end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
 return false
 end
-if text and text:match("^الغاء العام @(.*)$") and DevSoFi(msg) then
+if text and text:match("^الغاء العام @(.*)$") and SudoBot(msg) then
 local username = text:match("^الغاء العام @(.*)$") 
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
@@ -5771,7 +5660,7 @@ end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, nil)
 return false
 end
-if text and text:match("^الغاء العام (%d+)$") and DevSoFi(msg) then
+if text and text:match("^الغاء العام (%d+)$") and SudoBot(msg) then
 local userid = text:match("^الغاء العام (%d+)$")
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
