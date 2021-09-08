@@ -3964,8 +3964,8 @@ local Text = [[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = 'ᴍʏ ᴅᴇᴠ', callback_data="/units"},{text = 'ᴍʏ ᴄʜᴀɴɴᴇʟ', callback_data="/theytry"}},   
-{{text = '♪مــطــور الــبــوت•', url="http://t.me/"..sudos.UserName}},
-{{text = '♪ اضغط لاضافه البوت لمجموعتك •' ,url="t.me/"..dofile("./Info.lua").botUserName.."?startgroup=start"}}, 
+{{text = 'مــطــور الــبــوت', url="http://t.me/"..sudos.UserName}},
+{{text = ' اضغط لاضافه البوت لمجموعتك ' ,url="t.me/"..dofile("./Info.lua").botUserName.."?startgroup=start"}}, 
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/xxxcccvvbbnn/902&caption=' .. URL.escape(Text).."&photo="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -18467,7 +18467,7 @@ local Teext =[[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'بوت زخرفه اسماء',url="t.me/BOODY22_BOT"}},
+{{text = 'بوت تواصل',url="t.me/BOODY22_BOT"}},
 {{text = 'بوت دعم قنوات',url="t.me/Devsasa67bot"}},
 {{text = 'بوت حمايه الجروبات ',url="t.me/BoOdY_BaSha"}},
 {{text = '𝙱𝙰𝙲𝙺', callback_data="/bnada-yquio"}},
@@ -18478,7 +18478,7 @@ end
 
 if Text == '/HHH' then
 local Teext =[[
-•𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙻𝙰𝙴𝚁??⇣
+𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙻𝙰𝙴𝚁
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
