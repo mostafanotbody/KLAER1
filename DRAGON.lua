@@ -986,7 +986,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '𝚂𝙰𝚂𝙰',url="t.me/M0STaFa_6"}},
+{{text = '𝚂𝙰𝚂𝙰',url="t.me/M_P_L_6"}},
 {{text = ' 𝙱𝙾𝙾𝙳𝚈',url="t.me/BoOdY_BaSha"}},
 {{text = '𝚃𝙰𝚆𝙰𝚂𝙾𝙻',url="t.me/BOODY22_BOT"}}, 
 }
@@ -1004,7 +1004,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'المبرمج صاصا💖 ',url="t.me/M0STaFa_6"}}, 
+{{text = 'المبرمج صاصا💖 ',url="t.me/M_P_L_6"}}, 
 {{text = 'المبرمج بودي💖   ', url="t.me/BoOdY_BaSha"}},
 }
 local msg_id = msg.id_/2097152/0.5
@@ -3213,7 +3213,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  ❨  𝚂𝙰𝚂𝙰  ',url="t.me/M0STaFa_6"},{text = '  𝙱𝙾𝙾𝙳𝚈  ❩ ',url="t.me/BoOdY_BaSha"}},
+{{text = '  ❨  𝚂𝙰𝚂𝙰  ',url="t.me/M_P_L_6"},{text = '  𝙱𝙾𝙾𝙳𝚈  ❩ ',url="t.me/BoOdY_BaSha"}},
 {{text = '  ❨  𝚃𝙰𝚆𝙰𝚂𝙾𝙻  ❩ ',url="t.me/BOODY22_BOT"}}, 
 {{text = '  ❨  𝚂𝙾𝚄𝚁𝙲𝙴 𝙷𝙾𝙶𝙰𝙽  ❩ ',url="https://t.me/sasa_boody"}}, 
 }
@@ -3228,7 +3228,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = ' 𝚂𝙰𝚂𝙰',url="t.me/M0STaFa_6"},{text = ' 𝙱𝙾𝙾𝙳𝚈', url="t.me/BoOdY_BaSha"}},
+{{text = ' 𝚂𝙰𝚂𝙰',url="t.me/M_P_L_6"},{text = ' 𝙱𝙾𝙾𝙳𝚈', url="t.me/BoOdY_BaSha"}},
 {{text = ' 𝚃𝙰𝚆𝙰𝚂𝙾𝙻',url="t.me/BOODY22_BOT"}}, 
 {{text = '《𝚂𝙾𝚄𝚁𝙲𝙴 𝙷𝙾𝙶𝙰𝙽》 ', url="t.me/sasa_boody"}},
 {{text = 'اضف البوت الي مجموعتك' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"}}, 
@@ -3255,9 +3255,9 @@ local Text = [[
    ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = ' 𝚂𝙰𝚂𝙰𝅘𝅥𝅮',url="t.me/M0STaFa_6"}}, 
+{{text = ' 𝚂𝙰𝚂𝙰𝅘𝅥𝅮',url="t.me/M_P_L_6"}}, 
 } 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/M0STaFa_6&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/M_P_L_6&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 if text == 'يوتيوب' or text == 'بحث' or text == 'اليوتيوب' then
@@ -3294,7 +3294,7 @@ keyboard = {} keyboard.inline_keyboard = {
 {{text = '🎯لقاء مع كاتب رعب"', url="https://t.me/UU_NOVEL/7"}},
 {{text = '🎯رواية"الإنسان الأخير""', url="https://t.me/UU_NOVEL/24"}},
 {{text = '🎯رواية" مقبرة الحيوانات""', url="https://t.me/UU_NOVEL/8"}},
-{{text = '𝚂𝙰𝚂𝙰',url="t.me/M0STaFa_6"}},
+{{text = '𝚂𝙰𝚂𝙰',url="t.me/M_P_L_6"}},
 {{text = ' 𝙱𝙾𝙾𝙳𝚈',url="t.me/BoOdY_BaSha"}},
 {{text = '《𝚂𝙾𝚄𝚁𝙲𝙴 𝙷𝙾𝙶𝙰𝙽》 ', url="t.me/sasa_boody"}},
 }
@@ -3307,7 +3307,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'مبرمج صاصا',url="t.me/M0STaFa_6"}},
+{{text = 'مبرمج صاصا',url="t.me/M_P_L_6"}},
 {{text = 'مبرمج بودي',url="t.me/BoOdY_BaSha"}},
 }
 local msg_id = msg.id_/2097152/0.5
@@ -3342,7 +3342,7 @@ local Text ='تم اختيار الاستوري هذه لك'
 keyboard = {}  
 keyboard.inline_keyboard = { 
 {{text = 'استوري اخر', callback_data="استوري"}},
-{{text = '𝚂𝙰𝚂𝙰',url="t.me/M0STaFa_6"}},
+{{text = '𝚂𝙰𝚂𝙰',url="t.me/M_P_L_6"}},
 {{text = '𝙱𝙾𝙾𝙳𝚈',url="t.me/BoOdY_BaSha"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
@@ -3354,7 +3354,7 @@ local Text ='تم اختيار الاستوري هذه لك'
 keyboard = {}  
 keyboard.inline_keyboard = { 
 {{text = 'ثيم اخر', callback_data="/added"}},
-{{text = '𝚂𝙰𝚂𝙰',url="t.me/M0STaFa_6"}},
+{{text = '𝚂𝙰𝚂𝙰',url="t.me/M_P_L_6"}},
 {{text = '𝙱𝙾𝙾𝙳𝚈',url="t.me/BoOdY_BaSha"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
