@@ -1,12 +1,12 @@
 local function games(msg)
 local text = msg.content_.text_
-if text == '$$cc' and database:get(bot_id..'Lock:Games'..msg.chat_id_) then
+if text == '$$cc' and bot_data:get(ban_id..'Lock:Games'..msg.chat_id_) then
 if AddChannel(msg.sender_user_id_) == false then
-local textchuser = database:get(bot_id..'text:ch:user')
+local textchuser = bot_data:get(ban_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ✯لا تستطيع استخدام البوت \n  ✯يرجى الاشتراك بالقناه اولا \n  ✯اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ✯لا تستطيع استخدام البوت \n  ✯يرجى الاشتراك بالقناه اولا \n  ✯اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
 end
 return false
 end
@@ -21,53 +21,53 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '𝐒𝐎𝐔𝐑𝐂𝐄 𝑯𝑶𝑮𝑨𝑵',url="t.me/sasa_boody"}}, 
+{{text = '𝒔𝒐𝒖𝒓𝒄𝒆 𝒔𝒐𝒐𝒐𝒏',url="t.me/s_o_op"}}, 
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 if text == 'السمايلات' or text == 'السمايل' then
 if AddChannel(msg.sender_user_id_) == false then
-local textchuser = database:get(bot_id..'text:ch:user')
+local textchuser = bot_data:get(ban_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ✯لا تستطيع استخدام البوت \n  ✯يرجى الاشتراك بالقناه اولا \n  ✯اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ✯لا تستطيع استخدام البوت \n  ✯يرجى الاشتراك بالقناه اولا \n  ✯اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
 end
 return false
 end
-if database:get(bot_id..'Lock:Games'..msg.chat_id_) then
-database:del(bot_id..'Set:Sma'..msg.chat_id_)
-Random = {'🍏','🍎','🍐','🍊','🍉','🍇','🍓','🍈','🍒','🍑','🍍','🥝','🍅','🍆','🥑','🥦','🥒','🌶','🌽','🥕','🥔','🥖','🥐','🍞','🥨','🍟','🧀','🥚','🍳','🥓','🥩','🍗','🍖','🌭','🍔','🍠','🍕','🥪','🥙','☕️','🍵','🥤','🍶','🍺','🍻','🏀','⚽️','🏈','⚾️','🎾','🏐','🏉','🎱','🏓','🏸','🥅','🎰','🎮','🎳','🎯','🎲','🎻','🎸','🎺','🥁','🎹','🎼','🎧','🎤','🎬','🎨','🎭','🎪','🎟','🎫','🎗','🏵','🎖','🏆','🥌','🛷','🚗','🚌','🏎','🚓','🚑','🚚','🚛','🚜','🇮🇶','⚔','🛡','🔮','🌡','💣','📌','📍','📓','📗','📂','📅','📪','📫','📬','📭','⏰','📺','🎚','☎️','📡'}
+if bot_data:get(ban_id..'Lock:Games'..msg.chat_id_) then
+bot_data:del(ban_id..'Set:Sma'..msg.chat_id_)
+Random = {'🍏','🍎','🍐','🍊','??','🍉','🍇','🍓','🍈','🍒','🍑','🍍','??','🥝','🍅','🍆','🥑','🥦','🥒','🌶','🌽','🥕','🥔','🥖','🥐','🍞','🥨','🍟','🧀','🥚','🍳','🥓','🥩','🍗','🍖','🌭','🍔','🍠','🍕','🥪','🥙','☕️','🍵','🥤','🍶','🍺','🍻','🏀','⚽️','🏈','⚾️','🎾','🏐','🏉','🎱','🏓','🏸','🥅','🎰','🎮','🎳','🎯','🎲','🎻','🎸','🎺','🥁','🎹','🎼','🎧','🎤','🎬','🎨','🎭','🎪','🎟','🎫','🎗','🏵','🎖','🏆','🥌','🛷','🚗','🚌','🏎','🚓','🚑','🚚','🚛','🚜','🇮🇶','⚔','🛡','🔮','🌡','💣','📌','📍','📓','📗','📂','📅','📪','📫','📬','📭','⏰','📺','🎚','☎️','📡'}
 SM = Random[math.random(#Random)]
-database:set(bot_id..'Random:Sm'..msg.chat_id_,SM)
+bot_data:set(ban_id..'Random:Sm'..msg.chat_id_,SM)
 send(msg.chat_id_, msg.id_,' ✯اسرع واحد يدز هاذا السمايل ? » {`'..SM..'`}')
 return false
 end
 end
-if text == ''..(database:get(bot_id..'Random:Sm'..msg.chat_id_) or '')..'' and not database:get(bot_id..'Set:Sma'..msg.chat_id_) then
-if not database:get(bot_id..'Set:Sma'..msg.chat_id_) then 
+if text == ''..(bot_data:get(ban_id..'Random:Sm'..msg.chat_id_) or '')..'' and not bot_data:get(ban_id..'Set:Sma'..msg.chat_id_) then
+if not bot_data:get(ban_id..'Set:Sma'..msg.chat_id_) then 
 send(msg.chat_id_, msg.id_,' ✯الف مبروك لقد فزت \n ✯للعب مره اخره ارسل »{ سمايل , سمايلات }')
-database:incrby(bot_id..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_, 1)  
+bot_data:incrby(ban_id..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_, 1)  
 end
-database:set(bot_id..'Set:Sma'..msg.chat_id_,true)
+bot_data:set(ban_id..'Set:Sma'..msg.chat_id_,true)
 return false
 end 
 if text == 'اسرع' or text == 'الاسرع' or text == 'ترتيب' then
 if AddChannel(msg.sender_user_id_) == false then
-local textchuser = database:get(bot_id..'text:ch:user')
+local textchuser = bot_data:get(ban_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ✯لا تستطيع استخدام البوت \n  ✯يرجى الاشتراك بالقناه اولا \n  ✯اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ✯لا تستطيع استخدام البوت \n  ✯يرجى الاشتراك بالقناه اولا \n  ✯اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
 end
 return false
 end
-if database:get(bot_id..'Lock:Games'..msg.chat_id_) then
-database:del(bot_id..'Speed:Tr'..msg.chat_id_)
+if bot_data:get(ban_id..'Lock:Games'..msg.chat_id_) then
+bot_data:del(ban_id..'Speed:Tr'..msg.chat_id_)
 KlamSpeed = {'سحور','سياره','استقبال','قنفه','ايفون','بزونه','مطبخ','كرستيانو','دجاجه','مدرسه','الوان','غرفه','ثلاجه','كهوه','سفينه','العراق','محطه','طياره','رادار','منزل','مستشفى','كهرباء','تفاحه','اخطبوط','سلمون','فرنسا','برتقاله','تفاح','مطرقه','بتيته','لهانه','شباك','باص','سمكه','ذباب','تلفاز','حاسوب','انترنيت','ساحه','جسر'};
 name = KlamSpeed[math.random(#KlamSpeed)]
-database:set(bot_id..'Klam:Speed'..msg.chat_id_,name)
+bot_data:set(ban_id..'Klam:Speed'..msg.chat_id_,name)
 name = string.gsub(name,'سحور','س ر و ح')
 name = string.gsub(name,'سياره','ه ر س ي ا')
 name = string.gsub(name,'استقبال','ل ب ا ت ق س ا')
@@ -113,29 +113,29 @@ return false
 end
 end
 ------------------------------------------------------------------------
-if text == ''..(database:get(bot_id..'Klam:Speed'..msg.chat_id_) or '')..'' and not database:get(bot_id..'Speed:Tr'..msg.chat_id_) then
-if not database:get(bot_id..'Speed:Tr'..msg.chat_id_) then 
+if text == ''..(bot_data:get(ban_id..'Klam:Speed'..msg.chat_id_) or '')..'' and not bot_data:get(ban_id..'Speed:Tr'..msg.chat_id_) then
+if not bot_data:get(ban_id..'Speed:Tr'..msg.chat_id_) then 
 send(msg.chat_id_, msg.id_,' ✯الف مبروك لقد فزت \n ✯للعب مره اخره ارسل »{ الاسرع , ترتيب }')
-database:incrby(bot_id..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_, 1)  
+bot_data:incrby(ban_id..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_, 1)  
 end
-database:set(bot_id..'Speed:Tr'..msg.chat_id_,true)
+bot_data:set(ban_id..'Speed:Tr'..msg.chat_id_,true)
 end 
 
 if text == 'الحزوره' or text == 'حزوره' then
 if AddChannel(msg.sender_user_id_) == false then
-local textchuser = database:get(bot_id..'text:ch:user')
+local textchuser = bot_data:get(ban_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ✯لا تستطيع استخدام البوت \n  ✯يرجى الاشتراك بالقناه اولا \n  ✯اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ✯لا تستطيع استخدام البوت \n  ✯يرجى الاشتراك بالقناه اولا \n  ✯اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
 end
 return false
 end
-if database:get(bot_id..'Lock:Games'..msg.chat_id_) then
-database:del(bot_id..'Set:Hzora'..msg.chat_id_)
+if bot_data:get(ban_id..'Lock:Games'..msg.chat_id_) then
+bot_data:del(ban_id..'Set:Hzora'..msg.chat_id_)
 Hzora = {'الجرس','عقرب الساعه','السمك','المطر','5','الكتاب','البسمار','7','الكعبه','بيت الشعر','لهانه','انا','امي','الابره','الساعه','22','غلط','كم الساعه','البيتنجان','البيض','المرايه','الضوء','الهواء','الضل','العمر','القلم','المشط','الحفره','البحر','الثلج','الاسفنج','الصوت','بلم'};
 name = Hzora[math.random(#Hzora)]
-database:set(bot_id..'Klam:Hzor'..msg.chat_id_,name)
+bot_data:set(ban_id..'Klam:Hzor'..msg.chat_id_,name)
 name = string.gsub(name,'الجرس','شيئ اذا لمسته صرخ ما هوه ؟')
 name = string.gsub(name,'عقرب الساعه','اخوان لا يستطيعان تمضيه اكثر من دقيقه معا فما هما ؟')
 name = string.gsub(name,'السمك','ما هو الحيوان الذي لم يصعد الى سفينة نوح عليه السلام ؟')
@@ -174,29 +174,29 @@ return false
 end
 end
 ------------------------------------------------------------------------
-if text == ''..(database:get(bot_id..'Klam:Hzor'..msg.chat_id_) or '')..'' and not database:get(bot_id..'Set:Hzora'..msg.chat_id_) then
-if not database:get(bot_id..'Set:Hzora'..msg.chat_id_) then 
+if text == ''..(bot_data:get(ban_id..'Klam:Hzor'..msg.chat_id_) or '')..'' and not bot_data:get(ban_id..'Set:Hzora'..msg.chat_id_) then
+if not bot_data:get(ban_id..'Set:Hzora'..msg.chat_id_) then 
 send(msg.chat_id_, msg.id_,' ✯الف مبروك لقد فزت \n ✯للعب مره اخره ارسل »{ حزوره }')
-database:incrby(bot_id..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_, 1)  
+bot_data:incrby(ban_id..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_, 1)  
 end
-database:set(bot_id..'Set:Hzora'..msg.chat_id_,true)
+bot_data:set(ban_id..'Set:Hzora'..msg.chat_id_,true)
 end 
 
 if text == 'المعاني' or text == 'معاني' then
 if AddChannel(msg.sender_user_id_) == false then
-local textchuser = database:get(bot_id..'text:ch:user')
+local textchuser = bot_data:get(ban_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ✯لا تستطيع استخدام البوت \n  ✯يرجى الاشتراك بالقناه اولا \n  ✯اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ✯لا تستطيع استخدام البوت \n  ✯يرجى الاشتراك بالقناه اولا \n  ✯اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
 end
 return false
 end
-if database:get(bot_id..'Lock:Games'..msg.chat_id_) then
-database:del(bot_id..'Set:Maany'..msg.chat_id_)
+if bot_data:get(ban_id..'Lock:Games'..msg.chat_id_) then
+bot_data:del(ban_id..'Set:Maany'..msg.chat_id_)
 Maany_Rand = {'قرد','دجاجه','بطريق','ضفدع','بومه','نحله','ديك','جمل','بقره','دولفين','تمساح','قرش','نمر','اخطبوط','سمكه','خفاش','اسد','فأر','ذئب','فراشه','عقرب','زرافه','قنفذ','تفاحه','باذنجان'}
 name = Maany_Rand[math.random(#Maany_Rand)]
-database:set(bot_id..'Maany'..msg.chat_id_,name)
+bot_data:set(ban_id..'Maany'..msg.chat_id_,name)
 name = string.gsub(name,'قرد','🐒')
 name = string.gsub(name,'دجاجه','🐔')
 name = string.gsub(name,'بطريق','🐧')
@@ -206,7 +206,7 @@ name = string.gsub(name,'نحله','🐝')
 name = string.gsub(name,'ديك','🐓')
 name = string.gsub(name,'جمل','🐫')
 name = string.gsub(name,'بقره','🐄')
-name = string.gsub(name,'دولفين','🐬')
+name = string.gsub(name,'دولفين','??')
 name = string.gsub(name,'تمساح','🐊')
 name = string.gsub(name,'قرش','🦈')
 name = string.gsub(name,'نمر','🐅')
@@ -227,28 +227,28 @@ return false
 end
 end
 ------------------------------------------------------------------------
-if text == ''..(database:get(bot_id..'Maany'..msg.chat_id_) or '')..'' and not database:get(bot_id..'Set:Maany'..msg.chat_id_) then
-if not database:get(bot_id..'Set:Maany'..msg.chat_id_) then 
+if text == ''..(bot_data:get(ban_id..'Maany'..msg.chat_id_) or '')..'' and not bot_data:get(ban_id..'Set:Maany'..msg.chat_id_) then
+if not bot_data:get(ban_id..'Set:Maany'..msg.chat_id_) then 
 send(msg.chat_id_, msg.id_,' ✯ الف مبروك لقد فزت \n ✯للعب مره اخره ارسل »{ معاني }')
-database:incrby(bot_id..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_, 1)  
+bot_data:incrby(ban_id..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_, 1)  
 end
-database:set(bot_id..'Set:Maany'..msg.chat_id_,true)
+bot_data:set(ban_id..'Set:Maany'..msg.chat_id_,true)
 end 
 if text == 'العكس' or text == 'عكس' then
 if AddChannel(msg.sender_user_id_) == false then
-local textchuser = database:get(bot_id..'text:ch:user')
+local textchuser = bot_data:get(ban_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ✯لا تستطيع استخدام البوت \n  ✯يرجى الاشتراك بالقناه اولا \n  ✯اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ✯لا تستطيع استخدام البوت \n  ✯يرجى الاشتراك بالقناه اولا \n  ✯اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
 end
 return false
 end
-if database:get(bot_id..'Lock:Games'..msg.chat_id_) then
-database:del(bot_id..'Set:Aks'..msg.chat_id_)
+if bot_data:get(ban_id..'Lock:Games'..msg.chat_id_) then
+bot_data:del(ban_id..'Set:Aks'..msg.chat_id_)
 katu = {'باي','فهمت','موزين','اسمعك','احبك','موحلو','نضيف','حاره','ناصي','جوه','سريع','ونسه','طويل','سمين','ضعيف','شريف','شجاع','رحت','عدل','نشيط','شبعان','موعطشان','خوش ولد','اني','هادئ'}
 name = katu[math.random(#katu)]
-database:set(bot_id..'Set:Aks:Game'..msg.chat_id_,name)
+bot_data:set(ban_id..'Set:Aks:Game'..msg.chat_id_,name)
 name = string.gsub(name,'باي','هلو')
 name = string.gsub(name,'فهمت','مافهمت')
 name = string.gsub(name,'موزين','زين')
@@ -279,31 +279,31 @@ return false
 end
 end
 ------------------------------------------------------------------------
-if text == ''..(database:get(bot_id..'Set:Aks:Game'..msg.chat_id_) or '')..'' and not database:get(bot_id..'Set:Aks'..msg.chat_id_) then
-if not database:get(bot_id..'Set:Aks'..msg.chat_id_) then 
+if text == ''..(bot_data:get(ban_id..'Set:Aks:Game'..msg.chat_id_) or '')..'' and not bot_data:get(ban_id..'Set:Aks'..msg.chat_id_) then
+if not bot_data:get(ban_id..'Set:Aks'..msg.chat_id_) then 
 send(msg.chat_id_, msg.id_,' ✯الف مبروك لقد فزت \n ✯للعب مره اخره ارسل »{ العكس }')
-database:incrby(bot_id..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_, 1)  
+bot_data:incrby(ban_id..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_, 1)  
 end
-database:set(bot_id..'Set:Aks'..msg.chat_id_,true)
+bot_data:set(ban_id..'Set:Aks'..msg.chat_id_,true)
 end 
 
-if database:get(bot_id.."GAME:TKMEN" .. msg.chat_id_ .. "" .. msg.sender_user_id_) then  
+if bot_data:get(ban_id.."GAME:TKMEN" .. msg.chat_id_ .. "" .. msg.sender_user_id_) then  
 if text and text:match("^(%d+)$") then
 local NUM = text:match("^(%d+)$")
 if tonumber(NUM) > 20 then
 send(msg.chat_id_, msg.id_," ✯عذرآ لا يمكنك تخمين عدد اكبر من ال { 20 } خمن رقم ما بين ال{ 1 و 20 }\n")
 return false  end 
-local GETNUM = database:get(bot_id.."GAMES:NUM"..msg.chat_id_)
+local GETNUM = bot_data:get(ban_id.."GAMES:NUM"..msg.chat_id_)
 if tonumber(NUM) == tonumber(GETNUM) then
-database:del(bot_id..'SADD:NUM'..msg.chat_id_..msg.sender_user_id_)
-database:del(bot_id.."GAME:TKMEN" .. msg.chat_id_ .. "" .. msg.sender_user_id_)   
-database:incrby(bot_id..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_,5)  
+bot_data:del(ban_id..'SADD:NUM'..msg.chat_id_..msg.sender_user_id_)
+bot_data:del(ban_id.."GAME:TKMEN" .. msg.chat_id_ .. "" .. msg.sender_user_id_)   
+bot_data:incrby(ban_id..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_,5)  
 send(msg.chat_id_, msg.id_,' ✯مبروك فزت ويانه وخمنت الرقم الصحيح\n ✯تم اضافة { 5 } من النقاط \n')
 elseif tonumber(NUM) ~= tonumber(GETNUM) then
-database:incrby(bot_id..'SADD:NUM'..msg.chat_id_..msg.sender_user_id_,1)
-if tonumber(database:get(bot_id..'SADD:NUM'..msg.chat_id_..msg.sender_user_id_)) >= 3 then
-database:del(bot_id..'SADD:NUM'..msg.chat_id_..msg.sender_user_id_)
-database:del(bot_id.."GAME:TKMEN" .. msg.chat_id_ .. "" .. msg.sender_user_id_)   
+bot_data:incrby(ban_id..'SADD:NUM'..msg.chat_id_..msg.sender_user_id_,1)
+if tonumber(bot_data:get(ban_id..'SADD:NUM'..msg.chat_id_..msg.sender_user_id_)) >= 3 then
+bot_data:del(ban_id..'SADD:NUM'..msg.chat_id_..msg.sender_user_id_)
+bot_data:del(ban_id.."GAME:TKMEN" .. msg.chat_id_ .. "" .. msg.sender_user_id_)   
 send(msg.chat_id_, msg.id_,' ✯اوبس لقد خسرت في اللعبه \n ✯حظآ اوفر في المره القادمه \n ✯كان الرقم الذي تم تخمينه { '..GETNUM..' }')
 else
 send(msg.chat_id_, msg.id_,' ✯اوبس تخمينك غلط \n ✯ارسل رقم تخمنه مره اخرى ')
@@ -313,36 +313,36 @@ end
 end
 if text == 'خمن' or text == 'التخمين' then   
 if AddChannel(msg.sender_user_id_) == false then
-local textchuser = database:get(bot_id..'text:ch:user')
+local textchuser = bot_data:get(ban_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ✯لا تستطيع استخدام البوت \n  ✯يرجى الاشتراك بالقناه اولا \n  ✯اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ✯لا تستطيع استخدام البوت \n  ✯يرجى الاشتراك بالقناه اولا \n  ✯اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
 end
 return false
 end
-if database:get(bot_id..'Lock:Games'..msg.chat_id_) then
+if bot_data:get(ban_id..'Lock:Games'..msg.chat_id_) then
 Num = math.random(1,20)
-database:set(bot_id.."GAMES:NUM"..msg.chat_id_,Num) 
+bot_data:set(ban_id.."GAMES:NUM"..msg.chat_id_,Num) 
 send(msg.chat_id_, msg.id_,'\n ✯اهلا بك عزيزي في لعبة التخمين :\nٴ━━━━━━━━━━\n'..' ✯ملاحظه لديك { 3 } محاولات فقط فكر قبل ارسال تخمينك \n\n'..' ✯سيتم تخمين عدد ما بين ال {1 و 20} اذا تعتقد انك تستطيع الفوز جرب واللعب الان ؟ ')
-database:setex(bot_id.."GAME:TKMEN" .. msg.chat_id_ .. "" .. msg.sender_user_id_, 100, true)  
+bot_data:setex(ban_id.."GAME:TKMEN" .. msg.chat_id_ .. "" .. msg.sender_user_id_, 100, true)  
 return false  
 end
 end
 
-if database:get(bot_id.."SET:GAME" .. msg.chat_id_ .. "" .. msg.sender_user_id_) then  
+if bot_data:get(ban_id.."SET:GAME" .. msg.chat_id_ .. "" .. msg.sender_user_id_) then  
 if text and text:match("^(%d+)$") then
 local NUM = text:match("^(%d+)$")
 if tonumber(NUM) > 6 then
 send(msg.chat_id_, msg.id_," ✯عذرا لا يوجد سواء { 6 } اختيارات فقط ارسل اختيارك مره اخرى\n")
 return false  end 
-local GETNUM = database:get(bot_id.."Games:Bat"..msg.chat_id_)
+local GETNUM = bot_data:get(ban_id.."Games:Bat"..msg.chat_id_)
 if tonumber(NUM) == tonumber(GETNUM) then
-database:del(bot_id.."SET:GAME" .. msg.chat_id_ .. "" .. msg.sender_user_id_)   
+bot_data:del(ban_id.."SET:GAME" .. msg.chat_id_ .. "" .. msg.sender_user_id_)   
 send(msg.chat_id_, msg.id_,' ✯مبروك فزت وطلعت المحيبس بل ايد رقم { '..NUM..' }\n ✯لقد حصلت على { 3 }من نقاط يمكنك استبدالهن برسائل ')
-database:incrby(bot_id..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_,3)  
+bot_data:incrby(ban_id..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_,3)  
 elseif tonumber(NUM) ~= tonumber(GETNUM) then
-database:del(bot_id.."SET:GAME" .. msg.chat_id_ .. "" .. msg.sender_user_id_)   
+bot_data:del(ban_id.."SET:GAME" .. msg.chat_id_ .. "" .. msg.sender_user_id_)   
 send(msg.chat_id_, msg.id_,' ✯للاسف لقد خسرت \n ✯المحيبس بل ايد رقم { '..GETNUM..' }\n ✯حاول مره اخرى للعثور على المحيبس')
 end
 end
@@ -350,17 +350,17 @@ end
 
 if text == 'محيبس' or text == 'البات' then
 if AddChannel(msg.sender_user_id_) == false then
-local textchuser = database:get(bot_id..'text:ch:user')
+local textchuser = bot_data:get(ban_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ✯لا تستطيع استخدام البوت \n  ✯يرجى الاشتراك بالقناه اولا \n  ✯اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ✯لا تستطيع استخدام البوت \n  ✯يرجى الاشتراك بالقناه اولا \n  ✯اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
 end
 return false
 end
-if database:get(bot_id..'Lock:Games'..msg.chat_id_) then   
+if bot_data:get(ban_id..'Lock:Games'..msg.chat_id_) then   
 Num = math.random(1,6)
-database:set(bot_id.."Games:Bat"..msg.chat_id_,Num) 
+bot_data:set(ban_id.."Games:Bat"..msg.chat_id_,Num) 
 TEST = [[
 *➀       ➁     ➂      ➃      ➄     ➅
 ↓      ↓     ↓      ↓     ↓     ↓   
@@ -369,7 +369,7 @@ TEST = [[
  ✯الفائز يحصل على { 3 } من النقاط *
 ]]
 send(msg.chat_id_, msg.id_,TEST)
-database:setex(bot_id.."SET:GAME" .. msg.chat_id_ .. "" .. msg.sender_user_id_, 100, true)  
+bot_data:setex(ban_id.."SET:GAME" .. msg.chat_id_ .. "" .. msg.sender_user_id_, 100, true)  
 return false  
 end
 end
@@ -377,19 +377,19 @@ end
 ------------------------------------------------------------------------
 if text == 'المختلف' or text == 'مختلف' then
 if AddChannel(msg.sender_user_id_) == false then
-local textchuser = database:get(bot_id..'text:ch:user')
+local textchuser = bot_data:get(ban_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ✯لا تستطيع استخدام البوت \n  ✯يرجى الاشتراك بالقناه اولا \n  ✯اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ✯لا تستطيع استخدام البوت \n  ✯يرجى الاشتراك بالقناه اولا \n  ✯اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
 end
 return false
 end
-if database:get(bot_id..'Lock:Games'..msg.chat_id_) then
-mktlf = {'😸','☠','🐼','🐇','🌚','⭐️','✨','⛈','🌥','⛄️','👨‍🔬','👨‍💻','👨‍🔧','👩‍🍳','🧚‍♀','🙍‍♂','🧖‍♂','👬','👨‍👨‍👧','🕒','🕤','⌛️','📅',};
+if bot_data:get(ban_id..'Lock:Games'..msg.chat_id_) then
+mktlf = {'😸','☠','🐼','🐇','??','🌚','⭐️','✨','⛈','🌥','⛄️','👨‍🔬','👨‍💻','👨‍🔧','👩‍🍳','🧚‍♀','??‍♂','??‍♂','🙍‍♂','🧖‍♂','👬','👨‍👨‍👧','🕒','🕤','⌛️','📅',};
 name = mktlf[math.random(#mktlf)]
-database:del(bot_id..'Set:Moktlf:Bot'..msg.chat_id_)
-database:set(bot_id..':Set:Moktlf'..msg.chat_id_,name)
+bot_data:del(ban_id..'Set:Moktlf:Bot'..msg.chat_id_)
+bot_data:set(ban_id..':Set:Moktlf'..msg.chat_id_,name)
 name = string.gsub(name,'😸','😹😹😹😹😹😹😹😹😸😹😹😹😹')
 name = string.gsub(name,'☠','💀💀💀💀💀💀💀☠💀💀💀💀💀')
 name = string.gsub(name,'🐼','👻👻👻🐼👻👻👻👻👻👻👻')
@@ -421,30 +421,30 @@ return false
 end
 end
 ------------------------------------------------------------------------
-if text == ''..(database:get(bot_id..':Set:Moktlf'..msg.chat_id_) or '')..'' then 
-if not database:get(bot_id..'Set:Moktlf:Bot'..msg.chat_id_) then 
-database:del(bot_id..':Set:Moktlf'..msg.chat_id_)
+if text == ''..(bot_data:get(ban_id..':Set:Moktlf'..msg.chat_id_) or '')..'' then 
+if not bot_data:get(ban_id..'Set:Moktlf:Bot'..msg.chat_id_) then 
+bot_data:del(ban_id..':Set:Moktlf'..msg.chat_id_)
 send(msg.chat_id_, msg.id_,' ✯الف مبروك لقد فزت \n ✯للعب مره اخره ارسل »{ المختلف }')
-database:incrby(bot_id..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_, 1)  
+bot_data:incrby(ban_id..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_, 1)  
 end
-database:set(bot_id..'Set:Moktlf:Bot'..msg.chat_id_,true)
+bot_data:set(ban_id..'Set:Moktlf:Bot'..msg.chat_id_,true)
 end
 ------------------------------------------------------------------------
 if text == 'الرياضيات' or text == 'رياضيات' then
 if AddChannel(msg.sender_user_id_) == false then
-local textchuser = database:get(bot_id..'text:ch:user')
+local textchuser = bot_data:get(ban_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ✯لا تستطيع استخدام البوت \n  ✯يرجى الاشتراك بالقناه اولا \n  ✯اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ✯لا تستطيع استخدام البوت \n  ✯يرجى الاشتراك بالقناه اولا \n  ✯اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
 end
 return false
 end
-if database:get(bot_id..'Lock:Games'..msg.chat_id_) then
+if bot_data:get(ban_id..'Lock:Games'..msg.chat_id_) then
 Amer = {'22','30','33','60','90','2','5','36','16','88','50','10','19',};
 name = Amer[math.random(#Amer)]
-database:del(bot_id..'Set:Ryadeat:Bot'..msg.chat_id_)
-database:set(bot_id..':Set:Ryadeat'..msg.chat_id_,name)
+bot_data:del(ban_id..'Set:Ryadeat:Bot'..msg.chat_id_)
+bot_data:set(ban_id..':Set:Ryadeat'..msg.chat_id_,name)
 name = string.gsub(name,'22','2+20=')
 name = string.gsub(name,'30','10×3=')
 name = string.gsub(name,'33','30+3=')
@@ -463,30 +463,30 @@ return false
 end
 end
 ------------------------------------------------------------------------
-if text == ''..(database:get(bot_id..':Set:Ryadeat'..msg.chat_id_) or '')..'' then 
-if not database:get(bot_id..'Set:Ryadeat:Bot'..msg.chat_id_) then 
-database:del(bot_id..':Set:Ryadeat'..msg.chat_id_)
+if text == ''..(bot_data:get(ban_id..':Set:Ryadeat'..msg.chat_id_) or '')..'' then 
+if not bot_data:get(ban_id..'Set:Ryadeat:Bot'..msg.chat_id_) then 
+bot_data:del(ban_id..':Set:Ryadeat'..msg.chat_id_)
 send(msg.chat_id_, msg.id_,' ✯الف مبروك لقد فزت \n ✯للعب مره اخره ارسل »{ رياضيات }')
-database:incrby(bot_id..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_, 1)  
+bot_data:incrby(ban_id..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_, 1)  
 end
-database:set(bot_id..'Set:Ryadeat:Bot'..msg.chat_id_,true)
+bot_data:set(ban_id..'Set:Ryadeat:Bot'..msg.chat_id_,true)
 end
 ------------------------------------------------------------------------
-if text == ' انجليزي' or text == ' الانجليزي' then
+if text == 'انكليزي' or text == 'الانكليزي' then
 if AddChannel(msg.sender_user_id_) == false then
-local textchuser = database:get(bot_id..'text:ch:user')
+local textchuser = bot_data:get(ban_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ✯لا تستطيع استخدام البوت \n  ✯يرجى الاشتراك بالقناه اولا \n  ✯اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ✯لا تستطيع استخدام البوت \n  ✯يرجى الاشتراك بالقناه اولا \n  ✯اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
 end
 return false
 end
-if database:get(bot_id..'Lock:Games'..msg.chat_id_) then
+if bot_data:get(ban_id..'Lock:Games'..msg.chat_id_) then
 Amer = {'معلومات','قنوات','مجموعات','كتاب','تفاحه','مختلف','سدني','فلوس','اعلم','ذئب','تمساح','ذكي',};
 name = Amer[math.random(#Amer)]
-database:del(bot_id..'Set:English:Bot'..msg.chat_id_)
-database:set(bot_id..':Set:English'..msg.chat_id_,name)
+bot_data:del(ban_id..'Set:English:Bot'..msg.chat_id_)
+bot_data:set(ban_id..':Set:English'..msg.chat_id_,name)
 name = string.gsub(name,'ذئب','Wolf')
 name = string.gsub(name,'معلومات','Information')
 name = string.gsub(name,'قنوات','Channels')
@@ -504,30 +504,30 @@ return false
 end
 end
 ------------------------------------------------------------------------
-if text == ''..(database:get(bot_id..':Set:English'..msg.chat_id_) or '')..'' then 
-if not database:get(bot_id..'Set:English:Bot'..msg.chat_id_) then 
-database:del(bot_id..':Set:English'..msg.chat_id_)
-send(msg.chat_id_, msg.id_,' ✯الف مبروك لقد فزت \n ✯للعب مره اخره ارسل »{ ` انجليزي` }')
-database:incrby(bot_id..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_, 1)  
+if text == ''..(bot_data:get(ban_id..':Set:English'..msg.chat_id_) or '')..'' then 
+if not bot_data:get(ban_id..'Set:English:Bot'..msg.chat_id_) then 
+bot_data:del(ban_id..':Set:English'..msg.chat_id_)
+send(msg.chat_id_, msg.id_,' ✯الف مبروك لقد فزت \n ✯للعب مره اخره ارسل »{ `انكليزي` }')
+bot_data:incrby(ban_id..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_, 1)  
 end
-database:set(bot_id..'Set:English:Bot'..msg.chat_id_,true)
+bot_data:set(ban_id..'Set:English:Bot'..msg.chat_id_,true)
 end
 ------------------------------------------------------------------------
 if text == 'امثله' or text == 'الامثله' then
 if AddChannel(msg.sender_user_id_) == false then
-local textchuser = database:get(bot_id..'text:ch:user')
+local textchuser = bot_data:get(ban_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ✯لا تستطيع استخدام البوت \n  ✯يرجى الاشتراك بالقناه اولا \n  ✯اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ✯لا تستطيع استخدام البوت \n  ✯يرجى الاشتراك بالقناه اولا \n  ✯اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
 end
 return false
 end
-if database:get(bot_id..'Lock:Games'..msg.chat_id_) then
+if bot_data:get(ban_id..'Lock:Games'..msg.chat_id_) then
 mthal = {'جوز','ضراطه','الحبل','الحافي','شقره','بيدك','سلايه','النخله','الخيل','حداد','المبلل','يركص','قرد','العنب','العمه','الخبز','بالحصاد','شهر','شكه','يكحله',};
 name = mthal[math.random(#mthal)]
-database:set(bot_id..'Set:Amth'..msg.chat_id_,name)
-database:del(bot_id..'Set:Amth:Bot'..msg.chat_id_)
+bot_data:set(ban_id..'Set:Amth'..msg.chat_id_,name)
+bot_data:del(ban_id..'Set:Amth:Bot'..msg.chat_id_)
 name = string.gsub(name,'جوز','ينطي____للماعده سنون')
 name = string.gsub(name,'ضراطه','الي يسوق المطي يتحمل___')
 name = string.gsub(name,'بيدك','اكل___محد يفيدك')
@@ -553,17 +553,17 @@ return false
 end
 end
 ------------------------------------------------------------------------
-if text == ''..(database:get(bot_id..'Set:Amth'..msg.chat_id_) or '')..'' then 
-if not database:get(bot_id..'Set:Amth:Bot'..msg.chat_id_) then 
-database:del(bot_id..'Set:Amth'..msg.chat_id_)
+if text == ''..(bot_data:get(ban_id..'Set:Amth'..msg.chat_id_) or '')..'' then 
+if not bot_data:get(ban_id..'Set:Amth:Bot'..msg.chat_id_) then 
+bot_data:del(ban_id..'Set:Amth'..msg.chat_id_)
 send(msg.chat_id_, msg.id_,' ✯الف مبروك لقد فزت \n ✯للعب مره اخره ارسل »{ امثله }')
-database:incrby(bot_id..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_, 1)  
+bot_data:incrby(ban_id..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_, 1)  
 end
-database:set(bot_id..'Set:Amth:Bot'..msg.chat_id_,true)
+bot_data:set(ban_id..'Set:Amth:Bot'..msg.chat_id_,true)
 end
 if text == 'تعطيل الالعاب' and Manager(msg) then   
-if database:get(bot_id..'Lock:Games'..msg.chat_id_)  then
-database:del(bot_id..'Lock:Games'..msg.chat_id_) 
+if bot_data:get(ban_id..'Lock:Games'..msg.chat_id_)  then
+bot_data:del(ban_id..'Lock:Games'..msg.chat_id_) 
 Text = '\n ✯تم تعطيل الالعاب' 
 else
 Text = '\n ✯ بالتاكيد تم تعطيل الالعاب'
@@ -571,8 +571,8 @@ end
 send(msg.chat_id_, msg.id_,Text) 
 end
 if text == 'تفعيل الالعاب' and Manager(msg) then  
-if not database:get(bot_id..'Lock:Games'..msg.chat_id_)  then
-database:set(bot_id..'Lock:Games'..msg.chat_id_,true) 
+if not bot_data:get(ban_id..'Lock:Games'..msg.chat_id_)  then
+bot_data:set(ban_id..'Lock:Games'..msg.chat_id_,true) 
 Text = '\n ✯تم تفعيل الالعاب' 
 else
 Text = '\n ✯بالتاكيد تم تفعيل الالعاب'
@@ -582,5 +582,5 @@ end
 
 end
 return {
-Dragon = games
+VENOM = games
 }
