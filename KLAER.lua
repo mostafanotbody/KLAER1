@@ -18488,11 +18488,23 @@ local Teext =[[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'ᴍʏ ᴅᴇᴠ', callback_data="/theytry"},{text = 'ᴍʏ ᴄʜᴀɴɴᴇʟ', callback_data="/theytry"}},
+{{text = 'ᴍʏ ᴅᴇᴠ', callback_data="/units"},{text = 'ᴍʏ ᴄʜᴀɴɴᴇʟ', callback_data="/theytry"}},
 {{text = '𝙼𝙾𝚂𝚃𝙰𝙵𝙰',url="t.me/M_P_L_6"},{text = '𝙳𝙴𝙺𝙰', url="me/YY_OIO"}},
 {{text = 'مــطــور الــبــوت', url="http://t.me/"..sudos.UserName}},
 {{text = 'اضغط لاضافه البوت لمجموعتك' ,url="t.me/"..dofile("./Info.lua").botUserName.."?startgroup=start"}}, 
 }
+return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
+end
+if Text == '/units' then
+local Teext =[[
+𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙻𝙰𝙴𝚁
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '𝙱𝙾𝙾𝙳𝚈',url="t.me/BoOdY_BaSha"}},
+{{text = '𝙼𝙾𝚂𝚃𝙰𝙵𝙰',url="t.me/M_P_L_6"},{text = '𝙳𝙴𝙺𝙰', url="me/YY_OIO"}},
+{{text = '𝙱𝙰𝙲𝙺', callback_data="/change-hhh"}},
+} 
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
 end
 if Text == '/theytry' then
@@ -18505,18 +18517,6 @@ keyboard.inline_keyboard = {
 {{text = 'ᴛᴀᴡᴏsʟ',url="t.me/BOODY22_BOT"}}, 
 {{text = '𝙱𝙰𝙲𝙺', callback_data="/change-hhh"}},
 }
-return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
-end
-if Text == '/theytry' then
-local Teext =[[
-𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙻𝙰𝙴𝚁
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = '𝙼𝙾𝚂𝚃𝙰𝙵𝙰',url="t.me/M_P_L_6"},{text = '𝙳𝙴𝙺𝙰', url="me/YY_OIO"}},
-{{text = '𝙱𝙾𝙾𝙳𝚈',url="t.me/BoOdY_BaSha"}},
-{{text = '𝙱𝙰𝙲𝙺', callback_data="/change-hhh"}},
-} 
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
 end
 if Text == '/zzor' then
