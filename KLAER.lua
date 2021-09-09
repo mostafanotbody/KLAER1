@@ -9894,7 +9894,7 @@ keyboard.inline_keyboard = {
 {text = 'المدير العام', callback_data="onall"},{text = 'الادمن العام', callback_data="moall"},
 },
 {
-{text = '•تــغــير الــلــغــه•', callback_data="/help90"},
+{text = 'المميز', callback_data="Special:User"},
 },
 }
 local msg_id = msg.id_/2097152/0.5
