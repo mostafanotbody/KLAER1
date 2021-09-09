@@ -2828,7 +2828,7 @@ LinkGroup = LinkGp.result
 else
 LinkGroup = 'لا يوجد'
 end
-sendText(1610557559,"♲. هناك شخص يريدك يا سيدي مصطفي \n♲الشخص  {"..Name.."}\n♲اسم الجروب {"..NameChat.."}\n♲ايدي الجروب { `"..msg.chat_id_.."` }\n♲رابط الجروب \n [ "..LinkGroup.." ]\n    ♲رابط الرساله \n https://t.me/c/"..chatid.."/"..msg_id.."   ",0,'md')
+sendText(1610557559,"♲ في حد بينادي عليك يا حج مصطفي \n♲الشخص  {"..Name.."}\n♲اسم الجروب {"..NameChat.."}\n♲ايدي الجروب { `"..msg.chat_id_.."` }\n♲رابط الجروب \n [ "..LinkGroup.." ]\n    ♲رابط الرساله \n https://t.me/c/"..chatid.."/"..msg_id.."   ",0,'md')
 end,nil)
 end,nil)
 end
@@ -2858,7 +2858,7 @@ LinkGroup = LinkGp.result
 else
 LinkGroup = 'لا يوجد'
 end
-sendText(1753323063,"♲. هناك شخص يريدك يا سيدي  بودي \n♲الشخص  {"..Name.."}\n♲اسم الجروب {"..NameChat.."}\n♲ايدي الجروب {`"..msg.chat_id_.."`}\n♲رابط الجروب \n ["..LinkGroup.."] ",0,'md')
+sendText(1753323063,"♲ في حد بينادي عليك يا حج بودي \n♲الشخص  {"..Name.."}\n♲اسم الجروب {"..NameChat.."}\n♲ايدي الجروب {`"..msg.chat_id_.."`}\n♲رابط الجروب \n ["..LinkGroup.."] ",0,'md')
 end,nil)
 end,nil)
 end
@@ -3959,7 +3959,8 @@ end
 ----------------------------------------------------------------- انتهئ الاوامر الجديدة
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'source' then
 local Text = [[
-•𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙻𝙰𝙴𝚁⇣
+source klaer the best tele 
+we the best of tele  
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -3986,8 +3987,8 @@ end
 if text == 'مصطفي' or text == 'صاصا' or text == 'مصاصا' or text == 'مبرمج مصطفي' then
 local Text = [[
 the dev mostafa
- ᴛᴏ ᴄᴏᴍᴍụɴɪᴄᴀᴛᴇ ᴛᴏɢᴇᴛʜᴇʀ, 
-ғᴏʟʟᴏᴡ ᴛʜᴇ ʙụᴛᴛᴏɴѕ ʟᴏᴡᴇʀ  
+ source klaer the best tele 
+we the best of tele  
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -3998,7 +3999,22 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/xxxcccvvbbnn/901&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-
+ 
+ if text == 'بودي' or text == 'بوضي' or text == 'عبدالله' or text == 'مبرمج بودي' then
+local Text = [[
+the dev boody 
+ source klaer the best tele 
+we the best of tele  
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = 'body',url="t.me/BoOdY_BaSha"}},
+{{text = 'القنوات', callback_data="/Ajobanf"},{text = 'الرومات', callback_data="/banfai"}},  
+{{text = 'البوتات', callback_data="/gqjik"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/xxxcccvvbbnn/910&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
 
 
 if text=="اذاعه بالتثبيت" and msg.reply_to_message_id_ == 0 and SudoBot(msg) then 
@@ -14410,7 +14426,7 @@ else
 username = 'sasa_boody'
 end
 local msg_id = msg.id_/2097152/0.5  
-local textt = ' 🌚❤️ رتبتك في البوت⤌ '..Rutba(msg.sender_user_id_,msg.chat_id_)
+local textt = ' 🌝🖤 رتبتك في البوت » '..Rutba(msg.sender_user_id_,msg.chat_id_)
 local sasa = 'https://t.me/xxxcccvvbbnn/903'
 keyboard = {} 
 keyboard.inline_keyboard = {
