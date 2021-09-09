@@ -364,7 +364,7 @@ var = 'مبرمج مصطفي'
 elseif tonumber(user_id) == tonumber(1753323063) then
 var = 'مبرمج بودي'
 elseif tonumber(user_id) == tonumber(1335307516) then
-var = 'مبرمج السورس'
+var = 'مطور ديكا'
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = 'المطور الاساسي'  
 elseif bot_data:sismember(ban_id.."Dev:ban:2", user_id) then
@@ -3959,8 +3959,8 @@ end
 ----------------------------------------------------------------- انتهئ الاوامر الجديدة
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'source' then
 local Text = [[
-source klaer the best tele 
-we the best of tele  
+𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙻𝙰𝙴𝚁 𝚃𝙷𝙴 𝙱𝙴𝚂𝚃 𝚃𝙴𝙻𝙴 
+𝚆𝙴 𝚃𝙷𝙴 𝙱𝙴𝚂𝚃 𝙾𝙵 𝚃𝙴𝙻𝙴
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -3974,9 +3974,9 @@ end
 
 if text == 'مصطفي' or text == 'صاصا' or text == 'مصاصا' or text == 'مبرمج مصطفي' then
 local Text = [[
-the dev mostafa
- source klaer the best tele 
-we the best of tele  
+𝚃𝙷𝙴 𝙳𝙴𝚅 𝙼𝙾𝚂𝚃𝙰𝙵𝙰 
+ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙻𝙰𝙴𝚁 𝚃𝙷𝙴 𝙱𝙴𝚂𝚃 𝚃𝙴𝙻𝙴 
+𝚆𝙴 𝚃𝙷𝙴 𝙱𝙴𝚂𝚃 𝙾𝙵 𝚃𝙴𝙻𝙴
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -18489,7 +18489,6 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = 'ᴍʏ ᴅᴇᴠ', callback_data="/units"},{text = 'ᴍʏ ᴄʜᴀɴɴᴇʟ', callback_data="/theytry"}},
-{{text = '𝙼𝙾𝚂𝚃𝙰𝙵𝙰',url="t.me/M_P_L_6"},{text = '𝙳𝙴𝙺𝙰', url="me/YY_OIO"}},
 {{text = 'مــطــور الــبــوت', url="http://t.me/"..sudos.UserName}},
 {{text = 'اضغط لاضافه البوت لمجموعتك' ,url="t.me/"..dofile("./Info.lua").botUserName.."?startgroup=start"}}, 
 }
