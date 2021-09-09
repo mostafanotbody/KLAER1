@@ -21118,7 +21118,7 @@ DeleteMessage(Chat_id,{[0] = Msg_id})
 https.request("https://api.telegram.org/bot"..token..'/sendVoice?chat_id=' .. Chat_id .. '&voice=https://t.me/efwhgsdjg/'..ban..'&caption=' .. URL.escape(Text).."&reply_to_message_id=0&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 if Text == '/lklpo' then
-Text = 'دوس علي الزرار لاختيار استوري أخري 🍁'
+Text = 'لاختيار استوري اخر اضغط ع زر'
 ban = math.random(4,74); 
 keyboard = {}
 keyboard.inline_keyboard = {
