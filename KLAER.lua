@@ -9870,37 +9870,6 @@ end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
 return false
 end
-
-if text == 'رفع رول' then
-if not Mod(msg) then
-send(msg.chat_id_, msg.id_,' هذا الامر لا يخصك')
-return false
-end
-local Text =[[
-لرفع الرتبه اضغط ع زر 
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = 'المطور الثانوي', callback_data="Dev:ban:2"},{text = 'المطور', callback_data="Sudo:User"},
-},
-{
-{text = 'منشئ اساسي', callback_data="Basic:Constructor"},
-},
-{
-{text = 'منشئ', callback_data="Constructor"},{text = 'الادمن', callback_data="Mod:User"},
-},
-{
-{text = 'المدير العام', callback_data="onall"},{text = 'الادمن العام', callback_data="moall"},
-},
-{
-{text = 'المميز', callback_data="Special:User"},
-},
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-return false
-end
 -----------------------------------------------------
 if text == 'مسح الوتكات' and Mod(msg) then
 bot_data:del(ban_id..'Motte:User'..msg.chat_id_)
