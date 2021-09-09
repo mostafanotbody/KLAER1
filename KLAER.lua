@@ -5802,7 +5802,7 @@ else
 username = 'لا يوجد '
 end
 if result.status_.ID == "UserStatusRecently" and result.profile_photo_ ~= false then
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, ban.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n• 🖤 | 𝑼𝑬𝑺 : '..username..' \n• 🖤 | 𝑴𝑺𝑮 : '..Msguser..' \n• 🖤 | 𝑺𝑻𝑨 : '..Rutba(msg.sender_user_id_,msg.chat_id_)..'  \n• 🖤 | 𝑰𝑫 :  '..msg.sender_user_id_..' \n• 🖤 | b𝐼𝑂 : '..getbioY..' \n• 🖤 | 𝐶𝐻 : @sasa_boody \n')
+sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, ban.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n• 🖤 | 𝚄𝙴𝚂 : '..username..' \n• 🖤 | 𝙼𝚂𝙶 : '..Msguser..' \n• 🖤 | 𝚂𝚃𝙰 : '..Rutba(msg.sender_user_id_,msg.chat_id_)..'  \n• 🖤 | 𝙸𝙳 :  '..msg.sender_user_id_..' \n• 🖤 | 𝙱𝙸𝙾 : '..getbioY..' \n• 🖤 | 𝙲𝙷 : @sasa_boody \n')
 else 
 if result.status_.ID == "UserStatusEmpty" and result.profile_photo_ == false then
 send(msg.chat_id_, msg.id_,'[\n ¦✙ بيك عزيزي 『'..Name..'』 \n¦• 𝚄𝚂𝙴𝚁 ↝  『'..Name..'』    ↝💘\n¦• 𝙼𝚂𝙶𝚂↝ 『'..Msguser..'』.   ↝💘\n ¦• 𝚁𝙰𝙽𝙺↝ 『'..Rutba(msg.sender_user_id_,msg.chat_id_)..'』    ↝💘\n¦• 𝙸𝙳↝  『'..msg.sender_user_id_..'』    ↝💘\n¦• 𝒄𝒉↝   『@sasa_boody』 ↝🇧??\n')
@@ -5917,7 +5917,7 @@ else
 username = 'لا يوجد '
 end
 if result.status_.ID == "UserStatusRecently" and result.profile_photo_ ~= false then
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, ban.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n• 🖤 | 𝑼𝑬𝑺 : '..username..' \n• 🖤 | 𝑴𝑺𝑮 : '..Msguser..' \n• 🖤 | 𝑺𝑻𝑨 : '..Rutba(msg.sender_user_id_,msg.chat_id_)..'  \n• 🖤 | 𝑰𝑫 :  '..msg.sender_user_id_..' \n• 🖤 | b𝐼𝑂 : '..getbioY..' \n• 🖤 | 𝐶𝐻 : @sasa_boody \n')
+sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, ban.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n• 🖤 | 𝑼𝑬𝑺 : '..username..' \n• 🖤 | 𝑴𝑺𝑮 : '..Msguser..' \n• 🖤 | 𝑺𝑻𝑨 : '..Rutba(msg.sender_user_id_,msg.chat_id_)..'  \n• 🖤 | 𝑰?? :  '..msg.sender_user_id_..' \n• 🖤 | b𝐼𝑂 : '..getbioY..' \n• 🖤 | 𝐶𝐻 : @sasa_boody \n')
 else 
 if result.status_.ID == "UserStatusEmpty" and result.profile_photo_ == false then
 send(msg.chat_id_, msg.id_,'[\n ¦✙ بيك عزيزي 『'..Name..'』 \n¦• 𝚄𝚂𝙴𝚁 ↝  『'..Name..'』    ↝💘\n¦• 𝙼𝚂𝙶𝚂↝ 『'..Msguser..'』.   ↝💘\n ¦• 𝚁𝙰??𝙺↝ 『'..Rutba(msg.sender_user_id_,msg.chat_id_)..'』    ↝💘\n¦• 𝙸𝙳↝  『'..msg.sender_user_id_..'』    ↝💘\n¦• 𝒄𝒉↝   『@sasa_boody』 ↝🇧??\n')
@@ -15085,7 +15085,7 @@ local List = {
 • 🦄 | 𝑰𝑫 : #id ‌‌‏♕
 • 🦄 | 𝑴𝑺𝑮 : #msgs 𓆊
 • 🦄 | 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 : ⁞
-• 🦄 | 𝗖𝗛 - 『@sasa_boody』 💞.
+• 🦄 | 𝗖?? - 『@sasa_boody』 💞.
 ]],
 [[
 • △ | 𝑼𝑬𝑺 : #username ‌‌‏⚚
