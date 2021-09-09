@@ -18353,9 +18353,6 @@ keyboard.inline_keyboard = {
 {text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙻𝙰𝙴𝚁', url="t.me/sasa_boody"},
 },
 }
-{text = '𝙱𝙰𝙲𝙺', callback_data="/change-hhh"},
-},
-}
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
 end
 if Text == '/change-hklp' then
