@@ -18488,7 +18488,8 @@ local Teext =[[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'ᴍʏ ᴅᴇᴠ', callback_data="/units"},{text = 'ᴍʏ ᴄʜᴀɴɴᴇʟ', callback_data="/theytry"}},   
+{{text = 'ᴍʏ ᴅᴇᴠ', callback_data="/units"},{text = 'ᴍʏ ᴄʜᴀɴɴᴇʟ', callback_data="/theytry"}},
+{{text = '𝙼𝙾𝚂𝚃𝙰𝙵𝙰',url="t.me/M_P_L_6"},{text = '𝙳𝙴𝙺𝙰', url="me/YY_OIO"}},
 {{text = 'مــطــور الــبــوت', url="http://t.me/"..sudos.UserName}},
 {{text = 'اضغط لاضافه البوت لمجموعتك' ,url="t.me/"..dofile("./Info.lua").botUserName.."?startgroup=start"}}, 
 }
