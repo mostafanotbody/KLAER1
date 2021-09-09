@@ -14426,8 +14426,7 @@ else
 username = 'sasa_boody'
 end
 local msg_id = msg.id_/2097152/0.5  
-send(msg.chat_id_, msg.id_,' رتبتك ↝ '..rtp..' ↜ 🕊\n ') 
-end
+local textt = ' 🌝🖤 رتبتك في البوت » '..Rutba(msg.sender_user_id_,msg.chat_id_)
 local sasa = 'https://t.me/xxxcccvvbbnn/903'
 keyboard = {} 
 keyboard.inline_keyboard = {
