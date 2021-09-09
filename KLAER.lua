@@ -18433,9 +18433,9 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption
 end
 if Text == '/bnada-yquio' then
 local Teext =[[
-ᴘʀᴏɢʀᴀᴍᴍᴇʀ sasa
- ᴛᴏ ᴄᴏᴍᴍụɴɪᴄᴀᴛᴇ ᴛᴏɢᴇᴛʜᴇʀ, 
-ғᴏʟʟᴏᴡ ᴛʜᴇ ʙụᴛᴛᴏɴѕ ʟᴏᴡᴇʀ  
+the dev boody 
+ source klaer the best tele 
+we the best of tele
 
 ]]
 keyboard = {} 
@@ -18448,9 +18448,9 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption
 end
 if Text == '/Ajobanf' then
 local Teext =[[
-ᴘʀᴏɢʀᴀᴍᴍᴇʀ sasa
- ᴛᴏ ᴄᴏᴍᴍụɴɪᴄᴀᴛᴇ ᴛᴏɢᴇᴛʜᴇʀ, 
-ғᴏʟʟᴏᴡ ᴛʜᴇ ʙụᴛᴛᴏɴѕ ʟᴏᴡᴇʀ  
+the dev boody 
+ source klaer the best tele 
+we the best of tele 
 
 ]]
 keyboard = {} 
@@ -18462,9 +18462,9 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption
 end
 if Text == '/banfai' then
 local Teext =[[
-ᴘʀᴏɢʀᴀᴍᴍᴇʀ sasa
- ᴛᴏ ᴄᴏᴍᴍụɴɪᴄᴀᴛᴇ ᴛᴏɢᴇᴛʜᴇʀ, 
-ғᴏʟʟᴏᴡ ᴛʜᴇ ʙụᴛᴛᴏɴѕ ʟᴏᴡᴇʀ  
+the dev boody 
+ source klaer the best tele 
+we the best of tele
 
 ]]
 keyboard = {} 
@@ -18476,16 +18476,16 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption
 end
 if Text == '/gqjik' then
 local Teext =[[
-ᴘʀᴏɢʀᴀᴍᴍᴇʀ sasa
- ᴛᴏ ᴄᴏᴍᴍụɴɪᴄᴀᴛᴇ ᴛᴏɢᴇᴛʜᴇʀ, 
-ғᴏʟʟᴏᴡ ᴛʜᴇ ʙụᴛᴛᴏɴѕ ʟᴏᴡᴇʀ  
+the dev boody 
+ source klaer the best tele 
+we the best of tele
 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = 'بوت تواصل',url="t.me/BOODY22_BOT"}},
 {{text = 'بوت دعم قنوات',url="t.me/Devsasa67bot"}},
-{{text = 'بوت حمايه الجروبات ',url="t.me/BoOdY_BaSha"}},
+{{text = 'بوت حمايه الجروبات ',url="t.me/BoOdY_BaShabot"}},
 {{text = '𝙱𝙰𝙲𝙺', callback_data="/bnada-yquio"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -18506,7 +18506,7 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption
 end
 if Text == '/theytry' then
 local Teext =[[
-•𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙻𝙰𝙴𝚁⇣
+𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙻𝙰𝙴𝚁
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -18518,7 +18518,7 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption
 end
 if Text == '/units' then
 local Teext =[[
-•𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙻𝙰𝙴𝚁⇣
+𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙻𝙰𝙴𝚁
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
