@@ -159,7 +159,7 @@ io.popen("mkdir File_Bot")
 io.popen("cd File_Bot && rm -rf commands.lua.1") 
 io.popen("cd File_Bot && rm -rf commands.lua.2") 
 io.popen("cd File_Bot && rm -rf commands.lua.3") 
-io.popen("cd File_Bot && wget https://raw.githubusercontent.com/mostafanotbody/KLAER1/main/File_Bot/commands.lua") 
+io.popen("cd File_Bot && wget https://raw.githubusercontent.com/mostafanot𝙱𝙾𝙾𝙳𝚈/KLAER1/main/File_Bot/commands.lua") 
 t = "\27[35m".."\nAll Files Started : \n____________________\n"..'\27[m'
 i = 0
 for v in io.popen('ls File_Bot'):lines() do
@@ -823,8 +823,8 @@ File:close()
 sendDocument(msg.chat_id_, msg.id_,0, 1, nil, './'..ban_id..'.json', '- عدد جروبات التي في البوت { '..#list..'}')
 end
 function download_to_file(url, file_path) 
-local respbody = {} 
-local options = { url = url, sink = ltn12.sink.table(respbody), redirect = true } 
+local resp𝙱𝙾𝙾𝙳𝚈 = {} 
+local options = { url = url, sink = ltn12.sink.table(resp𝙱𝙾𝙾𝙳𝚈), redirect = true } 
 local response = nil 
 options.redirect = false 
 response = {https.request(options)} 
@@ -834,7 +834,7 @@ local status = response[4]
 if code ~= 200 then return false, code 
 end 
 file = io.open(file_path, "w+") 
-file:write(table.concat(respbody)) 
+file:write(table.concat(resp𝙱𝙾𝙾𝙳𝚈)) 
 file:close() 
 return file_path, code 
 end 
@@ -1861,7 +1861,7 @@ echo '💞 ═───═𝙺𝙻𝙰𝙴𝚁═───═💞\n 🔌l •⊱
 end
 if text == 'تحديث السورس ' and DevSoFi(msg) then 
 os.execute('rm -rf KLAER.lua')
-os.execute('wget https://raw.githubusercontent.com/mostafanotbody/KLAER1/main/KLAER.lua')
+os.execute('wget https://raw.githubusercontent.com/mostafanot𝙱𝙾𝙾𝙳𝚈/KLAER1/main/KLAER.lua')
 send(msg.chat_id_, msg.id_,'💞  تم تحديث السورس')
 dofile('KLAER.lua')  
 end
@@ -2834,7 +2834,7 @@ end,nil)
 end
 
 
-if text and text:match("^بودي$") or text and text:match("^boody$") or text and text:match("^body$") then
+if text and text:match("^بودي$") or text and text:match("^boody$") or text and text:match("^𝙱𝙾𝙾𝙳𝚈$") then
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
 tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,dp) 
 local Name1 = result.first_name_
@@ -3643,7 +3643,7 @@ end
 return false
 end
 os.execute('rm -rf KLAER.lua')
-os.execute('wget https://raw.githubusercontent.com/mostafanotbody/KLAER1/main/KLAER.lua')
+os.execute('wget https://raw.githubusercontent.com/mostafanot𝙱𝙾𝙾𝙳𝚈/KLAER1/main/KLAER.lua')
 send(msg.chat_id_, msg.id_,' ♲ تم تحديث السورس')
 dofile('KLAER.lua')  
 end
@@ -3996,7 +3996,7 @@ we the best of tele
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'body',url="t.me/BoOdY_BaSha"}},
+{{text = '𝙱𝙾𝙾𝙳𝚈',url="t.me/BoOdY_BaSha"}},
 {{text = 'القنوات', callback_data="/Ajobanf"},{text = 'الرومات', callback_data="/banfai"}},  
 {{text = 'البوتات', callback_data="/gqjik"}},
 }
@@ -7237,7 +7237,7 @@ send(msg.chat_id_, msg.id_,t)
 end
 if text == "متجر الملفات" or text == 'المتجر' then
 if Devban(msg) then
-local Get_Files, res = https.request("https://raw.githubusercontent.com/mostafanotbody/KLAER1/main/getfile.json")
+local Get_Files, res = https.request("https://raw.githubusercontent.com/mostafanot𝙱𝙾𝙾𝙳𝚈/KLAER1/main/getfile.json")
 if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 vardump(res.plugins_)
@@ -7275,7 +7275,7 @@ t = " ♲ الملف  ⇐ "..file.."\n ♲ تم تعطيل ملف \n"
 else
 t = " ♲ بالتاكيد تم تعطيل ملف → "..file.."\n"
 end
-local json_file, res = https.request("https://raw.githubusercontent.com/mostafanotbody/KLAER1/main/File_Bot/"..file)
+local json_file, res = https.request("https://raw.githubusercontent.com/mostafanot𝙱𝙾𝙾𝙳𝚈/KLAER1/main/File_Bot/"..file)
 if res == 200 then
 os.execute("rm -fr File_Bot/"..file)
 send(msg.chat_id_, msg.id_,t) 
@@ -7295,7 +7295,7 @@ t = " ♲ بالتاكيد تم تفعيل ملف → "..file.." \n"
 else
 t = " ♲ الملف  ⇐ "..file.."\n ♲ تم تفعيل ملف \n"
 end
-local json_file, res = https.request("https://raw.githubusercontent.com/mostafanotbody/KLAER1/main/File_Bot/"..file)
+local json_file, res = https.request("https://raw.githubusercontent.com/mostafanot𝙱𝙾𝙾𝙳𝚈/KLAER1/main/File_Bot/"..file)
 if res == 200 then
 local chek = io.open("File_Bot/"..file,'w+')
 chek:write(json_file)
@@ -18414,7 +18414,7 @@ local Teext =[[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'mostafa',url="t.me/M_P_L_6"},{text = 'body', url=".me/BoOdY_BaSha"}},
+{{text = 'mostafa',url="t.me/M_P_L_6"},{text = '𝙱𝙾𝙾𝙳𝚈', url=".me/BoOdY_BaSha"}},
 {{text = ' مـطور الـبـوت🔒', url="http://t.me/"..sudos.UserName}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -18443,7 +18443,7 @@ we the best of tele
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'TO THE END',url="https://t.me/BOODY_Uu"},{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙻𝙰𝙴𝚁',url="t.me/sasa_boody"}},
+{{text = '𝚃𝙾 𝚃𝙷𝙴 𝙴𝙽𝙳',url="https://t.me/BOODY_Uu"},{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙻𝙰𝙴𝚁',url="t.me/sasa_boody"}},
 {{text = '𝙱𝙰𝙲𝙺', callback_data="/Boody-yquio"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -18457,7 +18457,7 @@ we the best of tele
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'TEAM BOODY',url="t.me/BoOdY_122"}},
+{{text = '𝚃𝙴𝙰𝙼 𝙱𝙾𝙾𝙳𝚈',url="t.me/BoOdY_122"}},
 {{text = '𝙱𝙰𝙲𝙺', callback_data="/bnada-yquio"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -18498,7 +18498,7 @@ local Teext =[[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙻𝙰𝙴𝚁',url="t.me/sasa_boody"},{text = 'TO THE END', url="https://t.me/BOODY_Uu"}},
+{{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙻𝙰𝙴𝚁',url="t.me/sasa_boody"},{text = '𝚃𝙾 𝚃𝙷𝙴 𝙴𝙽𝙳', url="https://t.me/BOODY_Uu"}},
 {{text = 'ᴛᴀᴡᴏsʟ',url="t.me/BOODY22_BOT"}}, 
 {{text = '𝙱𝙰𝙲𝙺', callback_data="/HHH"}},
 }
@@ -18510,7 +18510,7 @@ local Teext =[[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'mostafa',url="t.me/M_P_L_6"},{text = 'body', url="me/BoOdY_BaSha"}},
+{{text = 'mostafa',url="t.me/M_P_L_6"},{text = '𝙱𝙾𝙾𝙳𝚈', url="me/BoOdY_BaSha"}},
 {{text = '𝙱𝙰𝙲𝙺', callback_data="/HHH"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
