@@ -1624,7 +1624,7 @@ if not msa3d(msg) then
 local bl = '♲انت الان المطور الثانوي في البوت \n♲ سورس كلير\n ♲يمكنك تحكم في البوتات من الكيبورد أسفل \n[تابع جديدنا](t.me/sasa_boody)'
 local keyboard = {
 {'الاحصائيات'},
-{'المطور','الانتيمي'},
+{'المطور','انتيمي'},
 {'معلومات الكيبورد'},
 {'『تواصل لسورس』','『اوامر اضف』'},
 {'『اوامر التفعيل』','『اوامر الحمايه』'},
@@ -1650,7 +1650,7 @@ local msg_id = msg.id_/2097152/0.5
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = 'معلومات📚', callback_data="/change-hhh"},{text = 'السورس🌀', callback_data="/change-siusr"},
+{text = 'معلومات📚', callback_data="/change-hhh"},{text = 'السورس🌎', callback_data="/change-siusr"},
 },
 {
 {text = 'الابراج🔮', callback_data="/zDRGd"},{text = 'الالعاب🎮', callback_data="/add"},
@@ -2006,7 +2006,7 @@ local Text = [[
 ]]
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = 'مطورين السورس⚙', url="t.me/sasa_boody"}}, 
+{{text = 'مطورين السورس⚙', url="t.me/hogan21"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/sasa7_7/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -2060,7 +2060,7 @@ local Text = [[
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = 'SASA˼', url="t.me/M_P_L_6"}}, 
+{{text = '𝚂𝙰𝚂𝙰', url="t.me/M_P_L_6"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -15517,7 +15517,7 @@ Msᴀɢ ~ #msgs
 - 𝗖𝗛 - 『@sasa_boody』 ♲
 ]],
 [[
-🌯 ¦✙• 𝐮𝐬𝐞𝐫??𝒂𝒎𝒆 ➢ ⁞  #username 🇪🇬
+🌯 ¦✙• 𝐮𝐬𝐞𝐫𝒏??𝒎𝒆 ➢ ⁞  #username 🇪🇬
 🌯 ¦✙• 𝐦𝐬𝐠 ➢ ⁞  #msgs  📝
 🌯 ¦✙• 𝒓𝒂𝒏𝒌 ➢ ⁞ #stast  
 🌯 ¦✙• 𝐢𝐝 𝒔𝒕𝒂 ➢ ⁞ #id  🆔
@@ -15950,7 +15950,7 @@ Msᴀɢ ~ #msgs
 𝟓 𝟔 𖡻 #username  ࿇🦄
 𝟓 𝟔 𖡻 #msgs  ࿇🦄
 𝟓 𝟔 𖡻 #auto  ࿇🦄
-?? 𝟔 𖡻 #stast  ࿇🦄
+𝟓 𝟔 𖡻 #stast  ࿇🦄
 𝟓 𝟔 𖡻 #id  ࿇🦄
 𝟓 𝟔 𖡻 𝗖𝗛 - 『@sasa_boody』 ♲
 ]],
@@ -16991,7 +16991,7 @@ local Teext =[[
 💞 ═───═𝙺𝙻𝙰𝙴𝚁═───═💞
 ♲ Crown for the two
 ♲ Khiennine survey
-💞 ═───═??𝙻𝙰𝙴𝚁═───═💞
+💞 ═───═𝙺??𝙰𝙴𝚁═───═💞
 ♲ Abit
 ♲ Crown for the mixture
 ♲ Survey
@@ -17614,7 +17614,7 @@ local Text ='اكتب ثيم وسيتم اختيار ثيم اخار'
 keyboard = {}  
 keyboard.inline_keyboard = { 
 {
-{text = 'ثيم آخر 🌀', callback_data="/dulljob"},
+{text = 'ثيم آخر 🌎', callback_data="/dulljob"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagedocument?chat_id='..Chat_id..'&document='..URL.escape(Text)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17960,7 +17960,7 @@ keyboard.inline_keyboard = {
 {{text = 'لعبه الامثله', callback_data="/help35"}},
 {{text = 'لعبه كشف الكذب', callback_data="/help47"}},
 {{text = 'مريم', callback_data="/help36"},{text = 'عقاب', callback_data="/help42"}},
-{{text = '◗القائمه الرائسيه◖', callback_data="/add"}},
+{{text = '◗القائمه الرئيسيه◖', callback_data="/add"}},
 {{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙻𝙰𝙴𝚁', url="t.me/sasa_boody"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -18088,7 +18088,7 @@ keyboard.inline_keyboard = {
 {{text = 'SpaceTraveler', url="https://t.me/gamee?game=SpaceTraveler"},{text = 'RedAndBlue', url="https://t.me/gamee?game=RedAndBlue"}},  
 {{text = 'SkodaHockey1 ', url="https://t.me/gamee?game=SkodaHockey1"},{text = 'SummerLove', url="https://t.me/gamee?game=SummerLove"}},  
 {{text = 'SmartUpShark', url="https://t.me/gamee?game=SmartUpShark"},{text = 'SpikyFish3', url="https://t.me/gamee?game=SpikyFish3"}},  
-{{text = '◗القائمه الرائسيه◖', callback_data="/add"}},
+{{text = '◗القائمه الرئيسيه◖', callback_data="/add"}},
 {{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙻𝙰𝙴𝚁', url="t.me/sasa_boody"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -18123,7 +18123,7 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '◗القائمه الرائسيه◖', callback_data="/change-id"},
+{text = '◗القائمه الرئيسيه◖', callback_data="/change-id"},
 },
 {
 {text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙻𝙰𝙴𝚁', url="t.me/sasa_boody"},
@@ -18166,7 +18166,7 @@ keyboard.inline_keyboard = {
 {{text = 'حروف بالصور', callback_data="/Xcvb"},{text = 'اصنع', callback_data="/klpou6"}}, 
 {{text = 'غنيلي', callback_data="/help17"}},
 {{text = 'نسبه جمالي', callback_data="/help18"},{text = 'اليتيوب', callback_data="/help24"}},
-{{text = '◗القائمه الرائسيه◖', callback_data="/add"}},
+{{text = '◗القائمه الرئيسيه◖', callback_data="/add"}},
 {{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙻𝙰𝙴𝚁', url="t.me/sasa_boody"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -18358,15 +18358,14 @@ end
 if Text == '/change-hklp' then
 local Teext =[[
  سعر التنصيب علي سورس كلير
- سعر التنصيب العادي 25ج
- سعر التنصيب المميز 35 ج
+التنصيب مجاني عشان اخواتنا بس والله الهدف من السورس دا هوايه مش فلوس
 تواصل مع المطورين لتنصيب
  💞 ═───═𝙺𝙻𝙰𝙴𝚁═───═💞
 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '𝚂𝙰𝚂𝙰',url="t.me/M0STaFa_6"},{text = ' 𝙱𝙾𝙾𝙳𝚈',url="t.me/BoOdY_BaSha"}},
+{{text = '𝚂𝙰𝚂𝙰',url="t.me/M_P_L_6"},{text = ' 𝙱𝙾𝙾𝙳𝚈',url="t.me/BoOdY_BaSha"}},
 {{text = '˹ᴛᴀᴡᴏsʟ˼',url="t.me/BOODY22_BOT"}}, 
 {{text = '𝙱𝙰𝙲𝙺', callback_data="/change-hhh"}},
 }
@@ -18382,7 +18381,8 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = 'المبرمج مصطفي', url="t.me/M_P_L_6"}},
-{{text = 'تواصل بودي',url="t.me/BOODY22_BOT"}}, 
+{{text = 'المبرمج بودي', url="t.me/BoOdY_BaSha"}},
+{{text = 'تواصل المبرمجين',url="t.me/BOODY22_BOT"}}, 
 {{text = '𝙱𝙰𝙲𝙺', callback_data="/change-hhh"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -18414,7 +18414,7 @@ local Teext =[[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'mostafa',url="t.me/M_P_L_6"},{text = 'body', url=".me/BoOdY_BaSha"}},
+{{text = 'mostafa',url="t.me/M_P_L_6"},{text = '𝙱𝙾𝙾𝙳𝚈', url=".me/BoOdY_BaSha"}},
 {{text = ' مـطور الـبـوت🔒', url="http://t.me/"..sudos.UserName}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -18444,7 +18444,7 @@ we the best of tele
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = '𝚃𝙾 𝚃𝙷𝙴 𝙴𝙽𝙳',url="https://t.me/BOODY_Uu"},{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙻𝙰𝙴𝚁',url="t.me/sasa_boody"}},
-{{text = '𝙱𝙰𝙲𝙺', callback_data="/Boody-yquio"}},
+{{text = '𝙱𝙰𝙲𝙺', callback_data="/change-hhh"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
 end
@@ -18458,7 +18458,7 @@ we the best of tele
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = '𝚃𝙴𝙰𝙼 𝙱𝙾𝙾𝙳𝚈',url="t.me/BoOdY_122"}},
-{{text = '𝙱𝙰𝙲𝙺', callback_data="/bnada-yquio"}},
+{{text = '𝙱𝙰𝙲𝙺', callback_data="/change-hhh"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
 end
@@ -18474,7 +18474,7 @@ keyboard.inline_keyboard = {
 {{text = 'بوت تواصل',url="t.me/BOODY22_BOT"}},
 {{text = 'بوت دعم قنوات',url="t.me/Devsasa67bot"}},
 {{text = 'بوت حمايه الجروبات ',url="t.me/BoOdY_BaShabot"}},
-{{text = '𝙱𝙰𝙲𝙺', callback_data="/bnada-yquio"}},
+{{text = '𝙱𝙰𝙲𝙺', callback_data="/change-hhh"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
 end
