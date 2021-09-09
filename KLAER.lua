@@ -3972,18 +3972,6 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/xxxcccvvbbnn/902&caption=' .. URL.escape(Text).."&photo="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text == 'بودي' or text == 'عبدالله' then
-local id = '1753323063'
-local urrl = https.request('https://api.telegram.org/bot'..tokenget..'/getchat?chat_id='..id)
-local json = JSON.decode(urrl)
-local name = json.result.first_name
-local user = json.result.username
-local bio = json.result.bio
-keyboard = {} 
-keyboard.inline_keyboard = {{{text = name,url="t.me/"..user}},}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/'..user..'&caption=' .. URL.escape(bio).."&reply_to_message_id="..msg_id.."&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
 if text == 'مصطفي' or text == 'صاصا' or text == 'مصاصا' or text == 'مبرمج مصطفي' then
 local Text = [[
 the dev mostafa
@@ -15964,7 +15952,7 @@ Msᴀɢ ~ #msgs
 𝟓 𝟔 𖡻 #auto  ࿇🦄
 𝟓 𝟔 𖡻 #stast  ࿇🦄
 𝟓 𝟔 𖡻 #id  ࿇🦄
-𝟓 𝟔 𖡻 𝗖𝗛 - 『@sasa_boody』 ♲
+𝟓 𝟔 𖡻 𝗖?? - 『@sasa_boody』 ♲
 ]],
 [[
 ► 𝗨𝗦𝗘𝗥𝗡𝗔𝗠𝗘 #username 𓃚  ꙰
