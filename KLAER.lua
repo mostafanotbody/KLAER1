@@ -1662,6 +1662,9 @@ keyboard.inline_keyboard = {
 {text = 'اضغط لاضافه البوت لمجموعتك☑️' ,url="t.me/"..dofile("./Info.lua").botUserName.."?startgroup=start"},
 },
 }
+{{text = '𝙱𝙰𝙲𝙺', callback_data="/change-hhh"}},
+},
+}
 local function getpro(extra, result, success) 
 if result.photos_[0] then 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&caption=' .. URL.escape(Namebot).."&photo="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -1681,7 +1684,7 @@ if msa3d(msg) then
 local bl = '♲انت الان المطور الاساسي في البوت \n♲ سورس كلير\n ♲يمكنك تحكم في البوتات من الكيبورد أسفل \n[تابع جديدنا](t.me/sasa_boody)'
 local keyboard = {
 {'ضع اسم للبوت','معلومات الكيبورد'},
-{'المطور','الانتيمي'},
+{'المطور','انتيمي'},
 {'الاحصائيات'},
 {'『تواصل لسورس』'},
 {'『اوامر الاذاعه』','『اوامر اضف』'},
@@ -1692,7 +1695,10 @@ local keyboard = {
 {'معلومات السيرفر'},
 {'الغاء'},
 }
-send_inline_key(msg.chat_id_,bl,keyboard)
+send_inline_key(msg.chat_id_,bl,keyboard) 
+}  
+local msg_id = msg.id_/2097152/0.5  
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/xxxcccvvbbnn/911&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 end
 
@@ -1900,7 +1906,7 @@ end
 tdcli_function ({ ID = "GetMessage", chat_id_ = msg.chat_id_, message_id_ = tonumber(msg.reply_to_message_id_) }, by_reply, nil) 
 end
 
-if text == '『تواصل لسورس』' and Devban(msg) then 
+if text == '『تواصل السـورس』' and Devban(msg) then 
 local Text = 'قسم مطورين السورس لدخول الي حسابتهم'
 local Key = {
 {'⇣───『 قـناه المطورين』───⇣'},
@@ -2009,7 +2015,7 @@ keyboard.inline_keyboard = {
 {{text = 'مطورين السورس⚙', url="t.me/hogan21"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/sasa7_7/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/xxxcccvvbbnn/911&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 
@@ -2078,7 +2084,7 @@ keyboard.inline_keyboard = {
 {{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙻𝙰𝙴𝚁', url="t.me/sasa_boody"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/sasa7_7/3=' .. URL.escape(Text).."&photo="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/xxxcccvvbbnn/911=' .. URL.escape(Text).."&photo="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 if text == "ضع اسم للبوت" and msa3d(msg) then  
@@ -4704,7 +4710,7 @@ local vBoodyv_Msg = {
 "‏ ‏هَتفضل توآسيهُم وآحد ورآ التآني لكن أنتَ هتتنسي ومحدِش هَيوآسيك.",
 "‏ جَبَرَ الله قلوبِكُم ، وقَلبِي .🍫",
 "‏ بس لما أنا ببقى فايق، ببقى أبكم له ودان.💖",
-"‏ ‏مقدرش عالنسيان ولو طال الزمن 🖤",
+"‏ ‏مقدرش عالنسيان ولو طال الزمن 💖",
 "‏ أنا لستُ لأحد ولا احد لي ، أنا إنسان غريب أساعد من يحتاجني واختفي.",
 "‏ ‏أحببتك وأنا منطفئ، فما بالك وأنا في كامل توهجي ؟",
 "‏ لا تعودني على دفء شمسك، إذا كان في نيتك الغروب .َ",
@@ -5088,7 +5094,7 @@ keyboard.inline_keyboard = {
 {{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙻𝙰𝙴𝚁', url="t.me/sasa_boody"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/sasa7_7/3=' .. URL.escape(Text).."&photo="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/xxxcccvvbbnn/911=' .. URL.escape(Text).."&photo="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 if text == '💞 ═───═𝙺𝙻𝙰𝙴𝚁═───═💞' then
 local Text = [[ 
@@ -5102,7 +5108,7 @@ keyboard.inline_keyboard = {
 {{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙻𝙰𝙴𝚁', url="t.me/sasa_boody"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/sasa7_7/3=' .. URL.escape(Text).."&photo="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/xxxcccvvbbnn/911=' .. URL.escape(Text).."&photo="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 if text == 'التواصل'  then
@@ -5115,7 +5121,7 @@ keyboard.inline_keyboard = {
 {{text = '˹ᴛᴀᴡᴏsʟ˼', url="t.me/BOODY22_BOT"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/sasa7_7/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/xxxcccvvbbnn/911&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 if text == 'العاب كلير' or text == 'العاب مطوره' or text == 'العاب متطوره' then  
 local Text = [[  
@@ -5152,7 +5158,7 @@ keyboard.inline_keyboard = {
 {{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙻𝙰𝙴𝚁', url="t.me/sasa_boody"}},
 }  
 local msg_id = msg.id_/2097152/0.5  
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/sasa7_7/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/xxxcccvvbbnn/911&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 --------------------------------------------------------------------------------------------------------------
 if text == 'تحديث' and Devban(msg) then    
@@ -5764,7 +5770,7 @@ local bana = {
 	
 "⚕ 𓆰 𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝙶𝚁𝙾𝚄𝙱 ★",
 
-"• 🖤 |𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝙶𝚁𝙾𝚄𝙱| 🖤 •",
+"• 💖 |𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝙶𝚁𝙾𝚄𝙱| 💖 •",
 
 }
 local rdphoto = bana[math.random(#bana)]
@@ -5802,7 +5808,7 @@ else
 username = 'لا يوجد '
 end
 if result.status_.ID == "UserStatusRecently" and result.profile_photo_ ~= false then
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, ban.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n• 🖤 | 𝚄𝙴𝚂 : '..username..' \n• 🖤 | 𝙼𝚂𝙶 : '..Msguser..' \n• 🖤 | 𝚂𝚃𝙰 : '..Rutba(msg.sender_user_id_,msg.chat_id_)..'  \n• 🖤 | 𝙸𝙳 :  '..msg.sender_user_id_..' \n• 🖤 | 𝙱𝙸𝙾 : '..getbioY..' \n• 🖤 | 𝙲𝙷 : @sasa_boody \n')
+sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, ban.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n• 💖 | 𝚄𝙴𝚂 : '..username..' \n• 💖 | 𝙼𝚂𝙶 : '..Msguser..' \n• 💖 | 𝚂𝚃𝙰 : '..Rutba(msg.sender_user_id_,msg.chat_id_)..'  \n• 💖 | 𝙸𝙳 :  '..msg.sender_user_id_..' \n• 💖 | 𝙱𝙸𝙾 : '..getbioY..' \n• 💖 | 𝙲𝙷 : @sasa_boody \n')
 else 
 if result.status_.ID == "UserStatusEmpty" and result.profile_photo_ == false then
 send(msg.chat_id_, msg.id_,'[\n ¦✙ بيك عزيزي 『'..Name..'』 \n¦• 𝚄𝚂𝙴𝚁 ↝  『'..Name..'』    ↝💘\n¦• 𝙼𝚂𝙶𝚂↝ 『'..Msguser..'』.   ↝💘\n ¦• 𝚁𝙰𝙽𝙺↝ 『'..Rutba(msg.sender_user_id_,msg.chat_id_)..'』    ↝💘\n¦• 𝙸𝙳↝  『'..msg.sender_user_id_..'』    ↝💘\n¦• 𝒄𝒉↝   『@sasa_boody』 ↝🇧??\n')
@@ -5879,7 +5885,7 @@ local bana = {
 	
 "⚕ 𓆰 𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝙶𝚁𝙾𝚄𝙱 ★",
 
-"• 🖤 |𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝙶𝚁𝙾𝚄𝙱| 🖤 •",
+"• 💖 |𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝙶𝚁𝙾𝚄𝙱| 💖 •",
 
 }
 local rdphoto = bana[math.random(#bana)]
@@ -5917,7 +5923,7 @@ else
 username = 'لا يوجد '
 end
 if result.status_.ID == "UserStatusRecently" and result.profile_photo_ ~= false then
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, ban.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n• 🖤 | 𝑼𝑬𝑺 : '..username..' \n• 🖤 | 𝑴𝑺𝑮 : '..Msguser..' \n• 🖤 | 𝑺𝑻𝑨 : '..Rutba(msg.sender_user_id_,msg.chat_id_)..'  \n• 🖤 | 𝑰?? :  '..msg.sender_user_id_..' \n• 🖤 | b𝐼𝑂 : '..getbioY..' \n• 🖤 | 𝐶𝐻 : @sasa_boody \n')
+sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, ban.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n• 💖 | 𝑼𝑬𝑺 : '..username..' \n• 💖 | 𝑴𝑺𝑮 : '..Msguser..' \n• 💖 | 𝑺𝑻𝑨 : '..Rutba(msg.sender_user_id_,msg.chat_id_)..'  \n• 💖 | 𝑰?? :  '..msg.sender_user_id_..' \n• 💖 | b𝐼𝑂 : '..getbioY..' \n• 💖 | 𝐶𝐻 : @sasa_boody \n')
 else 
 if result.status_.ID == "UserStatusEmpty" and result.profile_photo_ == false then
 send(msg.chat_id_, msg.id_,'[\n ¦✙ بيك عزيزي 『'..Name..'』 \n¦• 𝚄𝚂𝙴𝚁 ↝  『'..Name..'』    ↝💘\n¦• 𝙼𝚂𝙶𝚂↝ 『'..Msguser..'』.   ↝💘\n ¦• 𝚁𝙰??𝙺↝ 『'..Rutba(msg.sender_user_id_,msg.chat_id_)..'』    ↝💘\n¦• 𝙸𝙳↝  『'..msg.sender_user_id_..'』    ↝💘\n¦• 𝒄𝒉↝   『@sasa_boody』 ↝🇧??\n')
@@ -14414,7 +14420,7 @@ else
 username = 'sasa_boody'
 end
 local msg_id = msg.id_/2097152/0.5  
-local textt = ' 🌝🖤 رتبتك في البوت » '..Rutba(msg.sender_user_id_,msg.chat_id_)
+local textt = ' 🌝💖 رتبتك في البوت » '..Rutba(msg.sender_user_id_,msg.chat_id_)
 local Banda = 'https://t.me/xxxcccvvbbnn/903'
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -14686,10 +14692,10 @@ local List = {
 ]],
 [[
 ⚕ 𓆰 𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝙶𝚁𝙾𝚄𝙱 ★
-• 🖤 | 𝑼𝑬𝑺 : #username ‌‌‏⚚
-• 🖤 | 𝑺𝑻𝑨 : #stast 🧙🏻‍♂ ☥
-• 🖤 | 𝑰𝑫 : #id ‌‌‏♕
-• 🖤 | 𝑴𝑺𝑮 : #msgs 𓆊
+• 💖 | 𝑼𝑬𝑺 : #username ‌‌‏⚚
+• 💖 | 𝑺𝑻𝑨 : #stast 🧙🏻‍♂ ☥
+• 💖 | 𝑰𝑫 : #id ‌‌‏♕
+• 💖 | 𝑴𝑺𝑮 : #msgs 𓆊
 ]],
 [[
 ┌ 𝐔𝐒𝐄𝐑 𖤱 #username 𖦴 .
@@ -15043,15 +15049,15 @@ local List = {
 ✶- 𝗖𝗛 - 『@sasa_boody』 ♲.
 ]],
 [[
-• 🖤 | 𝑼𝑬𝑺 :  #username
+• 💖 | 𝑼𝑬𝑺 :  #username
 
-• 🖤 | 𝑺𝑻𝑨 : #stast
+• 💖 | 𝑺𝑻𝑨 : #stast
 
-• 🖤 | 𝑰𝑫 :  #id
+• 💖 | 𝑰𝑫 :  #id
 
-• 🖤 | 𝑴𝑺𝑮 : #msgs
+• 💖 | 𝑴𝑺𝑮 : #msgs
 
-• 🖤 | 𝗖𝗛 - 『@sasa_boody』 ♲.
+• 💖 | 𝗖𝗛 - 『@sasa_boody』 ♲.
 ]],
 [[
 • USE 𖦹 #username 
@@ -15105,11 +15111,11 @@ local List = {
 ]],
 [[
 ⚕ 𓆰 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝑻𝒐 ★
-• 🖤 | 𝑼𝑬𝑺 : #username ‌‌‏⚚
-• 🖤 | 𝑺𝑻𝑨 : #stast 🧙🏻‍♂ ☥
-• 🖤 | 𝑰𝑫 : #id ‌‌‏♕
-• 🖤 | 𝑴𝑺𝑮 : #msgs 𓆊
-• 🖤 | 𝗖𝗛 - 『@sasa_boody』 ♲.
+• 💖 | 𝑼𝑬𝑺 : #username ‌‌‏⚚
+• 💖 | 𝑺𝑻𝑨 : #stast 🧙🏻‍♂ ☥
+• 💖 | 𝑰𝑫 : #id ‌‌‏♕
+• 💖 | 𝑴𝑺𝑮 : #msgs 𓆊
+• 💖 | 𝗖𝗛 - 『@sasa_boody』 ♲.
 ]],
 [[
 ┄─━━ ♲━━─┄
@@ -15288,11 +15294,11 @@ Msᴀɢ ~ #msgs
 ᯓ 𝗖𝗛 - 『@sasa_boody』 ♲.
 ]],
 [[
-.𖣂 𝙪𝙨𝙚𝙧𝙣𝙖𝙢𝙚 , #username  🖤 ↴
-.𖣂 𝙨𝙩𝙖𝙨𝙩 , #stast  🖤 ↴
-.𖣂 𝙡𝘿 , #id  🖤 ↴
-.𖣂 𝘼𝙪𝙩𝙤 , #auto  🖤 ↴
-.𖣂 𝙢𝙨𝙂𝙨 , #msgs  🖤 ↴
+.𖣂 𝙪𝙨𝙚𝙧𝙣𝙖𝙢𝙚 , #username  💖 ↴
+.𖣂 𝙨𝙩𝙖𝙨𝙩 , #stast  💖 ↴
+.𖣂 𝙡𝘿 , #id  💖 ↴
+.𖣂 𝘼𝙪𝙩𝙤 , #auto  💖 ↴
+.𖣂 𝙢𝙨𝙂𝙨 , #msgs  💖 ↴
 .𖣂 𝗖𝗛 - 『@sasa_boody』 💞.
 ]],
 [[
@@ -15642,15 +15648,15 @@ Msᴀɢ ~ #msgs
 ✶- 𝗖𝗛 - 『@sasa_boody』 ↝❃.
 ]],
 [[
-• 🖤 | 𝑼𝑬𝑺 :  #username
+• 💖 | 𝑼𝑬𝑺 :  #username
 
-• 🖤 | 𝑺𝑻𝑨 : #stast
+• 💖 | 𝑺𝑻𝑨 : #stast
 
-• 🖤 | 𝑰𝑫 :  #id
+• 💖 | 𝑰𝑫 :  #id
 
-• 🖤 | 𝑴𝑺𝑮 : #msgs
+• 💖 | 𝑴𝑺𝑮 : #msgs
 
-• 🖤 | 𝗖𝗛 - 『@sasa_boody』 ♲
+• 💖 | 𝗖𝗛 - 『@sasa_boody』 ♲
 ]],
 [[
 • USE 𖦹 #username 
@@ -15710,11 +15716,11 @@ Msᴀɢ ~ #msgs
 ┇𝗖𝗛 - 『@sasa_boody』 ♲
 ]],
 [[
-• 🖤 | 𝑼𝑬𝑺 : #username ‌‌‏⚚
-• 🖤 | 𝑺𝑻𝑨 : #stast 🧙🏻‍♂ ☥
-• 🖤 | 𝑰𝑫 : #id ‌‌‏♕
-• 🖤 | 𝑴𝑺𝑮 : #msgs 𓆊
-• 🖤 | 𝗖𝗛 - 『@sasa_boody』 ♲
+• 💖 | 𝑼𝑬𝑺 : #username ‌‌‏⚚
+• 💖 | 𝑺𝑻𝑨 : #stast 🧙🏻‍♂ ☥
+• 💖 | 𝑰𝑫 : #id ‌‌‏♕
+• 💖 | 𝑴𝑺𝑮 : #msgs 𓆊
+• 💖 | 𝗖𝗛 - 『@sasa_boody』 ♲
 ]],
 [[
 𓄼 ᴜѕᴇ : #username ♕
@@ -15876,11 +15882,11 @@ Msᴀɢ ~ #msgs
 🇪🇬 - 𝄬 𝗖𝗛 - 『@sasa_boody』 ♲
 ]],
 [[
-.𖣂 𝙪𝙨𝙚𝙧𝙣𝙖𝙢𝙚 , #username  🖤 ↴
-.𖣂 𝙨𝙩𝙖𝙨𝙩 , #stast  🖤 ↴
-.𖣂 𝙡𝘿 , #id  🖤 ↴
-.𖣂 𝘼𝙪𝙩𝙤 , #auto  🖤 ↴
-.𖣂 𝙢𝙨𝙂𝙨 , #msgs  🖤 ↴
+.𖣂 𝙪𝙨𝙚𝙧𝙣𝙖𝙢𝙚 , #username  💖 ↴
+.𖣂 𝙨𝙩𝙖𝙨𝙩 , #stast  💖 ↴
+.𖣂 𝙡𝘿 , #id  💖 ↴
+.𖣂 𝘼𝙪𝙩𝙤 , #auto  💖 ↴
+.𖣂 𝙢𝙨𝙂𝙨 , #msgs  💖 ↴
 .𖣂 𝗖𝗛 - 『@sasa_boody』 ♲
 ]],
 [[
@@ -16707,7 +16713,7 @@ send(msg.chat_id_,msg.id_,'.\nـــــــــــــــــــــــــ
 else                
 local linkgpp = json:decode(https.request('https://api.telegram.org/bot'..token..'/exportChatInviteLink?chat_id='..msg.chat_id_))
 if linkgpp.ok == true then 
-linkgp = '• 🖤 |ＬＩＮＫ ＧＲＯＵＰ.\nـــــــــــــــــــــــــ\n ['..ta.title_..']('..linkgpp.result..')\nـــــــــــــــــــــــــ\n  ['..linkgpp.result..']'
+linkgp = '• 💖 |ＬＩＮＫ ＧＲＯＵＰ.\nـــــــــــــــــــــــــ\n ['..ta.title_..']('..linkgpp.result..')\nـــــــــــــــــــــــــ\n  ['..linkgpp.result..']'
 else
 linkgp = ' لا يوجد رابط ارسل ضع رابط'
 end  
@@ -16725,7 +16731,7 @@ end
 tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,ta) 
 local linkgpp = json:decode(https.request('https://api.telegram.org/bot'..token..'/exportChatInviteLink?chat_id='..msg.chat_id_)) or bot_data:get(ban_id.."Private:Group:Link"..msg.chat_id_) 
 if linkgpp.ok == true then 
-local linkgp = '• 🖤 |ＬＩＮＫ ＧＲＯＵＰ.\nـــــــــــــــــــــــــ\n ['..ta.title_..']('..linkgpp.result..')\nـــــــــــــــــــــــــ\n  ['..linkgpp.result..']'
+local linkgp = '• 💖 |ＬＩＮＫ ＧＲＯＵＰ.\nـــــــــــــــــــــــــ\n ['..ta.title_..']('..linkgpp.result..')\nـــــــــــــــــــــــــ\n  ['..linkgpp.result..']'
 keyboard = {} 
 keyboard.inline_keyboard = {{{text = ta.title_, url=linkgpp.result}},}
 DeleteMessage(Chat_id,{[0] = Msg_id})  
@@ -16744,7 +16750,7 @@ end
 tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,ta) 
 local linkgpp = json:decode(https.request('https://api.telegram.org/bot'..token..'/exportChatInviteLink?chat_id='..msg.chat_id_)) or bot_data:get(ban_id.."Private:Group:Link"..msg.chat_id_) 
 if linkgpp.ok == true then 
-local linkgp = '• 🖤 |ＬＩＮＫ ＧＲＯＵＰ.\nـــــــــــــــــــــــــ\n ['..ta.title_..']('..linkgpp.result..')\nـــــــــــــــــــــــــ\n  ['..linkgpp.result..']'
+local linkgp = '• 💖 |ＬＩＮＫ ＧＲＯＵＰ.\nـــــــــــــــــــــــــ\n ['..ta.title_..']('..linkgpp.result..')\nـــــــــــــــــــــــــ\n  ['..linkgpp.result..']'
 local inline = {{{text = ta.title_, url=linkgpp.result}},} 
 DeleteMessage(Chat_id,{[0] = Msg_id})  
 send_inline_key(msg.chat_id_,linkgp,nil,inline,msg.id_/2097152/0.5) 
@@ -18353,6 +18359,7 @@ keyboard.inline_keyboard = {
 {text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙻𝙰𝙴𝚁', url="t.me/sasa_boody"},
 },
 }
+{{text = '𝙱𝙰𝙲𝙺', callback_data="/change-hhh"}},
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
 end
 if Text == '/change-hklp' then
@@ -18382,6 +18389,7 @@ keyboard = {}
 keyboard.inline_keyboard = {
 {{text = 'المبرمج مصطفي', url="t.me/M_P_L_6"}},
 {{text = 'المبرمج بودي', url="t.me/BoOdY_BaSha"}},
+{{text = 'المطور ديكا', url="t.me/YY_OIO"}},
 {{text = 'تواصل المبرمجين',url="t.me/BOODY22_BOT"}}, 
 {{text = '𝙱𝙰𝙲𝙺', callback_data="/change-hhh"}},
 }
@@ -18389,7 +18397,7 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption
 end
 if Text == '/change-ghjjgyy' then
 local Teext =[[
-📬 • 𝐚𝐛𝐨𝐮𝐭 𝐭𝐡𝐞 𝐬𝐨𝐮𝐫𝐜𝐞
+📬 • 𝙰𝙱𝙾𝚄𝚃 𝚃𝙷𝙴 𝚂𝙾𝚄𝚁𝙲𝙴
 💞 ═───═𝙺𝙻𝙰𝙴𝚁═───═💞
 ♲سورس خاص في حماية المجموعات من التفليش 🚸 . 
 ♲تستطيع تنصيب بوتك وتصبح المطور الاساسي 👨🏼‍✈️.
@@ -18414,7 +18422,8 @@ local Teext =[[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'mostafa',url="t.me/M_P_L_6"},{text = '𝙱𝙾𝙾𝙳𝚈', url=".me/BoOdY_BaSha"}},
+{{text = '𝙱𝙾𝙾𝙳𝚈',url="t.me/BoOdY_BaSha"}},
+{{text = '𝙼𝙾𝚂𝚃𝙰𝙵𝙰',url="t.me/M_P_L_6"},{text = '𝙳𝙴𝙺𝙰', url=".me/YY_OIO"}},
 {{text = ' مـطور الـبـوت🔒', url="http://t.me/"..sudos.UserName}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -18500,7 +18509,7 @@ keyboard = {}
 keyboard.inline_keyboard = {
 {{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙻𝙰𝙴𝚁',url="t.me/sasa_boody"},{text = '𝚃𝙾 𝚃𝙷𝙴 𝙴𝙽𝙳', url="https://t.me/BOODY_Uu"}},
 {{text = 'ᴛᴀᴡᴏsʟ',url="t.me/BOODY22_BOT"}}, 
-{{text = '𝙱𝙰𝙲𝙺', callback_data="/HHH"}},
+{{text = '𝙱𝙰𝙲𝙺', callback_data="/change-hhh"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
 end
@@ -18510,8 +18519,9 @@ local Teext =[[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'mostafa',url="t.me/M_P_L_6"},{text = 'body', url="me/BoOdY_BaSha"}},
-{{text = '𝙱𝙰𝙲𝙺', callback_data="/HHH"}},
+{{text = '𝙱𝙾𝙾𝙳𝚈',url="t.me/BoOdY_BaSha"}},
+{{text = '𝙼𝙾𝚂𝚃𝙰𝙵𝙰',url="t.me/M_P_L_6"},{text = '𝙳𝙴𝙺𝙰', url="me/YY_OIO"}},
+{{text = '𝙱𝙰𝙲𝙺', callback_data="/change-hhh"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
 end
