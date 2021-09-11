@@ -9876,8 +9876,8 @@ send(msg.chat_id_, msg.id_,' هذا الامر لا يخصك')
 return false
 end
 local Text =[[
-(تم تغير الكلمه الي كلير اكتب كلير وسوف يظهر لك بعض زراير اختار ماتريده)(t.me/sasa_boody)
-(the source klaer the best source on tele)(t.me/sasa_boody)
+تم تغير الكلمه الي كلير اكتب كلير وسوف يظهر لك بعض زراير اختار ماتريده 
+the source klaer the best source on tele
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
