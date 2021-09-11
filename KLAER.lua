@@ -6088,7 +6088,7 @@ return false
 end
 --------------------------------------------------------------------------------------------------------------
 
-if text == "غنيلي" and not  bot_data:get(ban_id.."sing:for:me"..msg.chat_id_) then 
+if text == "_غنيلي_" and not  bot_data:get(ban_id.."sing:for:me"..msg.chat_id_) then 
 ban = math.random(3,42); 
 local Text ='لاختيار اغنيه اخري اتك ع زر بالاسفل' 
 keyboard = {}  
@@ -6196,7 +6196,7 @@ local abc = msg.id_/2097152/0.5
 https.request('https://api.telegram.org/bot'..token..'/sendVoice?chat_id='..msg.chat_id_..'&reply_to_message_id='..abc..'&voice=https://t.me/emeuii/'..T..'') 
 end
 
-if text == "استوري" and not  bot_data:get(ban_id.."sing:for:me"..msg.chat_id_) then 
+if text == "_استوري_" and not  bot_data:get(ban_id.."sing:for:me"..msg.chat_id_) then 
 ban = math.random(4,74); 
 local Text ='لاختيار استوري اخر اضغط ع زر ' 
 keyboard = {}  
@@ -6207,7 +6207,7 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/sijebehdhd/'..ban..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text == "كتبات بالصور" and not  bot_data:get(ban_id.."sing:for:me"..msg.chat_id_) then 
+if text == "_كتبات بالصور_" and not  bot_data:get(ban_id.."sing:for:me"..msg.chat_id_) then 
 ban = math.random(3,49); 
 local Text ='✨🌻' 
 keyboard = {}  
@@ -6217,7 +6217,7 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/dfk9apa/'..ban..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-if text == "تويت بالصور" and not  bot_data:get(ban_id.."sing:for:me"..msg.chat_id_) then 
+if text == "_تويت بالصور_" and not  bot_data:get(ban_id.."sing:for:me"..msg.chat_id_) then 
 ban = math.random(1,28); 
 local Text ='مرحبا إليك تويت بالصوره✨🌚' 
 keyboard = {}  
@@ -6227,7 +6227,7 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/wffhvv/'..ban..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-if text == "لو خيروك بالصور" and not  bot_data:get(ban_id.."sing:for:me"..msg.chat_id_) then 
+if text == "_لو خيروك بالصور_" and not  bot_data:get(ban_id.."sing:for:me"..msg.chat_id_) then 
 ban = math.random(1,24); 
 local Text ='مرحبا اليك لو خيروك بالصوره🍁🌝' 
 keyboard = {}  
@@ -9870,6 +9870,25 @@ end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
 return false
 end
+if text == 'غنيلي' or text == 'استوري' or text == 'لو خيروك بالصوره' or text == 'تويت بالصوره' or text == 'ثيم' then
+if not Mod(msg) then
+send(msg.chat_id_, msg.id_,' هذا الامر لا يخصك')
+return false
+end
+local Text =[[
+(تم تغير الكلمه الي كلير اكتب كلير وسوف يظهر لك بعض زراير اختار ماتريده)(t.me/sasa_boody)
+(the source klaer the best source on tele)(t.me/sasa_boody)
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = 'source klaer', callback_data="t.me/sasa_boody"},
+},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+return false
+end 
 
 if text == 'كلير' then
 if not Mod(msg) then
