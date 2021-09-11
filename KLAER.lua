@@ -7313,7 +7313,7 @@ send(msg.chat_id_,msg.id_," ♲ تم مسح الملفات")
 return false
 end
 
-if text == ("sasa/1") and msg.reply_to_message_id_ and Devban(msg) then
+if text == ("رفع مطور") and msg.reply_to_message_id_ and Devban(msg) then
 function start_function(extra, result, success)
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = bot_data:get(ban_id..'text:ch:user')
@@ -7334,7 +7334,7 @@ end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
 return false 
 end
-if text and text:match("^sasa/1 @(.*)$") and Devban(msg) then
+if text and text:match("^رفع مطور @(.*)$") and Devban(msg) then
 local username = text:match("^رفع مطور @(.*)$")
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = bot_data:get(ban_id..'text:ch:user')
@@ -7363,8 +7363,8 @@ end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, nil)
 return false 
 end
-if text and text:match("^sasa/1 (%d+)$") and Devban(msg) then
-local userid = text:match("^sasa/1 (%d+)$")
+if text and text:match("^رفع مطور (%d+)$") and Devban(msg) then
+local userid = text:match("^رفع مطور (%d+)$")
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = bot_data:get(ban_id..'text:ch:user')
 if textchuser then
@@ -15923,7 +15923,7 @@ Msᴀɢ ~ #msgs
 🇪🇬 - 𝄬 𝗖𝗛 - 『@sasa_boody』 ♲
 ]],
 [[
-.𖣂 𝙪𝙨𝙚𝙧𝙣𝙖𝙢𝙚 , #username  🖤 ↴
+.𖣂 𝙪𝙨𝙚𝙧𝙣𝙖𝙢𝙚 , #username  ?? ↴
 .𖣂 𝙨𝙩𝙖𝙨𝙩 , #stast  🖤 ↴
 .𖣂 𝙡𝘿 , #id  🖤 ↴
 .𖣂 𝘼𝙪𝙩𝙤 , #auto  🖤 ↴
