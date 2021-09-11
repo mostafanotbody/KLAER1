@@ -9877,7 +9877,7 @@ send(msg.chat_id_, msg.id_,' هذا الامر لا يخصك')
 return false
 end
 local Text =[[
-لرفع الرتبه اضغط ع زر 
+لاي شي تريده	 اضغط ع زر 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
