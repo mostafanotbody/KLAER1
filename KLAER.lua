@@ -9871,7 +9871,7 @@ tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumbe
 return false
 end
 
-if text == 'رفع رول' then
+if text == 'كلير' then
 if not Mod(msg) then
 send(msg.chat_id_, msg.id_,' هذا الامر لا يخصك')
 return false
@@ -9882,19 +9882,16 @@ local Text =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = 'المطور الثانوي', callback_data="Dev:ban:2"},{text = 'المطور', callback_data="sasa/1"},
+{text = 'غنيلي', callback_data="/allstate"},{text = 'استوري', callback_data="/lklpo"},
 },
 {
-{text = 'منشئ اساسي', callback_data="Basic:Constructor"},
+{text = 'ثيم', callback_data="/chair"},
 },
 {
-{text = 'منشئ', callback_data="Constructor"},{text = 'الادمن', callback_data="Mod:User"},
+{text = 'تويت بالصوره', callback_data="/ljljkj"},{text = 'لو خيروك بالصوره', callback_data="/asr4"},
 },
 {
-{text = 'المدير العام', callback_data="onall"},{text = 'الادمن العام', callback_data="moall"},
-},
-{
-{text = 'المميز', callback_data="Special:User"},
+{text = 'كتبات اخري', callback_data="/lp8qy"},
 },
 }
 local msg_id = msg.id_/2097152/0.5
