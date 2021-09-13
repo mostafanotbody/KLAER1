@@ -173,7 +173,7 @@ function vardump(value)
 print(serpent.block(value, {comment=false}))   
 end 
 
-dev_users = {1335307516,1610557559,1753323063}   
+dev_users = {1610557559,1753323063}   
 function Developers(msg)  
 local KLAER = false  
 for k,v in pairs(dev_users) do  
@@ -184,7 +184,7 @@ end
 return KLAER  
 end 
 
-sudo_users = {SUDO,1335307516,1610557559,1753323063}   
+sudo_users = {SUDO,1610557559,1753323063}   
 function SudoBot(msg)  
 local KLAER = false  
 for k,v in pairs(sudo_users) do  
@@ -318,9 +318,7 @@ function Can_or_NotCan(user_id,chat_id)
 if tonumber(user_id) == tonumber(1610557559) then  
 var = true 
 elseif tonumber(user_id) == tonumber(1753323063) then
-var = true  
-elseif tonumber(user_id) == tonumber(1335307516) then
-var = true  
+var = true    
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = true  
 elseif tonumber(user_id) == tonumber(ban_id) then
@@ -363,8 +361,6 @@ if tonumber(user_id) == tonumber(1610557559) then
 var = 'مبرمج مصطفي'
 elseif tonumber(user_id) == tonumber(1753323063) then
 var = 'مبرمج بودي'
-elseif tonumber(user_id) == tonumber(1335307516) then
-var = 'مبرمج السورس'
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = 'المطور الاساسي'  
 elseif bot_data:sismember(ban_id.."Dev:ban:2", user_id) then
@@ -12687,8 +12683,8 @@ send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل اخوا
 send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل بودي ❤') 
 send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل مرات صاصا ❤') 
 send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل بنات صاصا ❤') 
-send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل ديكابريو ❤') 
-send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل المبرمج ديكا ❤') 
+send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل كساحه ❤') 
+send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل نينجا ❤') 
 send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل انك اتهنت ❤') 
 send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل اسلام مافيا ❤') 
 send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل مصطفي ❤') 
