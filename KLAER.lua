@@ -2172,7 +2172,6 @@ send(msg.chat_id_, msg.id_, t)
 return false
 end
 if Text == 'YY3H_SASA'..data.sender_user_id_ and msa3d(data) then  
-local username = text:match('YY3H_SASA')
 if AddChannel(msg.sender_user_id_) == false then
 local sasa_boody = database:get(bot_id..'text:ch:user')
 if sasa_boody then
