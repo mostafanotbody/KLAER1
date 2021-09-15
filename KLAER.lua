@@ -2780,7 +2780,6 @@ local Name1 = Name1:gsub("*","")
 local Name1 = Name1:gsub("{","") 
 local Name1 = Name1:gsub("}","") 
 local Name = '['..Name1..'](tg://user?id='..result.id_..')'
-local getbioY = getbio(msg.sender_user_id_)
 local NameChat = dp.title_
 local NameChat = NameChat:gsub('"',"") 
 local NameChat = NameChat:gsub("'","") 
@@ -8455,7 +8454,6 @@ tdcli_function ({ID = "GetUser",user_id_ = SUDO,},function(arg,result)
 local function taha(extra, taha, success)
 if taha.photos_[0] then
 local Name = 'ᎠᎬᏙ ΝᎬᎷᎬ -> ['..result.first_name_..'](tg://user?id='..result.id_..')\n'
-local getbioY = getbio(msg.sender_user_id_)
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
