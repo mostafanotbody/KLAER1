@@ -3960,7 +3960,7 @@ we the best of tele
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'ᴍʏ ᴅᴇᴠ', callback_data="/units"},{text = 'ᴍʏ ᴄʜᴀɴɴᴇʟ', callback_data="/theytry"}},   
+{{text = 'Developers', callback_data="/units"},{text = 'ᴍʏ ᴄʜᴀɴɴᴇʟ', callback_data="/theytry"}},   
 {{text = 'مــطــور الــبــوت', url="http://t.me/"..sudos.UserName}},
 {{text = ' اضغط لاضافه البوت لمجموعتك ' ,url="t.me/"..dofile("./Info.lua").botUserName.."?startgroup=start"}}, 
 }
@@ -18510,7 +18510,7 @@ local Teext =[[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'ᴍʏ ᴅᴇᴠ', callback_data="/units"},{text = 'ᴍʏ ᴄʜᴀɴɴᴇʟ', callback_data="/theytry"}},   
+{{text = 'Developers', callback_data="/units"},{text = 'ᴍʏ ᴄʜᴀɴɴᴇʟ', callback_data="/theytry"}},   
 {{text = 'مــطــور الــبــوت', url="http://t.me/"..sudos.UserName}},
 {{text = 'اضغط لاضافه البوت لمجموعتك' ,url="t.me/"..dofile("./Info.lua").botUserName.."?startgroup=start"}}, 
 }
