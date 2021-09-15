@@ -18445,7 +18445,6 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption
 end
 if Text == '/bnada-yquio' then
 local Teext =[[
-the dev boody 
  source klaer the best tele 
 we the best of tele
 
@@ -18460,7 +18459,6 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption
 end
 if Text == '/Ajobanf' then
 local Teext =[[
-the dev boody 
  source klaer the best tele 
 we the best of tele 
 
@@ -18474,7 +18472,6 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption
 end
 if Text == '/banfai' then
 local Teext =[[
-the dev boody 
  source klaer the best tele 
 we the best of tele
 
@@ -18488,7 +18485,6 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption
 end
 if Text == '/gqjik' then
 local Teext =[[
-the dev boody 
  source klaer the best tele 
 we the best of tele
 
