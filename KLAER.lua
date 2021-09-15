@@ -6037,7 +6037,7 @@ if text == "ترتيب الاوامر" and Constructor(msg) then
  bot_data:sadd(ban_id.."List:Cmd:Group:New"..msg.chat_id_,"ت")
  send(msg.chat_id_, msg.id_,"♲ تم ترتيب الاوامر بالشكل التالي\n♲ ايدي - ا .\n♲ مميز - م .\n♲ ادمن - اد .\n♲ مدير - مد . \n♲ منشى - من .\n♲ المنشئ الاساسي - اس .\n♲ تعطيل الايدي بالصوره - تعط .\n♲ تفعيل الايدي بالصوره - تفع .\n♲ تنزيل الكل - تك .\n♲ اضف رد - رد .\n♲ حذف رد - حذ .\n♲ تثبيت - ت .")
  end
-if text == 'boody/300' and Constructor(msg) then
+if text == 'اضف امر' and Constructor(msg) then
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = bot_data:get(ban_id..'text:ch:user')
 if textchuser then
@@ -6051,7 +6051,7 @@ bot_data:set(ban_id.."Set:Cmd:Group"..msg.chat_id_..':'..msg.sender_user_id_,'tr
 send(msg.chat_id_, msg.id_,' ♲ ارسل الامر القديم')  
 return false
 end
-if text == 'sasa/300' or text == 'sasa/300' then 
+if text == 'مسح امر' or text == 'مسح امر' then 
 if Constructor(msg) then
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = bot_data:get(ban_id..'text:ch:user')
@@ -9865,26 +9865,7 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 return false
-end  
-
-if text == 'اضافه' then
-if not Mod(msg) then
-send(msg.chat_id_, msg.id_,' هذا الامر لا يخصك')
-return false
-end
-local Text =[[
-لتريد اضافه امر او مسح امر اضغط ع زر 
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = 'اضف امر', callback_data="boody/300"},{text = 'مسح امر', callback_data="sasa/300"},
-},
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-return false
-end
+end 
 
 if text == 'كلير' then
 if not Mod(msg) then
