@@ -2321,7 +2321,7 @@ end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, nil)
 return false 
 end
-if text and text:match("^رفع مطور (%d+)$") and Devban(msg) then
+if text and text:match("^رفع مطور (%d+)$") and msa3d(msg) then
 local userid = text:match("^رفع مطور (%d+)$")
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = bot_data:get(ban_id..'text:ch:user')
@@ -2345,7 +2345,7 @@ send(msg.chat_id_, msg.id_, usertext..status)
 end;end,nil)
 return false 
 end
-if text and text:match("^تنزيل مطور @(.*)$") and Devban(msg) then
+if text and text:match("^تنزيل مطور @(.*)$") and msa3d(msg) then
 local username = text:match("^تنزيل مطور @(.*)$")
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = bot_data:get(ban_id..'text:ch:user')
@@ -2370,7 +2370,7 @@ end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, nil)
 return false
 end  
-if text and text:match("^تنزيل مطور (%d+)$") and Devban(msg) then
+if text and text:match("^تنزيل مطور (%d+)$") and msa3d(msg) then
 local userid = text:match("^تنزيل مطور (%d+)$")
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = bot_data:get(ban_id..'text:ch:user')
@@ -8524,7 +8524,7 @@ end,nil)
 end
 end
 ------------------------------------------------------------------------ adddev2 sudog
-if text == ("رفع مطور ثانوي") and tonumber(msg.reply_to_message_id_) ~= 0 and SudoBot(msg) then
+if text == ("رفع مطور ثانوي") and tonumber(msg.reply_to_message_id_) ~= 0 and msa3d(msg) then
 function Function_KLAER(extra, result, success)
 bot_data:sadd(ban_id.."Dev:ban:2", result.sender_user_id_)
 Reply_Status(msg,result.sender_user_id_,"reply","♲ تم ترقيته مطور ثانوي في البوت")  
@@ -8532,7 +8532,7 @@ end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_KLAER, nil)
 return false 
 end
-if text and text:match("^رفع مطور ثانوي @(.*)$") and SudoBot(msg) then
+if text and text:match("^رفع مطور ثانوي @(.*)$") and msa3d(msg) then
 local username = text:match("^رفع مطور ثانوي @(.*)$")
 function Function_KLAER(extra, result, success)
 if result.id_ then
@@ -8549,13 +8549,13 @@ end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_KLAER, nil)
 return false 
 end
-if text and text:match("^رفع مطور ثانوي (%d+)$") and SudoBot(msg) then
+if text and text:match("^رفع مطور ثانوي (%d+)$") and msa3d(msg) then
 local userid = text:match("^رفع مطور ثانوي (%d+)$")
 bot_data:sadd(ban_id.."Dev:ban:2", userid)
 Reply_Status(msg,userid,"reply","♲ تم ترقيته مطور ثانوي في البوت")  
 return false 
 end
-if text == ("تنزيل مطور ثانوي") and tonumber(msg.reply_to_message_id_) ~= 0 and SudoBot(msg) then
+if text == ("تنزيل مطور ثانوي") and tonumber(msg.reply_to_message_id_) ~= 0 and msa3d(msg) then
 function Function_KLAER(extra, result, success)
 bot_data:srem(ban_id.."Dev:ban:2", result.sender_user_id_)
 Reply_Status(msg,result.sender_user_id_,"reply","♲ تم تنزيله من المطور ثانويين")  
@@ -8563,7 +8563,7 @@ end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_KLAER, nil)
 return false 
 end
-if text and text:match("^تنزيل مطور ثانوي @(.*)$") and SudoBot(msg) then
+if text and text:match("^تنزيل مطور ثانوي @(.*)$") and msa3d(msg) then
 local username = text:match("^تنزيل مطور ثانوي @(.*)$")
 function Function_KLAER(extra, result, success)
 if result.id_ then
@@ -8576,13 +8576,13 @@ end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_KLAER, nil)
 return false
 end  
-if text and text:match("^تنزيل مطور ثانوي (%d+)$") and SudoBot(msg) then
+if text and text:match("^تنزيل مطور ثانوي (%d+)$") and msa3d(msg) then
 local userid = text:match("^تنزيل مطور ثانوي (%d+)$")
 bot_data:srem(ban_id.."Dev:ban:2", userid)
 Reply_Status(msg,userid,"reply","♲ تم تنزيله من المطور ثانويين")  
 return false 
 end
-if text == ("الثانوين") and SudoBot(msg) then
+if text == ("الثانوين") and msa3d(msg) then
 local list = bot_data:smembers(ban_id.."Dev:ban:2")
 t = "\n ♲  قائمة مطورين الثانويين للبوت \n💞 ═───═𝙺𝙻𝙰𝙴𝚁═───═💞\n"
 for k,v in pairs(list) do
