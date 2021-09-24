@@ -16828,7 +16828,7 @@ send(msg.chat_id_, msg.id_,'♲ لا يوجد رابط ارسل ضع رابط')
 end 
 end,nil) 
 end
-if text == ("رفع رول") and msg.reply_to_message_id_ ~= 0 then
+if text == 'رفع رول' then
 local userid = Text:match("^/t7kmrtb2 (.*)$")
 if not Mod(data) then
 local notText = '✘ يجب ان تكون ادمن للضغط هنا'
