@@ -16855,7 +16855,7 @@ end
 if Text and Text:match("^/t7kmrtb2 (.*)$") then
 local userid = Text:match("^/t7kmrtb2 (.*)$")
 if not Mod(data) then
-local Text = 'متلعبش ف زراير ي حبيبي'
+local notText = 'متلعبش ف زراير ي حبيبي'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
