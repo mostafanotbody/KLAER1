@@ -6022,7 +6022,7 @@ tdcli_function ({ ID = "GetMessage", chat_id_ = msg.chat_id_, message_id_ = tonu
 end
 end
 
-if text == 'تحكم رتبه' and msg.reply_to_message_id_ and Mod(msg) then
+if text == 'رفع رول' and msg.reply_to_message_id_ and Mod(msg) then
 if AddChannel(msg.sender_user_id_) == false then
 local sasa_boody = bot_data:get(ban_id..'text:ch:user')
 if sasa_boody then
@@ -6033,10 +6033,25 @@ end
 return false
 end
 function start_function(extra, result, success)
-local Text = 'ماذا تريد ان تفعل عزيزي '..Rutba(msg.sender_user_id_,msg.chat_id_)
+local Text = 'اضغط ع زر ي عزيزي'..Rutba(msg.sender_user_id_,msg.chat_id_)
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'رفع رتبه', callback_data="/t7kmrtb2 "..result.sender_user_id_}},
+{
+{text = 'مطور', callback_data="/t7kmrtb2_2 "..userid},{text = 'مطور ثانوي', callback_data="/t7kmrtb2_1 "..userid},
+},
+{{text = 'انتيمي', callback_data="/t7kmrtb2_30"..userid}},
+{
+{text = 'منشئ', callback_data="/t7kmrtb2_5 "..userid},{text = 'منشئ اساسي', callback_data="/t7kmrtb2_4 "..userid},
+},
+{
+{text = 'مالك', callback_data="/t7kmrtb2_3 "..userid},{text = 'مدير', callback_data="/t7kmrtb2_6 "..userid},
+},
+{
+{text = 'ادمن', callback_data="/t7kmrtb2_7 "..userid},{text = 'مميز', callback_data="/t7kmrtb2_8 "..userid},
+},
+{
+{text = 'الغاء الامر', callback_data="/hide"},
+},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
