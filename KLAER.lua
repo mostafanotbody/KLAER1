@@ -16863,7 +16863,7 @@ keyboard.inline_keyboard = {
 {
 {text = 'مطور', callback_data="/t7kmrtb2_2 "..userid},{text = 'مطور ثانوي', callback_data="/t7kmrtb2_1 "..userid},
 },
-{{text = 'انتيمي', callback_data="/t7kmrtb2_300"..userid}},
+{{text = 'انتيمي', callback_data="/t7kmrtb2_300 "..userid}},
 {
 {text = 'منشئ', callback_data="/t7kmrtb2_5 "..userid},{text = 'منشئ اساسي', callback_data="/t7kmrtb2_4 "..userid},
 },
