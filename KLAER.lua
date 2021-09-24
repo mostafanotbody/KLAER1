@@ -16863,9 +16863,7 @@ keyboard.inline_keyboard = {
 {
 {text = 'مطور', callback_data="/t7kmrtb2_2 "..userid},{text = 'مطور ثانوي', callback_data="/t7kmrtb2_1 "..userid},
 },
-{
-{text = 'انتيمي', callback_data="/t7kmrtb2_30"..userid},
-},
+{{text = 'انتيمي', callback_data="/t7kmrtb2_30"..userid}},
 {
 {text = 'منشئ', callback_data="/t7kmrtb2_5 "..userid},{text = 'منشئ اساسي', callback_data="/t7kmrtb2_4 "..userid},
 },
@@ -16945,7 +16943,7 @@ end
 
 if Text and Text:match("^/t7kmrtb2_30 (.*)$") then
 local userid = Text:match("^/t7kmrtb2_30(.*)$")
-if not msa3d(data) then
+if msa3d(data) then
 local notText = 'يجب ان تكون رتبتك اعلي لاستخدام هذا الامر'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
