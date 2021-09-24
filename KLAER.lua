@@ -16857,7 +16857,7 @@ local notText = '✘ يجب ان تكون ادمن للضغط هنا'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Teext = 'تغيرت رتبه الي ('..Rutba(userid,Chat_id)..') اضغط ع زر ليتم اعطائه الرتبه 🐣'
+local Teext = 'اضغط ع زر ليتم اعطائه الرتبه 🐣'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
