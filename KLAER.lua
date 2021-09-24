@@ -6046,9 +6046,9 @@ return false
 end
 if text == 'تنزيل رول' and msg.reply_to_message_id_ and Mod(msg) then
 if AddChannel(msg.sender_user_id_) == false then
-local X_G_33 = bot_data:get(ban_id..'text:ch:user')
-if X_G_33 then
-send(msg.chat_id_, msg.id_,'['..X_G_33..']')
+local sasa_boody = bot_data:get(ban_id..'text:ch:user')
+if sasa_boody then
+send(msg.chat_id_, msg.id_,'['..sasa_boody..']')
 else
 send(msg.chat_id_, msg.id_,'☭لا تستطيع استخدام البوت \n ☭يرجى الاشتراك بالقناه اولا \n ☭اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
 end
@@ -16883,17 +16883,17 @@ local Teext = 'اضغط ع زر ليتم اعطائه الرتبه 🐣'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = 'مطور', callback_data="/t7kmrtb2_2 "},{text = 'مطور ثانوي', callback_data="/t7kmrtb2_1 "},
+{text = 'مطور', callback_data="/t7kmrtb2_2 "..userid},{text = 'مطور ثانوي', callback_data="/t7kmrtb2_1 "..userid},
 },
-{{text = 'انتيمي', callback_data="/t7kmrtb2_300 "}},
+{{text = 'انتيمي', callback_data="/t7kmrtb2_300 "..userid}},
 {
-{text = 'منشئ', callback_data="/t7kmrtb2_5 "},{text = 'منشئ اساسي', callback_data="/t7kmrtb2_4 "},
-},
-{
-{text = 'مالك', callback_data="/t7kmrtb2_3 "},{text = 'مدير', callback_data="/t7kmrtb2_6 "},
+{text = 'منشئ', callback_data="/t7kmrtb2_5 "..userid},{text = 'منشئ اساسي', callback_data="/t7kmrtb2_4 "..userid},
 },
 {
-{text = 'ادمن', callback_data="/t7kmrtb2_7 "},{text = 'مميز', callback_data="/t7kmrtb2_8 "},
+{text = 'مالك', callback_data="/t7kmrtb2_3 "..userid},{text = 'مدير', callback_data="/t7kmrtb2_6 "..userid},
+},
+{
+{text = 'ادمن', callback_data="/t7kmrtb2_7 "..userid},{text = 'مميز', callback_data="/t7kmrtb2_8 "..userid},
 },
 {
 {text = 'الغاء الامر', callback_data="/hide"},
