@@ -6022,6 +6022,28 @@ tdcli_function ({ ID = "GetMessage", chat_id_ = msg.chat_id_, message_id_ = tonu
 end
 end
 
+if text == 'تحكم رتبه' and msg.reply_to_message_id_ and Mod(msg) then
+if AddChannel(msg.sender_user_id_) == false then
+local sasa_boody = bot_data:get(ban_id..'text:ch:user')
+if sasa_boody then
+send(msg.chat_id_, msg.id_,'['..sasa_boody..']')
+else
+send(msg.chat_id_, msg.id_,'☭لا تستطيع استخدام البوت \n ☭يرجى الاشتراك بالقناه اولا \n ☭اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
+end
+return false
+end
+function start_function(extra, result, success)
+local Text = 'ماذا تريد ان تفعل عزيزي '..Rutba(msg.sender_user_id_,msg.chat_id_)
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = 'رفع رتبه', callback_data="/t7kmrtb2 "..result.sender_user_id_}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
+return false
+end
 if text == 'جلب النسخه' and Devban(msg) then 
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = bot_data:get(ban_id..'text:ch:user')
@@ -16828,7 +16850,7 @@ send(msg.chat_id_, msg.id_,'♲ لا يوجد رابط ارسل ضع رابط')
 end 
 end,nil) 
 end
-if text == 'رفع رول' then
+if Text and Text:match("^/t7kmrtb2 (.*)$") then
 local userid = Text:match("^/t7kmrtb2 (.*)$")
 if not Mod(data) then
 local notText = '✘ يجب ان تكون ادمن للضغط هنا'
