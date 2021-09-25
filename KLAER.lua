@@ -16866,7 +16866,7 @@ keyboard.inline_keyboard = {
 {
 {text = 'مطور', callback_data="/t7kmrtb1_2 "..userid},{text = 'مطور ثانوي', callback_data="/t7kmrtb1_1 "..userid},
 },
-{{text = 'انتيمي', callback_data="/t7kmrtb2_305 "..userid}},
+{{text = 'انتيمي', callback_data="/t7kmrtb2_320 "..userid}},
 {
 {text = 'منشئ', callback_data="/t7kmrtb1_5 "..userid},{text = 'منشئ اساسي', callback_data="/t7kmrtb1_4 "..userid},
 },
@@ -16890,7 +16890,7 @@ local notText = 'متلعبش ف زراير ي حبيبي'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Teext = 'اضغط ع زر ليتم اعطائه الرتبه 🐣'
+local Teext = 'رتبته الان ('..Rutba(userid,Chat_id)..') ماذا ستفعل به 🙂'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -16910,9 +16910,7 @@ keyboard.inline_keyboard = {
 {text = 'الغاء الامر', callback_data="/hide"},
 },
 }
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-return false
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
 
 
@@ -17199,8 +17197,8 @@ end;end,nil)
 return false 
 end
 
-if Text and Text:match("^/t7kmrtb1_305 (.*)$") then
-local userid = Text:match("^/t7kmrtb1_305 (.*)$")
+if Text and Text:match("^/t7kmrtb1_320 (.*)$") then
+local userid = Text:match("^/t7kmrtb1_320 (.*)$")
 if not msa3d(data) then
 local notText = 'يجب ان تكون رتبتك اعلي لاستخدام هذا الامر'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
