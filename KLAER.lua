@@ -16813,7 +16813,7 @@ local OnVid = Text:gsub(':searchVid',''):gsub(id_from_user,'')
 msgidrp  = OnVid:match("(%d+)")
 local id_from_vid = Text:gsub(':',''):gsub('searchVid',''):gsub(id_from_user,''):gsub(msgidrp,'')
 if tonumber(data.sender_user_id_) ~= tonumber(id_from_user) then  
-local notText = '⌯︙ عذرا الاوامر هذه لا تخصك'
+local notText = 'متلعبش ف زراير هديك بلقلم'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
@@ -16914,7 +16914,7 @@ local notText = '✘ يجب ان تكون ادمن للضغط هنا'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Teext = 'رتبته الان ('..Rutba(userid,Chat_id)..') ماذا ستفعل به 🙂'
+local Teext = 'اضغط علي زراير لتنزيل الرتبه'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -16944,7 +16944,7 @@ local notText = 'متلعبش ف زراير ي حبيبي'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Teext = 'رتبته الان ('..Rutba(userid,Chat_id)..') ماذا ستفعل به 🙂'
+local Teext = 'اضغط ع زراير للرفع رتبه'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
