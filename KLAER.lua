@@ -8623,6 +8623,14 @@ t = " ♲  لا يوجد مطورين ثانويين"
 end
 send(msg.chat_id_, msg.id_, t)
 end
+if text == 'تفعيل النسخه التلقائيه' and SudoBot(msg) then  
+send(msg.chat_id_, msg.id_,"*⌯︙تم تفعيل النسخه الاحتياطيه التلقائيه*") 
+database:del(bot_id.."AutoFile")
+end
+if text == 'تعطيل النسخه التلقائيه' and SudoBot(msg) then  
+send(msg.chat_id_, msg.id_,"*⌯︙تم تعطيل النسخه الاحتياطيه التلقائيه*") 
+database:set(bot_id.."AutoFile",true) 
+end
 if text == ("مسح الثانوين") and SudoBot(msg) then
 bot_data:del(ban_id.."Dev:ban:2")
 send(msg.chat_id_, msg.id_, "\n ♲ تم مسح قائمة المطورين الثانوين  ")
@@ -16637,6 +16645,93 @@ t = v.."\n"
 end
 send(msg.chat_id_, msg.id_, t)
 end
+if text and not database:get(bot_id.."AutoFile") then
+Time = database:get(bot_id.."AutoFile:Time")
+if Time then 
+if Time ~= os.date("%x") then  
+local list = database:smembers(bot_id..'Chek:Groups') 
+local t = '{"BOT_ID": '..bot_id..',"GP_BOT":{'  
+for k,v in pairs(list) do   
+NAME = 'TELANDW Chat'
+link = database:get(bot_id.."Private:Group:Link"..msg.chat_id_) or ''
+CoSu = database:smembers(bot_id..'CoSu'..v)
+ASAS = database:smembers(bot_id..'Basic:Constructor'..v)
+MNSH = database:smembers(bot_id..'Constructor'..v)
+MDER = database:smembers(bot_id..'Manager'..v)
+MOD = database:smembers(bot_id..'Mod:User'..v)
+if k == 1 then
+t = t..'"'..v..'":{"TELANDW":"'..NAME..'",'
+else
+t = t..',"'..v..'":{"TELANDW":"'..NAME..'",'
+end
+if #CoSu ~= 0 then 
+t = t..'"CoSu":['
+for k,v in pairs(CoSu) do
+if k == 1 then
+t =  t..'"'..v..'"'
+else
+t =  t..',"'..v..'"'
+end
+end   
+t = t..'],'
+end
+if #ASAS ~= 0 then 
+t = t..'"ASAS":['
+for k,v in pairs(ASAS) do
+if k == 1 then
+t =  t..'"'..v..'"'
+else
+t =  t..',"'..v..'"'
+end
+end   
+t = t..'],'
+end
+if #MOD ~= 0 then
+t = t..'"MOD":['
+for k,v in pairs(MOD) do
+if k == 1 then
+t =  t..'"'..v..'"'
+else
+t =  t..',"'..v..'"'
+end
+end   
+t = t..'],'
+end
+if #MDER ~= 0 then
+t = t..'"MDER":['
+for k,v in pairs(MDER) do
+if k == 1 then
+t =  t..'"'..v..'"'
+else
+t =  t..',"'..v..'"'
+end
+end   
+t = t..'],'
+end
+if #MNSH ~= 0 then
+t = t..'"MNSH":['
+for k,v in pairs(MNSH) do
+if k == 1 then
+t =  t..'"'..v..'"'
+else
+t =  t..',"'..v..'"'
+end
+end   
+t = t..'],'
+end
+t = t..'"linkgroup":"'..link..'"}' or ''
+end
+t = t..'}}'
+local File = io.open('./'..bot_id..'.json', "w")
+File:write(t)
+File:close()
+sendDocument(SUDO, msg.id_,0, 1, nil, './'..bot_id..'.json', '⌯︙عدد مجموعات التي في البوت { '..#list..'}')
+database:set(bot_id.."AutoFile:Time",os.date("%x"))
+end
+else 
+database:set(bot_id.."AutoFile:Time",os.date("%x"))
+end
+end
 if text == "تعطيل الافلام" and Mod(msg) then
 send(msg.chat_id_, msg.id_, ' ♲ تم تعطيل الافلام')
 bot_data:set(ban_id.."ban:movie_bot"..msg.chat_id_,"close")
@@ -16799,15 +16894,7 @@ end -- end msg
 function tdcli_update_callback(data)  -- clback
 if data.ID == "UpdateChannel" then 
 if data.channel_.status_.ID == "ChatMemberStatusKicked" then 
-t = "قام احد المنشئين بطرد البوت من مجموعته\n\n"
-tdcli_function({ID ="GetChat",chat_id_="-100"..data.channel_.id_},function(arg,chat)  
-local NameChat = chat.title_
-t =t.."اسم المجموعه\n"..NameChat
-local IdChat = "-100"..data.channel_.id_
-t =t.."\n\nايدي المجموعه\n"..IdChat
-send(SUDO, msg.id_,t)
-database:srem(bot_id..'Chek:Groups','-100'..data.channel_.id_)  
-end,nil)
+bot_data:srem(ban_id..'Chek:Groups','-100'..data.channel_.id_)  
 end
 end
 if data.ID == "UpdateNewCallbackQuery" then
