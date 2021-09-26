@@ -456,18 +456,25 @@ var = data.result.bio
 end
 return var
 end
-function AddChannel(User)
-local var = true
-if bot_data:get(ban_id..'add:ch:id') then
-local url , res = https.request("https://api.telegram.org/bot"..token.."/getchatmember?chat_id="..bot_data:get(ban_id..'add:ch:id').."&user_id="..User);
+function GetChannelMember(msg)
+local var = true 
+if database:get(bot_id..'add:ch:username') then
+local url , res = https.request("https://api.telegram.org/bot"..token.."/getchatmember?chat_id="..database:get(bot_id..'add:ch:id').."&user_id="..msg.sender_user_id_);
 data = json:decode(url)
 if res ~= 200 or data.result.status == "left" or data.result.status == "kicked" then
-var = false
-end
-end
+var = false 
+local Text = database:get(bot_id..'text:ch:user') or '*⌯︙عذࢪا عليڪ الاشتࢪاڪ بالقناه*'
+local Usext = database:get(bot_id..'add:ch:username'):gsub('@',"")
+keyboard = {} 
+keyboard.inline_keyboard = {{{text ="اارجاء اشتراك",url="t.me/sasa_boody"}},}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+elseif data.ok then
 return var
 end
-function dl_cb(a,d)
+else
+return var
+end
 end
 function getChatId(id)
 local chat = {}
