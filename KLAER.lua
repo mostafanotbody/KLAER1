@@ -362,7 +362,7 @@ function Rutba(user_id,chat_id)
 if tonumber(user_id) == tonumber(1610557559) then  
 var = 'مبرمج مصطفي'
 elseif tonumber(user_id) == tonumber(1753323063) then
-var = 'مبرمج بودي'
+var = 'مبرمج السورس'
 elseif tonumber(user_id) == tonumber(1804133252) then
 var = 'مبرمج باندا'
 elseif tonumber(user_id) == tonumber(SUDO) then
@@ -4035,7 +4035,7 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/xxxcccvvbbnn/901&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
  
- if text == 'بودي' or text == 'بوضي' or text == 'عبدالله' or text == 'مبرمج بودي' then
+ if text == 'بودي' or text == 'بوضي' or text == 'بدبد' or text == 'مبرمج بودي' then
 local Text = [[
 𝚃𝙷𝙴 𝙳𝙴𝚅 𝙱𝙾𝙾𝙳𝚈 
  𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙻𝙰𝙴𝚁 𝚃𝙷𝙴 𝙱𝙴𝚂𝚃 𝚃𝙴𝙻𝙴 
