@@ -3743,7 +3743,7 @@ user_id_ = user_id
 }, cb, nil)
 end
 ---------------------- الاوامر الجديدة
-if text == 'اخرص' and msg.reply_to_message_id_ and Mod(msg) then
+if text == 'تحكم اخرص' and msg.reply_to_message_id_ and Mod(msg) then
 if AddChannel(msg.sender_user_id_) == false then
 local sasa_boody = bot_data:get(ban_id..'text:ch:user')
 if sasa_boody then
@@ -3759,11 +3759,17 @@ local Text = 'عذرا هذا '..Rutba(result.sender_user_id_,msg.chat_id_)..'\n
 send(msg.chat_id_, msg.id_, Text)
 return false
 end
-local Text = 'اضغط ع زر لفك كتم او الغاء كتم ي عزيزي '..Rutba(msg.sender_user_id_,msg.chat_id_)
+local Text = 'مرحبـآ عزيزي  يمكنك التحكم بالعضو عن طريق الازرار '..Rutba(msg.sender_user_id_,msg.chat_id_)
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
 {text = 'الغاء كتم', callback_data="/t7km1 "..result.sender_user_id_},{text = 'كتم', callback_data="/t7km2 "..result.sender_user_id_},
+},
+{
+{text = 'الغاء حظر', callback_data="/t7km3 "..result.sender_user_id_},{text = 'حظر', callback_data="/t7km4 "..result.sender_user_id_},
+},
+{
+{text = 'الغاء تقيد', callback_data="/t7km5 "..result.sender_user_id_},{text = 'تقيد', callback_data="/t7km6 "..result.sender_user_id_},
 },
 }
 local msg_id = msg.id_/2097152/0.5
