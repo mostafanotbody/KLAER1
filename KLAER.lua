@@ -3755,21 +3755,15 @@ return false
 end
 function start_function(extra, result, success)
 if Can_or_NotCan(result.sender_user_id_, msg.chat_id_) == true then
-local Text = 'عذرا هذا '..Rutba(result.sender_user_id_,msg.chat_id_)..'\nلا يمكنني التحكم بة'
+local Text = 'مينفعش دا '..Rutba(result.sender_user_id_,msg.chat_id_)..'\nمليش دعوه يعم'
 send(msg.chat_id_, msg.id_, Text)
 return false
 end
-local Text = 'مرحبـآ عزيزي  يمكنك التحكم بالعضو عن طريق الازرار '..Rutba(msg.sender_user_id_,msg.chat_id_)
+local Text = 'لتريد كتم او الغاء كتم اضغط ع زر '..Rutba(msg.sender_user_id_,msg.chat_id_)
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
 {text = 'الغاء كتم', callback_data="/t7km1 "..result.sender_user_id_},{text = 'كتم', callback_data="/t7km2 "..result.sender_user_id_},
-},
-{
-{text = 'الغاء حظر', callback_data="/t7km3 "..result.sender_user_id_},{text = 'حظر', callback_data="/t7km4 "..result.sender_user_id_},
-},
-{
-{text = 'الغاء تقيد', callback_data="/t7km5 "..result.sender_user_id_},{text = 'تقيد', callback_data="/t7km6 "..result.sender_user_id_},
 },
 }
 local msg_id = msg.id_/2097152/0.5
@@ -17043,7 +17037,7 @@ local notText = 'يجب ان تكون ادمن لاستخدام هذا الام�
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local text = 'تم الغاء كتم العضو'
+local text = 'تم الغاء كتم العضو بنجاح'
 bot_data:srem(ban_id..'Muted:User'..Chat_id, userid)
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(text)..'&message_id='..msg_idd) 
 end
@@ -17054,7 +17048,7 @@ local notText = 'يجب ان تكون ادمن لاستخدام هذا الام�
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local text = 'تم كتم العضو'
+local text = 'تم كتم العضو بنجاح'
 bot_data:sadd(ban_id..'Muted:User'..Chat_id, userid)
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(text)..'&message_id='..msg_idd) 
 end
