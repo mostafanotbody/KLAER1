@@ -3743,7 +3743,7 @@ user_id_ = user_id
 }, cb, nil)
 end
 ---------------------- الاوامر الجديدة
-if text == 'تحكم اخرص' and msg.reply_to_message_id_ and Mod(msg) then
+if text == 'اخرص' and msg.reply_to_message_id_ and Mod(msg) then
 if AddChannel(msg.sender_user_id_) == false then
 local sasa_boody = bot_data:get(ban_id..'text:ch:user')
 if sasa_boody then
