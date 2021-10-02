@@ -49,7 +49,7 @@ else
 print('\27[0;31m💞 ═───═𝙺𝙻𝙰𝙴𝚁═───═💞\n لم يتم حفظ ايدي المطور الاساسي ارسله مره اخره')
 end 
 
-io.write('\27[1;31m ↓ ارسل معرف المطور الاساسي :\n SEND ID FOR SIDO : n\27[0;39;49m')
+io.write('\27[1;31m ↓ ارسل معرف المطور الاساسي :\n SEND ID FOR SIDO : \27[0;39;49m')
 local SUDOUSERNAME = io.read():gsub('@','')
 if SUDOUSERNAME ~= '' then
 io.write('\n\27[1;34m تم حفظ معرف المطور :\n\27[0;39;49m')
@@ -3743,6 +3743,35 @@ user_id_ = user_id
 }, cb, nil)
 end
 ---------------------- الاوامر الجديدة
+if text == 'اخرص' and msg.reply_to_message_id_ and Mod(msg) then
+if AddChannel(msg.sender_user_id_) == false then
+local sasa_boody = bot_data:get(ban_id..'text:ch:user')
+if sasa_boody then
+send(msg.chat_id_, msg.id_,'['..sasa_boody..']')
+else
+send(msg.chat_id_, msg.id_,'☭لا تستطيع استخدام البوت \n ☭يرجى الاشتراك بالقناه اولا \n ☭اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
+end
+return false
+end
+function start_function(extra, result, success)
+if Can_or_NotCan(result.sender_user_id_, msg.chat_id_) == true then
+local Text = 'عذرا هذا '..Rutba(result.sender_user_id_,msg.chat_id_)..'\nلا يمكنني التحكم بة'
+send(msg.chat_id_, msg.id_, Text)
+return false
+end
+local Text = 'اضغط ع زر لفك كتم او الغاء كتم ي عزيزي '..Rutba(msg.sender_user_id_,msg.chat_id_)
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = 'الغاء كتم', callback_data="/t7km1 "..result.sender_user_id_},{text = 'كتم', callback_data="/t7km2 "..result.sender_user_id_},
+},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
+return false
+end
 if text == 'الاوامر' then
 if not Mod(msg) then
 send(msg.chat_id_, msg.id_,' ♲ هذا الامر خدد ليس لك\n  اكتب 『اوامر الاعضاء』لعرض اوامر الاعضاء')
@@ -17000,6 +17029,28 @@ else
 send(msg.chat_id_, msg.id_,'♲ لا يوجد رابط ارسل ضع رابط') 
 end 
 end,nil) 
+end
+if Text and Text:match("^/t7km1 (.*)$") then
+local userid = Text:match("^/t7km1 (.*)$")
+if not Mod(data) then
+local notText = 'يجب ان تكون ادمن لاستخدام هذا الامر'
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+return false
+end
+local text = 'تم الغاء كتم العضو'
+bot_data:srem(ban_id..'Muted:User'..Chat_id, userid)
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(text)..'&message_id='..msg_idd) 
+end
+if Text and Text:match("^/t7km2 (.*)$") then
+local userid = Text:match("^/t7km2 (.*)$")
+if not Mod(data) then
+local notText = 'يجب ان تكون ادمن لاستخدام هذا الامر'
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+return false
+end
+local text = 'تم كتم العضو'
+bot_data:sadd(ban_id..'Muted:User'..Chat_id, userid)
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(text)..'&message_id='..msg_idd) 
 end
 if Text and Text:match("^/t7kmrtb1 (.*)$") then
 local userid = Text:match("^/t7kmrtb1 (.*)$")
