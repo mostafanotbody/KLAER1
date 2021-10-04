@@ -13757,6 +13757,9 @@ local msg_id = msg.id_/2097152/0.5
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
+{text = KLAER_Msg, url="http://t.me/"..username},
+},
+{
 {text = 'اضغط لاضافه البوت لمجموعتك☑️ ' ,url="t.me/"..dofile("./Info.lua").botUserName.."?startgroup=start"},
 },
 }
