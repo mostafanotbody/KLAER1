@@ -13791,7 +13791,7 @@ local msg_id = msg.id_/2097152/0.5
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = ' مـطور الـبـوت🔒', url="http://t.me/"..sudos.UserName},
+{text = Namebot, url="http://t.me/"..username},
 },
 {
 {text = 'اضغط لاضافه البوت لمجموعتك☑️ ' ,url="t.me/"..dofile("./Info.lua").botUserName.."?startgroup=start"},
