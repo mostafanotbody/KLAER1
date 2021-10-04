@@ -14419,7 +14419,7 @@ end
 end
 
 if text == 'الاحصائيات' and msa3d(msg) then 
-local Namebot = (bot_data:get(ban_id..'Name:Bot') or 'انوبيس') 
+local Namebot = (bot_data:get(ban_id..'Name:Bot') or 'كلير') 
 local Groups = bot_data:scard(ban_id..'Chek:Groups')  
 local Users = bot_data:scard(ban_id..'User_Bot')  
 local getbioY = getbio(msg.sender_user_id_)
