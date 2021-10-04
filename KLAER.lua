@@ -13754,7 +13754,7 @@ local KLAER_Msg = {
 } 
 Namebot = KLAER_Msg[math.random(#KLAER_Msg)] 
 local msg_id = msg.id_/2097152/0.5 
-local texxtt = ' '..Namebot..''
+local texxtt = ''..Namebot..''
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -13789,7 +13789,7 @@ local KLAER_Msg = {
 } 
 Namebot = KLAER_Msg[math.random(#KLAER_Msg)] 
 local msg_id = msg.id_/2097152/0.5  
-local texxtt =  ' '..Namebot..''
+local texxtt =   ''..Namebot..''
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
