@@ -14423,12 +14423,13 @@ local Namebot = (bot_data:get(ban_id..'Name:Bot') or 'انوبيس')
 local Groups = bot_data:scard(ban_id..'Chek:Groups')  
 local Users = bot_data:scard(ban_id..'User_Bot')  
 local getbioY = getbio(msg.sender_user_id_)
-Namebot = "NAME BOT ⇐"..Namebot..'\n groubs ⇐ {'..Groups..'}\nSubscribers ⇐ {'..Users..'}\nBIO ⇐ {'..getbioY..'}'
+tessttm = "NAME BOT ⇐"..Namebot..'\n groubs ⇐ {'..Groups..'}\nSubscribers ⇐ {'..Users..'}\nBIO ⇐ {'..getbioY..'}'
 local msg_id = msg.id_/2097152/0.5  
+local tessttm = '{'..Groups..'}'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = 'SOURCE KLAER', url = "https://t.me/sasa_boody"},
+{text = tessttm, url = "https://t.me/sasa_boody"},
 },
 {
 {text = 'اضغط لاضافه البوت لمجموعتك ' ,url="t.me/"..dofile("./Info.lua").botUserName.."?startgroup=start"},
