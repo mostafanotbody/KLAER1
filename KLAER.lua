@@ -2113,7 +2113,7 @@ local msg_id = msg.id_/2097152/0.5
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = 'SOURCE KLAER', url = "https://t.me/sasa_boody"},
+{text = ''..Groups..'', url = "https://t.me/sasa_boody"},
 },
 {
 {text = 'اضغط لاضافه البوت لمجموعتك ' ,url="t.me/"..dofile("./Info.lua").botUserName.."?startgroup=start"},
