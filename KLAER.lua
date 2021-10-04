@@ -13789,14 +13789,11 @@ local KLAER_Msg = {
 } 
 Namebot = KLAER_Msg[math.random(#KLAER_Msg)] 
 local msg_id = msg.id_/2097152/0.5  
-local texxtt = ' اسمي '..Namebot..'ينور عيني'
+local texxtt = '..Namebot..'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
 {text = texxtt, url="http://t.me/"..username},
-},
-{
-{text = ' مـطور الـبـوت🔒', url="http://t.me/"..sudos.UserName},
 },
 {
 {text = 'اضغط لاضافه البوت لمجموعتك☑️ ' ,url="t.me/"..dofile("./Info.lua").botUserName.."?startgroup=start"},
