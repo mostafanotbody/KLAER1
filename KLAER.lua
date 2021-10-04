@@ -2108,12 +2108,12 @@ local Namebot = (bot_data:get(ban_id..'Name:Bot') or 'كلير')
 local Groups = bot_data:scard(ban_id..'Chek:Groups')  
 local Users = bot_data:scard(ban_id..'User_Bot')  
 local getbioY = getbio(msg.sender_user_id_)
-Namebot = "اسم البوت ⇐"..Namebot..'\n⇐عـدد الجروبات هو ⇐ {'..Groups..'}\nعدد المشتركين هو ⇐ {'..Users..'}\nالبايو ⇐ {'..getbioY..'}'
 local msg_id = msg.id_/2097152/0.5  
+local mostafa = ''..Groups..''
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = ' Groups ', url = "https://t.me/sasa_boody"},
+{text =  mostafa, url = "https://t.me/sasa_boody"},
 },
 {
 {text = 'اضغط لاضافه البوت لمجموعتك ' ,url="t.me/"..dofile("./Info.lua").botUserName.."?startgroup=start"},
