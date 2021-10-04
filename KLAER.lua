@@ -14425,7 +14425,7 @@ local Users = bot_data:scard(ban_id..'User_Bot')
 local getbioY = getbio(msg.sender_user_id_)
 tessttm = "NAME BOT ⇐"..Namebot..'\n groubs ⇐ {'..Groups..'}\nSubscribers ⇐ {'..Users..'}\nBIO ⇐ {'..getbioY..'}'
 local msg_id = msg.id_/2097152/0.5  
-local tessttm = '{'..Groups..'}'
+local tessttm = 'المشتركين'..Users..''
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
