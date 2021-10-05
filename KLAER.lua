@@ -14413,14 +14413,9 @@ local teessttmos = 'اسم بوت ⇐ '..Namebot..''
 local teessttmo = 'الجروبات ⇐ '..Groups..''
 keyboard = {} 
 keyboard.inline_keyboard = {
-{
-{text = teessttmos, url = "https://t.me/sasa_boody"},
-},
-{
-{text = teessttmo, url = "https://t.me/sasa_boody"},
-{
-{text = 'اضغط لاضافه البوت لمجموعتك ' ,url="t.me/"..dofile("./Info.lua").botUserName.."?startgroup=start"},
-},
+{{text = teessttmos, url = "https://t.me/sasa_boody"}},
+{{text = teessttmo, url = "https://t.me/sasa_boody"}},
+{{text = 'اضغط لاضافه البوت لمجموعتك ' ,url="t.me/"..dofile("./Info.lua").botUserName.."?startgroup=start"}},
 }
 local function getpro(extra, result, success) 
 if result.photos_[0] then 
