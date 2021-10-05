@@ -13725,7 +13725,7 @@ keyboard.inline_keyboard = {
 }
 local function getpro(extra, result, success) 
 if result.photos_[0] then 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&caption=' .. URL.escape(Namebot).."&reply_to_photo_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&caption=' .. URL.escape(Namebot).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 else 
 send(msg.chat_id_, msg.id_,Namebot, 1, 'md') 
 end 
@@ -13760,18 +13760,13 @@ keyboard.inline_keyboard = {
 }
 local function getpro(extra, result, success) 
 if result.photos_[0] then 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&caption=' .. URL.escape(Namebot).."&reply_to_photo_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&photo=' .. URL.escape(Namebot).."&photo="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 else 
 send(msg.chat_id_, msg.id_,Namebot, 1, 'md') 
 end 
 end 
 tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = ban_id, offset_ = 0, limit_ = 1 }, getpro, nil) 
 end
-if text == "تفعيل الاذاعه" and SudoBot(msg) then 
-bot_data:del(ban_id.."Status:Ss") 
-send(msg.chat_id_, msg.id_,"\n٭ تم تفعيل الاذاعه " ) 
-return false
-end 
 if text == "تعطيل الاذاعه" and SudoBot(msg) then 
 bot_data:set(ban_id.."Status:Ss",true) 
 send(msg.chat_id_, msg.id_,"\n٭ تم تعطيل الاذاعه") 
@@ -14901,7 +14896,7 @@ local List = {
 ➞: 𝒔𝒕𝒂𓂅 #stast 𓍯➸💞.
 ➞: ??𝒔𝒆𝒓𓂅 #username 𓍯➸💞.
 ➞: 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯➸💞.
-➞: 𝒊𝒅 𓂅 #id 𓍯➸💞.
+➞: 𝒊?? 𓂅 #id 𓍯➸💞.
 ]],
 [[
 ☆•𝐮𝐬𝐞𝐫 : #username 𖣬  
@@ -15341,7 +15336,7 @@ local List = {
 𝗖𝗛☤🇪🇬 - 『@sasa_boody』 ♲.
 ]],
 [[
-⭐️𝖘𝖙𝖆 : #stast ـ🍭
+⭐️𝖘𝖙𝖆 : #stast ـ??
 ⭐️𝖚𝖘𝖊𝖗𝖓𝖆𝖒𝖊 : #username ـ🍭
 ⭐️𝖒𝖘𝖌𝖘 : #msgs ـ🍭
 ⭐️𝖎𝖉 : #id ـ 🍭
@@ -15761,7 +15756,7 @@ Msᴀɢ ~ #msgs
  ♲ - 𝓼𝓽𝓪𝓼𝓽  ➪ #stast ♲.
  ♲ - 𝓲𝓭 ➪ #id ⸙ ♲.
  ♲ - 𝓰𝓶𝓪𝓼 ➪ #gmas ⸙ ??.
- ♲ - 𝓶𝓼𝓰𝓼 ➪ #msgs ♲.
+ ♲ - 𝓶??𝓰𝓼 ➪ #msgs ♲.
  ♲ - 𝗖𝗛 - 『@sasa_boody』 ♲
 ]],
 [[
