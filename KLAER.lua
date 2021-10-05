@@ -2925,24 +2925,6 @@ send(msg.chat_id_, msg.id_,'['..t..']')
 end,nil) 
 end 
 end 
-if bot_data:get(ban_id.."CAPTCHA"..msg.chat_id_) then
-if msg.content_.ID == "MessageChatJoinByLink" then 
-https.request("https://api.telegram.org/bot"..token.."/restrictChatMember?chat_id="..msg.chat_id_.."&user_id="..msg.sender_user_id_)
-captcha = math.random(4567,8907);
-cap = math.random(10,50);
-capt = math.random(60,90);
-capc = math.random(100,500);
-local Text ='• قم بختيار الرقم الصحيح الموجود في الصوره\n• ليتم الغاء تقييدك الان'
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = '9'..capt..'5', callback_data=capt..msg.sender_user_id_},{text =capc..'2', callback_data=capc..msg.sender_user_id_}},
-{{text = '4'..cap..'8', callback_data=cap},{text = captcha, callback_data='okCaptcha'..msg.sender_user_id_}},
-{{text = '1'..capt..'2', callback_data=capt},{text = '7'..capc, callback_data=capc}},
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://mode-pro.tk/niggax/captcha.php?c='..captcha..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-end 
-end
 if msg.content_.ID == "MessageChatAddMembers" then 
 if msg.content_.members_[0].id_ == tonumber(ban_id) then 
 print("it is Bot")
@@ -12636,20 +12618,6 @@ local Num = text:match('^ضع زمن التكرار (%d+)$')
 bot_data:hset(ban_id.."flooding:settings:"..msg.chat_id_ ,"floodtime" ,Num) 
 send(msg.chat_id_, msg.id_,' ♲ تم وضع زمن التكرار ('..Num..')') 
 end
-if text == "تعطيل الترجمه" and Manager(msg) then
-send(msg.chat_id_, msg.id_, '♲تم تعطيل الترجمه')
-bot_data:set(ban_id.."ban:TRGMA"..msg.chat_id_,"close")
-end
-if text == "تفعيل الترجمه" and Manager(msg) then
-send(msg.chat_id_, msg.id_,'♲تم تفعيل الترجمه')
-bot_data:set(ban_id.."ban:TRGMA"..msg.chat_id_,"open")
-end
-
-if text and text:match("^ترجمه (.*)$") and bot_data:get(ban_id.."ban:TRGMA"..msg.chat_id_) == "open" then
-local text = text:match("^ترجمه (.*)$")
-local TRGMA = https.request('https://devdeiveddev.ml/api/google/tran.php?o=en&i=ar&t='..URL.escape(text)..'')
-send(msg.chat_id_, msg.id_, TRGMA)
-end
 if text == 'تفعيل اليوتيوب' and Mod(msg) and GetChannelMember(msg) then  
 bot_data:del(ban_id..'searchinbot'..msg.chat_id_) 
 send(msg.chat_id_, msg.id_,' *⌯︙تم تفعيل اليوتيوب*') 
@@ -12659,13 +12627,6 @@ if text == 'تعطيل اليوتيوب' and Mod(msg) and GetChannelMember(msg) 
 bot_data:set(ban_id..'searchinbot'..msg.chat_id_,true) 
 send(msg.chat_id_, msg.id_,' *⌯︙تم تعطيل اليوتيوب*') 
 return false  
-end
-if not bot_data:get(ban_id..'searchinbot'..msg.chat_id_) then
-if text and text:match('^بحث (.*)$') then 
-local TextSearch = text:match('^بحث (.*)$') 
-local msg_id = msg.id_/2097152/0.5
-local done = json:decode(https.request("https://vvvzvv.ml/Xx/searchinbot.php?token="..token.."&chat_id="..msg.chat_id_.."&from="..msg.sender_user_id_.."&msg="..msg_id.."&Text="..TextSearch.."&n=s")) 
-end
 end
 
 if text == "تعطيل الزخرفه" and Manager(msg) then
@@ -17122,7 +17083,7 @@ keyboard.inline_keyboard = {
 {text = 'الغاء الامر', callback_data="/hide"},
 },
 }
-return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+return https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
 if Text and Text:match("^/t7kmrtb2 (.*)$") then
