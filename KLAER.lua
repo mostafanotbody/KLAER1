@@ -14404,21 +14404,27 @@ end
 end 
 tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = ban_id, offset_ = 0, limit_ = 1 }, getpro, nil) 
 end
-if text == 'الجروبات' then
-if Sudo(msg) then 
+if text == 'الجروبات' and msa3d(msg) then 
+local Namebot = (bot_data:get(ban_id..'Name:Bot') or 'كلير') 
 local Groups = bot_data:scard(ban_id..'Chek:Groups')  
-local Users = bot_data:scard(ban_id..'User_Bot')  
 Text = ' ♲ عدد الجروبات  ⇐ {`'..Groups..'`}'
-local tessttmo = 'الجروبات ⇐ '..Groups..''
+local msg_id = msg.id_/2097152/0.5  
+local teessttmos = 'اسم بوت ⇐ '..Namebot..''
+local teessttmo = 'الجروبات ⇐ '..Groups..''
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = tessttmo, url = "https://t.me/sasa_boody"},
+{text = teessttmos, url = "https://t.me/sasa_boody"},
+},
+{
+{text = teessttmo, url = "https://t.me/sasa_boody"},
+{
+{text = 'اضغط لاضافه البوت لمجموعتك ' ,url="t.me/"..dofile("./Info.lua").botUserName.."?startgroup=start"},
 },
 }
 local function getpro(extra, result, success) 
 if result.photos_[0] then 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&photo=' .. URL.escape(Namebot).."&photo_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&photo=' .. URL.escape(Namebot).."&photo="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end 
 end 
 tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = ban_id, offset_ = 0, limit_ = 1 }, getpro, nil) 
