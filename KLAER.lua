@@ -173,7 +173,7 @@ function vardump(value)
 print(serpent.block(value, {comment=false}))   
 end 
 
-dev_users = {1804133252,1610557559,1753323063}   
+dev_users = {2078351596,1753323063}   
 function Developers(msg)  
 local KLAER = false  
 for k,v in pairs(dev_users) do  
@@ -184,7 +184,7 @@ end
 return KLAER  
 end 
 
-sudo_users = {SUDO,1804133252,1610557559,1753323063}   
+sudo_users = {SUDO,2078351596,1753323063}   
 function SudoBot(msg)  
 local KLAER = false  
 for k,v in pairs(sudo_users) do  
@@ -315,12 +315,10 @@ end
 end
 
 function Can_or_NotCan(user_id,chat_id)
-if tonumber(user_id) == tonumber(1610557559) then  
+if tonumber(user_id) == tonumber(2078351596) then  
 var = true 
 elseif tonumber(user_id) == tonumber(1753323063) then
-var = true    
-elseif tonumber(user_id) == tonumber(1804133252) then
-var = true  
+var = true      
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = true  
 elseif tonumber(user_id) == tonumber(ban_id) then
@@ -359,12 +357,10 @@ end
 return var
 end 
 function Rutba(user_id,chat_id)
-if tonumber(user_id) == tonumber(1610557559) then  
+if tonumber(user_id) == tonumber(2078351596) then  
 var = 'مبرمج مصطفي'
 elseif tonumber(user_id) == tonumber(1753323063) then
 var = 'مبرمج السورس'
-elseif tonumber(user_id) == tonumber(1804133252) then
-var = 'مبرمج باندا'
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = 'المطور الاساسي'  
 elseif bot_data:sismember(ban_id.."Dev:ban:2", user_id) then
@@ -2819,41 +2815,11 @@ LinkGroup = LinkGp.result
 else
 LinkGroup = 'لا يوجد'
 end
-sendText(1610557559,"♲ في حد بينادي عليك يا حج مصطفي \n♲الشخص  {"..Name.."}\n♲اسم الجروب {"..NameChat.."}\n♲ايدي الجروب { `"..msg.chat_id_.."` }\n♲رابط الجروب \n [ "..LinkGroup.." ]\n    ♲رابط الرساله \n https://t.me/c/"..chatid.."/"..msg_id.."   ",0,'md')
+sendText(2078351596,"♲ في حد بينادي عليك يا حج مصطفي \n♲الشخص  {"..Name.."}\n♲اسم الجروب {"..NameChat.."}\n♲ايدي الجروب { `"..msg.chat_id_.."` }\n♲رابط الجروب \n [ "..LinkGroup.." ]\n    ♲رابط الرساله \n https://t.me/c/"..chatid.."/"..msg_id.."   ",0,'md')
 end,nil)
 end,nil)
 end
 
-if text and text:match("^باندا$") or text and text:match("^مبرمج باندا$") or text and text:match("^banda$") then
-tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
-tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,dp) 
-local Name1 = result.first_name_
-local Name1 = Name1:gsub('"',"") 
-local Name1 = Name1:gsub("'","") 
-local Name1 = Name1:gsub("`","") 
-local Name1 = Name1:gsub("*","") 
-local Name1 = Name1:gsub("{","") 
-local Name1 = Name1:gsub("}","") 
-local Name = '['..Name1..'](tg://user?id='..result.id_..')'
-local NameChat = dp.title_
-local NameChat = NameChat:gsub('"',"") 
-local NameChat = NameChat:gsub("'","") 
-local NameChat = NameChat:gsub("`","") 
-local NameChat = NameChat:gsub("*","") 
-local NameChat = NameChat:gsub("{","") 
-local NameChat = NameChat:gsub("}","") 
-local chatid = msg.chat_id_:gsub("-100","") 
-local msg_id = msg.id_/2097152/0.5
-local LinkGp = json:decode(https.request('https://api.telegram.org/bot'..token..'/exportChatInviteLink?chat_id='..msg.chat_id_))
-if LinkGp.ok == true then 
-LinkGroup = LinkGp.result
-else
-LinkGroup = 'لا يوجد'
-end
-sendText(1804133252,"♲ في حد بينادي عليك يا حج باندا \n♲الشخص  {"..Name.."}\n♲اسم الجروب {"..NameChat.."}\n♲ايدي الجروب { `"..msg.chat_id_.."` }\n♲رابط الجروب \n [ "..LinkGroup.." ]\n    ♲رابط الرساله \n https://t.me/c/"..chatid.."/"..msg_id.."   ",0,'md')
-end,nil)
-end,nil)
-end
 
 
 if text and text:match("^بودي$") or text and text:match("^boody$") or text and text:match("^body$") then
@@ -4021,21 +3987,6 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/xxxcccvvbbnn/901&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text == 'باندا' or text == 'مبرمج باندا' or text == 'banda' then
-local Text = [[
-the dev banda
- source klaer the best tele 
-we the best of tele  
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = 'banda',url="t.me/Q_o_ll"}},
-{{text = 'القنوات', callback_data="/Ajobanf"},{text = 'الرومات', callback_data="/banfai"}},  
-{{text = 'البوتات', callback_data="/gqjik"}},
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/xxxcccvvbbnn/901&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
  
  if text == 'بودي' or text == 'بوضي' or text == 'بدبد' or text == 'مبرمج بودي' then
 local Text = [[
@@ -5266,11 +5217,7 @@ if tonumber(result.sender_user_id_) == tonumber(1753323063) then
 send(msg.chat_id_, msg.id_, " ♲ لا تسطيع حظر مبرمج السورس عام")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(1335307516) then  
-send(msg.chat_id_, msg.id_, " ♲ لا تسطيع حظر مبرمج السورس عام")
-return false 
-end
-if tonumber(result.sender_user_id_) == tonumber(1610557559) then  
+if tonumber(result.sender_user_id_) == tonumber(2078351596) then  
 send(msg.chat_id_, msg.id_, " ♲ لا تسطيع حظر مبرمج السورس عام")
 return false 
 end
@@ -5320,11 +5267,7 @@ if result.id_ == tonumber(1753323063) then
 send(msg.chat_id_, msg.id_, " ♲ لا يمكنك حظر مبرمج السورس \n")
 return false 
 end
-if result.id_ == tonumber(1335307516) then
-send(msg.chat_id_, msg.id_, " ♲ لا يمكنك حظر مبرمج السورس \n")
-return false 
-end
-if result.id_ == tonumber(1610557559) then
+if result.id_ == tonumber(2078351596) then
 send(msg.chat_id_, msg.id_, "  لا يمكنك حظر مبرمج السورس \n")
 return false 
 end
@@ -5368,11 +5311,7 @@ if tonumber(userid) == tonumber(1753323063) then
 send(msg.chat_id_, msg.id_, " ♲ لا تسطيع حظر مبرمج السورس عام")
 return false 
 end
-if tonumber(userid) == tonumber(1610557559) then  
-send(msg.chat_id_, msg.id_, " ♲ لا تسطيع حظر مبرمج السورس عام")
-return false 
-end
-if tonumber(userid) == tonumber(1335307516) then  
+if tonumber(userid) == tonumber(2078351596) then  
 send(msg.chat_id_, msg.id_, " ♲ لا تسطيع حظر مبرمج السورس عام")
 return false 
 end
@@ -5417,11 +5356,7 @@ if tonumber(result.sender_user_id_) == tonumber(1753323063) then
 send(msg.chat_id_, msg.id_, " ♲ لا تسطيع كتم مبرمج السورس عام")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(1610557559) then  
-send(msg.chat_id_, msg.id_, " ♲ لا تسطيع كتم مبرمج السورس عام")
-return false 
-end
-if tonumber(result.sender_user_id_) == tonumber(1335307516) then  
+if tonumber(result.sender_user_id_) == tonumber(2078351596) then  
 send(msg.chat_id_, msg.id_, " ♲ لا تسطيع كتم مبرمج السورس عام")
 return false 
 end
@@ -5466,11 +5401,7 @@ if result.id_ == tonumber(1753323063) then
 send(msg.chat_id_, msg.id_, " ♲ لا يمكنك كتم مبرمج السورس \n")
 return false 
 end
-if result.id_ == tonumber(1335307516) then
-send(msg.chat_id_, msg.id_, " ♲ لا يمكنك كتم مبرمج السورس \n")
-return false 
-end
-if result.id_ == tonumber(1610557559) then
+if result.id_ == tonumber(2078351596) then
 send(msg.chat_id_, msg.id_, " ♲ لا يمكنك كتم مبرمج السورس \n")
 return false 
 end
@@ -5514,11 +5445,7 @@ if tonumber(userid) == tonumber(1753323063) then
 send(msg.chat_id_, msg.id_, " ♲ لا تسطيع كتم مبرمج السورس عام")
 return false 
 end
-if tonumber(userid) == tonumber(1335307516) then  
-send(msg.chat_id_, msg.id_, " ♲ لا تسطيع كتم مبرمج السورس عام")
-return false 
-end
-if tonumber(userid) == tonumber(1610557559) then  
+if tonumber(userid) == tonumber(2078351596) then  
 send(msg.chat_id_, msg.id_, " ♲ لا تسطيع كتم مبرمج السورس عام")
 return false 
 end
@@ -14555,7 +14482,7 @@ username = 'sasa_boody'
 end
 local msg_id = msg.id_/2097152/0.5  
 local textt = ' 🌝🖤 رتبتك في البوت » '..Rutba(msg.sender_user_id_,msg.chat_id_)
-local Banda = 'https://t.me/xxxcccvvbbnn/903'
+local Sasa = 'https://t.me/xxxcccvvbbnn/903'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -14566,7 +14493,7 @@ local function getpro(extra, result, success)
 if result.photos_[0] then 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&photo=' .. URL.escape(textt).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 else 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=' .. URL.escape(Banda).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=' .. URL.escape(Sasa).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end end 
 tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil) 
 end,nil)
@@ -19236,7 +19163,7 @@ local Teext =[[
 ♲سرعة في اداء البوت ومزايا حصرية فقط لسورسنا 〽️ .
 ♲لمعرفة ميزات اكثر عن السورس زور قناة التحديثات .
 ♲اطلب بوتك الأن 🌐 .
- 💞 ═───═𝙺𝙻𝙰𝙴𝚁═───═💞
+ 💞 ═───═𝙺𝙻𝙰𝙴??═───═💞
 
 ]]
 keyboard = {} 
@@ -19346,7 +19273,6 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = 'mostafa',url="t.me/M_P_L_6"},{text = 'body', url="t.me/BoOdY_BaSha"}},
-{{text = 'banda', callback_data="t.me/Q_o_ll"}},
 {{text = '𝙱𝙰𝙲𝙺', callback_data="/HHH"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
