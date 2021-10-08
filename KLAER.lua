@@ -16087,7 +16087,17 @@ if Num == 0 then
 Text = ' ♲ لم تقم بأضافه احد'
 else
 Text = ' ♲ عدد جهاتك * ⇐ 『 '..Num..' 』 *'
+local sasatext = ''..Num..''
 end
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = sasatext, url="http://t.me/sasa_boody"},
+},
+{
+{text = 'اضف البوت الي مجموعتك' ,url="t.me/"..dofile("./Info.lua").botUserName.."?startgroup=start"},
+},
+}
 send(msg.chat_id_, msg.id_,Text) 
 end
 if text == "تنظيف المشتركين" and Devban(msg) then 
