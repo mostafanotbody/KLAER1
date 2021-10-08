@@ -16088,7 +16088,6 @@ Text = ' ♲ لم تقم بأضافه احد'
 else
 Text = ' ♲ عدد جهاتك * ⇐ 『 '..Num..' 』 *'
 local sasatext = ''..Num..''
-end
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
