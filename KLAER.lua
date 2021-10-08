@@ -13041,6 +13041,30 @@ end
 end,nil)  
 end   
 end
+if text == 'روابط الجروبات' or text == 'روابط المجموعات' or text == 'روابط المجموعات' then
+if not Devban(msg) then
+bot_data(msg.chat_id_, msg.id_, 1, '🖤للمطور الاساسي فقط ', 1, 'md')
+else
+local List =   bot_data:smembers(ban_id.."ban:Groups")
+if #List == 0 then
+Dev_ban(msg.chat_id_, msg.id_, 1, '🖤لا توجد مجموعات مفعله', 1, 'md')
+else
+send(msg.chat_id_, msg.id_, 1, '🖤جاري ارسال نسخه تحتوي على ↫ '..#List..' مجموعه', 1, 'md')
+local Text = "🖤Source ban_id\n🖤File Bot Groups\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
+for k,v in pairs(List) do
+local GroupsManagers =   bot_data:scard(ban_id.."ban:Managers:"..v) or 0
+local GroupsAdmins =   bot_data:scard(ban_id.."ban:Admins:"..v) or 0
+local Groupslink =   bot_data:get(ban_id.."ban:Groups:Links" ..v)
+Text = Text..k.." ↬ ⤈ \n🖤Group ID ↬ "..v.."\n🖤Group Link ↬ "..(Groupslink or "Not Found").."\n🖤Group Managers ↬ "..GroupsManagers.."\n🖤Group Admins ↬ "..GroupsAdmins.."\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
+end
+local File = io.open('GroupsBot.txt', 'w')
+File:write(Text)
+File:close()
+sendDocument(msg.chat_id_, msg.id_, 0, 1, nil, './GroupsBot.txt',dl_cb, nil)
+io.popen('rm -rf ./GroupsBot.txt')
+end
+end
+end
 if text == ("كشف البوتات") and Mod(msg) then  
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = bot_data:get(ban_id..'text:ch:user')
@@ -16087,8 +16111,19 @@ if Num == 0 then
 Text = ' ♲ لم تقم بأضافه احد'
 else
 Text = ' ♲ عدد جهاتك * ⇐ 『 '..Num..' 』 *'
-end
-send(msg.chat_id_, msg.id_,Text) 
+local msg_id = msg.id_/2097152/0.5  
+local klaer_sasa = ' ♲ عدد جهاتك ⇐ '..Num..''
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = klaer_sasa, url = "https://t.me/sasa_boody"}},
+{{text = 'اضغط لاضافه البوت لمجموعتك ' ,url="t.me/"..dofile("./Info.lua").botUserName.."?startgroup=start"}},
+}
+local function getpro(extra, result, success) 
+if result.photos_[0] then 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&photo=' .. URL.escape(Namebot).."&photo="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end 
+end 
+tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = ban_id, offset_ = 0, limit_ = 1 }, getpro, nil) 
 end
 if text == "تنظيف المشتركين" and Devban(msg) then 
 if AddChannel(msg.sender_user_id_) == false then
