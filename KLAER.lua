@@ -2279,7 +2279,7 @@ return false
 end
 
 
-if text and text:match("^رفع مطور @(.*)$") and msa3d(msg) then
+if text and text:match("^رفع مطور @(.*)$") and Devban(msg) then
 local username = text:match("^رفع مطور @(.*)$")
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = bot_data:get(ban_id..'text:ch:user')
@@ -2308,7 +2308,7 @@ end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, nil)
 return false 
 end
-if text and text:match("^رفع مطور (%d+)$") and msa3d(msg) then
+if text and text:match("^رفع مطور (%d+)$") and Devban(msg) then
 local userid = text:match("^رفع مطور (%d+)$")
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = bot_data:get(ban_id..'text:ch:user')
@@ -2332,7 +2332,7 @@ send(msg.chat_id_, msg.id_, usertext..status)
 end;end,nil)
 return false 
 end
-if text and text:match("^تنزيل مطور @(.*)$") and msa3d(msg) then
+if text and text:match("^تنزيل مطور @(.*)$") and Devban(msg) then
 local username = text:match("^تنزيل مطور @(.*)$")
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = bot_data:get(ban_id..'text:ch:user')
@@ -2357,7 +2357,7 @@ end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, nil)
 return false
 end  
-if text and text:match("^تنزيل مطور (%d+)$") and msa3d(msg) then
+if text and text:match("^تنزيل مطور (%d+)$") and Devban(msg) then
 local userid = text:match("^تنزيل مطور (%d+)$")
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = bot_data:get(ban_id..'text:ch:user')
@@ -19163,7 +19163,7 @@ local Teext =[[
 ♲سرعة في اداء البوت ومزايا حصرية فقط لسورسنا 〽️ .
 ♲لمعرفة ميزات اكثر عن السورس زور قناة التحديثات .
 ♲اطلب بوتك الأن 🌐 .
- 💞 ═───═𝙺𝙻𝙰𝙴??═───═💞
+ 💞 ═───═𝙺𝙻??𝙴??═───═💞
 
 ]]
 keyboard = {} 
