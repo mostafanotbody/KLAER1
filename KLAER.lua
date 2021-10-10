@@ -5605,25 +5605,6 @@ end
 end 
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, nil) 
 end
-if text == ("المطورين") and msa3d(msg) then
-local list = database:smembers(bot_id..'Sudo:User')
-t = "\n ♲  قائمة مطورين البوت \n💞 ═───═KLAER═───═💞 \n"
-for k,v in pairs(list) do
-local username = database:get(bot_id.."user:Name" .. v)
-if username then
-t = t..""..k.."- ([@"..username.."])\n"
-else
-t = t..""..k.."- (`"..v.."`)\n"
-end
-end
-if #list == 0 then
-t = " ♲  لا يوجد مطورين"
-end
-send(msg.chat_id_, msg.id_, t)
-end
-local msg_id = msg.id_/2097152/0.5
-send_inline_key(msg.chat_id_,t,nil,keyboard,msg_id)
-end
 if text == 'كشف' and tonumber(msg.reply_to_message_id_) > 0 then
 function start_function(extra, result, success)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(extra,data) 
