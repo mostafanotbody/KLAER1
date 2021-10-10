@@ -2113,20 +2113,25 @@ send(msg.chat_id_, msg.id_,Text)
 return false
 end
 if text == ("المطورين") and msa3d(msg) then
-local list = database:smembers(bot_id..'Sudo:User')
-t = "\n ♲  قائمة المطورين \n♲ ═───═KLAER═───═♲ \n"
+local list = bot_data:smembers(ban_id..'Sudo:User')
+t = "\n ♲ قائمة مطورين البوت \n💞 ═───═𝙺𝙻𝙰𝙴𝚁═───═💞\n"
+keyboard = {
+{{text="• مسح المطورين •",callback_data="/DelSudoBot"}},
+}
 for k,v in pairs(list) do
-local username = database:get(bot_id.."user:Name" .. v)
+local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
 t = t..""..k.."- ([@"..username.."])\n"
 else
-t = t..""..k.."- ("..v..")\n"
+t = t..""..k.."- (`"..v.."`)\n"
 end
 end
 if #list == 0 then
-t = " ♲  لا يوجد مطورين"
+t = " *𖢅⤈لا يوجد مطورين*"
+keyboard = nil
 end
-send(msg.chat_id_, msg.id_, t)
+local msg_id = msg.id_/2097152/0.5
+send_inline_key(msg.chat_id_,t,nil,keyboard,msg_id)
 end
 if text == ("قائمه العام") and msa3d(msg) then
 local list = bot_data:smembers(ban_id..'GDRG:User')
