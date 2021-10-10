@@ -2116,7 +2116,7 @@ if text == ("المطورين") and msa3d(msg) then
 local list = bot_data:smembers(ban_id..'Sudo:User')
 t = "\n ♲ قائمة مطورين البوت \n💞 ═───═𝙺𝙻𝙰𝙴𝚁═───═💞\n"
 keyboard = {
-{{text="• مسح المطورين •",callback_data="/DelSudoBot"}},
+{{text=" مسح المطورين ",callback_data="/DelSudoBot"}},
 }
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
@@ -2127,7 +2127,7 @@ t = t..""..k.."- (`"..v.."`)\n"
 end
 end
 if #list == 0 then
-t = " *𖢅⤈لا يوجد مطورين*"
+t = " ♲ لا يوجد مطورين خلاص اتمسحه "
 keyboard = nil
 end
 local msg_id = msg.id_/2097152/0.5
