@@ -2116,7 +2116,7 @@ if text == ("المطورين") and msa3d(msg) then
 local list = bot_data:smembers(ban_id..'Sudo:User')
 t = "\n ♲ قائمة المطورين \n💞 ═───═𝙺𝙻𝙰𝙴𝚁═───═💞\n"
 keyboard = {
-{{text = 'مسح المطورين',callback_data=msg.sender_user_id_.."DelLsta".."55"}},
+{{text=" مسح المطورين ",callback_data="/DelSudoBot"}},
 }
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
@@ -5609,6 +5609,27 @@ send(msg.chat_id_, msg.id_,' ♲ الايدي غير صحيح')
 end 
 end 
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, nil) 
+end
+if text == ("المطورين") and msa3d(msg) then
+local list = bot_data:smembers(ban_id..'Sudo:User')
+t = "\n ♲ قائمة المطورين \n💞 ═───═𝙺𝙻𝙰𝙴𝚁═───═💞\n"
+keyboard = {
+{{text=" مسح المطورين ",callback_data="/DelSudoBot"}},
+}
+for k,v in pairs(list) do
+local username = bot_data:get(ban_id.."user:Name" .. v)
+if username then
+t = t..""..k.."- ([@"..username.."])\n"
+else
+t = t..""..k.."- (`"..v.."`)\n"
+end
+end
+if #list == 0 then
+t = " ♲ لا يوجد مطورين"
+keyboard = nil
+end
+local msg_id = msg.id_/2097152/0.5
+send_inline_key(msg.chat_id_,t,nil,keyboard,msg_id)
 end
 if text == 'كشف' and tonumber(msg.reply_to_message_id_) > 0 then
 function start_function(extra, result, success)
