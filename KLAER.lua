@@ -19687,20 +19687,6 @@ keyboard.inline_keyboard = {
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
 end
-if Text == '/DelSudoBot' then
-if not Devban(data) then
-local notText = ' متلعبش ف زراير ي حببيبي'
-https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
-return false
-end
-local Text = '•تـم مسح قائمه المطورين 𖢅⤈↫ '
-bot_data:del(ban_id..'Sudo:User')
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = 'source klaer',url="t.me/sasa_boody"}},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
-end
 if Text == '/lockCickp' then
 if not Mod(data) then
 local notText = '✘ عذرا الاوامر هذه لا تخصك'
