@@ -2125,8 +2125,12 @@ end
 end
 if #list == 0 then
 t = " ♲ لا يوجد مطورين"
-end
-send(msg.chat_id_, msg.id_, t)
+local noText = 'متلعبش ف زراير ي حبيبي'
+keyboard.inline_keyboard = {
+{
+{{text="• مسح المطورين •",callback_data="/DelSudoBot"}},
+}
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(noText)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
 if text == ("قائمه العام") and msa3d(msg) then
 local list = bot_data:smembers(ban_id..'GDRG:User')
@@ -19635,6 +19639,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
 end
 
+
 if Text == '/lockwelcm' then
 if not Mod(data) then
 local notText = '✘ عذرا الاوامر هذه لا تخصك'
@@ -19667,6 +19672,20 @@ keyboard.inline_keyboard = {
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
 end
+if Text == '/DelSudoBot' then
+if not Devban(data) then
+local notText = ' متلعبش ف زراير ي حببيبي'
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+return false
+end
+local Text = '•تـم مسح قائمه المطورين 𖢅⤈↫ '
+bot_data:del(ban_id..'Sudo:User')
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{{text = 'source klaer',url="t.me/sasa_boody"}},
+},
+}
 if Text == '/lockCickp' then
 if not Mod(data) then
 local notText = '✘ عذرا الاوامر هذه لا تخصك'
