@@ -2121,7 +2121,7 @@ keyboard = {
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
-sasa7 = t..""..k.."- ([@"..username.."])\n"
+t = t..""..k.."- ([@"..username.."])\n"
 else
 t = t..""..k.."- (`"..v.."`)\n"
 end
@@ -2131,7 +2131,7 @@ t = " ♲ لا يوجد مطورين خلاص اتمسحه "
 keyboard = nil
 end
 local msg_id = msg.id_/2097152/0.5
-send_inline_key(msg.chat_id_,sasa7,nil,keyboard,msg_id)
+send_inline_key(msg.chat_id_,t,nil,keyboard,msg_id)
 end
 if text == ("قائمه العام") and msa3d(msg) then
 local list = bot_data:smembers(ban_id..'GDRG:User')
