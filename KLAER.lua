@@ -19699,7 +19699,6 @@ keyboard = {}
 keyboard.inline_keyboard = {
 {
 {{text = 'source klaer',url="t.me/sasa_boody"}},
-},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
 end
