@@ -2119,7 +2119,7 @@ keyboard = {
 {{text=" مسح المطورين ",callback_data="/DelSudoBot"}},
 }
 for k,v in pairs(list) do
-local username = bot_data:get(ban_id.."user:Name" .. v)
+local username = bot_data:get(bot_id.."user:Name" .. v)
 if username then
 t = t..""..k.."- ([@"..username.."])\n"
 else
@@ -19679,7 +19679,7 @@ local notText = ' متلعبش ف زراير ي حببيبي'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '•تـم مسح قائمه المطورين 𖢅⤈↫ '
+local Text = ' تـم مسح قائمه المطورين يعم خلاص '
 bot_data:del(ban_id..'Sudo:User')
 keyboard = {} 
 keyboard.inline_keyboard = {
