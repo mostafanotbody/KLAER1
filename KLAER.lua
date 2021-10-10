@@ -5605,25 +5605,6 @@ end
 end 
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, nil) 
 end
-if text == ("المطورين") and msa3d(msg) then
-local list = database:smembers(bot_id..'Sudo:User')
-t = "\n ♲  قائمة مطورين البوت \n💞 ═───═KLAER═───═💞 \n"
-for k,v in pairs(list) do
-local username = database:get(bot_id.."user:Name" .. v)
-if username then
-t = t..""..k.."- ([@"..username.."])\n"
-else
-t = t..""..k.."- (`"..v.."`)\n"
-end
-end
-if #list == 0 then
-t = " ♲  لا يوجد مطورين"
-end
-send(msg.chat_id_, msg.id_, t)
-end
-local msg_id = msg.id_/2097152/0.5
-send_inline_key(msg.chat_id_,t,nil,keyboard,msg_id)
-end
 if text == 'كشف' and tonumber(msg.reply_to_message_id_) > 0 then
 function start_function(extra, result, success)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(extra,data) 
@@ -19684,6 +19665,20 @@ keyboard.inline_keyboard = {
 {
 {text = '𝙱𝙰𝙲𝙺', callback_data="/help8"},
 },
+}
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
+end
+if Text == '/DelSudoBot' then
+if not Devban(data) then
+local notText = ' متلعبش ف زراير ي حببيبي'
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+return false
+end
+local Text = '•تـم مسح قائمه المطورين 𖢅⤈↫ '
+bot_data:del(ban_id..'Sudo:User')
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = 'source klaer',url="t.me/sasa_boody"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
 end
