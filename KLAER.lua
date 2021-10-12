@@ -5674,12 +5674,10 @@ local ban = ' ♲ عدد الادمنيه : '..data.administrator_count_..
 '\n\n ♲ عدد الاعضاء : '..data.member_count_..
 '\n\n ♲ عدد رسائل الجروب : '..(msg.id_/2097152/0.5)..
 '\n\n ♲  اسم الجروب : ['..ta.title_..']'
-local msg_id = msg.id_/2097152/0.5  
 local sasaklaer = '\n\n ♲ عدد المطرودين'..data.kicked_count_..
-keyboard = {
-{
-{text = sasaklaer, url = "https://t.me/sasa_boody"},
-},
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = sasaklaer, url = "https://t.me/sasa_boody"}},
 }
 local function getpro(extra, result, success) 
 if result.photos_[0] then 
