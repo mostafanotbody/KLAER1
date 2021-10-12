@@ -5185,6 +5185,9 @@ end
 if text == ("قائمه العام") and Devban(msg) then
 local list = bot_data:smembers(ban_id..'GDRG:User')
 t = "\n ♲ قائمة المحظورين عام \n💞 ═───═𝙺𝙻𝙰𝙴𝚁═───═💞\n"
+keyboard = {
+{{text=" مسح القائمه ",callback_data="/DELGDRGUSER"}},
+}
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -5195,9 +5198,10 @@ end
 end
 if #list == 0 then
 t = " ♲ لا يوجد محظورين عام"
+keyboard = nil
 end
-send(msg.chat_id_, msg.id_, t)
-return false
+local msg_id = msg.id_/2097152/0.5
+send_inline_key(msg.chat_id_,t,nil,keyboard,msg_id)
 end
 if text == ("حظر عام") and msg.reply_to_message_id_ and msa3d(msg) then
 if AddChannel(msg.sender_user_id_) == false then
