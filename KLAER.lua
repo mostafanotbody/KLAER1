@@ -3972,7 +3972,7 @@ we the best of tele
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'Developers', callback_data="/units"},{text = 'ᴍʏ ᴄʜᴀɴɴᴇʟ', callback_data="/theytry"}},   
+{{text = '𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁𝚂', callback_data="/units"},{text = 'ᴍʏ ᴄʜᴀɴɴᴇʟ', callback_data="/theytry"}},   
 {{text = 'مــطــور الــبــوت', url="http://t.me/"..sudos.UserName}},
 {{text = ' اضغط لاضافه البوت لمجموعتك ' ,url="t.me/"..dofile("./Info.lua").botUserName.."?startgroup=start"}}, 
 }
@@ -3988,7 +3988,7 @@ we the best of tele
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'mostafa',url="t.me/M_P_L_6"}},
+{{text = '𝙼𝙾𝚂𝚃𝙰𝙵𝙰',url="t.me/M_P_L_6"}},
 {{text = 'القنوات', callback_data="/Ajobanf"},{text = 'الرومات', callback_data="/banfai"}},  
 {{text = 'البوتات', callback_data="/gqjik"}},
 }
@@ -4994,57 +4994,6 @@ local vBoodyv_Msg = {
 send(msg.chat_id_, msg.id_,'['..vBoodyv_Msg[math.random(#vBoodyv_Msg)]..']')  
 return false 
 end
-if text == "اشتمو" or text == "اشتم" or text == "نيكو" then 
-local vBoodyv_Msg = { 
-"  كسمك يبن الوسخه", 
-" كسمسكك ",
-" هنيكك",
-" اركب امك❤. ",
-" ي ابن الاحبه😁:]] ",
-" هنيك امك فله^^ ",
-" يعرص",
-" ي ابن الوتس",
-" ابوك خول😁:]]",
-" تيزك😁:]]",
-" لا حبيبي❤.",
-" خلاص كسمك😁:]]",
-" كس اختك🙂 ",
-" بز امك^^",
-"ناك ابوك عل وتس🥺⚡...!؟",
-"انيكك🤝🏻😂...!؟",
-" كسمك ي هقر🤾🏻‍♂️😂...!؟",
-" ابوك عرص🏃🏻‍♀️😂...!؟",
-" امك لبوه🏂😂...!؟",
-" بيب بيب هنيك امك عند بتاع الانبيب 😂🤭...!؟",
-" انت بتناك ليه 😂...!؟",
-" كسمك ي خول😂...!؟",
-" هديك زبي 😂...!؟",
-" شششش مراتي🤭♥️...!؟",
-" كتفمك يخول🙂...!؟",
-" يبن الفيس😂...!؟",
-" ههينك ي ود مراتي😂...!؟ ",
-" بهزر معاك🙂...!؟",
-" خد زبي😉...!؟",
-" امك لبوه ياه🙂...!؟",
-" وه ي كسمك😂♥️...!؟",
-" ي ابن المتناكه🤝🏻😂...!؟",
-" تيزك فيها كام خرمه😂...!؟",
-" كسك🤾🏻‍♂️😂...!؟",
-" كسمك تاني😂😂...!؟ ",
-" هنيك امك😂...!؟",
-" كسمين امك😂...!؟ ",
-" كس اختك تاني😂🏂...!؟",
-" ي متناك😂⚡...!؟",
-" ي شرموط ",
-" ي مايح  ",
-" يبن الزانيه ",
-" ي كسمك  ",
-" ي منيوك ",
-" ي ابن المتناكة ",
-" يا لي امك احبهه ",
-" كسمينك",
-" كفياك كدا❤'✓",
-
 } 
 send(msg.chat_id_, msg.reply_to_message_id_,'['..vBoodyv_Msg[math.random(#vBoodyv_Msg)]..']')  
 return false 
@@ -8551,9 +8500,6 @@ end
 if text == ("الثانوين") and msa3d(msg) then
 local list = bot_data:smembers(ban_id.."Dev:ban:2")
 t = "\n ♲  قائمة مطورين الثانويين للبوت \n💞 ═───═𝙺𝙻𝙰𝙴𝚁═───═💞\n"
-keyboard = {
-{{text = 'مسح الثانوين',callback_data="/deldevBAN"}},
-}
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -8564,10 +8510,8 @@ end
 end
 if #list == 0 then
 t = " ♲  لا يوجد مطورين ثانويين"
-keyboard = nil
 end
-local msg_id = msg.id_/2097152/0.5
-send_inline_key(msg.chat_id_,t,nil,keyboard,msg_id)
+send(msg.chat_id_, msg.id_, t)
 end
 if text == 'تفعيل النسخه التلقائيه' and SudoBot(msg) then  
 send(msg.chat_id_, msg.id_,"*⌯︙تم تفعيل النسخه الاحتياطيه التلقائيه*") 
@@ -15871,7 +15815,7 @@ Msᴀɢ ~ #msgs
 ♡ : 𝐼𝐷 𖠀 #id .
 ♡ : 𝑈𝑆??𝑅 𖠀 #username .
 ♡ : 𝑀𝑆𝐺𝑆 𖠀 #msgs .
-♡ : 𝑆𝑇𝐴𝑇𝑆 𖠀 #stast .
+♡ : 𝑆𝑇𝐴𝑇𝑆 ?? #stast .
 ♡ : 𝐸𝐷𝐼𝑇  𖠀 #edit .
 ♡ : 𝗖𝗛 - 『@sasa_boody』 ♲
 ]],
@@ -19278,7 +19222,7 @@ local Teext =[[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'mostafa',url="t.me/M_P_L_6"},{text = 'body', url="t.me/BoOdY_BaSha"}},
+{{text = 'mostafa',url="t.me/M_P_L_6"},{text = '𝙱𝙾𝙾𝙳𝚈', url="t.me/BoOdY_BaSha"}},
 {{text = '𝙱𝙰𝙲𝙺', callback_data="/HHH"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -19708,20 +19652,6 @@ return false
 end
 local Text = ' تـم مسح قائمه العام يعم خلاص '
 bot_data:del(ban_id..'GDRG:User')
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = 'source klaer',url="t.me/sasa_boody"}},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
-end
-if Text == '/deldevBAN' then
-if not Devban(data) then
-local notText = 'متلعيش في زراير حاجه متخصكش'
-https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
-return false
-end
-local Text = ' تـم مسح الثانوين يعم خلاص '
-bot_data:del(ban_id..'Dev:ban:2')
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = 'source klaer',url="t.me/sasa_boody"}},
