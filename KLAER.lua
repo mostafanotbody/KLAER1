@@ -8551,6 +8551,9 @@ end
 if text == ("الثانوين") and msa3d(msg) then
 local list = bot_data:smembers(ban_id.."Dev:ban:2")
 t = "\n ♲  قائمة مطورين الثانويين للبوت \n💞 ═───═𝙺𝙻𝙰𝙴𝚁═───═💞\n"
+keyboard = {
+{{text=" مسح الثانوين ",callback_data="/Delsasaban"}},
+}
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -8561,8 +8564,10 @@ end
 end
 if #list == 0 then
 t = " ♲  لا يوجد مطورين ثانويين"
+keyboard = nil
 end
-send(msg.chat_id_, msg.id_, t)
+local msg_id = msg.id_/2097152/0.5
+send_inline_key(msg.chat_id_,t,nil,keyboard,msg_id)
 end
 if text == 'تفعيل النسخه التلقائيه' and SudoBot(msg) then  
 send(msg.chat_id_, msg.id_,"*⌯︙تم تفعيل النسخه الاحتياطيه التلقائيه*") 
@@ -19678,6 +19683,20 @@ keyboard.inline_keyboard = {
 {
 {text = '𝙱𝙰𝙲𝙺', callback_data="/help8"},
 },
+}
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
+end
+if Text == '/Delsasaban' then
+if not Devban(data) then
+local notText = ' متلعبش ف زراير ي حببيبي'
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+return false
+end
+local Text = ' تـم مسح قائمه الثانوين يعم خلاص '
+bot_data:del(ban_id..'Dev:ban:2')
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = 'source klaer',url="t.me/sasa_boody"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
 end
