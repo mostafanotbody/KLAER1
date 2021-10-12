@@ -2136,6 +2136,9 @@ end
 if text == ("قائمه العام") and msa3d(msg) then
 local list = bot_data:smembers(ban_id..'GDRG:User')
 t = "\n ♲ قائمه المحظورين عام \n💞 ═───═𝙺𝙻𝙰𝙴𝚁═───═💞\n"
+keyboard = {
+{{text=" مسح القائمه ",callback_data="/DELGDRGUSER"}},
+}
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -2146,9 +2149,10 @@ end
 end
 if #list == 0 then
 t = " ♲ لا يوجد محظورين عام"
+keyboard = nil
 end
-send(msg.chat_id_, msg.id_, t)
-return false
+local msg_id = msg.id_/2097152/0.5
+send_inline_key(msg.chat_id_,t,nil,keyboard,msg_id)
 end
 if text == ("قائمه الكتم العام") and msa3d(msg) then
 local list = bot_data:smembers(ban_id..'Gmute:User')
@@ -19681,6 +19685,20 @@ return false
 end
 local Text = ' تـم مسح قائمه المطورين يعم خلاص '
 bot_data:del(ban_id..'Sudo:User')
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = 'source klaer',url="t.me/sasa_boody"}},
+}
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
+end
+if Text == '/DELGDRGUSER' then
+if not Devban(data) then
+local notText = 'متلعيش في زراير حاجه متخصكش'
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+return false
+end
+local Text = ' تـم مسح قائمه العام يعم خلاص '
+bot_data:del(ban_id..'GDRG:User')
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = 'source klaer',url="t.me/sasa_boody"}},
