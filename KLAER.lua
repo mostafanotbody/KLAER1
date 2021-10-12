@@ -4994,7 +4994,6 @@ local vBoodyv_Msg = {
 send(msg.chat_id_, msg.id_,'['..vBoodyv_Msg[math.random(#vBoodyv_Msg)]..']')  
 return false 
 end
-} 
 send(msg.chat_id_, msg.reply_to_message_id_,'['..vBoodyv_Msg[math.random(#vBoodyv_Msg)]..']')  
 return false 
 end
