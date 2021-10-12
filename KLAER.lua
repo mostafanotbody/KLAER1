@@ -5675,7 +5675,7 @@ local ban = ' ♲ عدد الادمنيه : '..data.administrator_count_..
 '\n\n ♲ عدد رسائل الجروب : '..(msg.id_/2097152/0.5)..
 '\n\n ♲  اسم الجروب : ['..ta.title_..']'
 local msg_id = msg.id_/2097152/0.5  
-local sasaklaer = '\n\n ♲ عدد المطرودين'..data.kicked_count_..'
+local sasaklaer = '\n\n ♲ عدد المطرودين'..data.kicked_count_..
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
