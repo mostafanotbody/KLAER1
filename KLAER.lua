@@ -2288,7 +2288,7 @@ return false
 end
 
 
-if text and text:match("^رفع مطور @(.*)$") and Devban(msg) then
+if text and text:match("^رفع مطور @(.*)$") and Devban(msg) or msa3d(msg) then
 local username = text:match("^رفع مطور @(.*)$")
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = bot_data:get(ban_id..'text:ch:user')
@@ -2317,7 +2317,7 @@ end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, nil)
 return false 
 end
-if text and text:match("^رفع مطور (%d+)$") and Devban(msg) then
+if text and text:match("^رفع مطور (%d+)$") and Devban(msg) or msa3d(msg) then
 local userid = text:match("^رفع مطور (%d+)$")
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = bot_data:get(ban_id..'text:ch:user')
@@ -3972,7 +3972,7 @@ we the best of tele
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁𝚂', callback_data="/units"},{text = 'ᴍʏ ᴄʜᴀɴɴᴇʟ', callback_data="/theytry"}},   
+{{text = 'Developers', callback_data="/units"},{text = 'ᴍʏ ᴄʜᴀɴɴᴇʟ', callback_data="/theytry"}},   
 {{text = 'مــطــور الــبــوت', url="http://t.me/"..sudos.UserName}},
 {{text = ' اضغط لاضافه البوت لمجموعتك ' ,url="t.me/"..dofile("./Info.lua").botUserName.."?startgroup=start"}}, 
 }
@@ -3988,7 +3988,7 @@ we the best of tele
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '𝙼𝙾𝚂𝚃𝙰𝙵𝙰',url="t.me/M_P_L_6"}},
+{{text = 'mostafa',url="t.me/M_P_L_6"}},
 {{text = 'القنوات', callback_data="/Ajobanf"},{text = 'الرومات', callback_data="/banfai"}},  
 {{text = 'البوتات', callback_data="/gqjik"}},
 }
@@ -7326,7 +7326,7 @@ send(msg.chat_id_,msg.id_," ♲ تم مسح الملفات")
 return false
 end
 
-if text == ("رفع مطور") and msg.reply_to_message_id_ and Devban(msg) then
+if text == ("رفع مطور") and msg.reply_to_message_id_ and Devban(msg) or msa3d(msg) then
 function start_function(extra, result, success)
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = bot_data:get(ban_id..'text:ch:user')
@@ -7347,7 +7347,7 @@ end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
 return false 
 end
-if text and text:match("^رفع مطور @(.*)$") and Devban(msg) then
+if text and text:match("^رفع مطور @(.*)$") and Devban(msg) or msa3d(msg) then
 local username = text:match("^رفع مطور @(.*)$")
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = bot_data:get(ban_id..'text:ch:user')
@@ -7376,7 +7376,7 @@ end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, nil)
 return false 
 end
-if text and text:match("^رفع مطور (%d+)$") and Devban(msg) then
+if text and text:match("^رفع مطور (%d+)$") and Devban(msg) or msa3d(msg) then
 local userid = text:match("^رفع مطور (%d+)$")
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = bot_data:get(ban_id..'text:ch:user')
@@ -7479,6 +7479,9 @@ end
 if text == 'قائمه المالك' and Sudo(msg) then
 local list = bot_data:smembers(ban_id..'CoSu'..msg.chat_id_)
 t = "\n ♲ قائمه المالك\n💞 ═───═𝙺𝙻𝙰𝙴𝚁═───═💞\n"
+keyboard = {
+{{text=" مسح قائمه المالك ",callback_data="/DelCOSUSAsa"}},
+}
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -7489,9 +7492,10 @@ end
 end
 if #list == 0 then
 t = " ♲ لا يوجد احد في قائمه المالك"
+keyboard = nil
 end
-send(msg.chat_id_, msg.id_, t)
-return false
+local msg_id = msg.id_/2097152/0.5
+send_inline_key(msg.chat_id_,t,nil,keyboard,msg_id)
 end
 if text == ("صيح للمالك") or text == ("تاك للمالك") then
 local list = bot_data:smembers(ban_id..'CoSu'..msg.chat_id_)
@@ -19278,7 +19282,7 @@ local Teext =[[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '𝙼𝙾𝚂𝚃𝙰𝙵𝙰',url="t.me/M_P_L_6"},{text = '𝙱𝙾𝙾𝙳𝚈', url="t.me/BoOdY_BaSha"}},
+{{text = 'mostafa',url="t.me/M_P_L_6"},{text = 'body', url="t.me/BoOdY_BaSha"}},
 {{text = '𝙱𝙰𝙲𝙺', callback_data="/HHH"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -19687,13 +19691,27 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
 end
 if Text == '/Delsasaban' then
-if not Devban(data) then
+if not msa3d(data) then
 local notText = ' متلعبش ف زراير ي حببيبي'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
 local Text = ' تـم مسح قائمه الثانوين يعم خلاص '
 bot_data:del(ban_id..'Dev:ban:2')
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = 'source klaer',url="t.me/sasa_boody"}},
+}
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
+end
+if Text == '/DelCOSUSAsa' then
+if not Devban(data) then
+local notText = ' متلعبش ف زراير ي حببيبي'
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+return false
+end
+local Text = ' تم مسح قائمه المالك يعم خلاص '
+bot_data:del(ban_id..'CoSu'..msg.chat_id_)
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = 'source klaer',url="t.me/sasa_boody"}},
