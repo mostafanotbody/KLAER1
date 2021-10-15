@@ -14367,6 +14367,7 @@ return false
 end
 end
 if text == 'ايدي' and msa3d(msg) then 
+tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
 local Namebot = (bot_data:get(ban_id..'Name:Bot') or 'كلير') 
 local iduser = result.sender_user_id_
 local rtp = Rutba(msg.sender_user_id_,msg.chat_id_)
