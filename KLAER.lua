@@ -14375,19 +14375,16 @@ end
 local rtp = Rutba(msg.sender_user_id_,msg.chat_id_)
 local getbioY = getbio(msg.sender_user_id_)
 local msg_id = msg.id_/2097152/0.5  
-local BBusername = '• 🖤 | 𝑼𝑬𝑺 : :  '..username..''
-local BBgetbioY = '• 🖤 | 𝙱𝙸𝙾 : '..getbioY..''
-local BBrtp = '• 🖤 | 𝚂𝚃𝙰 : '..rtp..''
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = BBiduser, url = "https://t.me/sasa_boody"},
+{text = username, url = "https://t.me/sasa_boody"},
 },
 {
-{text = BBgetbioY, url = "https://t.me/sasa_boody"},
+{text = rtp, url = "https://t.me/sasa_boody"},
 },
 {
-{text = BBrtp, url = "https://t.me/sasa_boody"},
+{text = getbioY, url = "https://t.me/sasa_boody"},
 },
 {
 {text = 'اضغط لاضافه البوت لمجموعتك ' ,url="t.me/"..dofile("./Info.lua").botUserName.."?startgroup=start"},
@@ -15307,7 +15304,7 @@ local List = {
 [[
 ┄─━━ ●━━─┄
 𖣤 ᴜѕᴇʀɴᴀᴍᴇ 𓄹𓄼 #id 🇪🇬
-𖦼 ʏᴏᴜʀ ɪᴅ 𓄹𓄼 #username  💛
+𖦼 ʏᴏᴜʀ ɪᴅ 𓄹𓄼 #username  ??
 𖥪 ᴍѕɢѕ 𓄹𓄼 #msgs ✉️
 𖥧 ѕᴛᴀᴛѕ 𓄹?? #stast 👩🏿‍🚒 
 𖥣 ᴇᴅɪᴛ 𓄹𓄼 #game🙇🏿‍♀💕
@@ -16172,7 +16169,7 @@ Msᴀɢ ~ #msgs
 - 🦋 UsErNaMe . #username 𖠲
 - 🦋 StAsT . #stast 𖠲
 - 🦋 Id . #id 𖠲
-- 🦋 GaMeS . #game 𖠲
+- ?? GaMeS . #game 𖠲
 - 🦋 MsGs . #msgs 𖠲
 - 🦋 𝗖𝗛 - 『@sasa_boody』 ☆
 ]]}
