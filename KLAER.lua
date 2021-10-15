@@ -14368,7 +14368,6 @@ end
 end
 if text == 'ايدي' and msa3d(msg) then 
 local Namebot = (bot_data:get(ban_id..'Name:Bot') or 'كلير') 
-local iduser = result.sender_user_id_
 local rtp = Rutba(msg.sender_user_id_,msg.chat_id_)
 local getbioY = getbio(msg.sender_user_id_)
 local msg_id = msg.id_/2097152/0.5  
@@ -15299,7 +15298,7 @@ local List = {
 • 🖤 | 𝑼𝑬𝑺 : #username ‌‌‏⚚
 • 🖤 | 𝑺𝑻𝑨 : #stast ??🏻‍♂ ☥
 • 🖤 | 𝑰𝑫 : #id ‌‌‏♕
-• 🖤 | 𝑴𝑺𝑮 : #msgs 𓆊
+• 🖤 | 𝑴𝑺?? : #msgs 𓆊
 • 🖤 | 𝗖𝗛 - 『@sasa_boody』 ●.
 ]],
 [[
