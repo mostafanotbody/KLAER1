@@ -14372,19 +14372,11 @@ username = '@'..result.username_
 else
 username = 'لا يوجد '
 end
-local rtp = Rutba(msg.sender_user_id_,msg.chat_id_)
-local getbioY = getbio(msg.sender_user_id_)
 local msg_id = msg.id_/2097152/0.5  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
 {text = username, url = "https://t.me/sasa_boody"},
-},
-{
-{text = rtp, url = "https://t.me/sasa_boody"},
-},
-{
-{text = getbioY, url = "https://t.me/sasa_boody"},
 },
 {
 {text = 'اضغط لاضافه البوت لمجموعتك ' ,url="t.me/"..dofile("./Info.lua").botUserName.."?startgroup=start"},
@@ -15304,7 +15296,7 @@ local List = {
 [[
 ┄─━━ ●━━─┄
 𖣤 ᴜѕᴇʀɴᴀᴍᴇ 𓄹𓄼 #id 🇪🇬
-𖦼 ʏᴏᴜʀ ɪᴅ 𓄹𓄼 #username  ??
+𖦼 ʏᴏᴜʀ ɪᴅ 𓄹𓄼 #username  💛
 𖥪 ᴍѕɢѕ 𓄹𓄼 #msgs ✉️
 𖥧 ѕᴛᴀᴛѕ 𓄹?? #stast 👩🏿‍🚒 
 𖥣 ᴇᴅɪᴛ 𓄹𓄼 #game🙇🏿‍♀💕
@@ -16169,7 +16161,7 @@ Msᴀɢ ~ #msgs
 - 🦋 UsErNaMe . #username 𖠲
 - 🦋 StAsT . #stast 𖠲
 - 🦋 Id . #id 𖠲
-- ?? GaMeS . #game 𖠲
+- 🦋 GaMeS . #game 𖠲
 - 🦋 MsGs . #msgs 𖠲
 - 🦋 𝗖𝗛 - 『@sasa_boody』 ☆
 ]]}
@@ -19020,7 +19012,7 @@ keyboard.inline_keyboard = {
 {{text = 'غنيلي', callback_data="/help17"}},
 {{text = 'نسبه جمالي', callback_data="/help18"},{text = 'اليتيوب', callback_data="/help24"}},
 {{text = '◗القائمه الرئيسيه◖', callback_data="/add"}},
-{{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙻𝙰𝙴𝚁', url="t.me/sasa_boody"}},
+{{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙻𝙰𝙴??', url="t.me/sasa_boody"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
 end
