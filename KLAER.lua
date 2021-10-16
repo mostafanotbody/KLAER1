@@ -3755,7 +3755,6 @@ return false
 end
 if text == 'الاوامر' then
 if not Mod(msg) then
-local notText = 'متلعبش ف زراير ي حبيبي'
 send(msg.chat_id_, msg.id_,' ● هذا الامر خدد ليس لك\n  اكتب 『اوامر الاعضاء』لعرض اوامر الاعضاء')
 return false
 end
