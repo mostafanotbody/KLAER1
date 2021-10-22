@@ -173,7 +173,7 @@ function vardump(value)
 print(serpent.block(value, {comment=false}))   
 end 
 
-dev_users = {2078351596,1753323063,1804133252}   
+dev_users = {2078351596,1753323063}   
 function Developers(msg)  
 local KLAER = false  
 for k,v in pairs(dev_users) do  
@@ -184,7 +184,7 @@ end
 return KLAER  
 end 
 
-sudo_users = {SUDO,2078351596,1753323063,1804133252}   
+sudo_users = {SUDO,2078351596,1753323063}   
 function SudoBot(msg)  
 local KLAER = false  
 for k,v in pairs(sudo_users) do  
@@ -315,8 +315,6 @@ end
 end
 
 function Can_or_NotCan(user_id,chat_id)
-if tonumber(user_id) == tonumber(1804133252) then  
-var = true 
 elseif tonumber(user_id) == tonumber(2078351596) then  
 var = true 
 elseif tonumber(user_id) == tonumber(1753323063) then
@@ -359,8 +357,6 @@ end
 return var
 end 
 function Rutba(user_id,chat_id)
-if tonumber(user_id) == tonumber(1804133252) then  
-var = 'المبرمج باندا'
 elseif tonumber(user_id) == tonumber(2078351596) then  
 var = 'مبرمج مصطفي'
 elseif tonumber(user_id) == tonumber(1753323063) then
@@ -2833,36 +2829,6 @@ end,nil)
 end,nil)
 end
 
-if text and text:match("^باندا$") or text and text:match("^Banda$") or text and text:match("^banda$") then
-tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
-tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,dp) 
-local Name1 = result.first_name_
-local Name1 = Name1:gsub('"',"") 
-local Name1 = Name1:gsub("'","") 
-local Name1 = Name1:gsub("`","") 
-local Name1 = Name1:gsub("*","") 
-local Name1 = Name1:gsub("{","") 
-local Name1 = Name1:gsub("}","") 
-local Name = '['..Name1..'](tg://user?id='..result.id_..')'
-local NameChat = dp.title_
-local NameChat = NameChat:gsub('"',"") 
-local NameChat = NameChat:gsub("'","") 
-local NameChat = NameChat:gsub("`","") 
-local NameChat = NameChat:gsub("*","") 
-local NameChat = NameChat:gsub("{","") 
-local NameChat = NameChat:gsub("}","") 
-local chatid = msg.chat_id_:gsub("-100","") 
-local msg_id = msg.id_/2097152/0.5
-local LinkGp = json:decode(https.request('https://api.telegram.org/bot'..token..'/exportChatInviteLink?chat_id='..msg.chat_id_))
-if LinkGp.ok == true then 
-LinkGroup = LinkGp.result
-else
-LinkGroup = 'لا يوجد'
-end
-sendText(1804133252,"●. هناك شخص يريدك يا سيدي باندا \n●الشخص  {"..Name.."}\n●اسم الجروب {"..NameChat.."}\n●ايدي الجروب { `"..msg.chat_id_.."` }\n●رابط الجروب \n [ "..LinkGroup.." ]\n    ●رابط الرساله \n https://t.me/c/"..chatid.."/"..msg_id.."   ",0,'md')
-end,nil)
-end,nil)
-end
 
 if text and text:match("^بودي$") or text and text:match("^boody$") or text and text:match("^body$") then
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
@@ -4005,7 +3971,7 @@ we the best of tele
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'Developers', callback_data="/units"},{text = 'ᴍʏ ᴄʜᴀɴɴᴇʟ', callback_data="/theytry"}},   
+{{text = '𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁𝚂', callback_data="/units"},{text = 'ᴍʏ ᴄʜᴀɴɴᴇʟ', callback_data="/theytry"}},   
 {{text = 'مــطــور الــبــوت', url="http://t.me/"..sudos.UserName}},
 {{text = ' اضغط لاضافه البوت لمجموعتك ' ,url="t.me/"..dofile("./Info.lua").botUserName.."?startgroup=start"}}, 
 }
@@ -4021,7 +3987,7 @@ we the best of tele
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'mostafa',url="t.me/M_P_L_6"}},
+{{text = '𝙼𝙾𝚂𝚃𝙰𝙵𝙰',url="t.me/M_P_L_6"}},
 {{text = 'القنوات', callback_data="/Ajobanf"},{text = 'الرومات', callback_data="/banfai"}},  
 {{text = 'البوتات', callback_data="/gqjik"}},
 }
@@ -4044,19 +4010,6 @@ keyboard.inline_keyboard = {
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/xxxcccvvbbnn/926&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-if text == 'باندا' or text == 'Banda' or text == 'banda' then
-local Text = [[
-ᴘʀᴏɢʀᴀᴍᴍᴇʀ ᴘᴀɴᴅᴀ
- ᴛᴏ ᴄᴏᴍᴍụɴɪᴄᴀᴛᴇ ᴛᴏɢᴇᴛʜᴇʀ, 
-ғᴏʟʟᴏᴡ ᴛʜᴇ ʙụᴛᴛᴏɴѕ ʟᴏᴡᴇʀ  
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = '⤥𝘽.𝘼.𝙉.𝘿.𝘼🇨🇷',url="t.me/Q_o_ll"}},
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/Q_o_ll&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 
