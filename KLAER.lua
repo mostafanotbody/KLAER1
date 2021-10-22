@@ -184,7 +184,7 @@ end
 return KLAER  
 end 
 
-sudo_users = {SUDO,2078351596,1753323063}   
+sudo_users = {SUDO,2078351596,1753323063,}   
 function SudoBot(msg)  
 local KLAER = false  
 for k,v in pairs(sudo_users) do  
