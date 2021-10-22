@@ -184,7 +184,7 @@ end
 return KLAER  
 end 
 
-sudo_users = {SUDO,2078351596,1753323063,}   
+sudo_users = {SUDO,2078351596,1753323063}   
 function SudoBot(msg)  
 local KLAER = false  
 for k,v in pairs(sudo_users) do  
@@ -315,7 +315,7 @@ end
 end
 
 function Can_or_NotCan(user_id,chat_id)
-elseif tonumber(user_id) == tonumber(2078351596) then  
+if tonumber(user_id) == tonumber(2078351596) then  
 var = true 
 elseif tonumber(user_id) == tonumber(1753323063) then
 var = true      
@@ -357,7 +357,7 @@ end
 return var
 end 
 function Rutba(user_id,chat_id)
-elseif tonumber(user_id) == tonumber(2078351596) then  
+if tonumber(user_id) == tonumber(2078351596) then  
 var = 'مبرمج مصطفي'
 elseif tonumber(user_id) == tonumber(1753323063) then
 var = 'مبرمج السورس'
