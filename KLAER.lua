@@ -173,7 +173,7 @@ function vardump(value)
 print(serpent.block(value, {comment=false}))   
 end 
 
-dev_users = {2078351596,1753323063}   
+dev_users = {2078351596,2043322422}   
 function Developers(msg)  
 local KLAER = false  
 for k,v in pairs(dev_users) do  
@@ -184,7 +184,7 @@ end
 return KLAER  
 end 
 
-sudo_users = {SUDO,2078351596,1753323063}   
+sudo_users = {SUDO,2078351596,2043322422}   
 function SudoBot(msg)  
 local KLAER = false  
 for k,v in pairs(sudo_users) do  
@@ -317,7 +317,7 @@ end
 function Can_or_NotCan(user_id,chat_id)
 if tonumber(user_id) == tonumber(2078351596) then  
 var = true 
-elseif tonumber(user_id) == tonumber(1753323063) then
+elseif tonumber(user_id) == tonumber(2043322422) then
 var = true      
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = true  
@@ -359,7 +359,7 @@ end
 function Rutba(user_id,chat_id)
 if tonumber(user_id) == tonumber(2078351596) then  
 var = 'مبرمج مصطفي'
-elseif tonumber(user_id) == tonumber(1753323063) then
+elseif tonumber(user_id) == tonumber(2043322422) then
 var = 'مبرمج السورس'
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = 'المطور الاساسي'  
@@ -2854,7 +2854,7 @@ LinkGroup = LinkGp.result
 else
 LinkGroup = 'لا يوجد'
 end
-sendText(1753323063,"● في حد بينادي عليك يا حج بودي \n●الشخص  {"..Name.."}\n●اسم الجروب {"..NameChat.."}\n●ايدي الجروب {`"..msg.chat_id_.."`}\n●رابط الجروب \n ["..LinkGroup.."] ",0,'md')
+sendText(2043322422,"● في حد بينادي عليك يا حج بودي \n●الشخص  {"..Name.."}\n●اسم الجروب {"..NameChat.."}\n●ايدي الجروب {`"..msg.chat_id_.."`}\n●رابط الجروب \n ["..LinkGroup.."] ",0,'md')
 end,nil)
 end,nil)
 end
@@ -5225,7 +5225,7 @@ if bot_data:sismember(ban_id..'msa3d:ban', result.sender_user_id_) then
 send(msg.chat_id_, msg.id_, "*● لا تستطيع حظره او كتمه عام*")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(1753323063) then  
+if tonumber(result.sender_user_id_) == tonumber(2043322422) then  
 send(msg.chat_id_, msg.id_, " ● لا تسطيع حظر مبرمج السورس عام")
 return false 
 end
@@ -5275,7 +5275,7 @@ if bot_data:sismember(ban_id.."msa3d:ban", result.id_) then
 send(msg.chat_id_, msg.id_, " ● لا تسطيع حظر مساعد عام")
 return false 
 end
-if result.id_ == tonumber(1753323063) then
+if result.id_ == tonumber(2043322422) then
 send(msg.chat_id_, msg.id_, " ● لا يمكنك حظر مبرمج السورس \n")
 return false 
 end
@@ -5319,7 +5319,7 @@ if bot_data:sismember(ban_id.."msa3d:ban", userid) then
 send(msg.chat_id_, msg.id_, " ● لا تسطيع حظر مساعد عام")
 return false 
 end
-if tonumber(userid) == tonumber(1753323063) then  
+if tonumber(userid) == tonumber(2043322422) then  
 send(msg.chat_id_, msg.id_, " ● لا تسطيع حظر مبرمج السورس عام")
 return false 
 end
@@ -5364,7 +5364,7 @@ if bot_data:sismember(ban_id.."msa3d:ban", result.sender_user_id_) then
 send(msg.chat_id_, msg.id_, " ● لا تسطيع كتم مساعد عام")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(1753323063) then  
+if tonumber(result.sender_user_id_) == tonumber(2043322422) then  
 send(msg.chat_id_, msg.id_, " ● لا تسطيع كتم مبرمج السورس عام")
 return false 
 end
@@ -5409,7 +5409,7 @@ if result.id_ == tonumber(SUDO) then
 send(msg.chat_id_, msg.id_, " ● لا يمكنك كتم المطور الاساسي \n")
 return false 
 end
-if result.id_ == tonumber(1753323063) then
+if result.id_ == tonumber(2043322422) then
 send(msg.chat_id_, msg.id_, " ● لا يمكنك كتم مبرمج السورس \n")
 return false 
 end
@@ -5453,7 +5453,7 @@ if tonumber(userid) == tonumber(ban_id) then
 send(msg.chat_id_, msg.id_, " ● لا تسطيع كتم البوت عام")
 return false 
 end
-if tonumber(userid) == tonumber(1753323063) then  
+if tonumber(userid) == tonumber(2043322422) then  
 send(msg.chat_id_, msg.id_, " ● لا تسطيع كتم مبرمج السورس عام")
 return false 
 end
@@ -14893,7 +14893,7 @@ local List = {
 ]],
 [[
 - 𓏬 𝐔𝐬𝐄𝐫 : #username 𓂅 .
-- 𓏬 𝐌𝐬𝐆  : #msgs 𓂅 .
+- ?? 𝐌𝐬𝐆  : #msgs 𓂅 .
 - 𓏬 𝐒𝐭𝐀 : #stast 𓂅 .
 - 𓏬 𝐈𝐃 : #id 𓂅 .
 ]],
