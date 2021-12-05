@@ -14456,24 +14456,24 @@ end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, nil)
 end
 
-if text == "رتبتي" and not bot_data:get(ban_id..'ghiktr'..msg.chat_id_) then     
+
+if text == "رتبتي"  then     
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
 if result.username_ then
 username = result.username_ 
 else
 username = 'sasa_boody'
 end
+local msg_id = msg.id_/2097152/0.5  
 local textt = ' 🌝🖤 رتبتك في البوت » '..Rutba(msg.sender_user_id_,msg.chat_id_)
-local Sasa = 'https://t.me/xxxcccvvbbnn/903'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{
-{text = textt, url="http://t.me/"..username},
-},
+{{text = textt, url="http://t.me/"..username}},
 }
-local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(textt).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end,nil)
 end
+
 
 if text == 'تفعيل رتبتي' and Manager(msg) then   
 if bot_data:get(ban_id..'ghiktr'..msg.chat_id_)  then
