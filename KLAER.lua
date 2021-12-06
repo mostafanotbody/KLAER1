@@ -14508,9 +14508,10 @@ username = 'sasa_boody'
 end
 local msg_id = msg.id_/2097152/0.5  
 local textt = '.   ◍ '..Rutba(msg.sender_user_id_,msg.chat_id_)
+local sasasa = '.   ◍❤️ انت يا قلبي ➼ '..Rutba(msg.sender_user_id_,msg.chat_id_)
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text =  ❤️ انت يا قلبي ➺ textt, url="http://t.me/"..username}},
+{{text =   sasasa, url="http://t.me/"..username}},
 }
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(textt).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end,nil)
@@ -15935,7 +15936,7 @@ Msᴀɢ ~ #msgs
 ᯓ 𝗦𝗧𝗮𝗦𝗧 . #stast 🇪🇬 ꙰
 ᯓ 𝗜𝗗 . #id 🇪🇬 ꙰
 ᯓ 𝗚𝗮𝗺𝗘𝗦 . #game 🇪🇬 ꙰
-ᯓ 𝗺𝗦𝗚𝗦 . #msgs ??🇬 ꙰
+ᯓ 𝗺𝗦𝗚𝗦 . #msgs ???? ꙰
 ᯓ 𝗖𝗛 - 『@sasa_boody』 ●
 ]],
 [[
