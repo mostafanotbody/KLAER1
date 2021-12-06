@@ -14510,7 +14510,7 @@ local msg_id = msg.id_/2097152/0.5
 local textt = '.   ◍ '..Rutba(msg.sender_user_id_,msg.chat_id_)
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text =   '❤️ انت يا قلبي ➻' textt, url="http://t.me/"..username}},
+{{text =   textt, url="http://t.me/"..username}},
 }
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(textt).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end,nil)
@@ -15067,7 +15067,7 @@ local List = {
 ➫✿: 𝗖𝗛 - 『@sasa_boody』 ●.
 ]],
 [[
-✶- 𝒔𝒕𝒂𓂅 #stast 𓍯↝❃ .
+✶- 𝒔𝒕𝒂?? #stast 𓍯↝❃ .
 ✶- 𝐮𝐬𝐞𝐫𓂅 #username 𓍯↝❃.
 ✶- 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯↝❃.
 ✶- 𝐢𝐝 𓂅 #id ??↝❃.
