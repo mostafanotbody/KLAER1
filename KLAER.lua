@@ -14508,7 +14508,6 @@ username = 'sasa_boody'
 end
 local msg_id = msg.id_/2097152/0.5  
 local textt = '.   ◍ '..Rutba(msg.sender_user_id_,msg.chat_id_)
-local sasasa = '.   ◍❤️ انت يا قلبي ➼ '..Rutba(msg.sender_user_id_,msg.chat_id_)
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text =   sasasa, url="http://t.me/"..username}},
@@ -15936,7 +15935,7 @@ Msᴀɢ ~ #msgs
 ᯓ 𝗦𝗧𝗮𝗦𝗧 . #stast 🇪🇬 ꙰
 ᯓ 𝗜𝗗 . #id 🇪🇬 ꙰
 ᯓ 𝗚𝗮𝗺𝗘𝗦 . #game 🇪🇬 ꙰
-ᯓ 𝗺𝗦𝗚𝗦 . #msgs ???? ꙰
+ᯓ 𝗺𝗦𝗚𝗦 . #msgs ??🇬 ꙰
 ᯓ 𝗖𝗛 - 『@sasa_boody』 ●
 ]],
 [[
